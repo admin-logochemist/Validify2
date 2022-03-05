@@ -1,4 +1,3 @@
-
 import React from 'react'
 import wallet_icon from '../images/wallet-solid.svg'
 import bitcoin_icon from '../images/bitcoin.png'
@@ -25,20 +24,23 @@ function Tabscontent() {
         <div class="row">
             <div class="col-lg-12 margin-top">
             <div className='vollet_btn'>
-            {address?(
-        <>
-        <div className="connected_btn">          
-           <h1>Connected</h1>
-          <p>{address}</p>
-        </div>
-        </>
+            <div className="dash_search_box">
+                <input type='text' placeholder="Search Token Name/ Address"/>
+                <i className="fa fa-search"></i>
+              </div>
+              {address?(
+                <>
+                  <div className="connected_btn">          
+                    <h1>Connected</h1>
+                    <p>{address}</p>
+                  </div>
+                </>
       ):(
-        <>
-       <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon}/>Connect Wallet</button>
-       <p> Wallet is not Connected</p>
-       </>
-      )
-      }
+                <>
+                    <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon}/>Connect Wallet</button>
+                    <p> Wallet is not Connected</p>
+                </>
+      )}
           
         </div>
                 <div class="tab tabs_flex" role="tabpanel">
