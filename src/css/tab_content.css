@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .margin-top{
     margin-top: 50px;
 }
@@ -17,7 +17,7 @@ ul.nav-tabs li a img{
     border-radius: 30px;
     margin-right: 10px;
 }
-.tab{ font-family: 'Barlow', sans-serif; }
+.tab{ font-family: 'Lato', sans-serif; }
 
 .tab .nav-tabs{ 
     border: none;
@@ -29,6 +29,7 @@ ul.nav-tabs li a img{
     color: white;
     /* background: #fff; */
     font-size: 19px;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     text-transform: capitalize;
     padding: 8px 25px 10px;
@@ -121,6 +122,7 @@ ul.nav-tabs li a img{
 .dash_search_box input::placeholder{
     color: white;
     letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
 }
 .dash_search_box i{
     position: relative;
@@ -145,6 +147,34 @@ ul.nav-tabs li a img{
     line-height: 50px;
     margin: auto;
     display: block;
+}
+.connected_btn{
+    border: 1px solid palegoldenrod;
+    padding: 10px 31px;
+    border-radius: 17px;
+}
+.connected_btn h1{
+    color: #F4E286;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: -16px;
+}
+.connected_btn p{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 13px;
+}
+.vollet_msg p{
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    text-align: center;
 }
 .sign_up a:hover{
   color: #443107;
@@ -218,11 +248,16 @@ ul.nav-tabs li a img{
     background: unset;
     border: 1px solid #F4E286 !important;
     transition: all .6s linear;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 600 !important;
 }
 div.col-lg-6 > span:hover{
     background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     transition: all .5s linear;
     color: #443107;
+}
+.display_two{
+    display: none;
 }
 @media only screen and (max-width: 1500px){
     .own_container {
@@ -268,17 +303,66 @@ div.col-lg-6 > span:hover{
     .col_iframe {
         width: 100%;
     }
+    .responsive_col{
+        flex: unset !important;
+        max-width: unset !important;
+        width: 100% !important;
+    }
+    .display_one{
+        display: none;
+    }
+    .display_two{
+        display: block;
+        flex: unset !important;
+        max-width: unset !important;
+        width: 50% !important;
+    }
+    .own_res{
+        flex: unset !important;
+        max-width: unset !important;
+        width: 50% !important;
+    }
 }
 @media screen and (max-width:992px){
-    .own_container {
-        max-width: unset !important;
-        width: 90% !important;
-        flex: unset !important;
-        margin: auto;
-        display: contents;
+    .connected_btn {
+        padding: 2px 18px;
+    }
+    .connected_btn h1 {
+        font-size: 16px;
+        left: 0;
+    }
+    .dash_search_box input{
+        width: 85%;
     }
 }
 @media screen and (max-width:778px){
+    .dash_search_box input{
+        width: 100%;
+    }
+    .vollet_btn button {
+        margin-top: 20px;
+    }
+    
+.connected_btn {
+    padding: 2px 18px;
+    margin-top: 20px;
+}
+    
+    .dash_search_box input{
+        display: block;
+        margin: auto;
+    }
+    .dash_search_box i {
+        position: relative;
+        top: 15px;
+        right: 32px;
+        font-size: 20px;
+        color: white;
+        position: absolute;
+    }
+    .vollet_btn {
+        flex-wrap: wrap;
+    }
     ul.nav-tabs li{
         margin-top: 20px;
     }
@@ -292,6 +376,31 @@ div.col-lg-6 > span:hover{
     .side_menu .wrapper .menu-btn {
         top: 8px;
     }
+}
+@media screen and (max-width:650px){
+    .display_two{
+        width: 100% !important;
+    }
+    .own_res{
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+.img_left_side_box > img {
+    height: 68px;
+    left: 0%;
+}
+.img_left_side_box .stronge_head {
+    font-size: 13px;
+}
+.market_cup h3{
+    font-size: 13px;
+}
+.market_cup h3 span.two {
+    font-size: 13px;
+}
+.buy_now {
+    font-size: 13px;
+}
 }
 @media screen and (max-width:568px){
     .side_menu .wrapper .btn {
@@ -308,6 +417,18 @@ div.col-lg-6 > span:hover{
         object-fit: contain;
     }
 }
+@media screen and (max-width:500px){
+    .img_left_side_box {
+        flex-direction: column;
+        justify-content: center;
+    }.own_flex_classes {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .market_cup{
+        justify-content: center;
+    }
+}
 @media only screen and (max-width: 479px){
     .tab .nav-tabs li a{
          margin: 0 0 10px;
@@ -316,4 +437,5 @@ div.col-lg-6 > span:hover{
         height: 50px;
         margin-top: 16px;
     }
+
 }

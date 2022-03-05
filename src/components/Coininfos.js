@@ -66,7 +66,7 @@ const CoinInfos = ({ id }) => {
     // <ThemeProvider theme={darkTheme}>
 
     // </ThemeProvider>
-    <div className="col-lg-6">
+    <div className="col-lg-6 responsive_col">
       <BtcCoinPage id={id}/>
     {!historicData | flag===false ? (
       <CircularProgress

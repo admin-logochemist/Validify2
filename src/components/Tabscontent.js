@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
 import Swap from './Swap'
 import Portfolio from './Portfolio'
+import Swaptwo from './Swaptwo'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -62,51 +63,61 @@ function Tabscontent() {
                         <Swap />
                         <CoinInfos id="bitcoin"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="ETH">
                         <Swap />
                         <CoinInfos id="ethereum"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="tetherss">
                         <Swap />
                         <CoinInfos id="tether"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="bnb">
                         <Swap />
                         <CoinInfos id="binancecoin"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="usd">
                         <Swap />
                         <CoinInfos id="usd-coin"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="xrp">
                         <Swap />
                         <CoinInfos id="ripple"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="luna">
                         <Swap />
                         <CoinInfos id="terra-luna"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="sol">
                         <Swap />
                         <CoinInfos id="solana"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
                         <Swap />
                         <CoinInfos id="cardano"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
                         <Swap />
                         <CoinInfos id="avalanche-2"/>
                         <Portfolio/>
+                        <Swaptwo/>
                         </div>
                     </div>
                 </div>

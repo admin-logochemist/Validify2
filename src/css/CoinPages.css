@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .own_flex_classes{
     display: flex;
     flex-direction: row;
@@ -22,6 +23,8 @@
     font-size: 17px;
     color: white;
     letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 .img_left_side_box h3{
     display: flex;
@@ -48,11 +51,15 @@
     color: white;
     margin: 10px 0;
     letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 .img_left_side_box span.three{
     font-size: 13px;
     color: green;
     letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
 }
 .market_cup{
     display: flex;
@@ -67,10 +74,14 @@
 .market_cup h3 span.one{
     font-size: 15px;
     line-height: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 .market_cup h3 span.two{
     font-size: 15px;
     line-height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 
 .buy_now{
@@ -123,6 +134,8 @@
     letter-spacing: 2px;
     padding-left: 10px;
     padding-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 .comming_text{
     display: block;
@@ -130,6 +143,8 @@
     font-size: 25px;
     letter-spacing: 2px;
     padding-left: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 .swap_box{
     background: #0D203C;
@@ -138,4 +153,6 @@ div.col-lg-6 > canvas{
     background: #0D203C;
     margin: 17px 0;
     padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }

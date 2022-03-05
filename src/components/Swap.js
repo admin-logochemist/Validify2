@@ -1,9 +1,9 @@
 import React from 'react'
 import '../css/CoinPages.css'
-export default function () {
+export default function Swap() {
   return (
     <>
-       <div className='col-lg-3'>
+       <div className='col-lg-3 display_one'>
             <div className="swap_box">
                 <h4 className='left-right-head'>Swap</h4>
                     <br/>
