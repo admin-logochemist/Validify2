@@ -1,0 +1,120 @@
+.own_flex_classes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #0D203C;
+    margin-top: 20px;
+    padding-top: 30px;
+}
+.img_left_side_box{
+    display: flex;
+    align-items: center;
+}
+.img_left_side_box > img {
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -10px;
+    left: -15px;
+}
+.img_left_side_box .stronge_head{
+    font-size: 17px;
+    color: white;
+    letter-spacing: 1px;
+}
+.img_left_side_box h3{
+    display: flex;
+    flex-direction: column;
+}
+.stronge_head span.border_span{
+    position: relative;
+    display: inline-block;
+    margin: 0px 10px;
+}
+.stronge_head span.border_span::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 30px;
+    width: 133%;
+    background: white;
+    z-index: 99999;
+    border: 1px solid white;
+    top: -22px;
+}
+.img_left_side_box span.two{
+    font-size: 13px;
+    color: white;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.img_left_side_box span.three{
+    font-size: 13px;
+    color: green;
+    letter-spacing: 1px;
+}
+.market_cup{
+    display: flex;
+}
+.market_cup h3{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
+.market_cup h3 span.one{
+    font-size: 15px;
+    line-height: 30px;
+}
+.market_cup h3 span.two{
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.buy_now{
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    color: #443107;
+    border: none;
+    padding: 7px 1px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+.buy_now:hover{
+    color: #fff;
+    animation: swoosh 0.4s ease-out 0.2s;
+}
+
+.buy_now:before,
+.buy_now:after{
+    content: "";
+    background-color: #8f939396;
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+    transition: all 0.4s ease-out 0.1s;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.buy_now:after{
+    opacity: 0;
+    transform: scale(0.9,0.7);
+    left: 0;
+    transition: all 0.3s ease-out 0s;
+}
+.buy_now:before{ left: 100%; }
+.buy_now:hover:after{
+    opacity: 0.3;
+    transform: scale(1);
+}

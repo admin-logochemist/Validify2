@@ -12,10 +12,8 @@ import cardano from '../images/cardano (1).png'
 import avax from '../images/coin-round-red.png'
 import CoinInfos from './CoinInfos';
 import { useWeb3 } from '@3rdweb/hooks'
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
-import { CoinsTable } from "./CoinsTable";
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -37,15 +35,15 @@ function Tabscontent() {
                 </>
       ):(
                 <>
-                    <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon}/>Connect Wallet</button>
-                    <p> Wallet is not Connected</p>
+                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                  <p> Wallet is not Connected</p>
                 </>
       )}
           
-        </div>
+            </div>
                 <div class="tab tabs_flex" role="tabpanel">
                 <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon}/>Bit</a></li>
+                        <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
                         <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon}/> ETH</a></li>
                         <li role="presentation"><a href="#tether" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
                         <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon}/> BNB </a></li>
@@ -56,10 +54,11 @@ function Tabscontent() {
                         <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={cardano}/> Cardano </a></li>
                         <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={avax}/> AVALANCHE </a></li>
                     </ul>
-                    <div class="tab-content tabs">
-                        <div role="tabpanel" class="tab-pane fade in active" id="bit">
+                    <div class="tab-content tabs container-fluid">
+                        <div role="tabpanel" class="tab-pane fade in active row justify-content-center" id="bit">
+                        <div className='col-lg-3'></div>
                         <CoinInfos/>
-                        <CoinsTable/>
+                        <div className='col-lg-3'></div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="ETH">
                         <div className='own_flex_class'>
