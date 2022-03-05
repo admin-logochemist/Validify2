@@ -1,0 +1,58 @@
+.header_banner{
+    background-image: url(../images/bannerAd.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    float: right;
+    width: 86%;
+    margin-top: 10px;
+}
+marquee {
+    margin-top: 20px;
+    background: #1E222D;
+    padding: 5px 86px 20px px;
+    display: inline-block;
+    width: 94%;
+    float: right;
+    border: 1px solid grey;
+    border-radius: 8px;
+    display: flex;
+    padding-top: 11px;
+}
+marquee .animation{
+    display: inline-flex;
+    margin: 0 15px;
+    padding: 0 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+marquee .animation::before{
+    position: absolute;
+    content: "";
+    height: 78%;
+    width: 1px;
+    background: #5e5e5e;
+    top: 3px;
+    left: -11px;
+}
+.coin_names img{
+    height: 28px;
+    display: inline-flex;
+    margin-right: 12px;
+    border-radius: 16px;
+}
+.coin_names{
+    color: white;
+    font-size: 18px;
+
+}
+.coin_names .price{
+    margin-left: 10px;
+}
+.coin_names .current_value{
+    margin-left: 18px;
+}
+.coin_names .value{
+    margin-left: 20px;
+    color: rgb(124 157 124);
+}

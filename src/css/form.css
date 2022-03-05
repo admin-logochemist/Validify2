@@ -1,0 +1,247 @@
+
+.bg_animation{}
+.form-row{
+    margin-top: 160px;
+    position: relative;
+    left: 20px;
+  
+}
+.form-bg{
+    background-size: cover;
+    position: relative;
+
+}
+.form-bg:before{
+    content: "";
+    width: 100%;
+    height:149%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+.form-horizontal{   
+    width: 110%;
+    position: relative;
+    left: 296px;
+    height: 950px;
+    letter-spacing: 1px;
+    padding: 60px 40px 55px 40px;
+    margin-top: 200px;
+    background:    #13173a;
+    border-radius: 5px ;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.form-horizontal:before{
+    background-image: url(../images/formlogo.svg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 139px;
+    height: 137px;
+    line-height: 118px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    background: #000000;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: -62px;
+    left: -1px;
+    right: 0;   
+}
+
+.form-horizontal .heading{
+    display: block;
+    font-size: 30px;
+    color: #ebf7fd;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+
+.form-horizontal .form-group{
+    margin: 0 0 30px 0;
+    position: relative;
+}
+
+.form-horizontal .form-group:last-child{ margin: 0; }
+
+.form-horizontal .form-control{
+    width: 90%;
+    height: 80px;
+    border: 2px solid #cbe9ea;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 0 20px 0 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #94abb6;
+    position: relative;
+    left: 25px;
+    transition: all 0.3s ease 0s;
+}
+.Remembered{
+    margin-left: 16px;
+    font-size: 21px;
+    color: wheat;
+
+}
+.Forgotpassword{
+   position: relative;
+   left: 161px;  
+   font-size: 21px;
+   color: wheat;
+}
+.Rememberedcheckbox{
+    padding: 34px;
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox{
+     width: 20px;
+     height:20px;
+     position: relative;
+    top: 5px;
+    left: 10px;
+     border-radius: 2px 2px ;
+}
+
+.form-horizontal .form-control:focus{
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.form-horizontal .control-label{
+    width: 16%;
+    height: 43px;
+    line-height: 46px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #94abb6;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    top: 64px;
+    z-index: 1;
+    right: 0;
+    left: 14px;
+}
+.form-group span{
+    position: relative;
+    left: 225px;
+    font-size: 21px;
+    top: 30px;
+    color: wheat;
+}
+.formIcon{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+.formIcon .form-group i{
+    padding: 17px 20px;
+    border: 1px solid white;
+    border-radius: 52px;
+    margin: 0 13px;
+    font-size: 30px;
+    color: white;
+}
+.formIcon > .form-group i:nth-child(1):hover{
+    background: #3b5998;
+}
+.formIcon > .form-group i:nth-child(2):hover{
+    background: #00acee;
+}
+.formIcon > .form-group i:nth-child(3):hover{
+    background: #8134af;
+}
+.alert_msg{
+    display: block;
+    color: white;
+    text-align: center !important;
+    padding: 63px 0;
+}
+.form-horizontal .form_btn{
+    width: 35%;
+    height: 65px;
+    line-height: 50px;
+    padding: 0 30px;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    left: 190px;
+    top: 30px;
+}
+.form-horizontal .form_btn:hover{
+    color: #fff;
+    animation: swoosh 0.4s ease-out 0.2s;
+}
+
+.form-horizontal .form_btn:before,
+.form-horizontal .form_btn:after{
+    content: "";
+    background-color: #8f939396;
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+    transition: all 0.4s ease-out 0.1s;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.form-horizontal .form_btn:after{
+    opacity: 0;
+    transform: scale(0.9,0.7);
+    left: 0;
+    transition: all 0.3s ease-out 0s;
+}
+
+.form-horizontal .form_btn:hover:before{ left: 100%; }
+
+.form-horizontal .form_btn:hover:after{
+    opacity: 0.3;
+    transform: scale(1);
+}
+.form-horizontal .signup,
+.form-horizontal .forgot-pass{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    color: #14a3aa;
+}
+
+.form-horizontal .forgot-pass{
+    float: right;
+    color: #58aebc;
+}
+
+@media only screen and (max-width: 990px){
+    .form-horizontal:before{ top: -50px; }
+}
+
+@media only screen and (max-width: 480px){
+    .form-horizontal{ padding: 60px 20px 40px 20px; }
+    .form-horizontal .control-label{ font-size: 12px; }
+}

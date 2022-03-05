@@ -1,0 +1,91 @@
+
+.containerr{
+    width: 100%;
+    overflow-x: clip;
+}
+.containerr h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    left: 2%;
+    color: white;
+    letter-spacing: 1px;
+}
+.slick-slide {
+    height: 180px;
+    width: 3% !important;
+    margin: 10px 19px;
+    background: white;
+    padding: 0;
+    border-radius: 11px;
+}
+.card_slider{
+    padding-left: 16px
+}
+.card_slider img{
+    /* margin-left: 20px; */
+    margin-top: 15px;
+}
+.card_slider span{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 7px;
+    display: block;
+}
+.card_slider .chart_bar{
+    position: absolute;
+}
+.card_slider h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: black;
+}
+.card_slider price{
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+.card_slider percantage{
+    font-family: 'Lato', sans-serif;
+    float: right;
+    margin-right: 13px;
+    background: #8080805e;
+    padding: 5px 15px;
+    border-radius: 28px;
+    font-weight: 600;
+}
+.slick-next {
+    right: unset;
+    display: none !important;
+}
+
+
+/* // RESPONSIVE AREA // */
+@media only screen and (max-width: 993px){
+    .containerr {
+        margin-top: 130px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .containerr {
+        width: 90%;
+        margin: auto !important;
+        margin-top: 60px !important;
+    }
+    .slick-slide {
+        width: 4% !important;
+        margin: 10px 5px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .containerr {
+        width: 90%;
+        margin: auto !important;
+        margin-top: 0px !important;
+    }
+}

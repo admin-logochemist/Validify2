@@ -1,0 +1,35 @@
+.side{
+    margin-top: 160px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.right-side{
+    background-color: white;
+    height: 600px;
+    background-image: url(../images/bitcoin-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.heading{
+    text-align: center;
+    font-weight: 700;
+}
+.para{
+    color: #0b2251;
+    text-align: center;
+    font-size: 24px;
+}
+@media screen and (max-width:992px) {
+    /* .own_col{
+        width: 80%;
+    } */
+    .right-side{
+        display: none;
+    }
+    .para {
+        font-size: 20px;
+    }
+}
