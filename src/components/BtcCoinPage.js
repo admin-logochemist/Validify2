@@ -6,12 +6,12 @@ import { numberWithCommas } from "./CoinsTable";
 import { CryptoState } from "../CryptoContext";
 import axios from "axios";
 import { useEffect, useState } from "react";
-export default function BtcCoinPage() {
+export default function BtcCoinPage({id}) {
   const [coins, setCoin] = useState();
 
   const { currency, symbol } = CryptoState();
   const fetchCoin = async () => {
-    const { data } = await axios.get(BTCSingleCoin());
+    const { data } = await axios.get(BTCSingleCoin(id));
 console.log('data', data)
     setCoin(data);
   };
@@ -28,7 +28,7 @@ console.log('data', data)
          <div className='img_left_side_box'>
            <img src={coins?.image.large} alt={coins?.name} height="200"/>
            <h3>
-             <stronge className='stronge_head'> {coins?.name} <span className='border_span'></span>BTCT</stronge>
+             <stronge className='stronge_head'> {coins?.name} <span className='border_span'></span></stronge>
              <span className='two'>BTC</span>
              <span className='three'>  $
              {

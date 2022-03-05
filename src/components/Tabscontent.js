@@ -47,7 +47,7 @@ function Tabscontent() {
                 <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
                         <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon}/> ETH</a></li>
-                        <li role="presentation"><a href="#tether" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
+                        <li role="presentation"><a href="#tetherss" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
                         <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon}/> BNB </a></li>
                         <li role="presentation"><a href="#usd" aria-controls="messages" role="tab" data-toggle="tab">< img src={Usd_icon}/> USD </a></li>
                         <li role="presentation"><a href="#xrp" aria-controls="messages" role="tab" data-toggle="tab">< img src={Xrp}/> XRP </a></li>
@@ -57,27 +57,56 @@ function Tabscontent() {
                         <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={avax}/> AVALANCHE </a></li>
                     </ul>
                     <div class="tab-content tabs container-fluid">
-                        <div role="tabpanel" class="tab-pane fade in active row justify-content-center" id="bit">
+                        <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
                         {/* <div className='col-lg-3'></div> */}
                         <Swap />
-                        <CoinInfos/>
+                        <CoinInfos id="bitcoin"/>
                         <Portfolio/>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="ETH">
-                        <div className='own_flex_class'>
-                          </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="ETH">
+                        <Swap />
+                        <CoinInfos id="ethereum"/>
+                        <Portfolio/>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="tether">
-                          <div className='own_flex_class'>
-                          </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="tetherss">
+                        <Swap />
+                        <CoinInfos id="tether"/>
+                        <Portfolio/>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="bnb">
-                          <div className='own_flex_class'>
-                          </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="bnb">
+                        <Swap />
+                        <CoinInfos id="binancecoin"/>
+                        <Portfolio/>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="usd">
-                          <div className='own_flex_class'>
-                          </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="usd">
+                        <Swap />
+                        <CoinInfos id="usd-coin"/>
+                        <Portfolio/>
+                        </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="xrp">
+                        <Swap />
+                        <CoinInfos id="ripple"/>
+                        <Portfolio/>
+                        </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="luna">
+                        <Swap />
+                        <CoinInfos id="terra-luna"/>
+                        <Portfolio/>
+                        </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="sol">
+                        <Swap />
+                        <CoinInfos id="solana"/>
+                        <Portfolio/>
+                        </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
+                        <Swap />
+                        <CoinInfos id="cardano"/>
+                        <Portfolio/>
+                        </div>
+                        <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
+                        <Swap />
+                        <CoinInfos id="avalanche-2"/>
+                        <Portfolio/>
                         </div>
                     </div>
                 </div>

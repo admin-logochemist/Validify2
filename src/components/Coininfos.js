@@ -15,7 +15,7 @@ import { CryptoState } from "../CryptoContext";
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart }            from 'react-chartjs-2'
 import { CoinsTable } from "./CoinsTable";
-const CoinInfos = ({ coin }) => {
+const CoinInfos = ({ id }) => {
   
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
@@ -44,7 +44,7 @@ const CoinInfos = ({ coin }) => {
   // const classes = useStyles();
 
       const fetchHistoricData = async () => {
-        const { data } = await axios.get(HistoricalCharts(days));
+        const { data } = await axios.get(HistoricalCharts(id,days));
         setflag(true);
         setHistoricData(data.prices);
       };
@@ -67,7 +67,7 @@ const CoinInfos = ({ coin }) => {
 
     // </ThemeProvider>
     <div className="col-lg-6">
-      <BtcCoinPage />
+      <BtcCoinPage id={id}/>
     {!historicData | flag===false ? (
       <CircularProgress
         style={{ color: "gold" }}
