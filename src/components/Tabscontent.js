@@ -1,4 +1,3 @@
-
 import React from 'react'
 import wallet_icon from '../images/wallet-solid.svg'
 import bitcoin_icon from '../images/bitcoin.png'
@@ -37,7 +36,7 @@ function Tabscontent() {
                 </>
       ):(
                 <>
-                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon}/>Connect Wallet</button>
+                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
                   <p> Wallet is not Connected</p>
                 </>
       )}
@@ -45,7 +44,7 @@ function Tabscontent() {
             </div>
                 <div class="tab tabs_flex" role="tabpanel">
                 <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon}/>Bit</a></li>
+                        <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
                         <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon}/> ETH</a></li>
                         <li role="presentation"><a href="#tether" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
                         <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon}/> BNB </a></li>
