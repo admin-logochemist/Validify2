@@ -73,7 +73,9 @@ ul.nav-tabs li a img{
     right: 0;
     transition: all 0.4s ease 0.1s;
 }
-
+.MuiFormControl-root {
+    margin-top: 35px !important;
+}
 .tab .nav-tabs li.active a:before,
 .tab .nav-tabs li a:hover:before,
 .tab .nav-tabs li.active a:after,
@@ -81,9 +83,13 @@ ul.nav-tabs li a img{
     opacity: 1;
     transform: perspective(300px) rotateX(0);
 }
-
+.tab-content>.active {
+    display: flex;
+}
 .tab .tab-content{
     position: relative;
+    margin-top: 20px;
+    padding-top: 30px;
 }
 .fade:not(.show) {
     opacity: 1;
@@ -202,6 +208,21 @@ ul.nav-tabs li a img{
     letter-spacing: 3px;
     padding-top: 12px;
     padding-left: 20px;
+}
+ div.col-lg-6 > span {
+    display: inline-block !important;
+    padding: 10px 42px !important;
+    margin: 0px 10px;
+    width: auto;
+    color: white;
+    background: unset;
+    border: 1px solid #F4E286 !important;
+    transition: all .6s linear;
+}
+div.col-lg-6 > span:hover{
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    transition: all .5s linear;
+    color: #443107;
 }
 @media only screen and (max-width: 1500px){
     .own_container {

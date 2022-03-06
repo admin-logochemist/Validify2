@@ -15,6 +15,7 @@ import CoinInfos from './CoinInfos';
 import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
+import Swap from './Swap'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -57,7 +58,8 @@ function Tabscontent() {
                     </ul>
                     <div class="tab-content tabs container-fluid">
                         <div role="tabpanel" class="tab-pane fade in active row justify-content-center" id="bit">
-                        <div className='col-lg-3'></div>
+                        {/* <div className='col-lg-3'></div> */}
+                        <Swap />
                         <CoinInfos/>
                         <div className='col-lg-3'></div>
                         </div>

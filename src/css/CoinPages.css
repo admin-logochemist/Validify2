@@ -4,8 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     background: #0D203C;
-    margin-top: 20px;
-    padding-top: 30px;
+    padding: 17px 0;
 }
 .img_left_side_box{
     display: flex;
@@ -117,4 +116,26 @@
 .buy_now:hover:after{
     opacity: 0.3;
     transform: scale(1);
+}
+.left-right-head{
+    color: #F4E286;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.comming_text{
+    display: block;
+    color: #F4E286;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+.swap_box{
+    background: #0D203C;
+}
+div.col-lg-6 > canvas{
+    background: #0D203C;
+    margin: 17px 0;
+    padding: 10px;
 }
