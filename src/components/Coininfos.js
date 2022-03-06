@@ -5,8 +5,8 @@ import { Line } from "react-chartjs-2";
 import {
   CircularProgress,
   createTheme,
-  makeStyles,
-  ThemeProvider,
+  // makeStyles,
+  // ThemeProvider,
 } from "@material-ui/core";
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";

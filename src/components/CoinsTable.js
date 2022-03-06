@@ -20,8 +20,6 @@ import {
  TableCell
   } from "@material-ui/core";
 import { CryptoState } from '../CryptoContext';
-// import CoinInfos from './CoinInfos';
-
 export function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
