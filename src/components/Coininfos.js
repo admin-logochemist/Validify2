@@ -22,17 +22,17 @@ const CoinInfos = ({ coin }) => {
 
   const useStyles = makeStyles((theme) => ({
     container: {
-      width: "75%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: 25,
-      padding: 40,
+      // width: "75%",
+      // display: "flex",
+      // flexDirection: "column",
+      // alignItems: "center",
+      // justifyContent: "center",
+      // marginTop: 25,
+      // padding: 40,
       [theme.breakpoints.down("md")]: {
         width: "100%",
         marginTop: 0,
-        padding: 20,
+        padding: 0,
         paddingTop: 0,
         color:"white"
       },
@@ -66,6 +66,8 @@ const CoinInfos = ({ coin }) => {
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={classes.container}>
+       <div className="row">
+        <div className="col-lg-6">
         {!historicData | flag===false ? (
           <CircularProgress
             style={{ color: "gold" }}
@@ -148,7 +150,9 @@ const CoinInfos = ({ coin }) => {
               ))}
             </div>
           </>
-        )}
+        )}   
+        </div>
+       </div>
       </div>
     </ThemeProvider>
   );

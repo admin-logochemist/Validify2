@@ -8,17 +8,19 @@ import {
    TableBody,
     createTheme,
  ThemeProvider,
- Container,Typography,
+ Container,
+//  Typography,
  TextField,
  TableContainer,
  LinearProgress,
  Table,
  TableHead,
  TableRow,
+//  Paper,
  TableCell
   } from "@material-ui/core";
 import { CryptoState } from '../CryptoContext';
-import CoinInfos from './Coininfos';
+import CoinInfos from './CoinInfos';
 export function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -49,6 +51,7 @@ export const CoinsTable = () => {
           "&:hover": {
             backgroundColor: "#131111",
           },
+          
           fontFamily: "Montserrat",
         },
         pagination: {
@@ -77,14 +80,15 @@ export const CoinsTable = () => {
     
   return (
     <ThemeProvider theme={darkTheme}>
+       {/* <Paper className={classes.paper}> */}
          <Container style={{ textAlign: "center" }}>
-         <Typography
+         {/* <Typography
           variant="h4"
           style={{ color:"white",margin: 18, fontFamily: "Montserrat" }}
         >
           Cryptocurrency Prices by Market Cap
-        </Typography>
-        <CoinInfos/>
+        </Typography> */}
+        <CoinInfos />
         <TextField
           label="Search For a Crypto Currency.."
           variant="outlined"
@@ -97,13 +101,12 @@ export const CoinsTable = () => {
         ):(
          <Table>
              <TableHead style={{ backgroundColor: "#EEBC1D" }}>
-<TableRow>
-{["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
+         <TableRow>
+            {["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
                     <TableCell
                       style={{
                         color: "black",
                         fontWeight: "700",
-                        fontFamily: "Montserrat",
                       }}
                       key={head}
                       align={head === "Coin" ? "" : "right"}
@@ -111,7 +114,7 @@ export const CoinsTable = () => {
                       {head}
                     </TableCell>
                   ))}
-</TableRow>
+          </TableRow>
              </TableHead>
              
              <TableBody>
@@ -198,6 +201,7 @@ export const CoinsTable = () => {
           }}
         />
          </Container>
+         {/* </Paper> */}
     </ThemeProvider>
   )
 }

@@ -5,6 +5,7 @@
     float: right;
     width: 86%;
     margin-top: 10px;
+    background-size: contain;
 }
 marquee {
     margin-top: 20px;

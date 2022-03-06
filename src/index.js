@@ -1,23 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {ThirdwebWeb3Provider} from "@3rdweb/hooks"
 import {BrowserRouter, HashRouter} from 'react-router-dom';
 import CryptoContext from "./CryptoContext";
-const supportedChainIds=[4]
-const connectors={
-  injected:{},
-}
 ReactDOM.render(
-  <ThirdwebWeb3Provider
-  supportedChainIds={supportedChainIds}
-  connectors={connectors}
-  >
   <BrowserRouter>
 <CryptoContext>
       <App />
     </CryptoContext>
-  </BrowserRouter>
-  </ThirdwebWeb3Provider>,
+  </BrowserRouter>,
   document.getElementById('root')
 );

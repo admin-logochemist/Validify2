@@ -3,25 +3,6 @@
 .margin-top{
     margin-top: 50px;
 }
-.connected_btn{
-    border: 1px solid grey;
-    border-radius: 50px;
-    width: 24%;
-}
-.connected_btn h1{
-text-align: center;
-color: #0670bc;
-font-size: 25px;
-padding-top: 10px;
-}
-.connected_btn p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 12px;
-    color: white;
-    text-align: center;
-}
 .own_container{
     max-width: unset;
     float: left;
@@ -41,7 +22,7 @@ ul.nav-tabs li a img{
 .tab .nav-tabs{ 
     border: none;
     padding: 10px 0;
-    background: #1e1c1c;
+    background: #0D203C;
  }
 
 .tab .nav-tabs li a{
@@ -68,13 +49,13 @@ ul.nav-tabs li a img{
     color: #fff;
     background: transparent;
     border: none;
-    border-bottom: 3px solid #0670bc;
+    border-bottom: 3px solid #0670bc70;
 }
 
 .tab .nav-tabs li a:before,
 .tab .nav-tabs li a:after{
     content: "";
-    background-color: #0670bc;
+    background-color: #0670bc70;
     width: 50%;
     height: 100%;
     opacity: 0;
@@ -107,13 +88,42 @@ ul.nav-tabs li a img{
 .fade:not(.show) {
     opacity: 1;
 }
-.vollet_btn{
-    display: block;
+.vollet_btn {
+    display: flex;
     margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
-
+.dash_search_box {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+.dash_search_box input{
+    font-family: 'Lato', sans-serif;
+    height: 50px;
+    width: 50%;
+    border-radius: 11px;
+    border: 1px solid grey;
+    outline: none;
+    background: #80808038;
+    color: white;
+    padding-left: 20px;
+}
+.dash_search_box input::placeholder{
+    color: white;
+    letter-spacing: 2px;
+}
+.dash_search_box i{
+    position: relative;
+    top: 0px;
+    right: 35px;
+    font-size: 20px;
+    color: white;
+}
 .vollet_btn button{
-
     font-family: 'Lato', sans-serif;
     background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     color: #443107;
@@ -129,7 +139,6 @@ ul.nav-tabs li a img{
     line-height: 50px;
     margin: auto;
     display: block;
-    margin-top: 30px;
 }
 .sign_up a:hover{
   color: #443107;
@@ -195,6 +204,11 @@ ul.nav-tabs li a img{
     padding-left: 20px;
 }
 @media only screen and (max-width: 1500px){
+    .own_container {
+        width: 100%;
+        margin: auto;
+        margin-left: unset !important;
+    }
     .tabs_flex{
         display: flex;
         flex-direction: column;
@@ -213,12 +227,20 @@ ul.nav-tabs li a img{
         left: 2px;
         top: 25px;
     }
-    .header_banner {
+    /* .header_banner {
         width: 95%;
         background-size: contain;
-    }
+    } */
     marquee {
         width: 100%;
+    }
+    ul.nav-tabs li{
+        margin-top: 20px;
+    }
+    .tab .nav-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media only screen and (max-width: 1200px){
@@ -227,18 +249,15 @@ ul.nav-tabs li a img{
     }
 }
 @media screen and (max-width:992px){
-    .own_container{
+    .own_container {
         max-width: unset !important;
-        width: 95% !important;
+        width: 90% !important;
         flex: unset !important;
+        margin: auto;
+        display: contents;
     }
 }
 @media screen and (max-width:778px){
-    .tab .nav-tabs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     ul.nav-tabs li{
         margin-top: 20px;
     }
@@ -249,10 +268,31 @@ ul.nav-tabs li a img{
     .tab .nav-tabs li a {
         font-size: 14px;
     }
+    .side_menu .wrapper .menu-btn {
+        top: 8px;
+    }
+}
+@media screen and (max-width:568px){
+    .side_menu .wrapper .btn {
+        font-size: 20px;
+        cursor: pointer;
+        border: 0;
+        padding: 4px 8px;
+        color: hsla(0,0%,100%,.55);
+    }
+    .header_banner {
+        height: 66px;
+    }
+    .MuiTableCell-body > img {
+        object-fit: contain;
+    }
 }
 @media only screen and (max-width: 479px){
     .tab .nav-tabs li a{
          margin: 0 0 10px;
      }
-
+     .header_banner {
+        height: 50px;
+        margin-top: 16px;
+    }
 }
