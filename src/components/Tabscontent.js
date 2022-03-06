@@ -54,7 +54,7 @@ function Tabscontent() {
                         <div role="tabpanel" class="tab-pane fade in active" id="bit">
                           <div className='own_flex_class'>
                           {/* <BitCoin/> */}
-                         
+                        
                           <CoinsTable/>
                           
                           {/* <TradingSnaps/> */}

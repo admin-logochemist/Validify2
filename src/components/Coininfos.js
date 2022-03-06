@@ -20,26 +20,26 @@ const CoinInfos = ({ coin }) => {
   const { currency } = CryptoState();
   const [flag,setflag] = useState(false);
 
-  const useStyles = makeStyles((theme) => ({
-    container: {
-      // width: "75%",
-      // display: "flex",
-      // flexDirection: "column",
-      // alignItems: "center",
-      // justifyContent: "center",
-      // marginTop: 25,
-      // padding: 40,
-      [theme.breakpoints.down("md")]: {
-        width: "100%",
-        marginTop: 0,
-        padding: 0,
-        paddingTop: 0,
-        color:"white"
-      },
-    },
-  }));
+  // const useStyles = makeStyles((theme) => ({
+  //   container: {
+  //     width: "75%",
+  //     // display: "flex",
+  //     // flexDirection: "column",
+  //     // alignItems: "center",
+  //     // justifyContent: "center",
+  //     // marginTop: 25,
+  //     // padding: 40,
+  //     [theme.breakpoints.down("md")]: {
+  //       width: "100%",
+  //       marginTop: 0,
+  //       padding: 0,
+  //       paddingTop: 0,
+  //       color:"white"
+  //     },
+  //   },
+  // }));
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const fetchHistoricData = async () => {
     const { data } = await axios.get(HistoricalCharts(days));
@@ -64,9 +64,11 @@ const CoinInfos = ({ coin }) => {
   });
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <div className={classes.container}>
-       <div className="row">
+    // <ThemeProvider theme={darkTheme}>
+
+    // </ThemeProvider>
+    <div className='container'>
+      <div className="row">
         <div className="col-lg-6">
         {!historicData | flag===false ? (
           <CircularProgress
@@ -129,14 +131,6 @@ const CoinInfos = ({ coin }) => {
                 },
               }}
             /> */}
-            <div
-              style={{
-                display: "flex",
-                marginTop: 20,
-                justifyContent: "space-around",
-                width: "100%",
-              }}
-            >
               {chartDays.map((day) => (
                 <SelectButton 
                   key={day.value}
@@ -148,13 +142,11 @@ const CoinInfos = ({ coin }) => {
                   {day.label}
                 </SelectButton>
               ))}
-            </div>
           </>
         )}   
         </div>
-       </div>
       </div>
-    </ThemeProvider>
+   </div>
   );
 };
 

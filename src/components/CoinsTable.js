@@ -20,7 +20,7 @@ import {
  TableCell
   } from "@material-ui/core";
 import { CryptoState } from '../CryptoContext';
-import CoinInfos from './CoinInfos';
+// import CoinInfos from './CoinInfos';
 
 export function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -89,7 +89,7 @@ export const CoinsTable = () => {
         >
           Cryptocurrency Prices by Market Cap
         </Typography> */}
-      <CoinInfos/>
+      {/* <CoinInfos/> */}
         <TextField
           label="Search For a Crypto Currency.."
           variant="outlined"
