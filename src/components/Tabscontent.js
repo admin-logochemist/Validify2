@@ -15,6 +15,7 @@ import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
 import Swap from './Swap'
+import Portfolio from './Portfolio'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -60,7 +61,7 @@ function Tabscontent() {
                         {/* <div className='col-lg-3'></div> */}
                         <Swap />
                         <CoinInfos/>
-                        <div className='col-lg-3'></div>
+                        <Portfolio/>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="ETH">
                         <div className='own_flex_class'>
