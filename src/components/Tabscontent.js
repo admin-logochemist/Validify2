@@ -1,5 +1,4 @@
 // import 'font-awesome/css/font-awesome.min.css'
-import $ from "jquery";
 import wallet_icon from '../images/wallet-solid.svg'
 import BitCoin from '../components/BitCoin';
 import bitcoin_icon from '../images/bitcoin.png'
@@ -8,6 +7,7 @@ import Tethercoin_icon from '../images/tether.png'
 import Bnb_icon from '../images/bnb.svg'
 import Usd_icon from '../images/usd-coin.png'
 import TradingSnaps from './TradingSnaps';
+import CoinInfos from './CoinInfos';
 import Trades from './Trades';
 import { useWeb3 } from '@3rdweb/hooks'
 
@@ -53,7 +53,7 @@ function Tabscontent() {
                         <div role="tabpanel" class="tab-pane fade in active" id="bit">
                           <div className='own_flex_class'>
                           {/* <BitCoin/> */}
-                        
+                          <CoinInfos/>
                           <CoinsTable/>
                           
                           {/* <TradingSnaps/> */}
