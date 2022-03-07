@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/CoinPages.css'
 import BTC_icon from '../images/btcpage.png'
 import { BTCSingleCoin } from "../config/api";
-import { numberWithCommas } from "./CoinsTable";
+// import { numberWithCommas } from "./CoinsTable";
 import { CryptoState } from "../CryptoContext";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -35,6 +35,7 @@ console.log('data', data)
                 coins?.market_data.current_price[currency.toLowerCase()]
               }
               {
+
                 coins?.market_data?.ath_change_percentage?.usd}%
               
              </span>
@@ -43,15 +44,16 @@ console.log('data', data)
          <div className="market_cup">
            <h3>
              <span className="one">Market Cap</span>
-             <span className="two">$ { coins?.market_data.market_cap[currency.toLowerCase()]
+             
+             <span className="two"><span style={{color:"green"}}>$</span> { coins?.market_data.market_cap[currency.toLowerCase()]
                   .toString()
-                  .slice(0, -6)} BN</span>
+                  .slice(0, -6)} <span style={{color:"green"}}>M</span></span>
            </h3>
          </div>
          <div className="market_cup">
            <h3>
              <span className="one">Current Price</span>
-             <span className="two">$  {
+             <span className="two"><span style={{color:"green"}}>$</span>  {
                 coins?.market_data.current_price[currency.toLowerCase()]
               }</span>
              <button className="buy_now">Buy Now</button>
