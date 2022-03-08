@@ -82,10 +82,39 @@
         margin: 10px 5px;
     }
 }
+@media only screen and (max-width: 501px){
+    .containerr h3 {
+        font-size: 20px;
+    }
+    .card_slider img{
+        height: 25px;
+    }
+    .card_slider span{
+        font-size: 12px;
+    }
+    .card_slider h3{
+        font-size: 13px;
+        margin-top: 50px;
+    }
+    .card_slider price{
+        font-size: 13px;
+    }
+    .card_slider percantage {
+        margin-right: 8px;
+        padding: 3px 6px;
+        font-size: 13px;
+    }
+}
 @media only screen and (max-width: 480px){
     .containerr {
         width: 90%;
         margin: auto !important;
         margin-top: 0px !important;
+    }
+}
+@media only screen and (max-width: 376px){
+    .slick-slide {
+        width: 2% !important;
+        margin: 10px 5px;
     }
 }

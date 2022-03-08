@@ -129,17 +129,19 @@ const CoinInfos = ({ id }) => {
             },
           }}
         /> */}
+        <div className="data_btns">
           {chartDays.map((day) => (
-            <SelectButton 
-              key={day.value}
-              onClick={() => {setDays(day.value);
-                setflag(false);
-              }}
-              selected={day.value === days}
-            >
-              {day.label}
-            </SelectButton>
-          ))}
+                <SelectButton 
+                  key={day.value}
+                  onClick={() => {setDays(day.value);
+                    setflag(false);
+                  }}
+                  selected={day.value === days}
+                >
+                  {day.label}
+              </SelectButton>
+            ))}
+        </div>
       </>
     )} 
     <CoinsTable/>  

@@ -37,10 +37,10 @@ function Tabscontent() {
                   </div>
                 </>
       ):(
-                <>
+                <div className='vollet_msg'>
                   <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
                   <p> Wallet is not Connected</p>
-                </>
+                </div>
       )}
           
             </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .own_flex_classes{
     display: flex;
     flex-direction: row;
@@ -35,7 +36,7 @@
     display: inline-block;
     margin: 0px 10px;
 }
-.stronge_head span.border_span::before{
+/* .stronge_head span.border_span::before{
     content: "";
     position: absolute;
     left: 0%;
@@ -45,7 +46,7 @@
     z-index: 99999;
     border: 1px solid white;
     top: -22px;
-}
+} */
 .img_left_side_box span.two{
     font-size: 13px;
     color: white;

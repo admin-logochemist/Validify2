@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .header_banner{
     background-image: url(../images/bannerAd.png);
     height: 100px;
@@ -56,4 +57,53 @@ marquee .animation::before{
 .coin_names .value{
     margin-left: 20px;
     color: rgb(124 157 124);
+}
+
+.Footer_banner{
+    background-image: url(../images/bannerAd.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    float: right;
+    width: 86%;
+    margin-top: 10px;
+    background-size: contain;
+}
+.dash_footer{
+    background-color: #0a1728;
+    float: right;
+    margin-top: 39px;
+    width: 100%;
+}
+.dash_footer span{
+    display: block;
+    color: white;
+    z-index: 999;
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+@media screen and (max-width:1500px){
+    .Footer_banner{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:1200px){
+    .dash_footer{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:993px){
+    .Footer_banner{
+        height: 70px;
+    }
+}
+@media screen and (max-width:501px){
+    .Footer_banner{
+        height: 35px;
+    }
 }

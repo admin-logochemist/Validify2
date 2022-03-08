@@ -239,7 +239,11 @@ ul.nav-tabs li a img{
     padding-top: 12px;
     padding-left: 20px;
 }
- div.col-lg-6 > span {
+.data_btns {
+    display: flex;
+    justify-content: center;
+}
+.data_btns > span {
     display: inline-block !important;
     padding: 10px 42px !important;
     margin: 0px 10px;
@@ -251,7 +255,7 @@ ul.nav-tabs li a img{
     font-family: 'Lato', sans-serif !important;
     font-weight: 600 !important;
 }
-div.col-lg-6 > span:hover{
+.data_btns span:hover{
     background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     transition: all .5s linear;
     color: #443107;
@@ -419,14 +423,44 @@ div.col-lg-6 > span:hover{
 }
 @media screen and (max-width:500px){
     .img_left_side_box {
-        flex-direction: column;
         justify-content: center;
-    }.own_flex_classes {
-        justify-content: center;
+    }
+    .img_left_side_box > img {
+        padding: 10px;
+    }
+    .own_flex_classes {
+        display: flex;
         flex-direction: column;
+    }
+    .market_cup h3{
+        display: unset !important;
     }
     .market_cup{
         justify-content: center;
+    }
+    .market_cup h3 span.one {
+        margin: 0 10px;
+    }
+    .buy_now {
+        padding: 7px 14px;
+        margin: 0 10px;
+    }
+    .MuiTable-root {
+        width: 100% !important;
+        display: block !important;
+        overflow-x: scroll !important;
+    }
+    .MuiTableCell-body > img {
+        object-fit: contain;
+        height: 22px;
+        position: relative;
+        top: 7px;
+    }
+    th.MuiTableCell-body div span{
+        font-size: 14px !important;
+    }
+    td.MuiTableCell-alignRight {
+        font-size: 12px;
     }
 }
 @media only screen and (max-width: 479px){
@@ -437,5 +471,58 @@ div.col-lg-6 > span:hover{
         height: 50px;
         margin-top: 16px;
     }
-
+    .data_btns {
+        flex-direction: row;
+        align-items: center;
+    }
+    .data_btns > span {
+        padding: 6px 13px !important;
+        margin: 0px 5px;
+        font-weight: 500 !important;
+        font-size: 10px;
+    }
+    .left-right-head {
+        font-size: 19px;
+    }
+    .comming_text {
+        font-size: 17px;
+    }
+   button.MuiPaginationItem-root {
+        color: gold;
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+        height: 25px;
+    }
+    .MuiPagination-root{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 24px 0 !important;
+        padding: unset !important;
+    }
+}
+@media only screen and (max-width: 376px){
+    .img_left_side_box .stronge_head {
+        font-size: 11px;
+        line-height: 0;
+    }
+    .img_left_side_box span.two {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .img_left_side_box span.three {
+        font-size: 10px;
+        color: green;
+        letter-spacing: 1px;
+    }
+    .market_cup h3 span.one {
+        font-size: 11px;
+    }
+    .market_cup h3 span.two {
+        font-size: 10px;
+    }
+    .dash_footer span {
+        font-size: 13px;
+    }
 }

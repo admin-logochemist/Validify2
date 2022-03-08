@@ -45,7 +45,7 @@ console.log('data', data)
              <span className="one">Market Cap</span>
              <span className="two">$ { coins?.market_data.market_cap[currency.toLowerCase()]
                   .toString()
-                  .slice(0, -6)}</span>
+                  .slice(0, -6)} BN</span>
            </h3>
          </div>
          <div className="market_cup">

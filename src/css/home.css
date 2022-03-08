@@ -141,6 +141,7 @@
     color: #404040;
     line-height: 49px;
     padding-right: 125px;
+    text-align: left;
 }
 .token_sec_text .para_text{
     font-family: 'Lato', sans-serif;
@@ -374,6 +375,10 @@
         padding: 10px 14px;
         margin: 11px 6px;
         font-size: 13px;
+    }
+    .side_menu #menu-btn:checked ~ .close-btn {
+        position: relative;
+        left: 0;
     }
     *, ::after, ::before {
         box-sizing: border-box;
