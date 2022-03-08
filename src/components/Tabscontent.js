@@ -8,8 +8,10 @@ import Usd_icon from '../images/usd-coin.png'
 import  Xrp from '../images/xrp-symbol-white-128.png'
 import LUNA from '../images/luna1557227471663.png'
 import SOL from '../images/solana (1).png'
-import cardano from '../images/cardano (1).png'
-import avax from '../images/coin-round-red.png'
+import rond from '../images/elrond-egld-logo-487BD97FF9-seeklogo.com.png'
+import tron from '../images/415-4156138_trx-tron-hd-png-download.png'
+// import cardano from '../images/cardano (1).png'
+// import avax from '../images/coin-round-red.png'
 import CoinInfos from './CoinInfos';
 import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -54,8 +56,8 @@ function Tabscontent() {
                         <li role="presentation"><a href="#xrp" aria-controls="messages" role="tab" data-toggle="tab">< img src={Xrp}/> XRP </a></li>
                         <li role="presentation"><a href="#luna" aria-controls="messages" role="tab" data-toggle="tab">< img src={LUNA}/> LUNA </a></li>
                         <li role="presentation"><a href="#sol" aria-controls="messages" role="tab" data-toggle="tab">< img src={SOL}/> SOL </a></li>
-                        <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={cardano}/> Cardano </a></li>
-                        <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={avax}/> AVALANCHE </a></li>
+                        <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={rond}/> Elrond-erd </a></li>
+                        <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={tron}/> Tron </a></li>
                     </ul>
                     <div class="tab-content tabs container-fluid">
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
