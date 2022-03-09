@@ -31,9 +31,8 @@ const Faq = () => {
 									type="text"
 									className="search"
 									placeholder="Search Your Query"
-								>
-									
-								</input>
+								/>
+								<i className="fa fa-search"></i>
 							</div>
 						</div>
 					</div>

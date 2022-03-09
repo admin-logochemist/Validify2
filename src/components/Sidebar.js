@@ -3,6 +3,8 @@ import '../css/sidebar.css'
 import 'font-awesome/css/font-awesome.min.css'
 import footer_logo from '../images/logoFtr.svg'
 import head_img from '../images/head_img.png'
+import add_one from '../images/side_banner2.png'
+import platform from '../images/3859776.png'
 
 function Sidebar() {
   return (
@@ -38,13 +40,13 @@ function Sidebar() {
                   </ul>
                 </li>
 
-                <li className='li_hover'><i class="fa fa-globe side_icons"></i><a href="#">Whale Tarde</a></li>
-                <li className='li_hover'><i class="fa fa-database side_icons"></i><a href="#">Platforms</a></li>
+                <li className='li_hover'><i class="fa fa-globe side_icons"></i><a href="#">Whale Trade</a></li>
+                <li className='scd_li'><img src={platform}/><a href="#">Platforms</a></li>
 
                 <li>
                   <input type="checkbox" id="scdDrop" />
                   <label for="scdDrop" className="side_mobile-items">
-                    <i class="fa fa-database side_icons"></i>
+                    <i class="fa fa-globe side_icons"></i>
                     <a>Whale Trade  <i className="fa fa-caret-down drop_arrow"></i></a> 
                   </label>
                 
@@ -56,6 +58,11 @@ function Sidebar() {
                   </ul>
                 </li>
 
+                <div className='Add_banner'>
+                    <img src={add_one}/>
+                    <img src={add_one}/>
+                    <img src={add_one}/>
+                </div>
               </ul>
 
               <label for="menu-btn" className="btn menu-btn"><i className="fa fa-bars"></i></label>

@@ -13,11 +13,11 @@ ReactDOM.render(
   supportedChainIds={supportedChainIds}
   connectors={connectors}
   >
-  <BrowserRouter>
+  <HashRouter>
 <CryptoContext>
       <App />
     </CryptoContext>
-  </BrowserRouter>
+  </HashRouter>
   </ThirdwebWeb3Provider>,
   document.getElementById('root')
 );

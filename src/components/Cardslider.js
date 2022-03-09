@@ -42,10 +42,11 @@ class cardslider extends Component {
           }
         },
         {
-          breakpoint: 501,
+          breakpoint: 376,
           settings: {
             slidesToShow: 1,
-            // slidesToScroll: 3,
+            slidesToShow: 1,
+            slidesToScroll: 1,
           }
         },
     ]

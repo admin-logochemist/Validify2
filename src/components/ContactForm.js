@@ -53,53 +53,6 @@ const contactForm = () => {
 					
 				</div>
 			</div>
-			
-			{/* <div className="container-fluid">
-				<div className="row">
-					<div className="col-md-5 col-sm-4 ">
-						<div className="form contact-Horizontal">
-							<h1 className="contact-text">Contact us</h1>
-							<div class="row">
-								<div className="col">
-									<input
-										type="text"
-										className="form-control input-contact"
-										placeholder="First name"
-									/>
-								</div>
-								<div className="col">
-									<input
-										type="text"
-										className="form-control input-contact"
-										placeholder="Last name"
-										aria-label="Last name"
-									/>
-								</div>
-							</div>
-							<div class="row">
-								<div className="col">
-									<input
-										type="text"
-										className="form-control input-contact"
-										placeholder="First name"
-										aria-label="First name"
-									/>
-								</div>
-								<div className="col">
-									<input
-										type="text"
-										className="form-control input-contact"
-										placeholder="Last name"
-										aria-label="Last name"
-									></input>
-								</div>
-							</div>
-							<input  text='text' placeholder=""  className="text-area" />
-						</div>
-						<button type="submit" className="form_btn">Submit</button>
-					</div>
-				</div>
-			</div> */}
 		</section>
 	);
 };
