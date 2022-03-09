@@ -15,6 +15,7 @@ import { CryptoState } from "../CryptoContext";
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart }            from 'react-chartjs-2'
 import { CoinsTable } from "./CoinsTable";
+import Trades from "./Trades";
 const CoinInfos = ({ id }) => {
   
   const [historicData, setHistoricData] = useState();
@@ -144,7 +145,8 @@ const CoinInfos = ({ id }) => {
         </div>
       </>
     )} 
-    <CoinsTable/>  
+    {/* <CoinsTable/>   */}
+    <Trades/>
     </div>
   );
 };

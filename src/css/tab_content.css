@@ -219,7 +219,7 @@ ul.nav-tabs li a img{
     width: 40% !important;
 }
 .col_iframe{
-    width: 55%;
+    width: 100% !important;
     background: hsla(0,0%,100%,.05);
     margin: 10px;
 }
