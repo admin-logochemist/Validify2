@@ -64,7 +64,7 @@ function App() {
          <Route path="PortfolioTracker " element={<PortfolioTracker  />} />
          <Route path="VALIDEFINTTLink " element={<VALIDEFINTTLink />} />
           <Route path="TitanWallet " element={<TitanWallet />} />
-          <Route path="Team " element={<Team />} />
+          <Route path="Team" element={<Team />} />
           <Route path="InvestorRelations" element={<InvestorRelations />} />
           <Route path="Institutional" element={<Institutional />} />
           <Route path="Careers" element={<Careers />} />

@@ -33,7 +33,7 @@ function Footer() {
                 <div className='col-lg-2 col_footer'>
                   <div className='footer'>
                     <h4>ABOUT</h4>
-                    <li><Link to='/Signup'> <a>Team</a></Link> </li>
+                    <li><Link to='/Team'> <a>Team</a></Link> </li>
                     <li><Link to='/Signup'><a>Investor Relations</a></Link></li>
                     <li><Link to='/Signup'><a>Institutional</a></Link></li>
                     <li><Link to='/Signup'><a>Careers</a></Link></li>
@@ -44,7 +44,7 @@ function Footer() {
                 <div className='col-lg-2 col_footer'>
                   <div className='footer'>
                     <h4>LEGAL</h4>
-                    <li><Link to='/Signup'><a>Term of use</a></Link></li>
+                    <li><Link to='/Termofuse'><a>Term of use</a></Link></li>
                     <li><Link to='/Signup'><a>Customer Agreement</a></Link></li>
                     <li><Link to='/Signup'><a>Licenses</a></Link></li>
                     <li><Link to='/Signup'><a>Privacy Policy</a></Link></li>
