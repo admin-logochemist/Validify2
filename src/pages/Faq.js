@@ -28,7 +28,7 @@ const Faq = () => {
 								<label className="" for="exampleInputName2"></label>
 								<input
 									required=""
-									type="password"
+									type="text"
 									className="search"
 									placeholder="Search Your Query"
 								>

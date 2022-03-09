@@ -68,3 +68,14 @@
     display: flex;
      justify-content: center;
 }
+
+@media screen and (max-width:578px) {
+    .ant-tabs-tab-btn {
+        outline: none;
+        transition: all 0.3s !important;
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+    
+}
