@@ -444,6 +444,8 @@ ul.nav-tabs li a img{
     .buy_now {
         padding: 7px 14px;
         margin: 0 10px;
+        display: block;
+        margin: auto;
     }
     .MuiTable-root {
         width: 100% !important;
@@ -464,6 +466,9 @@ ul.nav-tabs li a img{
     }
     .tab .tab-content {
         padding: 0;
+    }
+    .img_left_side_box h3 {
+        line-height: 0.5;
     }
 }
 @media only screen and (max-width: 479px){
