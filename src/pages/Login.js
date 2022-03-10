@@ -10,13 +10,55 @@ export default function Login() {
   return (
     <>     
       <Header />
-      <section className='bg_animation'>
-        <div className='container'>
-            <div className='row'>
-                {/* <div className='co'><Form /></div> */}
-            </div>
-        </div>
-      </section>
+      <section className="contactForm">
+			<div className="container">
+				<div className="row contact-row">
+					<div class="col-md-12">
+						<span class="a-one animate"></span>
+						<span class="a-two animate"></span>
+						<span class="a-three animate"></span>
+						<span class="a-four animate"></span>
+						<span class="a-five animate"></span>
+						<span class="a-six animate"></span>
+						<span class="a-seven animate"></span>
+						<span class="a-eight animate"></span>
+						<span class="a-nine animate"></span>
+						<span class="a-ten animate"></span>
+					</div>
+					<div className="contact-sec">
+                        <form className="contact-form-horizontal">
+                            <span className="cont-heading">Contact Us</span>
+							<div className="custom-flex">
+                            <div className="form-group">
+                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
+                                <input required="" type="text" className="form-control" id="exampleInputEmail1" placeholder='First Name' />
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
+                                <input required="" type="password" className="form-control" placeholder='Last Name'></input>
+                            </div>
+							</div>
+							<div className="custom-flex">
+                            <div className="form-group">
+                                <label className="control-label" for="exampleInputName2"><i className="fa fa-solid fa-envelope"></i></label>
+                                <input required="" type="email" className="form-control" id="exampleInputEmail1" placeholder='Enter Your Email'></input>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-phone mt-2"></i></label>
+                                <input required="" type="number" className="form-control" placeholder='Phone Number'></input>
+                            </div>
+							
+							</div>
+							<div className="msg_box">
+								<textarea name="text" id="" placeholder="discription" className="text-area-form"></textarea>
+								<button className="btn-contact">Submit</button>
+							</div>
+                        </form>
+                    </div>
+					
+				</div>
+			</div>
+		</section>
       <Footer/>
 
          
