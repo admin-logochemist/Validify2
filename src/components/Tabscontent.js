@@ -56,7 +56,7 @@ function Tabscontent() {
                         <li role="presentation"><a href="#xrp" aria-controls="messages" role="tab" data-toggle="tab">< img src={Xrp}/> XRP </a></li>
                         <li role="presentation"><a href="#luna" aria-controls="messages" role="tab" data-toggle="tab">< img src={LUNA}/> LUNA </a></li>
                         <li role="presentation"><a href="#sol" aria-controls="messages" role="tab" data-toggle="tab">< img src={SOL}/> SOL </a></li>
-                        <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={rond}/> Elrond-erd </a></li>
+                        <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={rond}/> Bitshiba </a></li>
                         <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={tron}/> Tron </a></li>
                     </ul>
                     <div class="tab-content tabs container-fluid">
@@ -111,13 +111,13 @@ function Tabscontent() {
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
                         <Swap />
-                        <CoinInfos id="cardano"/>
+                        <CoinInfos id="bitshiba"/>
                         <Portfolio/>
                         <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
                         <Swap />
-                        <CoinInfos id="avalanche-2"/>
+                        <CoinInfos id="tron"/>
                         <Portfolio/>
                         <Swaptwo/>
                         </div>

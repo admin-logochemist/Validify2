@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
-import Form from '../components/Form';
+// import Form from '../components/Form';
 import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import'../css/form.css' 
@@ -27,32 +27,18 @@ export default function Login() {
 					</div>
 					<div className="contact-sec">
                         <form className="contact-form-horizontal">
-                            <span className="cont-heading">Contact Us</span>
-							<div className="custom-flex">
-                            <div className="form-group">
-                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
-                                <input required="" type="text" className="form-control" id="exampleInputEmail1" placeholder='First Name' />
-                            </div>
-                            <div className="form-group">
-                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
-                                <input required="" type="password" className="form-control" placeholder='Last Name'></input>
-                            </div>
-							</div>
-							<div className="custom-flex">
-                            <div className="form-group">
-                                <label className="control-label" for="exampleInputName2"><i className="fa fa-solid fa-envelope"></i></label>
-                                <input required="" type="email" className="form-control" id="exampleInputEmail1" placeholder='Enter Your Email'></input>
-                            </div>
-                            <div className="form-group">
-                                <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-phone mt-2"></i></label>
-                                <input required="" type="number" className="form-control" placeholder='Phone Number'></input>
-                            </div>
-							
-							</div>
-							<div className="msg_box">
-								<textarea name="text" id="" placeholder="discription" className="text-area-form"></textarea>
-								<button className="btn-contact">Submit</button>
-							</div>
+                            <span className="cont-heading">Login Your Account</span>
+                                <div className="form-group">
+                                        <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
+                                        <input required="" type="email" className="form-control" id="exampleInputEmail1" placeholder='Email' />
+                                </div>
+                                <div className="form-group">
+                                    <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
+                                    <input required="" type="password" className="form-control" placeholder='Password'></input>
+                                </div>
+                                <div className="msg_box">
+                                    <button className="btn-contact">Login</button>
+                                </div>
                         </form>
                     </div>
 					
