@@ -1,15 +1,15 @@
 export const chartDays = [
     {
       label: "1 Hours",
-      value: 1,
+      value: 0.166,
     },
     {
       label: "5 Hours",
-      value: 5,
+      value: 0.08,
     },
     {
       label: "12 Hours",
-      value: 12,
+      value: 0.2,
     },
     {
       label: "24 Hours",
