@@ -111,13 +111,13 @@ function Tabscontent() {
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
                         <Swap />
-                        <CoinInfos id="cardano"/>
+                        <CoinInfos id="shiba-inu"/>
                         <Portfolio/>
                         <Swaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
                         <Swap />
-                        <CoinInfos id="avalanche-2"/>
+                        <CoinInfos id="tron"/>
                         <Portfolio/>
                         <Swaptwo/>
                         </div>

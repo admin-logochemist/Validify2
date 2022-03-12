@@ -14,3 +14,5 @@ export const TrendingCoins = (currency) =>
   `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=USD&days=${days}`;
   export const BTCSingleCoin = (id) =>
   `https://api.coingecko.com/api/v3/coins/${id}`;
+  export const HistoricalChartss = (id,days = 365) =>
+  `https://api.coingecko.com/api/v3/coins/tron/market_chart?vs_currency=USD&days=365`;
