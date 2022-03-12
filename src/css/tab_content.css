@@ -239,14 +239,12 @@ ul.nav-tabs li a img{
     padding-top: 12px;
     padding-left: 20px;
 }
-.data_btns {
-    display: flex;
-    justify-content: center;
-}
+/* .data_btns {
+} */
 .data_btns > span {
     display: inline-block !important;
     padding: 10px 42px !important;
-    margin: 0px 10px;
+    margin: 7px 10px;
     width: auto;
     color: white;
     background: unset;

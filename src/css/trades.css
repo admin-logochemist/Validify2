@@ -123,3 +123,29 @@
     text-align: center;
   }
   
+@media screen and (max-width:678px){
+    .table_trades table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0.3em;
+      overflow-x: scroll;
+      display: block;
+    }
+    .table_trades th {
+      font-size: 10px;
+    }
+    .table_trades td {
+      font-size: 13px;
+    }
+}
+@media screen and (max-width:500px){
+  .table_trades .flex_box_table button {
+    padding: 5px 14px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+}
+
+/* .hamza #hamza{
+  display: none;
+} */
