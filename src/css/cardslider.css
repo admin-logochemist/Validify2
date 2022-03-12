@@ -20,6 +20,7 @@
     padding: 0;
     border-radius: 11px;
 }
+.main_slider{}
 .card_slider{
     padding-left: 16px
 }
@@ -114,7 +115,8 @@
 }
 @media only screen and (max-width: 376px){
     .slick-slide {
-        width: 2% !important;
-        margin: 10px 5px;
+        width: 8.5% !important;
+        margin: 10px 15px;
+        border-radius: 6px;
     }
 }
