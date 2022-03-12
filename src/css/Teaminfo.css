@@ -195,14 +195,6 @@
        margin-top: 0;
 
     }
-    .row>* {
-        flex-shrink: 0;
-        width: 90%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * .3);
-        padding-left: calc(var(--bs-gutter-x) * 3);
-        margin-top: var(--bs-gutter-y);
-    }
     .our-team .pic{
         display: inline-block;
         width: 50%;

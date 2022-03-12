@@ -26,6 +26,7 @@ class cardslider extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
       slidesToScroll: 1,
+      draggable: true,
       responsive: [
         {
           breakpoint: 1200,
@@ -39,14 +40,20 @@ class cardslider extends Component {
           settings: {
             slidesToShow: 2,
             // slidesToScroll: 3,
+            draggable: true,
           }
         },
         {
           breakpoint: 376,
           settings: {
-            slidesToShow: 1,
-            slidesToShow: 1,
             slidesToScroll: 1,
+            infinite: false,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            // centerMode: true,
+            variableWidth: true,
+            draggable: true,
+
           }
         },
     ]

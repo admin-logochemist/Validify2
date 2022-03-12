@@ -30,7 +30,7 @@ const contactForm = () => {
                             </div>
                             <div className="form-group">
                                 <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-user mt-2"></i></label>
-                                <input required="" type="password" className="form-control" placeholder='Last Name'></input>
+                                <input required="" type="text" className="form-control" placeholder='Last Name'></input>
                             </div>
 							</div>
 							<div className="custom-flex">
@@ -40,7 +40,7 @@ const contactForm = () => {
                             </div>
                             <div className="form-group">
                                 <label className="control-label" for="exampleInputName2"><i class="fa fa-solid fa-phone mt-2"></i></label>
-                                <input required="" type="number" className="form-control" placeholder='Phone Number'></input>
+                                <input required="" type="text" className="form-control" placeholder='Phone Number'></input>
                             </div>
 							
 							</div>
