@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import  Valliam_img from '../images/valliam.jpg'
 import Kristiana_img from '../images/KRISTIANA.jpg'
 import Steve_img from '../images/STEVE.jpg'
-import Miranda_img from '../images/MIRANDA.jpg'
 
 
 export default function Teaminfo() {
