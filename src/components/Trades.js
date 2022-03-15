@@ -13,11 +13,11 @@ function Trades() {
         <table>
             <thead>
                 <th>Date</th>
-                <th>Token</th>
+                <th>To</th>
                 <th>Type</th>
-                <th>Price USD</th>
-                <th>Amount UTP</th>
-                <th>Token Price</th>
+                <th>From</th>
+                <th>Gass Used</th>
+                <th>Total Price</th>
             </thead>
             <tbody>
                 <tr>
