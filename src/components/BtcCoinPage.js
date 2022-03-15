@@ -47,7 +47,7 @@ export default function BtcCoinPage({id}) {
              
              <span className="two"><span style={{color:"green"}}>$</span> { coins?.market_data.market_cap[currency.toLowerCase()]
                   .toString()
-                  .slice(0, -6)} <span style={{color:"green"}}>M</span></span>
+                  .slice(0, -8)} <span style={{color:"green"}}>B</span></span>
            </h3>
          </div>
          <div className="market_cup">
