@@ -27,5 +27,9 @@ export const chartDays = [
       label: "1 Year",
       value: 365,
     },
+    {
+      label: "1 Min",
+      value: 0.0140,
+    },
   ];
   
