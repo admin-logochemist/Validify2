@@ -12,10 +12,10 @@ export default function BtcCoinPage({id}) {
   const { currency, symbol } = CryptoState();
   const fetchCoin = async () => {
     const { data } = await axios.get(BTCSingleCoin(id));
-console.log('data', data)
+
     setCoin(data);
   };
-  console.log('star', coins);
+ 
 
   useEffect(() => {
     fetchCoin();
