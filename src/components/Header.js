@@ -48,8 +48,8 @@ function Header() {
                             <li><Link to="/"><img src={drop_img_five}/>TRON</Link></li>
                         </ul>
                     </li>
-                    <li className='menu-links login display_none'><Link to="/Login">SIGNIN</Link></li>
-                    <li className='menu-links login display_none sign_up'><Link to="/">SIGNUP</Link></li>  
+                    {/* <li className='menu-links login display_none'><Link to="/Login">SIGNIN</Link></li> */}
+                    {/* <li className='menu-links login display_none sign_up'><Link to="/">SIGNUP</Link></li>   */}
                 </ul>
                 <label htmlFor="menu-btn" className="btn menu-btn"><i className="fa fa-bars"></i></label>
               </div>
