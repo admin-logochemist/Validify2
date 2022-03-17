@@ -58,7 +58,7 @@ function Footer() {
                     <img src={footer_logo}/>
                     <p>We're committed to creating financial freedom by making valid and secure tools accessible to everyone.</p>
                     <ul>
-                      <li><a><i class="fa fa-facebook-f"></i></a></li>
+                      <li><a href='https://business.facebook.com/Validefi-106728818516821'><i class="fa fa-facebook-f"></i></a></li>
                       <li><a><i class="fa fa-twitter"></i></a></li>
                       <li><a><i class="fa fa-instagram"></i></a></li>
                       <li><a><i class="fa fa-linkedin"></i></a></li>
