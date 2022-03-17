@@ -8,10 +8,10 @@ function Iframe(props) {
     );
   }
 function BitCoin() {
-    const iframe = '<iframe id="tradingview_1bbc4" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_1bbc4&amp;symbol=BTCUSD&amp;interval=D&amp;hidesidetoolbar=1&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=F1F3F6&amp;studies=%5B%5D&amp;hideideas=1&amp;theme=Dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=validefi.global&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=BTCUSD" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>';
+    const iframe = '<iframe src="https://widget.onramper.com?color=266677&apiKey=pk_test_x5M_5fdXzn1fxK04seu0JgFjGsu7CH8lOvS9xZWzuSM0" height="595px" width="440px" title="Onramper widget" frameborder="0" allow="accelerometer; autoplay; camera; gyroscope; payment" style="box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);"> <a href="https://widget.onramper.com" target="_blank">Buy crypto</a> </iframe>'
     return (
             <div className='col_iframe scd_width'>
-                <h3 className='trandingview'>TradingView Chart</h3>
+   
                 <Iframe iframe={iframe} />
             </div>
     )
