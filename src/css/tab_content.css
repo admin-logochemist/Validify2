@@ -92,7 +92,7 @@ ul.nav-tabs li a img{
     margin-top: 20px;
     padding-top: 30px;
 }
-.fade:not(.show) {
+.container-fluid .fade:not(.show) {
     opacity: 1;
 }
 .vollet_btn {

@@ -16,9 +16,27 @@ import CoinInfos from './CoinInfos';
 import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
-import Swap from './Swap'
+import BTCSwap from './BTCSwap'
 import Portfolio from './Portfolio'
-import Swaptwo from './Swaptwo'
+import BTCSwaptwo from './BTCSwaptwo'
+import ETHSwap from './ETHSwap'
+import ETHSwaptow from './ETHSwaptow'
+import TETSwap from './TETSwap'
+import TETSwaptwo from './TETSwaptwo'
+import BNBSwap from './BNBSwap'
+import BNBSwaptow from './BNBSwaptwo'
+import USDSwap from './USDSwap'
+import USDSwaptow from './USDSwaptwo'
+import XRPSwap from './XRPSwap'
+import XRPSwaptow from './XRPSwaptwo'
+import LUNASwap from './LUNASwap'
+import LUNASwaptow from './LUNASwaptwo'
+import SOLSwap from './SOLSwap'
+import SOLSwaptow from './SOLSwaptwo'
+import BITSwap from './BITSwap'
+import BITSwaptow from './BITSwaptwo'
+import TRONSwap from './TRONSwap'
+import TRONSwaptow from './TRONSwaptwo'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -62,65 +80,64 @@ function Tabscontent() {
                     <div class="tab-content tabs container-fluid">
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
                         {/* <div className='col-lg-3'></div> */}
-                        <Swap />
-                      
+                        <BTCSwap />
                         <CoinInfos id="bitcoin"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <Portfolio />
+                        <BTCSwaptwo />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="ETH">
-                        <Swap />
-                        <CoinInfos id="ethereum"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <ETHSwap />
+                        <CoinInfos id="ethereum" />
+                        <Portfolio />
+                        <ETHSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="tetherss">
-                        <Swap />
-                        <CoinInfos id="tether"/>
+                        <TETSwap />
+                        <CoinInfos id="tether" />
                         <Portfolio/>
-                        <Swaptwo/>
+                        <TETSwaptwo/>
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="bnb">
-                        <Swap />
-                        <CoinInfos id="binancecoin"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <BNBSwap />
+                        <CoinInfos id="binancecoin" />
+                        <Portfolio />
+                        <BNBSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="usd">
-                        <Swap />
+                        <USDSwap />
                         <CoinInfos id="usd-coin"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <Portfolio />
+                        <USDSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="xrp">
-                        <Swap />
+                        <XRPSwap />
                         <CoinInfos id="ripple"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <Portfolio />
+                        <XRPSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="luna">
-                        <Swap />
-                        <CoinInfos id="terra-luna"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <LUNASwap />
+                        <CoinInfos id="terra-luna" />
+                        <Portfolio />
+                        <LUNASwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="sol">
-                        <Swap />
-                        <CoinInfos id="solana"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <SOLSwap />
+                        <CoinInfos id="solana" />
+                        <Portfolio />
+                        <SOLSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
-                        <Swap />
-                        <CoinInfos id="bitshiba"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <BITSwap />
+                        <CoinInfos id="bitshiba" />
+                        <Portfolio />
+                        <BITSwaptow />
                         </div>
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
-                        <Swap />
-                        <CoinInfos id="tron"/>
-                        <Portfolio/>
-                        <Swaptwo/>
+                        <TRONSwap />
+                        <CoinInfos id="tron" />
+                        <Portfolio />
+                        <TRONSwaptow />
                         </div>
                     </div>
                 </div>
