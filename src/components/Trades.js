@@ -39,7 +39,7 @@ const [trades, setTrades] = useState([])
             <tbody>
          
             {trades.slice(0,10).map((post,key) =>{
-                             return(
+            return(
                 <tr key={key}>
                     <td>{moment.unix(post?.timeStamp).format("MMMM Do YYYY, h:mma")}</td>
                     <td>{post?.to.slice(0, 17)}</td>
@@ -47,9 +47,8 @@ const [trades, setTrades] = useState([])
                     <td>${post?.gas}</td>
                     <td>${post?.gasPrice.slice(0,-5)}</td>
                 </tr>
-     )
-
-    })}
+                )
+            })}
             </tbody>
         </table>
 
