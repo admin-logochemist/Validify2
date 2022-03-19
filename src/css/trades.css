@@ -45,6 +45,9 @@
   border-collapse: separate;
   border-spacing: 0 0.3em;
   overflow: hidden;
+  height: 600px;
+  display: block;
+  overflow-y: scroll;
 }
 
 .table_trades thead {
