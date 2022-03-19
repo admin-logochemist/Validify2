@@ -405,10 +405,6 @@ ul.nav-tabs li a img{
 }
 }
 @media screen and (max-width:568px){
-    .responsive_col{
-        padding: 0;
-        margin: 0;
-    }
     .side_menu .wrapper .btn {
         font-size: 20px;
         cursor: pointer;

@@ -147,6 +147,16 @@
     font-size: 12px;
     border-radius: 6px;
 }
+
+  .table_trades td {
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .table_trades table {
+    height: 430px;
+   }
 }
 
 /* .hamza #hamza{

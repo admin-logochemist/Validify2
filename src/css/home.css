@@ -409,6 +409,36 @@
         margin: 9px auto;
         display: block;
     }
+    .serviceBox {
+        margin: 0 0 0px !important;
+    }
+    .serviceBox {
+        padding: 89px 5px 8px 0px !important;
+    }
+    .service-icon {
+        color: #fff;
+        font-size: 65px;
+        background-color: #c19636;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 2px;
+        border-radius: 68px;
+        display: block;
+        position: relative;
+        top: 65px;
+    }
+    .service-icon span > img {
+        height: 40px;
+    }    
+    .serviceBox .title {
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .serviceBox .description {
+        line-height: 18px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width: 480px){
     .banner_h4 {
@@ -438,6 +468,31 @@
     .col_large{
         width: 100%;
         margin: auto;
+    }
+    .service-icon {
+        font-size: 52px;
+        width: 100px;
+        height: 100px;
+        top: 55px;
+    }
+    .serviceBox {
+        padding: 66px 5px 8px 0px !important;
+    }
+    .subscripe h4 {
+        font-size: 15px;
+    }
+    .subscripe p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .subcripe_field > div > input {
+        height: 50px;
+    }
+    .btn_one {
+        margin: 9px 0 !important;
+    }
+    .subcripe_field .btn_banner .btn_one {
+        padding: 12px 30px;
     }
 }
 @media only screen and (max-width: 990px){

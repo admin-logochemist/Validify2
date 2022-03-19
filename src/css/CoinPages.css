@@ -157,3 +157,9 @@ div.col-lg-6 > canvas{
     font-family: 'Lato', sans-serif;
     font-weight: 600;
 }
+
+@media screen and (max-width: 400px) {
+    div.col-lg-6 > canvas{
+        height: 33vh !important;
+    }
+}
