@@ -15,7 +15,7 @@ export default function Swaptwo() {
                   </ul>
                   <div class="tab-content tabs">
                       <div role="tabpanel" class="tab-pane fade in active" id="Swap_one">
-                         <h3>Hamza</h3>
+                         <h3>Swap</h3>
                       </div>
                       <div role="tabpanel" class="tab-pane fade" id="Buy_one">
                         <BitCoin/>
