@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import {  HistoricalCharts } from "../config/api";
 import { Line } from "react-chartjs-2";
+
 import BtcCoinPage from './BtcCoinPage';
 import {
   CircularProgress,
@@ -9,6 +10,7 @@ import {
   // makeStyles,
   // ThemeProvider,
 } from "@material-ui/core";
+
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
@@ -16,7 +18,7 @@ import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart }            from 'react-chartjs-2'
 import { CoinsTable } from "./CoinsTable";
 import Trades from "./Trades";
-import BitCoin from "./BitCoin";
+
 const CoinInfos = ({ id }) => {
   
   const [historicData, setHistoricData] = useState();
@@ -56,19 +58,13 @@ const CoinInfos = ({ id }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [days]);
 
-      const darkTheme = createTheme({
-        palette: {
-          primary: {
-            main: "#fff",
-          },
-          type: "dark",
-        },
-      });
+    
       return (
     // <ThemeProvider theme={darkTheme}>
 
     // </ThemeProvider>
     <div className="col-lg-6 responsive_col">
+
       <BtcCoinPage id={id}/>
     {!historicData | flag===false ? (
       <CircularProgress
@@ -78,6 +74,7 @@ const CoinInfos = ({ id }) => {
       />
     ) : (
       <>
+      
       <Line style={{color:"white"}}
       data={{
         labels:historicData.map(coin=>{

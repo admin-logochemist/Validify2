@@ -15,7 +15,7 @@ export default function Swap() {
                   </ul>
                   <div class="tab-content tabs">
                       <div role="tabpanel" class="tab-pane fade in active" id="Swap">
-                         <h3>Hamza</h3>
+                         <h3 style={{color:"gold",fontSize:32}}>Swap</h3>
                       </div>
                       <div role="tabpanel" class="tab-pane fade" id="Buy">
                         <BitCoin/>

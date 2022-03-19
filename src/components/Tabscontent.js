@@ -63,6 +63,7 @@ function Tabscontent() {
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
                         {/* <div className='col-lg-3'></div> */}
                         <Swap />
+                      
                         <CoinInfos id="bitcoin"/>
                         <Portfolio/>
                         <Swaptwo/>
