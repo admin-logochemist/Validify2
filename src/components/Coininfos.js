@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {  HistoricalCharts } from "../config/api";
+import {  HistoChart } from "../config/api";
 import { Line } from "react-chartjs-2";
 
 import BtcCoinPage from './BtcCoinPage';
@@ -14,9 +14,10 @@ import {
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
-import { Chart as ChartJS } from 'chart.js/auto'
-import { Chart }            from 'react-chartjs-2'
-import { CoinsTable } from "./CoinsTable";
+import Chart from "react-google-charts";
+// import { Chart as ChartJS } from 'chart.js/auto'
+// import { Chart }            from 'react-chartjs-2'
+// import { CoinsTable } from "./CoinsTable";
 import Trades from "./Trades";
 
 const CoinInfos = ({ id }) => {
@@ -48,9 +49,10 @@ const CoinInfos = ({ id }) => {
   // const classes = useStyles();
 
       const fetchHistoricData = async () => {
-        const { data } = await axios.get(HistoricalCharts(id,days));
+        const { data } = await axios.get(HistoChart(id,days));
         setflag(true);
-        setHistoricData(data.prices);
+
+        setHistoricData(data);
       };
   
       useEffect(() => {
@@ -58,13 +60,25 @@ const CoinInfos = ({ id }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [days]);
 
-    
+      const marketdata =()=>{
+        let data = [["day", "a", "b","c","d"]]
+        historicData.map(coin=>{
+                
+          let date=new Date(coin[0]);
+         
+            data.push([date.toLocaleDateString(),coin[1],coin[2],coin[3],coin[4]])
+      }
+      
+        )
+        return data
+      }
+        
       return (
     // <ThemeProvider theme={darkTheme}>
 
     // </ThemeProvider>
     <div className="col-lg-6 responsive_col">
-
+{console.log("History",historicData)}
       <BtcCoinPage id={id}/>
     {!historicData | flag===false ? (
       <CircularProgress
@@ -74,16 +88,27 @@ const CoinInfos = ({ id }) => {
       />
     ) : (
       <>
-      
-      <Line style={{color:"white"}}
+        <Chart
+                width={'100%'}
+                height={450}
+                chartType="CandlestickChart"
+                loader={<div>Loading Chart</div>}
+                data={marketdata()}
+                options={{
+                  legend: 'none',
+                }}
+                rootProps={{ 'data-testid': '1' }}
+              />  
+      {/* <Line style={{color:"white"}}
       data={{
         labels:historicData.map(coin=>{
+          
           let date=new Date(coin[0]);
           let time =
           date.getHours() > 12
             ? `${date.getHours() - 12}:${date.getMinutes()} PM`
             : `${date.getHours()}:${date.getMinutes()} AM`;
-            return days === 1 ? time : date.toLocaleDateString();
+            return days === 1 ? time : date.toLocaleDateString()
         }),
         datasets: [
           {
@@ -100,7 +125,7 @@ const CoinInfos = ({ id }) => {
           },
         },
       }}
-      />
+      /> */}
         <div className="data_btns">
           {chartDays.map((day) => (
                 <SelectButton 
