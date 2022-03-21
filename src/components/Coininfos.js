@@ -89,16 +89,25 @@ const CoinInfos = ({ id }) => {
     ) : (
       <>
         <Chart
-                width={'100%'}
-                height={450}
-                chartType="CandlestickChart"
-                loader={<div>Loading Chart</div>}
-                data={marketdata()}
-                options={{
-                  legend: 'none',
-                }}
-                rootProps={{ 'data-testid': '1' }}
-              />  
+            width={'100%'}
+            height={450}
+          chartType="CandlestickChart"
+          loader={
+            <div className="chart_animation">
+              <h2>Loading...</h2>
+            </div>
+          }
+          data={marketdata()}
+          options={{
+            legend: "show",
+            // bar: { groupWidth: "100%" }, // Remove space between bars.
+            candlestick: {
+              fallingColor: { strokeWidth: 5,  fill: "red" }, // red
+              risingColor: { strokeWidth: 2, fill: "green" } // green
+            }
+          }}
+          rootProps={{ 'data-testid': '1' }}
+        />  
       {/* <Line style={{color:"white"}}
       data={{
         labels:historicData.map(coin=>{
