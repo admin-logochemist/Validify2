@@ -3,6 +3,14 @@
 .margin-top{
     margin-top: 50px;
 }
+.chart_animation h2{
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 50px auto;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
 .own_container{
     max-width: unset;
     float: left;
