@@ -66,7 +66,7 @@ const CoinInfos = ({ id }) => {
                 
           let date=new Date(coin[0]);
          
-            data.push([date.toLocaleDateString(),coin[1],coin[2],coin[3],coin[4]])
+            data.push([date.toLocaleDateString(),coin[2],coin[1],coin[4],coin[3]])
       }
       
         )
@@ -89,25 +89,22 @@ const CoinInfos = ({ id }) => {
     ) : (
       <>
         <Chart
-            width={'100%'}
-            height={450}
-          chartType="CandlestickChart"
-          loader={
-            <div className="chart_animation">
-              <h2>Loading...</h2>
-            </div>
-          }
-          data={marketdata()}
-          options={{
-            legend: "show",
-            // bar: { groupWidth: "100%" }, // Remove space between bars.
-            candlestick: {
-              fallingColor: { strokeWidth: 5,  fill: "red" }, // red
-              risingColor: { strokeWidth: 2, fill: "green" } // green
+            chartType="CandlestickChart"
+            loader={
+              <div className="chart_animation">
+                <h2>Loading...</h2>
+              </div>
             }
-          }}
-          rootProps={{ 'data-testid': '1' }}
-        />  
+            data={marketdata()}
+            options={{
+              legend: 'none',
+              candlestick: {
+                fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
+                risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
+              }
+            }}
+            rootProps={{ 'data-testid': '1' }}
+          />  
       {/* <Line style={{color:"white"}}
       data={{
         labels:historicData.map(coin=>{
