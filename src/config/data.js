@@ -1,35 +1,19 @@
 export const chartDays = [
     {
-      label: "1 Hours",
-      value: 0.166,
-    },
-    {
-      label: "5 Hours",
-      value: 0.08,
-    },
-    {
-      label: "12 Hours",
-      value: 0.2,
-    },
-    {
-      label: "24 Hours",
+      label: "24H",
       value: 1,
     },
     {
-      label: "30 Days",
+      label: "30D",
       value: 30,
     },
     {
-      label: "3 Months",
+      label: "3M",
       value: 90,
     },
     {
-      label: "1 Year",
+      label: "1Y",
       value: 365,
-    },
-    {
-      label: "1 Min",
-      value: 0.0140,
     },
   ];
   

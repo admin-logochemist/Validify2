@@ -39,7 +39,7 @@ function Home() {
             <div className='col-lg-6 video'>
               <RetPlayer 
                 controls 
-                autoplay 
+                autoplay="true" 
                 url={video}/>
             </div>
           </div>

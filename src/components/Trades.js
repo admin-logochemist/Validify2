@@ -19,13 +19,11 @@ function Trades() {
     const [trades, setTrades] = useState([])
  
   return (
-    <div className='table_trades mt-5 mb-3'>
+    <div className='table_trades'>
         {console.log("trades",trades)}
       
             <div className='flex_box_table'>
                <h3>Trades</h3>
-               <button className='buy_btn'>Buy</button>
-               <button className='sale_btn'>Sale</button>
             </div>
                      
                                
@@ -51,9 +49,7 @@ function Trades() {
                     )
                 })}
            </tbody>
-        </table>
-
-                     
+        </table>        
     </div>
   )
 }

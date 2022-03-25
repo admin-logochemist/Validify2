@@ -45,11 +45,19 @@
   border-collapse: separate;
   border-spacing: 0 0.3em;
   overflow: hidden;
-  height: 600px;
+  height: 555px;
   display: block;
   overflow-y: scroll;
 }
-
+.table_trades table::-webkit-scrollbar {
+  width: 10px;
+}
+.table_trades table::-webkit-scrollbar-track {
+  background: #242526;
+}
+.table_trades table::-webkit-scrollbar-thumb {
+  background: #3A3B3C;
+}
 .table_trades thead {
  visibility: hidden;
  position: absolute;

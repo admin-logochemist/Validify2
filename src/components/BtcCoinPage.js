@@ -45,7 +45,7 @@ export default function BtcCoinPage({id}) {
            <h3>
              <span className="one">Market Cap</span>
              
-             <span className="two"><span style={{color:"green"}}>$</span> { coins?.market_data.market_cap[currency.toLowerCase()]
+             <span className="two margin-top-two"><span style={{color:"green"}}>$</span> { coins?.market_data.market_cap[currency.toLowerCase()]
                   .toString()
                   .slice(0, -8)} <span style={{color:"green"}}>B</span></span>
            </h3>

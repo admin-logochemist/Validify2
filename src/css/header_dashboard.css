@@ -73,6 +73,9 @@ marquee .animation::before{
     float: right;
     margin-top: 39px;
     width: 100%;
+    padding: 0;
+    position: relative;
+    clear: both;
 }
 .dash_footer span{
     display: block;

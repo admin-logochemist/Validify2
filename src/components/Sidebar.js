@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/sidebar.css'
 import 'font-awesome/css/font-awesome.min.css'
-import footer_logo from '../images/logoFtr.svg'
+import logo from '../images/logoFtr.svg'
 import head_img from '../images/head_img.png'
 import add_one from '../images/side_banner2.png'
 import platform from '../images/3859776.png'
@@ -14,9 +14,9 @@ function Sidebar() {
               <input type="radio" name="slider" id="menu-btn" />
               <input type="radio" name="slider" id="close-btn" />
               <ul className="side-links">
-                <img src={footer_logo} className="side_img_logo" />
+                <img src={logo} className="side_img_logo" />
                 <img src={head_img} className="side_img" />
-                <li className='li_hover'><i class="fa fa-tachometer side_icons"></i><a href="#"> Dashboard</a></li>
+                <li className='li_hover active'><i class="fa fa-tachometer side_icons"></i><a href="#"> Dashboard</a></li>
                 <li className='li_hover'><i class="fa fa-line-chart side_icons"></i><a href="#">Charts</a></li>
 
                 <li>

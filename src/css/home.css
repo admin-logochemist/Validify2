@@ -376,10 +376,6 @@
         margin: 11px 6px;
         font-size: 13px;
     }
-    .side_menu #menu-btn:checked ~ .close-btn {
-        position: relative;
-        left: 0;
-    }
     *, ::after, ::before {
         box-sizing: border-box;
         overflow-x: clip;

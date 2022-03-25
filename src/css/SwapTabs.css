@@ -18,9 +18,10 @@ ul.swap-tabs li{
     text-align: center;
     display: block;
     width: 50%;
+    /* color: #443107; */
 }
 .swaps .swap-tabs li a{
-    color: #fff;
+    color: white;
     background: transparent;
     font-size: 15px;
     font-weight: 600;
@@ -29,15 +30,21 @@ ul.swap-tabs li{
     position: relative;
     z-index: 1;
     transition: all 0.3s ease 0s;
-    /* width: 171px;
-    display: block;*/
     line-height: 3;
 }
-
-.swaps .swap-tabs li.active,
+.swaps .swap-tabs li.active a,
 .swaps .swap-tabs li:hover,
 .swaps .swap-tabs li.active{
-    color: black;
+    color: #443107;
+    background: transparent;
+    border: none;
+    background-color: #F4E286;
+    display: block;
+}
+.swaps .swap-tabs li a.active,
+.swaps .swap-tabs li a:hover,
+.swaps .swap-tabs li a.active{
+    color: #443107;
     background: transparent;
     border: none;
     background-color: #F4E286;
