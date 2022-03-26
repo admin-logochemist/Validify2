@@ -143,12 +143,17 @@ nav.main_nav{
     background: rgba(128, 128, 128, 0.411);
   }
   .wrapper .btn{
-    font-size: 31px;
+    font-size: 23px;
     cursor: pointer;
     display: none;
     border: 1px solid hsla(0,0%,100%,.1);
-    padding: 0px 20px;
+    padding: 4px 17px;
     color: hsla(0,0%,100%,.55);
+    border-radius: 46px;
+    top: -21px;
+    position: relative;
+    background: white;
+    color: gray;
   }
   .wrapper .btn.close-btn{
     position: absolute;
@@ -291,6 +296,9 @@ nav.main_nav{
   @media screen and (max-width:400px){
     nav.main_nav .wrapper .logo a > img{
       height: 40px;
+    }
+    .wrapper .nav-links {
+      max-width: 300px;
     }
   }
   @media screen and (max-width:350px){
