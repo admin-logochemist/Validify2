@@ -171,7 +171,7 @@
     margin: 3px 5px;
 }
 .exchange_links a > img{
-    height: 58px;
+    /* height: 58px; */
     width: 100%;
     object-fit: fill;
     margin: 4px;
