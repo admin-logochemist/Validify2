@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import '../css/trades.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-function Trades() {
+import { BscScan } from "@jpmonette/bscscan";
+function TradesETH() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://localhost:9000/users?currency=BTC/USDT').then((res)=>res.json().then(re=>{setRes(re)
+        fetch('http://localhost:9000/users?currency=ETH/USDT').then((res)=>res.json().then(re=>{setRes(re)
     
     }))
     }
@@ -41,7 +41,7 @@ function Trades() {
                     <th>Type</th>
                     <th>Price USD</th>
                     <th>Amount USD</th>
-                    <th>Total BTC</th>
+                    <th>Total ETH</th>
                     <th>Marker</th>
                 </thead>
                 <tbody>         
@@ -63,4 +63,4 @@ function Trades() {
   )
 }
 
-export default Trades
+export default TradesETH

@@ -53,6 +53,15 @@ import BITSwap from './BITSwap'
 import BITSwaptow from './BITSwaptwo'
 import TRONSwap from './TRONSwap'
 import TRONSwaptow from './TRONSwaptwo'
+import TradesETH from './TradesETH'
+import TradesTether from './TradesTether'
+import TradesBNB from './TradesBNB'
+import TradesUSDC from './TradesUSDC'
+import TradesXRP from './TradesXRP'
+import TradesTerra from './TradesTerra'
+import TradesSol from './TradesSol'
+import TradesShiba from './TradesShiba'
+import TradesTron from './TradesTron'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -122,7 +131,7 @@ function Tabscontent() {
                             <Portfolio />
                             <ETHSwaptow />
                             <div className='col-lg-6 trades_col mt-5'>
-                              <Trades/>
+                              <TradesETH/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
@@ -141,7 +150,7 @@ function Tabscontent() {
                             <Portfolio />
                             <TETSwaptwo />
                             <div className='col-lg-6 trades_col mt-5'>
-                              <Trades/>
+                              <TradesTether/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
@@ -160,7 +169,7 @@ function Tabscontent() {
                             <Portfolio />
                             <BNBSwaptow />
                             <div className='col-lg-6 trades_col mt-5'>
-                              <Trades/>
+                              <TradesBNB/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
@@ -179,7 +188,7 @@ function Tabscontent() {
                               <Portfolio />
                               <USDSwaptow />
                               <div className='col-lg-6 trades_col mt-5'>
-                                <Trades/>
+                                <TradesUSDC/>
                               </div>
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
@@ -198,7 +207,7 @@ function Tabscontent() {
                             <Portfolio />
                             <XRPSwaptow />
                             <div className='col-lg-6 trades_col mt-5'>
-                                  <Trades/>
+                                  <TradesXRP/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
@@ -217,7 +226,7 @@ function Tabscontent() {
                             <Portfolio />
                             <LUNASwaptow />
                             <div className='col-lg-6 trades_col mt-5'>
-                                  <Trades/>
+                                  <TradesTerra/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
@@ -236,7 +245,7 @@ function Tabscontent() {
                               <Portfolio />
                               <SOLSwaptow />
                               <div className='col-lg-6 trades_col mt-5'>
-                                  <Trades/>
+                                  <TradesSol/>
                               </div>
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
@@ -255,7 +264,7 @@ function Tabscontent() {
                               <Portfolio />
                               <BITSwaptow />
                               <div className='col-lg-6 trades_col mt-5'>
-                                  <Trades/>
+                                  <TradesShiba/>
                               </div>
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
@@ -274,7 +283,7 @@ function Tabscontent() {
                             <Portfolio />
                             <TRONSwaptow />
                             <div className='col-lg-6 trades_col mt-5'>
-                                  <Trades/>
+                                  <TradesTron/>
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
