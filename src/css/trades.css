@@ -44,10 +44,10 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.3em;
-  overflow: hidden;
+  overflow: scroll;
   height: 555px;
   display: block;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .table_trades table::-webkit-scrollbar {
   width: 10px;
@@ -132,16 +132,22 @@
     letter-spacing: 2px;
     text-transform: capitalize;
     text-align: center;
+    text-align: left;
   }
+  /* .table_trades table:nth-child(2) > thead:nth-child(1) > th:nth-child(3),
+  .table_trades table:nth-child(2) > thead:nth-child(1) > th:nth-child(4){
+    display: block;
+    width: 173px;
+  } */
   
 @media screen and (max-width:678px){
-    .table_trades table {
+    /* .table_trades table {
       width: 100%;
       border-collapse: separate;
       border-spacing: 0 0.3em;
       overflow-x: scroll;
       display: block;
-    }
+    } */
     .table_trades th {
       font-size: 10px;
     }

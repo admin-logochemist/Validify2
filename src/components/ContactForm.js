@@ -45,7 +45,7 @@ const contactForm = () => {
 							
 							</div>
 							<div className="msg_box">
-								<textarea name="text" id="" placeholder="discription" className="text-area-form"></textarea>
+								<textarea name="text" id="" placeholder="description" className="text-area-form"></textarea>
 								<button className="btn-contact">Submit</button>
 							</div>
                         </form>

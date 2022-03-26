@@ -102,13 +102,13 @@ function Tabscontent() {
                           </div>
                           <Portfolio />
                           <BTCSwaptwo />
-                          <div className='col-lg-12 responsive_col mt-5'>
+                          <div className='col-lg-6 trades_col mt-5'>
                               <Trades/>
                           </div>
                           <div className='col-lg-6 responsive_col mt-5'>
                             <BullSays/>
                           </div>
-                          <div className='col-lg-6 responsive_col mt-5'>
+                          <div className='col-lg-12 responsive_col mt-5'>
                             <Trendinghr/>
                           </div>
                         </div>
@@ -127,7 +127,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -165,7 +165,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -184,7 +184,7 @@ function Tabscontent() {
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-6 responsive_col mt-5'>
+                              <div className='col-lg-12 responsive_col mt-5'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -203,7 +203,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -241,7 +241,7 @@ function Tabscontent() {
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-6 responsive_col mt-5'>
+                              <div className='col-lg-12 responsive_col mt-5'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -260,7 +260,7 @@ function Tabscontent() {
                               <div className='col-lg-6 responsive_col mt-5'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-6 responsive_col mt-5'>
+                              <div className='col-lg-12 responsive_col mt-5'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -279,7 +279,7 @@ function Tabscontent() {
                             <div className='col-lg-6 responsive_col mt-5'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-6 responsive_col mt-5'>
+                            <div className='col-lg-12 responsive_col mt-5'>
                               <Trendinghr/>
                             </div>
                         </div>

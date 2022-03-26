@@ -6,7 +6,7 @@ import { BscScan } from "@jpmonette/bscscan";
 function Trades() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://localhost:9000/users?currency=ETH/USDT').then((res)=>res.json().then(re=>{setRes(re)
+        fetch('http://localhost:9000/users?currency=BTC/USDT').then((res)=>res.json().then(re=>{setRes(re)
     
     }))
     }
@@ -30,52 +30,36 @@ function Trades() {
  
   return (
     <div className='table_trades'>
-        {console.log("post",resf)}
-            {/* {resf.map((post,key) =>{
-            return(
-                
-                <div key={key} style={{display:'flex',flexDirection:'row'}}><p>{post.datetime}</p>
-                <p style={{paddingRight:10}}>{post.side}</p>
-                <p style={{paddingRight:10}}>{post.price}</p>
-                <p style={{paddingRight:10}}>1.0</p>
-                <p style={{paddingRight:10}}>{post.cost}</p>
-                <p style={{paddingRight:10}}>{post.id}</p>
-                </div>
-        
-        )
-    })}
-       */}
-      
+        {console.log("post",resf)}      
             <div className='flex_box_table'>
                <h3>Trades</h3>
             </div>
-                     
-                               
-           
-        <table>
-            <thead>
-                <th>Date</th>
-                <th>Type</th>
-                <th>Price USD</th>
-                <th>Amount USD</th>
-                <th>Total ETH</th>
-                <th>Marker</th>
-            </thead>
-            <tbody>         
-                {resf.slice(0,10).map((post,key) =>{
-                return(
-                    <tr key={key}>
-                        <td>{post.datetime}</td>
-                        <td>{post.side}</td>
-                        <td>${post.price}</td>
-                        <td>${post.amount}</td>
-                        <td>{post.cost}</td>
-                        <td>{post.id}</td>
-                    </tr>
-                    )
-                })}
-           </tbody>
-        </table>        
+
+            {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
+            <table>
+                <thead>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Price USD</th>
+                    <th>Amount USD</th>
+                    <th>Total ETH</th>
+                    <th>Marker</th>
+                </thead>
+                <tbody>         
+                    {resf.slice(0,10).map((post,key) =>{
+                    return(
+                        <tr key={key}>
+                            <td>{post.datetime}</td>
+                            <td>{post.side}</td>
+                            <td>${post.price}</td>
+                            <td>${post.amount}</td>
+                            <td>{post.cost}</td>
+                            <td>{post.id}</td>
+                        </tr>
+                        )
+                    })}
+            </tbody>
+            </table>        
     </div>
   )
 }
