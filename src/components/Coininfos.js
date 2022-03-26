@@ -40,7 +40,7 @@ const [flag,setflag] = useState(false);
       
     return (
         <>
-        {console.log("History",historicData)}
+     
             <BtcCoinPage id={id}/> 
         </>
           );
