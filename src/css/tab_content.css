@@ -31,6 +31,10 @@ ul.nav-tabs li a img{
     border: none;
     padding: 10px 0;
     background: #0D203C;
+    justify-content: center;
+    /* overflow-x: scroll;
+    overflow-y: hidden;
+    display: block ruby !important; */
  }
 
 .tab .nav-tabs li a{
