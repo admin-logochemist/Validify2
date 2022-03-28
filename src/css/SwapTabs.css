@@ -1,7 +1,6 @@
 .swaps{
     border-radius: 15px;
 }
-
 .swaps .nav-tabs{
     margin: 0;
     border: none;
@@ -13,12 +12,10 @@ ul.swap-tabs{
     padding: 0px 0;
     margin: 0 15px;
 }
-
 ul.swap-tabs li{
     text-align: center;
     display: block;
     width: 50%;
-    /* color: #443107; */
 }
 .swaps .swap-tabs li a{
     color: white;
@@ -63,11 +60,13 @@ ul.swap-tabs li{
 .swaps .tab-content .fade:not(.show) {
     opacity: 1;
 }
+
 @media only screen and (max-width: 479px){
     .swaps .swap-tabs li{
         width: 100%;
         text-align: center;
     }
-
-    .swaps .swap-tabs li a{ margin: 0 0 10px; }
+    .swaps .swap-tabs li a{
+        margin: 0 0 10px;
+    }
 }

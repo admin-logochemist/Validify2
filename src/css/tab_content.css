@@ -3,6 +3,12 @@
 .margin-top{
     margin-top: 50px;
 }
+.own_container .row .margin-top > div{
+    float: revert;
+}
+.label-39Xi8p6T{
+ display: none !important;
+}
 .chart_animation h2{
     color: white;
     letter-spacing: 1px;
@@ -25,7 +31,9 @@ ul.nav-tabs li a img{
     border-radius: 30px;
     margin-right: 10px;
 }
-.tab{ font-family: 'Lato', sans-serif; }
+.tab{ 
+    font-family: 'Lato', sans-serif;
+}
 
 .tab .nav-tabs{ 
     border: none;
@@ -35,11 +43,10 @@ ul.nav-tabs li a img{
     /* overflow-x: scroll;
     overflow-y: hidden;
     display: block ruby !important; */
- }
+}
 
 .tab .nav-tabs li a{
     color: white;
-    /* background: #fff; */
     font-size: 19px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
@@ -47,7 +54,6 @@ ul.nav-tabs li a img{
     padding: 8px 25px 10px;
     margin: 0 10px 0 0;
     border: none;
-    /* border-top: 3px solid #0670bc; */
     border-radius: 0;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) inset;
     overflow: hidden;
@@ -233,7 +239,6 @@ ul.nav-tabs li a img{
 .col_iframe{
     width: 100% !important;
     background: hsla(0,0%,100%,.05);
-    /* margin: 10px 0; */
 }
 .tv-embed-widget-wrapper__body {
     height: 555px !important;
@@ -284,25 +289,15 @@ ul.nav-tabs li a img{
     display: none;
 }
 
-.chart_animation h2{
+/* .chart_animation h2{
     color: white;
     letter-spacing: 1px;
     text-align: center;
     margin: 50px auto;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
-}
+} */
 
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(1) > rect:nth-child(1),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(2) > rect:nth-child(2),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(3) > rect:nth-child(3),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(4) > rect:nth-child(4),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(5) > rect:nth-child(5),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(6) > rect:nth-child(6),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(7) > rect:nth-child(7),
-#reactgooglegraph-2 > div > div:nth-child(1) > div > svg > g:nth-child(3) > g:nth-child(2) > g:nth-child(8) > rect:nth-child(8){
-    fill: transparent;
-}
 @media only screen and (max-width: 1500px){
     .own_container {
         width: 100%;
@@ -317,13 +312,7 @@ ul.nav-tabs li a img{
     }
     .tab .tab-content {
         position: relative;
-        /* width: 80%; */
     }
-
-    /* .header_banner {
-        width: 95%;
-        background-size: contain;
-    } */
     marquee {
         width: 100%;
     }
@@ -336,6 +325,7 @@ ul.nav-tabs li a img{
         justify-content: center;
     }
 }
+
 @media only screen and (max-width: 1200px){
     .col_iframe {
         width: 100%;
@@ -368,6 +358,7 @@ ul.nav-tabs li a img{
         overflow: scroll !important;
     }
 }
+
 @media screen and (max-width:992px){
     .connected_btn {
         padding: 2px 18px;
@@ -380,6 +371,7 @@ ul.nav-tabs li a img{
         width: 85%;
     }
 }
+
 @media screen and (max-width:885px){
     .trades_col{
         flex: unset !important;
@@ -390,6 +382,7 @@ ul.nav-tabs li a img{
         width: 100% !important;
     }
 }
+
 @media screen and (max-width:778px){
     .dash_search_box input{
         width: 100%;
@@ -397,12 +390,10 @@ ul.nav-tabs li a img{
     .vollet_btn button {
         margin-top: 20px;
     }
-    
-.connected_btn {
-    padding: 2px 18px;
-    margin-top: 20px;
-}
-    
+    .connected_btn {
+        padding: 2px 18px;
+        margin-top: 20px;
+    }
     .dash_search_box input{
         display: block;
         margin: auto;
@@ -432,6 +423,7 @@ ul.nav-tabs li a img{
         top: 8px;
     }
 }
+
 @media screen and (max-width:650px){
     .display_two{
         width: 100% !important;
@@ -441,6 +433,7 @@ ul.nav-tabs li a img{
         margin-bottom: 20px !important;
     }
 }
+
 @media screen and (max-width:568px){
     .header_banner {
         height: 66px;
@@ -449,6 +442,7 @@ ul.nav-tabs li a img{
         object-fit: contain;
     }
 }
+
 @media screen and (max-width:500px){
     .img_left_side_box {
         justify-content: center;
@@ -499,6 +493,7 @@ ul.nav-tabs li a img{
         line-height: 0.5;
     }
 }
+
 @media only screen and (max-width: 479px){
     .tab .nav-tabs li a{
          margin: 0 0 10px;
@@ -538,6 +533,7 @@ ul.nav-tabs li a img{
         padding: unset !important;
     }
 }
+
 @media only screen and (max-width: 376px){
     .dash_footer span {
         font-size: 13px;
