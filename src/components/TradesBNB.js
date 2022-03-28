@@ -43,7 +43,7 @@ function TradesBNB() {
                     <th>Price USD</th>
                     <th>Amount USD</th>
                     <th>Total BNB</th>
-                    <th>Marker</th>
+                    <th>Maker</th>
                 </thead>
                 <tbody>         
                     {resf.slice(0,10).map((post,key) =>{
