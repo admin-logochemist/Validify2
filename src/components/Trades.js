@@ -37,8 +37,9 @@ function Trades() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
             <table>
                 <thead>
+                <th>Pair</th>
                     <th>Date</th>
-                    <th>Type</th>
+                    <th>Type</th>           
                     <th>Price USD</th>
                     <th>Amount USD</th>
                     <th>Total BTC</th>
@@ -48,8 +49,9 @@ function Trades() {
                     {resf.slice(0,10).map((post,key) =>{
                     return(
                         <tr key={key}>
+                            <td>{post.symbol}</td>
                             <td>{(post.datetime).replace('T','..').slice(0, -5)}</td>
-                            <td>{post.side}</td>
+                            <td>{post.side}</td>                  
                             <td>${post.price}</td>
                             <td>${post.amount}</td>
                             <td>{post.cost}</td>
