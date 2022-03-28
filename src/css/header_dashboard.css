@@ -4,11 +4,12 @@
     height: 100px;
     background-repeat: no-repeat;
     float: right;
-    width: 86%;
+    width: 87%;
     margin-top: 10px;
     background-size: contain;
 }
-marquee {
+
+/* marquee {
     margin-top: 20px;
     background: #1E222D;
     padding: 5px 86px 20px px;
@@ -36,7 +37,7 @@ marquee .animation::before{
     background: #5e5e5e;
     top: 3px;
     left: -11px;
-}
+} */
 .coin_names img{
     height: 28px;
     display: inline-flex;
@@ -64,7 +65,7 @@ marquee .animation::before{
     height: 100px;
     background-repeat: no-repeat;
     float: right;
-    width: 86%;
+    width: 87%;
     margin-top: 10px;
     background-size: contain;
 }
