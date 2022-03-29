@@ -64,6 +64,7 @@ import TradesTerra from './TradesTerra'
 import TradesSol from './TradesSol'
 import TradesShiba from './TradesShiba'
 import TradesTron from './TradesTron'
+import { TVChartContainer } from './TVChartContainer'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -111,6 +112,7 @@ function Tabscontent() {
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
                           <BTCSwap />
                           <div className='col-lg-9 responsive_col'>
+                            <TVChartContainer/>
                             <CoinInfos id="bitcoin"/>
                             <BTCCoin/>
                           </div>
