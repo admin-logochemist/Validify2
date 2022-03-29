@@ -37,9 +37,9 @@ function Trades() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
             <table>
                 <thead>
-                <th>Pair</th>
+                      <th>Pair</th>
                     <th>Date</th>
-                    <th>Type</th>           
+                    <th>Type</th>
                     <th>Price USD</th>
                     <th>Amount USD</th>
                     <th>Total BTC</th>
