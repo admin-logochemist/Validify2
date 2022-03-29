@@ -38,28 +38,30 @@ function TradesBNB() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
             <table>
                 <thead>
+                <th>Pair</th>
                     <th>Date</th>
-                    <th>Type</th>
-                    <th>Price USD</th>
-                    <th>Amount USD</th>
-                    <th>Total BNB</th>
-                    <th>Marker</th>
+                    <th>Type</th>           
+                    <th className='transform'>Price USD</th>
+                    <th className='transform'>Amount USD</th>
+                    <th className='transform'>Total BTC</th>
+                    <th>Maker</th>
                 </thead>
                 <tbody>         
                     {resf.slice(0,10).map((post,key) =>{
                     return(
                         <tr key={key}>
-                            <td>{(post.datetime).replace('T','..').slice(0, -5)}</td>
-                            <td>{post.side}</td>
+                            <td>{post.symbol}</td>
+                            <td className='date_table'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
+                            <td>{post.side}</td>                  
                             <td>${post.price}</td>
                             <td>${post.amount}</td>
                             <td>{post.cost}</td>
-                            <td>{post.id}</td>
+                            <td className='maker_table'>{post.id}</td>
                         </tr>
                         )
                     })}
             </tbody>
-            </table>        
+            </table>           
     </div>
   )
 }
