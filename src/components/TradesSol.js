@@ -38,7 +38,7 @@ function TradesSol() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
             <table>
                 <thead>
-                      <th>Pair</th>
+                    <th>Pair</th>
                     <th>Date</th>
                     <th>Type</th>           
                     <th className='transform'>Price USD</th>
@@ -46,36 +46,36 @@ function TradesSol() {
                     <th className='transform'>Total BTC</th>
                     <th>Maker</th>
                 </thead>
-                <tbody>         
-                    {resf.slice(0,10).map((post,key) =>{
-                        if(post.side=="buy"){
+                    <tbody>         
+                        {resf.slice(0,10).map((post,key) =>{
+                            if(post.side=="buy"){
 
                         
-                    return(
-                        <tr key={key}>
-                            <td className='green'>{post.symbol}</td>
-                            <td className='date_table green'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
-                            <td className='green'>{post.side}</td>                  
-                            <td className='green'>${post.price}</td>
-                            <td className='green'>${post.amount}</td>
-                            <td className='green'>{post.cost}</td>
-                            <td className='green maker_table'>{post.id}</td>
-                        </tr>
-                        )}else{
-                            return(
-                                <tr key={key}>
-                                    <td className='red'>{post.symbol}</td>
-                                    <td className='date_table red'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
-                                    <td className='red'>{post.side}</td>                  
-                                    <td className='red'>${post.price}</td>
-                                    <td className='red'>${post.amount}</td>
-                                    <td className='red'>{post.cost}</td>
-                                    <td className='maker_table red'>{post.id}</td>
-                                </tr>
+                        return(
+                            <tr key={key}>
+                                <td className='green'>{post.symbol}</td>
+                                <td className='date_table green'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
+                                <td className='green'>{post.side}</td>                  
+                                <td className='green'>${post.price}</td>
+                                <td className='green'>${post.amount}</td>
+                                <td className='green'>{post.cost}</td>
+                                <td className='green maker_table'>{post.id}</td>
+                            </tr>
+                            )}else{
+                                return(
+                                    <tr key={key}>
+                                        <td className='red'>{post.symbol}</td>
+                                        <td className='date_table red'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
+                                        <td className='red'>{post.side}</td>                  
+                                        <td className='red'>${post.price}</td>
+                                        <td className='red'>${post.amount}</td>
+                                        <td className='red'>{post.cost}</td>
+                                        <td className='maker_table red'>{post.id}</td>
+                                    </tr>
                                 )
-                        }
-                    })}
-            </tbody>
+                            }
+                        })}
+                </tbody>
             </table>          
     </div>
   )

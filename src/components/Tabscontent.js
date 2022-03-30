@@ -295,7 +295,7 @@ function Tabscontent() {
                             </div>
                             <div className='col-lg-6 responsive_col mt-5'>
                               <Trendinghr/>
-                            </div>
+                            </div> 
                         </div>
                         
                     </div>
