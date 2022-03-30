@@ -112,7 +112,7 @@ function Tabscontent() {
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
                           <BTCSwap />
                           <div className='col-lg-9 responsive_col'>
-                            <TVChartContainer/>
+                            {/* <TVChartContainer/> */}
                             <CoinInfos id="bitcoin"/>
                             <BTCCoin/>
                           </div>

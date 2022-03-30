@@ -11,7 +11,7 @@ function getLanguageFromURL() {
          
 export class TVChartContainer extends React.PureComponent { 
 	static defaultProps = {
-		symbol: "0xac51066d7bec65dc4589368da368b212745d63e8", 
+		 symbol: "0xac51066d7bec65dc4589368da368b212745d63e8", 
 		interval: '15',
 		containerId: 'tv_chart_container',
 		// datafeedUrl: 'https://demo_feed.tradingview.com',

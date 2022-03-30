@@ -40,10 +40,10 @@ function TradesSol() {
                 <thead>
                       <th>Pair</th>
                     <th>Date</th>
-                    <th>Type</th>           
+                    <th>Type</th>    
+                    <th className='transform'>Amount USD</th>       
                     <th className='transform'>Price USD</th>
-                    <th className='transform'>Amount USD</th>
-                    <th className='transform'>Total BTC</th>
+                    <th className='transform'>Total SOL</th>
                     <th>Maker</th>
                 </thead>
                 <tbody>         
@@ -57,8 +57,8 @@ function TradesSol() {
                             <td className='date_table green'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
                             <td className='green'>{post.side}</td>                  
                             <td className='green'>${post.price}</td>
-                            <td className='green'>${post.amount}</td>
-                            <td className='green'>{post.cost}</td>
+                            <td className='green'>{post.amount}</td>
+                            <td className='green'>${post.cost}</td>
                             <td className='green maker_table'>{post.id}</td>
                         </tr>
                         )}else{
