@@ -62,12 +62,12 @@ marquee .animation::before{
 
 .Footer_banner{
     background-image: url(../images/bannerAd.png);
-    height: 100px;
     background-repeat: no-repeat;
     float: right;
-    width: 87%;
+    width: 100%;
     margin-top: 10px;
-    background-size: contain;
+    background-size: cover;
+    height: 13vh;
 }
 .dash_footer{
     background-color: #0a1728;
@@ -89,6 +89,19 @@ marquee .animation::before{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
+}
+@media screen and (max-width:1780px){
+    .Footer_banner{
+        height: 100px;
+        background-repeat: no-repeat;
+        float: unset !important;
+        width: 90%;
+        background-size: contain;
+        margin: 20px auto auto auto !important;
+        display: flex;
+        position: relative;
+        top: 16px;
+    }
 }
 @media screen and (max-width:1500px){
     .Footer_banner{

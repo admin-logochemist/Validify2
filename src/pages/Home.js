@@ -12,7 +12,8 @@ import head_img from '../images/logoIcon.svg'
 import chain from '../images/portfolio.svg'
 import multichain from '../images/Icon_awesome-coins.svg'
 import titan from '../images/crypto-wallet.svg'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 AOS.init();
 
 function Home() {
@@ -32,14 +33,16 @@ function Home() {
                   </div>
                   <div className='btn_banner'>
                     <button className='btn_one'>Get a Token</button>
-                    <button className='btn_two'>Read More</button>
+                    <button className='btn_two'><Link to="/About"><a>Read More</a></Link></button>
                   </div>
                 </div>
             </div>
             <div className='col-lg-6 video'>
               <RetPlayer 
-                controls 
+                playing="playing"
+                preload="true"
                 autoplay="true" 
+                controls="true"
                 url={video}/>
             </div>
           </div>
@@ -73,19 +76,17 @@ function Home() {
                       <br/>
                       <br/>
                       Instead VALIDEFI takes a completely unique approach and offers
-                      its holders a share in the profitability of the platform thru a completely unique staking and tokenomic system. Unlike typical reflection 
+                      its holders a share in the profitability of the platform thru a completely custom staking and tokenomic system. Unlike typical reflection 
                       rewards tokens valid Holders receive a monthly payout on its PSP (profit sharing platform) that is paid in the form of BUSD Stablecoin.
                   </p>
                   <div className='btn_banner'>
-                    <button className='btn_one'>Read More</button>
+                    <button className='btn_one scd_btn'><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank' >Whitepaper</a></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
        </section>
-
-
 
        <section>
           <div className="container-fluid custom_conatiner">
@@ -111,7 +112,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <button className='btn_one services_btn'>Launch App</button>
+                           <button className='btn_one services_btn scd_color'><Link to="/Dashboard">Launch App</Link></button>
                         </div>
                     </div>
                 </div>
@@ -146,14 +147,13 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <button className='btn_one services_btn'>Launch App</button>
+                            <Link to='/Signup'><button className='btn_one services_btn'> Launch App </button></Link>
                         </div>
                     </div>
                 </div>
             </div>
           </div>
        </section>
-       
 
        <section className='section'>
           <div className='container-fluid custom_conatiner'>
@@ -177,7 +177,6 @@ function Home() {
              </div>
           </div>
        </section>
-
        <Footer />
     </div>
   )

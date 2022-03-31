@@ -37,7 +37,7 @@ function TradesSol() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
             <table>
                 <thead>
-                      <th>Pair</th>
+                    <th>Pair</th>
                     <th>Date</th>
                     <th>Type</th>    
                     <th className='transform'>Amount USD</th>       
@@ -45,9 +45,9 @@ function TradesSol() {
                     <th className='transform'>Total SOL</th>
                     <th>Maker</th>
                 </thead>
-                <tbody>         
-                    {resf.slice(0,10).map((post,key) =>{
-                        if(post.side=="buy"){
+                    <tbody>         
+                        {resf.slice(0,10).map((post,key) =>{
+                            if(post.side=="buy"){
 
                         
                     return(
@@ -72,9 +72,9 @@ function TradesSol() {
                                     <td className='maker_table red'>{post.id}</td>
                                 </tr>
                                 )
-                        }
-                    })}
-            </tbody>
+                            }
+                        })}
+                </tbody>
             </table>          
     </div>
   )
