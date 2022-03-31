@@ -46,9 +46,9 @@ function Footer() {
                 <div className='col-lg-2 col_footer'>
                   <div className='footer'>
                     <h4>LEGAL</h4>
-                    <li><Link to='/Termofuse'><a>Term of use</a></Link></li>
+                    <li><Link to='/Signup'><a>Term of use</a></Link></li>
                     <li><Link to='/Signup'><a>Customer Agreement</a></Link></li>
-                    <li><Link to='/Signup'><a>Licenses</a></Link></li>
+                    <li><Link to='/TextPdf'><a>Licenses</a></Link></li>
                     <li><Link to='/Signup'><a>Privacy Policy</a></Link></li>
                     <li><Link to='/Signup'><a>Promotions</a></Link></li>
                   </div>

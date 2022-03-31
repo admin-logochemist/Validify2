@@ -35,6 +35,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import Promotions from './pages/Promotions'
 import CoinPage from "./pages/CoinPage";
 import WhaleTrade from "./pages/WhaleTrade";
+import TextPdf from "./pages/TextPdf";
 
 
 
@@ -51,6 +52,7 @@ function App() {
        <Route path="USDT" element={<USDT />} /> */}
        {/* <Route path="Tron" element={<Tron />} /> */}
        <Route path="WhaleTrade" element={<WhaleTrade />} />
+       <Route path="TextPdf" element={<TextPdf />} />
        <Route path="About" element={<About />} />
        <Route path="Faq" element={<Faq />} />
        <Route path="Contact" element={<Contact />} />
