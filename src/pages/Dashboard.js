@@ -10,12 +10,14 @@ function Dashboard() {
 
 
   return (
+    <>
       <div className="container-fluid">
-        <Sidebar />
-        <Dashheader />
-        <Tabscontent/>
-        <DashFooter/>
+          <Sidebar />
+          <Dashheader />
+          <Tabscontent/>
       </div>
+      <DashFooter/>
+    </>
   )
 }
 
