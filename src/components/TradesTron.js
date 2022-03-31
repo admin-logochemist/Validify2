@@ -6,7 +6,7 @@ import { BscScan } from "@jpmonette/bscscan";
 function TradesTron() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://localhost:9000/users?currency=TRX/USDT').then((res)=>res.json().then(re=>{setRes(re)
+        fetch('http://23.23.147.168:8080/users?currency=TRX/USDT').then((res)=>res.json().then(re=>{setRes(re)
     
     }))
     }
