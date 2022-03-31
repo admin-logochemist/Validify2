@@ -6,14 +6,13 @@ function WhaleTrade() {
   return (
       <>
           <section className='bannerAdds_whale_trade'></section>
-          {/* <div className='container-fluid'>
+          <div className='container-fluid'>
             <div className='row'>
                 <div className='col-12'>
+                  <PriceTickers />
                 </div>
             </div>
-          </div> */}
-                <PriceTickers />
-
+          </div>
           <DashFooter/>
       </>
   )
