@@ -2,11 +2,11 @@ import React from 'react'
 import '../css/header.css'
 import logo from '../images/logo.svg'
 import side_logo from '../images/logoFtr.svg'
-import drop_img_one from '../images/bitcoin.png'
-import drop_img_two from '../images/ethereum.png'
-import drop_img_three from '../images/tether.png'
-import drop_img_four from '../images/binance-coin.png'
-import drop_img_five from '../images/tron.png'
+// import drop_img_one from '../images/bitcoin.png'
+// import drop_img_two from '../images/ethereum.png'
+// import drop_img_three from '../images/tether.png'
+// import drop_img_four from '../images/binance-coin.png'
+// import drop_img_five from '../images/tron.png'
 import 'font-awesome/css/font-awesome.min.css'
 import { Link } from 'react-router-dom'
 
@@ -33,13 +33,13 @@ function Header() {
                             <li><Link to="/Dashboard">VALIDEFI•DX</Link></li>
                             <li><Link to="/Validefinf">VALIDEFI•NF T-Link (Coming Soon)</Link></li>
                             <li><Link to="/Validefipsp" >Validefi PSP</Link></li>
-                            <li><Link to="/Valideficoming">Validefi (Coming Soon)</Link></li>
+                            <li><Link to="/Valideficoming">Validefi•Pro (Coming Soon)</Link></li>
                         </ul>
                     </li>
                     <li className='menu-links'><Link to="/About">About</Link></li>
                     <li className='menu-links'><Link to="/Faq">Faq</Link></li>
                     <li className='menu-links'><Link to="/Contact">Contact</Link></li>
-                    <li className='menu-links display_none'>
+                    {/* <li className='menu-links display_none'>
                         <a href="" className="desktop-item abbreviations_bit"><img src={drop_img_one} className='drop_img' /> BTC<i className="fa fa-caret-down"></i></a>
                         <ul className="drop-menu display_none">
                             <li><Link to="/"><img src={drop_img_two}/>ETH</Link></li>
@@ -47,7 +47,7 @@ function Header() {
                             <li><Link to="/"><img src={drop_img_four}/>BNB</Link></li>
                             <li><Link to="/"><img src={drop_img_five}/>TRON</Link></li>
                         </ul>
-                    </li>
+                    </li> */}
                     {/* <li className='menu-links login display_none'><Link to="/Login">SIGNIN</Link></li> */}
                     {/* <li className='menu-links login display_none sign_up'><Link to="/">SIGNUP</Link></li>   */}
                 </ul>

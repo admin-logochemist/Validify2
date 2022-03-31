@@ -14,10 +14,10 @@ function Footer() {
                 <div className='col-lg-2 col_footer'>
                   <div className='footer'>
                     <h4>TOOLS</h4>
-                    <li><Link to='/Signup'><a>VALIDEFI•DX</a></Link></li>
+                    <li><Link to='/Dashboard'><a>VALIDEFI•DX</a></Link></li>
                     <li><Link to='/Signup'><a>Portfolio Tracker</a></Link></li>
-                    <li><Link to='/Signup'><a>VALIDEFI•NT T-Link</a></Link></li>
-                    <li><Link to='/Signup'> <a>Titan Wallet</a></Link> </li>
+                    <li><Link to='/Signup'><a>VALIDEFI•NF T Link</a></Link></li>
+                    <li><a href='https://validefi.demoapp-lc.com/Validefi-Wallet-Wireframe-Presentation.pdf' target='_blank'>Titan Wallet</a></li>
                   </div>
                 </div>
 
@@ -26,7 +26,9 @@ function Footer() {
                     <h4>TOKEN</h4>
                       <li><Link to='/Signup'><a>Valid Token</a></Link></li>
                       <li><Link to='/Signup'><a>PSP (Profit Share Protocol)</a></Link></li>
-                      <li><Link to='/Signup'> <a>White Paper</a></Link> </li>
+                      <li><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank'>White Paper</a></li>
+                      {/* <li><Link href=""> <a>White Paper</a></Link> </li> */}
+
                   </div>
                 </div>
 
@@ -37,7 +39,7 @@ function Footer() {
                     <li><Link to='/Signup'><a>Investor Relations</a></Link></li>
                     <li><Link to='/Signup'><a>Institutional</a></Link></li>
                     <li><Link to='/Signup'><a>Careers</a></Link></li>
-                    <li><Link to='/Signup'><a>NFT Platform</a></Link></li>
+                    {/* <li><Link to='/Signup'><a>NFT Platform</a></Link></li> */}
                   </div>
                 </div>
 

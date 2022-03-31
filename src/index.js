@@ -19,5 +19,6 @@ ReactDOM.render(
     </CryptoContext>
   </HashRouter>
   </ThirdwebWeb3Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
+ 
 );

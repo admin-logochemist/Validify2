@@ -64,19 +64,23 @@ import TradesTerra from './TradesTerra'
 import TradesSol from './TradesSol'
 import TradesShiba from './TradesShiba'
 import TradesTron from './TradesTron'
+import SearchData from './SearchData.json'
+import Searchbar from './Searchbar'
+import { TVChartContainer } from './TVChartContainer'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
   return (
-    <div class="container own_container">
+    <div class="container-fluid own_container">
         <div class="row">
             <div class="col-lg-12 margin-top">
             <PriceTickers />
             <div className='vollet_btn'>
-            <div className="dash_search_box">
+            {/* <div className="dash_search_box">
                 <input type='text' placeholder="Search Token Name/ Address"/>
                 <i className="fa fa-search"></i>
-              </div>
+            </div> */}
+            <Searchbar  data={SearchData}/>
               {address?(
                 <>
                   <div className="connected_btn">          
@@ -109,11 +113,12 @@ function Tabscontent() {
                     <div class="tab-content tabs container-fluid">
 
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
-                          <BTCSwap />
-                          <div className='col-lg-9 responsive_col'>
+                          <div className='col-lg-6 responsive_col'>
+                            {/* <TVChartContainer/> */}
                             <CoinInfos id="bitcoin"/>
                             <BTCCoin/>
                           </div>
+                          <BTCSwap />
                           <Portfolio />
                           <BTCSwaptwo />
                           <div className='col-lg-12 trades_col mt-5'>
@@ -128,11 +133,11 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="ETH">
-                            <ETHSwap />
-                            <div className='col-lg-9 responsive_col'>
+                            <div className='col-lg-6 responsive_col'>
                               <CoinInfos id="ethereum" />
                               <ETHCoin/>
                             </div>
+                            <ETHSwap />
                             <Portfolio />
                             <ETHSwaptow />
                             <div className='col-lg-11 trades_col mt-5'>
@@ -147,11 +152,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="tetherss">
-                            <TETSwap />
-                            <div className='col-lg-9 responsive_col'>
+                           
+                            <div className='col-lg-6 responsive_col'>
                               <CoinInfos id="tether" />
                               <TetherCoin/>
                             </div>
+                            <TETSwap />
                             <Portfolio />
                             <TETSwaptwo />
                             <div className='col-lg-11 trades_col mt-5'>
@@ -166,11 +172,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="bnb">
-                            <BNBSwap />
-                            <div className='col-lg-9 responsive_col'>
+                            
+                            <div className='col-lg-6 responsive_col'>
                               <CoinInfos id="binancecoin" />
                               <BNBCoin/>
                             </div>
+                            <BNBSwap />
                             <Portfolio />
                             <BNBSwaptow />
                             <div className='col-lg-11 trades_col mt-5'>
@@ -185,11 +192,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="usd">
-                              <USDSwap />
-                              <div className='col-lg-9 responsive_col'>
+                             
+                              <div className='col-lg-6 responsive_col'>
                                   <CoinInfos id="usd-coin" />
                                   <USDCoin/>
                               </div>
+                              <USDSwap />
                               <Portfolio />
                               <USDSwaptow />
                               <div className='col-lg-11 trades_col mt-5'>
@@ -204,11 +212,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="xrp">
-                            <XRPSwap />
-                            <div className='col-lg-9 responsive_col'>
+                            
+                            <div className='col-lg-6 responsive_col'>
                                 <CoinInfos id="ripple" />
                                 <XRPCoin/>
                             </div>
+                            <XRPSwap />
                             <Portfolio />
                             <XRPSwaptow />
                             <div className='col-lg-11 trades_col mt-5'>
@@ -223,11 +232,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="luna">
-                            <LUNASwap />
-                            <div className='col-lg-9 responsive_col'>
+                            
+                            <div className='col-lg-6 responsive_col'>
                                 <CoinInfos id="terra-luna" />
                                 <LUNACoin/>
                             </div>
+                            <LUNASwap />
                             <Portfolio />
                             <LUNASwaptow />
                             <div className='col-lg-11 trades_col mt-5'>
@@ -242,11 +252,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="sol">
-                              <SOLSwap />
-                              <div className='col-lg-9 responsive_col'>
+
+                              <div className='col-lg-6 responsive_col'>
                                   <CoinInfos id="solana" />
                                   <SOLCoin/>
                               </div>
+                              <SOLSwap />
                               <Portfolio />
                               <SOLSwaptow />
                               <div className='col-lg-11 trades_col mt-5'>
@@ -261,11 +272,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="cardano">
-                            <BITSwap />
-                            <div className='col-lg-9 responsive_col'>
+                            
+                            <div className='col-lg-6 responsive_col'>
                                   <CoinInfos id="bitshiba" />
                                   <SHIBACoin/>
                               </div>
+                              <BITSwap />
                               <Portfolio />
                               <BITSwaptow />
                               <div className='col-lg-11 trades_col mt-5'>
@@ -280,11 +292,12 @@ function Tabscontent() {
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="avax">
-                            <TRONSwap />
-                            <div className='col-lg-9 responsive_col'>
+                           
+                            <div className='col-lg-6 responsive_col'>
                                 <CoinInfos id="tron" />
                                 <TRONCoin/>
                             </div>
+                            <TRONSwap />
                             <Portfolio />
                             <TRONSwaptow />
                             <div className='col-lg-11 trades_col mt-5'>

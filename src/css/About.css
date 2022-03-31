@@ -34,16 +34,17 @@
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 40px;
+    line-height: 85px;
 }
 .about_para{
     color: #0b2251;
-    font-size: 17px;
+    font-size: 19px;
     font-family: 'Lato', sans-serif;
     text-align: left;
     padding: 0;
     margin: 0;
     letter-spacing: 1px;
-    line-height: 26px;
+    line-height: 75px;
     padding-right: 110px;
     margin-bottom: 40px;
 }

@@ -41,8 +41,8 @@ function Trades() {
                     <th>Date</th>
                     <th>Type</th>           
                     <th className='transform'>Price USD</th>
-                    <th className='transform'>Amount USD</th>
                     <th className='transform'>Total BTC</th>
+                    <th className='transform'>Amount USD</th>
                     <th>Maker</th>
                 </thead>
                 <tbody>         

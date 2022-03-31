@@ -4,11 +4,11 @@ import  {Routes, Route} from "react-router-dom"
 import Home from "./pages/Home";
 import Dashboard from './pages/Dashboard'
 import Login from "./pages/Login";
-import ETH from "./pages/ETH";
+// import ETH from "./pages/ETH";
 import Signup from "./pages/Signup";
-import BNB from "./pages/BNB";
-import USDT from "./pages/USDT";
-import Tron from "./pages/Tron";
+// import BNB from "./pages/BNB";
+// import USDT from "./pages/USDT";
+// import Tron from "./pages/Tron";
 import About from './pages/About';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
@@ -34,6 +34,7 @@ import Licenses from './pages/Licenses'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Promotions from './pages/Promotions'
 import CoinPage from "./pages/CoinPage";
+import WhaleTrade from "./pages/WhaleTrade";
 
 
 
@@ -45,10 +46,11 @@ function App() {
        <Route path='Dashboard' element={ <Dashboard />}/>
        <Route path='Login' element={<Login />} />
        <Route path="Signup" element={<Signup />} />
-       <Route path="ETH" element={<ETH />} />
+       {/* <Route path="ETH" element={<ETH />} />
        <Route path="BNB" element={<BNB />} />
-       <Route path="USDT" element={<USDT />} />
-       <Route path="Tron" element={<Tron />} />
+       <Route path="USDT" element={<USDT />} /> */}
+       {/* <Route path="Tron" element={<Tron />} /> */}
+       <Route path="WhaleTrade" element={<WhaleTrade />} />
        <Route path="About" element={<About />} />
        <Route path="Faq" element={<Faq />} />
        <Route path="Contact" element={<Contact />} />

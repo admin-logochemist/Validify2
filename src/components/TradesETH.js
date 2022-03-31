@@ -41,8 +41,8 @@ function TradesETH() {
                     <th>Date</th>
                     <th>Type</th>           
                     <th className='transform'>Price USD</th>
+                    <th className='transform'>Total ETH</th>
                     <th className='transform'>Amount USD</th>
-                    <th className='transform'>Total BTC</th>
                     <th>Maker</th>
                 </thead>
                 <tbody>         

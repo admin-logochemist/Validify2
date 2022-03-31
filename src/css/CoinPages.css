@@ -20,8 +20,8 @@
     top: -10px;
     left: -15px;
 }
-.img_left_side_box .stronge_head{
-    font-size: 30px;
+.img_left_side_box .stronge_head {
+    font-size: 20px;
     color: white;
     letter-spacing: 1px;
     font-family: 'Lato', sans-serif;
@@ -48,7 +48,7 @@
     top: -22px;
 } */
 .img_left_side_box span.two{
-    font-size: 22px;
+    font-size: 19px;
     color: white;
     margin: 10px 0;
     letter-spacing: 1px;
@@ -56,7 +56,7 @@
     font-weight: 600;
 }
 .img_left_side_box span.three{
-    font-size: 20px;
+    font-size: 17px;
     color: green;
     letter-spacing: 1px;
     font-family: 'Lato', sans-serif;
@@ -73,19 +73,19 @@
     color: white;
 }
 .market_cup h3 span.one{
-    font-size: 30px;
+    font-size: 20px;
     line-height: 30px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
 }
 .market_cup h3 span.two{
-    font-size: 22px;
+    font-size: 19px;
     line-height: 50px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
 }
 .margin-top-two{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .buy_now{
     font-family: 'Lato', sans-serif;
@@ -151,7 +151,7 @@
 }
 .swap_box{
     background: #0D203C;
-    height: 82vh;
+    height: 83.1vh
 }
 .exchange_links a {
     display: inline-flex;
