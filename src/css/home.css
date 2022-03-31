@@ -260,15 +260,19 @@
     letter-spacing: 1px;
     font-weight: 800;
     font-size: 30px;
+    text-align: center;
 }
 .subscripe p{
     font-family: 'Lato', sans-serif;
     color: #919191;
     font-size: 17px;
     letter-spacing: 1px;
+    text-align: center;
 }
 .subcripe_field > div{
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 .subcripe_field > div > input{
