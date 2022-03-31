@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react'
 import '../css/trades.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { BscScan } from "@jpmonette/bscscan";
 function TradesSol() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{

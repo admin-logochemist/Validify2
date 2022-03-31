@@ -27,6 +27,7 @@
 .card_slider img{
     /* margin-left: 20px; */
     margin-top: 15px;
+    height: 36px;
 }
 .card_slider span{
     font-family: 'Lato', sans-serif;
@@ -35,6 +36,7 @@
     font-weight: 500;
     margin-top: 7px;
     display: block;
+    text-transform: uppercase;
 }
 .card_slider .chart_bar{
     position: absolute;
@@ -45,6 +47,8 @@
     font-weight: 700;
     margin-top: 8px;
     color: black;
+    left: 0 !important;
+    text-transform: capitalize;
 }
 .card_slider price{
     font-family: 'Lato', sans-serif;
