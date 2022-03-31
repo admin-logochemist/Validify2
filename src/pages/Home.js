@@ -12,7 +12,7 @@ import head_img from '../images/logoIcon.svg'
 import chain from '../images/portfolio.svg'
 import multichain from '../images/Icon_awesome-coins.svg'
 import titan from '../images/crypto-wallet.svg'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 AOS.init();
 
 function Home() {

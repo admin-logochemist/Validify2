@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Trades() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://localhost:9000/users?currency=BTC/USDT').then((res)=>res.json().then(re=>{setRes(re)
+         fetch('http://localhost:9000/users?currency=BTC/USDT').then((res)=>res.json().then(re=>{setRes(re)
     
     }))
     }
