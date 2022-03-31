@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/WhaleTrades.css'
 import PriceTickers from '../components/PriceTickers'
 import DashFooter from '../components/DashFooter'
+import { CoinsTable } from '../components/CoinsTable'
 function WhaleTrade() {
   return (
       <>
@@ -12,8 +13,12 @@ function WhaleTrade() {
                   <PriceTickers />
                 </div>
             </div>
+            <div className='col-12'>
+                  <CoinsTable/>
+                </div>
           </div>
           <DashFooter/>
+         
       </>
   )
 }
