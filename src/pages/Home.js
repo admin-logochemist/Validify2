@@ -157,23 +157,30 @@ function Home() {
 
        <section className='section'>
           <div className='container-fluid custom_conatiner'>
-             <div className='row'>
-               <div className='col-lg-6'>
+             <div className='row justify-content-centent'>
+               <div className='col-lg-12'>
                  <div className='subscripe'>
                     <h4>Subscribe to our Medium Page</h4>
                     <p>Receive an email whenever VALIDEFI Network Publishes a story.</p>
                  </div>
-               </div>
-               <div className='col-lg-6'>
                  <div className='subcripe_field'>
                    <div>
-                     <input type='text' placeholder='Your Email'/>
                      <div className='btn_banner'>
-                           <button className='btn_one'>Subscribe</button>
+                           <button className='btn_one'><a href='https://validefi.medium.com/subscribe'>Subscribe</a></button>
                       </div>
                   </div>
                  </div>
                </div>
+               {/* <div className='col-lg-6'>
+                 <div className='subcripe_field'>
+                   <div>
+                     <input type='text' placeholder='Your Email'/>
+                     <div className='btn_banner'>
+                           <button className='btn_one'><a href='https://validefi.medium.com/subscribe'>Subscribe</a></button>
+                      </div>
+                  </div>
+                 </div>
+               </div> */}
              </div>
           </div>
        </section>
