@@ -6,7 +6,7 @@ import { BscScan } from "@jpmonette/bscscan";
 function TradesXRP() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://23.23.147.168:8080/users?currency=XRP/USDT').then((res)=>res.json().then(re=>{setRes(re)
+        fetch('https://validefi.global:8080/users?currency=XRP/USDT').then((res)=>res.json().then(re=>{setRes(re)
     
     }))
     }

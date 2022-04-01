@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function TradesSol() {
     const[resf,setRes]=useState([]);
     const callApi=()=>{
-        fetch('http://23.23.147.168:8080/users?currency=SOL/USDT').then((res)=>res.json().then(re=>{setRes(re)
+        fetch('https://validefi.global:8080/users?currency=SOL/USDT').then((res)=>res.json().then(re=>{setRes(re)
     }))
     }
 
