@@ -15,8 +15,8 @@ function Sidebar() {
               <input type="radio" name="slider" id="menu-btn" />
               <input type="radio" name="slider" id="close-btn" />
               <ul className="side-links">
-                <img src={logo} className="side_img_logo" />
-                <img src={head_img} className="side_img" />
+                <Link to='/'><img src={logo} className="side_img_logo" /></Link>
+                <Link to='/'><img src={head_img} className="side_img" /></Link>
                 <li className='li_hover active'><i class="fa fa-tachometer side_icons"></i><Link to='/'>Home</Link></li>
                 <li className='li_hover'><i class="fa fa-line-chart side_icons"></i><a href="#">Charts</a></li>
 

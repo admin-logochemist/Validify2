@@ -296,12 +296,15 @@ background: #ecde84 !important;}
 
 
 @media only screen and (max-width: 1500px){
+  .side_menu .wrapper .side-links {
+    left: -50%;
+}
   .side_menu #menu-btn:checked ~ .side-links{
     left: 0%; 
   }
-  .side_menu #close-btn:checked ~ .side-links{
+  /* .side_menu #close-btn:checked ~ .side-links{
     max-width: 0px; 
-  }
+  } */
   /* .side_menu .wrapper .side-links {
       left: -100%;
   } */
