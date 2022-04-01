@@ -25,7 +25,8 @@ function Footer() {
                   <div className='footer'>
                     <h4>TOKEN</h4>
                       <li><Link to='/Signup'><a>Valid Token</a></Link></li>
-                      <li><Link to='/Signup'><a>PSP</a></Link></li>
+                      <li><a href='href="https://validefi.global/psp/"'>PSP</a></li>
+                      {/* <li><Link to='/Signup'><a href='href="https://validefi.global/psp/"'>PSP</a></Link></li> */}
                       <li><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank'>White Paper</a></li>
                       {/* <li><Link href=""> <a>White Paper</a></Link> </li> */}
 
