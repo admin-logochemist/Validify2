@@ -53,11 +53,12 @@ function Cardslider() {
         }
       },
       {
-        breakpoint: 376,
+        breakpoint: 500,
         settings: {
-          slidesToScroll: 1,
-          infinite: false,
           slidesToShow: 1,
+          slidesToScroll: 1,
+          // initialSlide: 1,
+          infinite: 1,
           adaptiveHeight: true,
           // centerMode: true,
           variableWidth: true,
@@ -65,6 +66,28 @@ function Cardslider() {
 
         }
       },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          infinite: 1,
+          adaptiveHeight: true,
+          variableWidth: true,
+        }
+      }
+      // {
+      //   breakpoint: 376,
+      //   settings: {
+      //     slidesToScroll: 1,
+      //     // infinite: 1,
+      //     slidesToShow: 1,
+      //     adaptiveHeight: true,
+      //     // centerMode: true,
+      //     variableWidth: true,
+      //     draggable: true,
+
+      //   }
+      // },
   ]
   };
   return (

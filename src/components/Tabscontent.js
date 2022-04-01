@@ -64,9 +64,10 @@ import TradesTerra from './TradesTerra'
 import TradesSol from './TradesSol'
 import TradesShiba from './TradesShiba'
 import TradesTron from './TradesTron'
-import SearchData from './SearchData.json'
-import Searchbar from './Searchbar'
+// import SearchData from './SearchData.json'
+// import Searchbar from './Searchbar'
 import { TVChartContainer } from './TVChartContainer'
+import { Link } from 'react-router-dom'
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
@@ -76,11 +77,13 @@ function Tabscontent() {
             <div class="col-lg-12 margin-top">
             <PriceTickers />
             <div className='vollet_btn'>
-            {/* <div className="dash_search_box">
+            <div className="dash_search_box">
+                <Link to='/WhaleTrade'>
                 <input type='text' placeholder="Search Token Name/ Address"/>
-                <i className="fa fa-search"></i>
-            </div> */}
-            <Searchbar  data={SearchData}/>
+                {/* <i className="fa fa-search"></i> */}
+                </Link>
+            </div>
+            {/* <Searchbar  data={SearchData}/> */}
               {address?(
                 <>
                   <div className="connected_btn">          

@@ -17,7 +17,7 @@ function Footer() {
                     <li><Link to='/Dashboard'><a>VALIDEFI•DX</a></Link></li>
                     <li><Link to='/Signup'><a>Portfolio Tracker</a></Link></li>
                     <li><Link to='/Signup'><a>VALIDEFI•NF T Link</a></Link></li>
-                    <li><a href='https://validefi.demoapp-lc.com/Validefi-Wallet-Wireframe-Presentation.pdf' target='_blank'>Titan Wallet</a></li>
+                    <li><a href='https://validefi.global/pdf/Validefi-Wallet-Wireframe-Presentation.pdf' target='_blank'>Titan Wallet</a></li>
                   </div>
                 </div>
 
@@ -25,10 +25,8 @@ function Footer() {
                   <div className='footer'>
                     <h4>TOKEN</h4>
                       <li><Link to='/Signup'><a>Valid Token</a></Link></li>
-                      <li><Link to='/Signup'><a>PSP</a></Link></li>
-                      <li><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank'>White Paper</a></li>
-                      {/* <li><Link href=""> <a>White Paper</a></Link> </li> */}
-
+                      <li><a href="https://validefi.global/psp/" target='_blank'>PSP</a></li>
+                      <li><a href='https://validefi.global/pdf/Validefi_Whitepaper_V2_20220329.pdf' target='_blank'>White Paper</a></li>
                   </div>
                 </div>
 

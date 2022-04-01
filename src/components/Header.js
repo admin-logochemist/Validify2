@@ -32,7 +32,7 @@ function Header() {
                         <ul className="drop-menu">
                             <li><Link to="/Dashboard">VALIDEFI•DX</Link></li>
                             <li><Link to="/Validefinf">VALIDEFI•NF T-Link (Coming Soon)</Link></li>
-                            <li><a href="https://validefi.global/psp/" >Validefi PSP</a></li>
+                            <li><a href="https://validefi.global/psp/" target='_blank' >Validefi PSP</a></li>
                             <li><Link to="/Valideficoming">Validefi•Pro (Coming Soon)</Link></li>
                         </ul>
                     </li>

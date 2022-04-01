@@ -127,19 +127,21 @@ ul.nav-tabs li a img{
 .dash_search_box {
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 50%;
     position: relative;
 }
 .dash_search_box input{
     font-family: 'Lato', sans-serif;
     height: 50px;
-    width: 50%;
+    width: 80%;
     border-radius: 11px;
     border: 1px solid grey;
     outline: none;
     background: #80808038;
     color: white;
     padding-left: 20px;
+    position: relative;
+    top: -20px;
 }
 .dash_search_box input::placeholder{
     color: white;
@@ -152,6 +154,7 @@ ul.nav-tabs li a img{
     right: 35px;
     font-size: 20px;
     color: white;
+    top: -20px;
 }
 .vollet_btn button{
     font-family: 'Lato', sans-serif;
