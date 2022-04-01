@@ -80,7 +80,7 @@ function Tabscontent() {
             <div className="dash_search_box">
                 <Link to='/WhaleTrade'>
                 <input type='text' placeholder="Search Token Name/ Address"/>
-                <i className="fa fa-search"></i>
+                {/* <i className="fa fa-search"></i> */}
                 </Link>
             </div>
             {/* <Searchbar  data={SearchData}/> */}
