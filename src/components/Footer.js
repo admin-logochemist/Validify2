@@ -25,7 +25,7 @@ function Footer() {
                   <div className='footer'>
                     <h4>TOKEN</h4>
                       <li><Link to='/Signup'><a>Valid Token</a></Link></li>
-                      <li><Link to='/Signup'><a>PSP (Profit Share Protocol)</a></Link></li>
+                      <li><Link to='/Signup'><a>PSP</a></Link></li>
                       <li><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank'>White Paper</a></li>
                       {/* <li><Link href=""> <a>White Paper</a></Link> </li> */}
 
@@ -48,7 +48,7 @@ function Footer() {
                     <h4>LEGAL</h4>
                     <li><Link to='/Signup'><a>Term of use</a></Link></li>
                     <li><Link to='/Signup'><a>Customer Agreement</a></Link></li>
-                    <li><Link to='/TextPdf'><a>Licenses</a></Link></li>
+                    <li><Link to=''><a>Licenses</a></Link></li>
                     <li><Link to='/Signup'><a>Privacy Policy</a></Link></li>
                     <li><Link to='/Signup'><a>Promotions</a></Link></li>
                   </div>
