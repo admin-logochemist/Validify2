@@ -28,7 +28,6 @@ const Pill = ({ address }) => {
 
   return (
   
-    //   <Blockies seed={address} size={10} scale={3} />
       <div className="connected_btn">          
                     <h1>Connected</h1>
                     <p>{address}</p>
