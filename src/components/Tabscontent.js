@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React,{ useState,useEffect} from 'react'
 import wallet_icon from '../images/wallet-solid.svg'
 import bitcoin_icon from '../images/bitcoin.png'
 import Ethcoin_icon from '../images/eth.svg'
@@ -29,8 +28,8 @@ import Trendinghr from './Trending24hr'
 import BullSays from './BullSays'
 // import Technical from './TechnicalAnalysis'
 import PriceTickers from './PriceTickers'
-
-
+import Pill from './molecules/Pill'
+import ConnectButton from './molecules/ConnectButton'
 import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
@@ -68,13 +67,42 @@ import TradesTron from './TradesTron'
 // import Searchbar from './Searchbar'
 import { TVChartContainer } from './TVChartContainer'
 import { Link } from 'react-router-dom'
+import InstallMetaMask from './molecules/InstallMetaMask'
+
 
 function Tabscontent() {
   const {address,connectWallet}=useWeb3()
+  const { ethereum } = window;
+  const [account, setAccount] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const connectedAccount = (
+          await ethereum.request({ method: "eth_accounts" })
+        )[0];
+        setAccount(connectedAccount);
+      } catch (e) {
+        console.log(e);
+      }
+    })();
+  }, [ethereum]);
+
+  const connect = async () => {
+    try {
+      const accounts = (
+        await ethereum.request({ method: "eth_requestAccounts" })
+      )[0];
+      setAccount(accounts);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
-    <div class="container-fluid own_container">
-        <div class="row">
-            <div class="col-lg-12 margin-top">
+    <div className="container-fluid own_container">
+        <div className="row">
+            <div className="col-lg-12 margin-top">
             <PriceTickers />
             <div className='vollet_btn'>
             <div className="dash_search_box">
@@ -84,7 +112,18 @@ function Tabscontent() {
                 </Link>
             </div>
             {/* <Searchbar  data={SearchData}/> */}
-              {address?(
+            {account ? (
+          <Pill address={account} />
+        ) : ethereum ? (
+          <ConnectButton connect={connect} />
+        ) : (
+          <div className='vollet_msg'>
+                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                  <p> Wallet is not Connected</p>
+               
+                </div>
+        )}
+               {/* {address?(
                 <>
                   <div className="connected_btn">          
                     <h1>Connected</h1>
@@ -97,13 +136,13 @@ function Tabscontent() {
                   <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
                   <p> Wallet is not Connected</p>
                
-                </div>)}
+                </div>)}  */}
           
             </div>
-                <div class="tab tabs_flex" role="tabpanel">
+                <div className="tab tabs_flex" role="tabpanel">
                     <div className='hamza'>
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
+                            <li role="presentation" className="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
                             <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon}/> ETH</a></li>
                             <li role="presentation"><a href="#tetherss" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
                             <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon}/> BNB </a></li>
