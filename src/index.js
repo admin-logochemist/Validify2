@@ -12,6 +12,7 @@ ReactDOM.render(
   <ThirdwebWeb3Provider
   supportedChainIds={supportedChainIds}
   connectors={connectors}
+  libraryName={"ethers.js"}
   >
   <HashRouter>
 <CryptoContext>

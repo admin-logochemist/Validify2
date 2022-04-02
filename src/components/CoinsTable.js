@@ -36,7 +36,7 @@ export const CoinsTable = () => {
         setLoading(false);
         // setCoin(data);
       };
-      console.log(coins);
+      console.log("Coins",coins);
       
   const { currency, symbol } = CryptoState();
       useEffect(() => {
