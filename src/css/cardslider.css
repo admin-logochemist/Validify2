@@ -109,6 +109,14 @@
         padding: 3px 6px;
         font-size: 13px;
     }
+    .slick-list {
+        width: 90% !important;
+    }
+    .slick-slide {
+        width: 3% !important;
+        margin: 10px 5px;
+
+    }
 }
 @media only screen and (max-width: 480px){
     .containerr {
@@ -116,11 +124,24 @@
         margin: auto !important;
         margin-top: 0px !important;
     }
+    .slick-slide {
+        margin-right:20px;
+        margin-left:20px;
+    }
 }
-@media only screen and (max-width: 376px){
+@media only screen and (max-width: 425px){
+    .containerr {
+        width: 87%;
+        margin: auto !important;
+    }
+    .slick-slide {
+        width: 3% !important;
+    }
+}
+/* @media only screen and (max-width: 376px){
     .slick-slide {
         width: 8.5% !important;
         margin: 10px 15px;
         border-radius: 6px;
     }
-}
+} */

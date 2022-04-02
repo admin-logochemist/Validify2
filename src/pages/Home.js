@@ -32,8 +32,8 @@ function Home() {
                        that was made to blur the lines between traditional finance and true financial freedom thru it's multi use case platforms.</p>
                   </div>
                   <div className='btn_banner'>
-                    <button className='btn_one'>Get a Token</button>
-                    <button className='btn_two'><Link to="/About"><a>Read More</a></Link></button>
+                    <Link to='' className='link_btn_one'><button className='btn_one Read_more'>Get a Token</button></Link>
+                    <Link to="/About" className='link_btn_one'><button className='btn_two Read_more'>Read More</button></Link>
                   </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ function Home() {
                       rewards tokens valid Holders receive a monthly payout on its PSP (profit sharing platform) that is paid in the form of BUSD Stablecoin.
                   </p>
                   <div className='btn_banner'>
-                    <button className='btn_one scd_btn'><a href='https://validefi.demoapp-lc.com/Validefi_Whitepaper_V2_20220329.pdf' target='_blank' >Whitepaper</a></button>
+                    <a className='link_btn_one' href="https://validefi.global/pdf/Validefi_Whitepaper_V2_20220329.pdf" target='_blank'><button className='btn_two scd_btn'>Whitepaper</button></a>
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <button className='btn_one services_btn scd_color'><Link to="/Dashboard">Launch App</Link></button>
+                           <Link to="/Dashboard" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <button className='btn_one services_btn'>Coming Soon</button>
+                           <Link to="" className='link_btn_one'><button className='btn_one services_btn'>Coming Soon</button></Link>
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                            <Link to='/Signup'><button className='btn_one services_btn'> Launch App </button></Link>
+                            <Link to="/Signup" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ function Home() {
                  <div className='subcripe_field'>
                    <div>
                      <div className='btn_banner'>
-                           <button className='btn_one'><a href='https://validefi.medium.com/subscribe'>Subscribe</a></button>
+                           <a className='link_btn_one' href="https://validefi.medium.com/subscribe" target='_blank'><button className='btn_one scd_btn'>Subscribe</button></a>
                       </div>
                   </div>
                  </div>
