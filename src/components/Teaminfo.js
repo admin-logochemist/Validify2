@@ -11,16 +11,17 @@ export default function Teaminfo() {
   return (
      <>
     <div className="container mb-5">
-       <div className='row' >
+        <div className='row' >
            <h3 className='Team-heading'>
-           <span className='border_head left'></span>
-                 validefi Team
+                <span className='border_head left'></span>
+                    validefi Team
                 <span className='border_head  right'></span>
-               </h3>
-               {/* <p className='team-para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p> */}
-           </div>
+            </h3>
+            {/* <p className='team-para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p> */}
+        </div>
             <div className="row our-team-row justify-content-center">
-                <div className="col-md-4 col-sm-4">
+
+                <div className="col-lg-5 text_res">
                     <div className="our-team">
                         <div className="pic">   
                             <div> 
@@ -28,17 +29,17 @@ export default function Teaminfo() {
                             </div>
                                 <h3 className="title mt-4">DJ Manoloff</h3>
                                 <span className="post">Co-Founder</span>
-                                <ul className="social">
+                                {/* <ul className="social">
                                     <li><a href="#" className="fa fab fa-facebook"></a></li>
                                     <li><a href="#" className="fa fab fa-twitter"></a></li>
                                     <li><a href="#" className="fa fab fa-google-plus"></a></li>
                                     <li><a href="#" className="fa fab fa-linkedin"></a></li>
-                                </ul>
+                                </ul> */}
                         </div>
                     </div>
                 </div>
 
-                <div className="col-md-4 col-sm-4">
+                <div className="col-lg-5 text_res">
                     <div className="our-team">
                         <div className="pic">   
                             <div> 
@@ -46,12 +47,12 @@ export default function Teaminfo() {
                             </div>
                                 <h3 className="title mt-4">Shawn Ott</h3>
                                 <span className="post">Co-Founder</span>
-                                <ul className="social">
+                                {/* <ul className="social">
                                     <li><a href="#" className="fa fab fa-facebook"></a></li>
                                     <li><a href="#" className="fa fab fa-twitter"></a></li>
                                     <li><a href="#" className="fa fab fa-google-plus"></a></li>
                                     <li><a href="#" className="fa fab fa-linkedin"></a></li>
-                                </ul>
+                                </ul> */}
                         </div>
                     </div>
                 </div>

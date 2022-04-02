@@ -1,7 +1,7 @@
 
 .table_trades{
   background: hsla(0,0%,100%,.05);
-  padding: 0 15px 0 15px;
+  padding: 15px 15px;
 }
 .table_trades .flex_box_table{
   display: flex;
@@ -53,17 +53,22 @@
   overflow: scroll;
   height: 555px;
   display: block;
-  /* overflow-y: scroll; */
+
 }
-.table_trades table::-webkit-scrollbar {
-  width: 10px;
+.table_trades table::-webkit-scrollbar-track{
+  background-color: #0B2251;
 }
-.table_trades table::-webkit-scrollbar-track {
-  background: #242526;
+
+.table_trades table::-webkit-scrollbar{
+	width: 6px;
+  padding: 50px;
+	background-color: #072d79;
 }
-.table_trades table::-webkit-scrollbar-thumb {
-  background: #3A3B3C;
+
+.table_trades table::-webkit-scrollbar-thumb{
+	background-color: #0B2251;
 }
+
 .table_trades thead {
  visibility: hidden;
  position: absolute;

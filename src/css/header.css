@@ -283,7 +283,12 @@ nav.main_nav{
   nav input{
     display: none;
   }
-
+  @media screen and (max-width:600px){
+    .btn i{
+      position: relative;
+      top: 3px;
+    }
+  }
   @media screen and (max-width:480px){
     nav.main_nav .wrapper .logo a > img{
       height: 50px;
