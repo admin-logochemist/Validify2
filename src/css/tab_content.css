@@ -350,6 +350,7 @@ ul.nav-tabs li a img{
         flex: unset !important;
         max-width: unset !important;
         width: 50% !important;
+        margin-top: 46px !important;
     }
     .own_res{
         flex: unset !important;
@@ -362,7 +363,7 @@ ul.nav-tabs li a img{
         width: 50% !important;
     }
     .table_trades table {
-        overflow: scroll !important;
+        height: 642px;
     }
 }
 
@@ -377,6 +378,24 @@ ul.nav-tabs li a img{
     .dash_search_box input{
         width: 85%;
     }
+    .vollet_btn {
+        flex-direction: column;
+    }
+    .margin-top {
+        margin-top: -26px;
+    }
+    .dash_search_box input {
+        margin: 10px auto;
+        width: 90%;
+        top: unset !important;
+        display: block;
+    }
+    .dash_search_box {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
 }
 
 @media screen and (max-width:885px){
@@ -390,6 +409,11 @@ ul.nav-tabs li a img{
     }
 }
 
+@media screen and (max-width:816px) {
+    .champolala{
+        height: 74px !important;
+    }
+}
 @media screen and (max-width:778px){
     .dash_search_box input{
         width: 100%;
@@ -448,6 +472,9 @@ ul.nav-tabs li a img{
     .MuiTableCell-body > img {
         object-fit: contain;
     }
+    .margin-top {
+        margin-top: 2px;
+    }    
 }
 
 @media screen and (max-width:500px){
@@ -499,6 +526,9 @@ ul.nav-tabs li a img{
     .img_left_side_box h3 {
         line-height: 0.5;
     }
+    .table_trades table {
+        height: 433px;
+    }
 }
 
 @media only screen and (max-width: 479px){
@@ -538,6 +568,9 @@ ul.nav-tabs li a img{
         justify-content: center;
         margin: 24px 0 !important;
         padding: unset !important;
+    }
+    .side_menu .wrapper .menu-btn {
+        left: 8px !important;
     }
 }
 

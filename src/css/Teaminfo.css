@@ -184,12 +184,33 @@
 @media only screen and (max-width: 768px){
     .our-team{ margin-bottom: 20px; }
     .our-team1{ margin-bottom: 20px; }
-
 }
-@media only screen and (max-width: 576px){
+@media screen and (max-width:600px) {
+    .Team-heading {
+        font-size: 27px;
+    }
+    .our-team .pic {
+        width: 275px;
+    }
+    .our-team {
+        margin-bottom: 43px;
+        height: 47vh;
+    }
+}
+@media screen and (max-width:400px) {
+    .our-team {
+        height: 40vh;
+    }
+    .pic img {
+        width: 189px;
+        height: 196px;
+        border-radius: 50%;
+        object-fit: fill;
+    }
+}
+/* @media only screen and (max-width: 576px){
     .our-team{ 
         width: 90%
- 
      }
     .our-team1{ 
        width: 90%;
@@ -228,4 +249,4 @@
 
     }
 
-}
+} */

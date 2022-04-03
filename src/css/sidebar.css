@@ -314,6 +314,11 @@ background: #ecde84 !important;}
     top: 15px;
 }
 }
+@media screen and (max-width:1200px){
+  .side_menu .wrapper .btn.menu-btn {
+    top: 15px;
+  }
+}
 @media only screen and (max-width: 601px){
   .side_menu label.btn i{
     position: relative;
