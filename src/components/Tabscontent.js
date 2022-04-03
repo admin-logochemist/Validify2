@@ -123,6 +123,7 @@ function Tabscontent() {
                
                 </div>
         )}
+<<<<<<< HEAD
                {/* {address?(
                 <>
                   <div className="connected_btn">          
@@ -141,6 +142,9 @@ function Tabscontent() {
                
                 </div>)}  */}
 >>>>>>> 5fa9a8adabda771157e4c9863fd6f091ceeaf278
+=======
+            
+>>>>>>> 63408a5e7eec97461a7e5540629395863c6d7aaa
           
             </div>
                 <div className="tab tabs_flex" role="tabpanel">
