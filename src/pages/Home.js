@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Header from '../components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AOS from 'aos'
@@ -40,10 +40,16 @@ function Home() {
             <div className='col-lg-6 video'>
               <RetPlayer 
                 playing="playing"
-                preload="true"
+                // preload="true"
                 autoplay="true" 
                 controls="true"
-                url={video}/>
+                url={video}
+                onReady={() => console.log('onReady Callback')}
+                onStart={() => console.log('onStart Callback')}
+                onPause={() => console.log('onPause Callback')}
+                onEnded={() => console.log('onEnded Callback')}
+                onError={() => console.log('onError Callback')}
+                />
             </div>
           </div>
        </div>
