@@ -25,10 +25,12 @@
     "buffer": "^6.0.3",
     "chart.js": "^3.7.1",
     "font-awesome": "^4.7.0",
+    "framer-motion": "^6.2.8",
     "module": "^1.2.5",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-alice-carousel": "^2.5.1",
+    "react-blockies": "^1.4.1",
     "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
     "react-google-charts": "^4.0.0",
@@ -37,6 +39,7 @@
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
