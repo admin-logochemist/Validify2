@@ -105,7 +105,9 @@ function Tabscontent() {
             <div className="col-lg-12 margin-top">
             <PriceTickers />
               <div className='vollet_btn'>
-                  <Searchbar  data={SearchData}/>
+                  <div className='search_boxx'>
+                      <Searchbar  data={SearchData}/>
+                  </div>
                   {/* <div className="dash_search_box">
                       <Link to='/WhaleTrade'>
                       <input type='text' placeholder="Search Token Name/ Address"/>
