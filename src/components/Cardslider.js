@@ -62,7 +62,7 @@ function Cardslider() {
           adaptiveHeight: true,
           // centerMode: true,
           variableWidth: true,
-          // autoplay: true,
+          // autoplay: true,ta
           draggable: true,
 
         }

@@ -63,8 +63,8 @@ import TradesTerra from './TradesTerra'
 import TradesSol from './TradesSol'
 import TradesShiba from './TradesShiba'
 import TradesTron from './TradesTron'
-// import SearchData from './SearchData.json'
-// import Searchbar from './Searchbar'
+import SearchData from './SearchData.json'
+import Searchbar from './Searchbar'
 import { TVChartContainer } from './TVChartContainer'
 import { Link } from 'react-router-dom'
 import InstallMetaMask from './molecules/InstallMetaMask'
@@ -104,27 +104,26 @@ function Tabscontent() {
         <div className="row">
             <div className="col-lg-12 margin-top">
             <PriceTickers />
-            <div className='vollet_btn'>
-            <div className="dash_search_box">
-                <Link to='/WhaleTrade'>
-                <input type='text' placeholder="Search Token Name/ Address"/>
-                {/* <i className="fa fa-search"></i> */}
-                </Link>
-            </div>
-            {/* <Searchbar  data={SearchData}/> */}
-            {account ? (
-          <Pill address={account} />
-        ) : ethereum ? (
-          <ConnectButton connect={connect} />
-        ) : (
-          <div className='vollet_msg'>
-              <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
-              <p> Wallet is not Connected</p>
-          </div>
-        )}
-            
-          
-            </div>
+              <div className='vollet_btn'>
+                  <Searchbar  data={SearchData}/>
+                  {/* <div className="dash_search_box">
+                      <Link to='/WhaleTrade'>
+                      <input type='text' placeholder="Search Token Name/ Address"/>
+                      <i className="fa fa-search"></i>
+                      </Link>
+                  </div> */}
+                        {account ? (
+                      <Pill address={account} />
+                    ) : ethereum ? (
+                      <ConnectButton connect={connect} />
+                    ) : (
+                      <div className='vollet_msg'>
+                          <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                          <p> Wallet is not Connected</p>
+                      </div>
+                    )}
+              </div>
+
                 <div className="tab tabs_flex" role="tabpanel">
                     <div className='hamza'>
                         <ul class="nav nav-tabs" role="tablist">
@@ -343,6 +342,7 @@ function Tabscontent() {
                         
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
