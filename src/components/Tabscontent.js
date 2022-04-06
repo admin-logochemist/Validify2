@@ -172,11 +172,11 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                               <TradesETH/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
-                              <BullSays/>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
+                               <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
-                              <Trendinghr/>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
+                               <Trendinghr/>
                             </div>
                         </div>
 
@@ -192,10 +192,10 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                               <TradesTether/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -212,16 +212,15 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                               <TradesBNB/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
-                              <BullSays/>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
+                               <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
-                              <Trendinghr/>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
+                               <Trendinghr/>
                             </div>
                         </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="usd">
-                             
                               <div className='col-lg-6 responsive_col'>
                                   <CoinInfos id="usd-coin" />
                                   <USDCoin/>
@@ -232,10 +231,10 @@ function Tabscontent() {
                               <div className='col-lg-9 trades_col mt-5'>
                                 <TradesUSDC/>
                               </div>
-                              <div className='col-lg-5 responsive_col mt-5'>
+                              <div className='col-lg-5 responsive_col mt-5 css_orders'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-4 responsive_col mt-5'>
+                              <div className='col-lg-4 responsive_col mt-5 css_orders'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -252,10 +251,10 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                                   <TradesXRP/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
-                              <BullSays/>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
+                               <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
                               <Trendinghr/>
                             </div>
                         </div>
@@ -272,13 +271,13 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                                   <TradesTerra/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
-                              <BullSays/>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
+                                <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
                               <Trendinghr/>
                             </div>
-                        </div>
+                          </div>
 
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="sol">
 
@@ -292,10 +291,10 @@ function Tabscontent() {
                               <div className='col-lg-9 trades_col mt-5'>
                                   <TradesSol/>
                               </div>
-                              <div className='col-lg-5 responsive_col mt-5'>
+                              <div className='col-lg-5 responsive_col mt-5 css_orders'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-4 responsive_col mt-5'>
+                              <div className='col-lg-4 responsive_col mt-5 css_orders'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -312,10 +311,10 @@ function Tabscontent() {
                               <div className='col-lg-9 trades_col mt-5'>
                                   <TradesShiba/>
                               </div>
-                              <div className='col-lg-5 responsive_col mt-5'>
+                              <div className='col-lg-5 responsive_col mt-5 css_orders'>
                                 <BullSays/>
                               </div>
-                              <div className='col-lg-4 responsive_col mt-5'>
+                              <div className='col-lg-4 responsive_col mt-5 css_orders'>
                                 <Trendinghr/>
                               </div>
                         </div>
@@ -332,12 +331,12 @@ function Tabscontent() {
                             <div className='col-lg-9 trades_col mt-5'>
                                   <TradesTron/>
                             </div>
-                            <div className='col-lg-5 responsive_col mt-5'>
+                            <div className='col-lg-5 responsive_col mt-5 css_orders'>
                               <BullSays/>
                             </div>
-                            <div className='col-lg-4 responsive_col mt-5'>
+                            <div className='col-lg-4 responsive_col mt-5 css_orders'>
                               <Trendinghr/>
-                            </div> 
+                            </div>
                         </div>
                         
                     </div>

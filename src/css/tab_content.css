@@ -338,6 +338,18 @@ ul.nav-tabs li a img{
         align-items: center;
         justify-content: center;
     }
+    .responsive_col{
+        width: 70%;
+    }
+    .display_one{
+        width: 30%;
+    }
+    .trades_col{
+        width: 100% !important;
+    }
+    .css_orders{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1200px){
