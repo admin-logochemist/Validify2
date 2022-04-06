@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from 'react'
 import { CoinList } from '../config/api';
  import { makeStyles } from "@material-ui/core/styles";
@@ -132,11 +131,10 @@ export const CoinsTable = () => {
           </TableHead>
           
           <TableBody>
-          {/* {resd.map((post,key) =>{
-            <div key={key}>
+          {resd.map((post,key) =>{
+            ,d
 <h1> {post.baseAmount}</h1>
-</div>
-    })} */}
+    })}
             {handleSearch()
               .slice((page - 1) * 10, (page - 1) * 10 + 10)
               .map((row) => {

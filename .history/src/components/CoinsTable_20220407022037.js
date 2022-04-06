@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from 'react'
 import { CoinList } from '../config/api';
  import { makeStyles } from "@material-ui/core/styles";
@@ -73,7 +72,7 @@ export const CoinsTable = () => {
       const[resd,setResd]=useState([]);
       const callApi=()=>{
            fetch(`http://localhost:8080/exchange?bcurrency=0xdac17f958d2ee523a2206206994597c13d831ec7`).then((resd)=>resd.json().then(re=>{setResd(re)
-  console.log("GHayas",resd);    
+  console.log(resd);    
       }))
       }
   
@@ -102,14 +101,13 @@ export const CoinsTable = () => {
       Cryptocurrency Prices by Market Cap
     </Typography> */}
   {/* <CoinInfos/> */}
- 
     <TextField
       label="Search For a Crypto Currency.."
       variant="outlined"
       style={{ marginBottom: 20, width: "100%",border:"none" }}
       onChange={(e) => setSearch(e.target.value)}
     />
-   
+    {resf.slice(0,10).map((post,key) =>{
     {loading ?(
           <LinearProgress style={{ backgroundColor: "gold" }} />
     ):(
@@ -132,11 +130,6 @@ export const CoinsTable = () => {
           </TableHead>
           
           <TableBody>
-          {/* {resd.map((post,key) =>{
-            <div key={key}>
-<h1> {post.baseAmount}</h1>
-</div>
-    })} */}
             {handleSearch()
               .slice((page - 1) * 10, (page - 1) * 10 + 10)
               .map((row) => {

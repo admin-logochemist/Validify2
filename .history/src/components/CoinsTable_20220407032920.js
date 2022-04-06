@@ -132,11 +132,11 @@ export const CoinsTable = () => {
           </TableHead>
           
           <TableBody>
-          {/* {resd.map((post,key) =>{
+          {resd.map((post,key) =>{
             <div key={key}>
 <h1> {post.baseAmount}</h1>
 </div>
-    })} */}
+    })}
             {handleSearch()
               .slice((page - 1) * 10, (page - 1) * 10 + 10)
               .map((row) => {

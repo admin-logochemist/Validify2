@@ -73,3 +73,26 @@
 #clearBtn {
   cursor: pointer;
 }
+
+@media screen and (max-width:1200px){
+  .search_box{
+    width: 100%;
+  }
+}
+@media screen and (max-width:993px){
+    .search_box {
+      height: 75px;
+    }
+    .searchInputs {
+      justify-content: center;
+    }
+}
+
+@media screen and (max-width:501px){
+    .searchInputs > input {
+       width: 100% !important;
+     }
+    .search_box {
+      height: 60px !important;
+    }
+}
