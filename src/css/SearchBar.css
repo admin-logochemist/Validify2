@@ -2,8 +2,11 @@
   /* margin-top: 105px; */
   display: flex;
 }
+.search_boxx{
+  width: 50%;
+}
 .search_box{
-  width: 60%;
+  width: 75%;
   height: 100px;
 }
 
@@ -141,6 +144,7 @@
   display: inline-flex;
   color: white;
   padding: 10px 20px;
+  margin: 10px 0;
 }
 .top_box:hover{
   background: #54545459;
@@ -159,20 +163,53 @@
   top: 4px;
 }
 
+
+@media screen and (max-width:1500px) {
+  .search_boxx{
+    width: 82%;
+}
+}
 @media screen and (max-width:1200px){
   .search_box{
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (max-width:993px){
+    .search_boxx{
+      width: 100%;
+    }
     .search_box {
       height: 75px;
+      width: 100%;
     }
     .searchInputs {
       justify-content: center;
     }
 }
 
+@media screen and (max-width:601px){
+    .top_box {
+      display: inline-table;
+    }
+    .top_box img {
+      height: 25px;
+      margin: 0 auto !important;
+      display: block;
+    }
+    .top_box span {
+        top: 0px;
+        margin-top: 9px;
+    }
+    .top_box:hover {
+        border-radius: 10px;
+    }
+    .top_box {
+        padding: 11px 20px;
+    }
+    .dataResult{
+      overflow: scroll !important;
+    }
+}
 @media screen and (max-width:501px){
     .searchInputs > input {
        width: 100% !important;
@@ -180,4 +217,15 @@
     .search_box {
       height: 60px !important;
     }
+    .filterData_coins li {
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 4px;
+  }
+}
+@media screen and (max-width:801px){
+  .searchInputs > input::placeholder{
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
 }

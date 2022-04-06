@@ -105,7 +105,7 @@ function Tabscontent() {
             <div className="col-lg-12 margin-top">
             <PriceTickers />
               <div className='vollet_btn'>
-                  <div className='search_box'>
+                  <div className='search_boxx'>
                       <Searchbar  data={SearchData}/>
                   </div>
                   {/* <div className="dash_search_box">
