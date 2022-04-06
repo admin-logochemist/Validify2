@@ -303,6 +303,9 @@ ul.nav-tabs li a img{
     display: none;
 }
 
+.search_box{
+    width: 50%;
+}
 /* .chart_animation h2{
     color: white;
     letter-spacing: 1px;
