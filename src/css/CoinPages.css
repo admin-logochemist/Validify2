@@ -122,12 +122,11 @@
 }
 .left-right-head{
     color: #F4E286;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 2px;
-    padding-left: 10px;
-    padding-top: 10px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
+    padding: 24px 18px;
 }
 .comming_text{
     display: block;
@@ -140,7 +139,7 @@
 }
 .swap_box{
     background: #0D203C;
-    height: 83.1vh
+    /* height: 83.1vh; */
 }
 .exchange_links a {
     display: inline-flex;
@@ -233,35 +232,110 @@ div.col-lg-6 > canvas{
         font-size: 19px;
     }
 }
+@media screen and (max-width: 501px) {
+
+    .img_left_side_box {
+        justify-content: center;
+    }
+    .img_left_side_box > img {
+        padding: 10px;
+    }
+    .own_flex_classes {
+        display: flex;
+        flex-direction: column;
+    }
+    .market_cup h3{
+        display: inline-block !important;
+    }
+    .market_cup{
+        justify-content: center;
+    }
+    .market_cup h3 span.one {
+        margin: 0 10px;
+    }
+    .buy_now {
+        padding: 7px 14px;
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .img_left_side_box > img {
+        height: 61px;
+        border-radius: 8px;
+        border: 2px solid #808080bd;
+        padding: 5px !important;
+        object-fit: contain;
+        left: unset !important;
+    }
+    .img_left_side_box h3 {
+        display: inline-block;
+        margin: 0 23px;
+    }
+    .img_left_side_box span.three {
+        display: block;
+        line-height: 34px;
+    }    
+    .img_left_side_box .stronge_head {
+        letter-spacing: 3px;
+    }
+    .img_left_side_box span.two {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+}
+@media screen and (max-width:416px) {
+    .buy_now {
+        display: block !important;
+        margin: auto !important;
+    }
+    
+}
 @media screen and (max-width: 400px) {
     div.col-lg-6 > canvas{
         height: 33vh !important;
     }
 }
 
-@media only screen and (max-width: 376px){
+@media only screen and (max-width: 381px){
+    .img_left_side_box > img {
+        height: 45px;
+        top: -5px !important;
+    }
     .img_left_side_box .stronge_head {
-        font-size: 25px;
-        line-height: 20px;
+        font-size: 15px;
     }
     .img_left_side_box span.two {
-        font-size: 17px;
-        letter-spacing: 2px;
+        font-size: 15px;
+        letter-spacing: 1px;
     }
     .img_left_side_box span.three {
-        font-size: 18px;
-        color: green;
-        letter-spacing: 1px;
-        line-height: 31px;
+        display: block;
+        line-height: 50px;
+        letter-spacing: 0;
+        font-size: 14px;
     }
     .market_cup h3 span.one {
-        font-size: 20px;
-    }
-    .market_cup h3 span.two {
         font-size: 17px;
     }
-    .buy_now {
-        padding: 12px 34px;
-        font-size: 20px;
+    .market_cup h3 span.two {
+        font-size: 19px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .img_left_side_box > img {
+        height: 35px;
+        top: -10px !important;
+    }
+    .img_left_side_box .stronge_head {
+        letter-spacing: 0;
+    }
+    .img_left_side_box span.two {
+        letter-spacing: 0px;
+    }
+    .market_cup h3 span.one {
+        font-size: 15px;
+    }
+    .market_cup h3 span.two {
+        font-size: 15px;
     }
 }

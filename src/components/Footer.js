@@ -14,7 +14,7 @@ function Footer() {
                 <div className='col-lg-2 col_footer'>
                   <div className='footer'>
                     <h4>TOOLS</h4>
-                    <li><Link to='/Dashboard'><a>VALIDEFI•DX</a></Link></li>
+                    <li><Link to='/Dashboard' target='_blank'><a>VALIDEFI•DX</a></Link></li>
                     <li><Link to='/Signup'><a>Portfolio Tracker</a></Link></li>
                     <li><Link to='/Signup'><a>VALIDEFI•NF T Link</a></Link></li>
                     <li><a href='https://validefi.global/pdf/Validefi-Wallet-Wireframe-Presentation.pdf' target='_blank'>Titan Wallet</a></li>

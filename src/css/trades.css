@@ -3,9 +3,32 @@
   background: hsla(0,0%,100%,.05);
   padding: 15px 15px;
 }
+.btns_lengends{
+  /* width: 20%; */
+  display: inline-flex;
+  padding: 10px;
+}
+.btns_lengends button{
+  border: none;
+  padding: 9px 30px;
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.btns_lengends button.buy{
+  color: white !important;
+  background-color: #07b707 !important;
+}
+.btns_lengends button.sell{
+  color: #b10b0b !important;
+  background-color: transparent !important;
+  border: 1px solid !important;
+}
 .table_trades .flex_box_table{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  width: 100%;
 }
 .table_trades .flex_box_table h3{
   color: #ecde84;
@@ -17,10 +40,12 @@
   width: 85%;
 }
 .green{
-  color: #4ee29d !important;
+  color: #07b707 !important;
+  font-weight: bolder;
 }
 .red{
-  color: #e4828c !important;
+  color: #b10b0b !important;
+  font-weight: bolder;
 }
 .table_trades .flex_box_table button{
   border: none;
@@ -181,12 +206,22 @@
       font-size: 13px;
     }
 }
-@media screen and (max-width:500px){
-  .table_trades .flex_box_table button {
-    padding: 5px 14px;
-    font-size: 12px;
-    border-radius: 6px;
+
+@media screen and (max-width:602px){
+/* .table_trades .flex_box_table {
+    display: block !important;
+} */
+  .btns_lengends {
+    width: 77%;
+    padding: 0%;
+  }
 }
+@media screen and (max-width:500px){
+    .table_trades .flex_box_table button {
+      padding: 5px 14px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
 
   .table_trades td {
       font-size: 10px;
@@ -197,8 +232,22 @@
   .table_trades table {
     height: 430px;
    }
+   .table_trades {
+      background: hsla(0,0%,100%,.05);
+      padding: 0px 15px !important;
+      padding-bottom: 15px !important;
+    }
 }
-
-/* .hamza #hamza{
-  display: none;
-} */
+@media screen and (max-width:381px){
+    .table_trades .flex_box_table h3 {
+      font-size: 20px;
+   }
+   .table_trades .flex_box_table button {
+    margin: 14px 3px;
+   }
+}
+@media screen and (max-width: 322px){
+    .btns_lengends {
+      width: 112%;
+  }
+}

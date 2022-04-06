@@ -24,12 +24,10 @@
     padding: 0;
     border-radius: 11px;
 }
-.main_slider{}
 .card_slider{
     padding-left: 16px
 }
 .card_slider img{
-    /* margin-left: 20px; */
     margin-top: 15px;
     height: 36px;
 }
@@ -92,35 +90,59 @@
     }
 }
 @media only screen and (max-width: 501px){
+    .containerr{
+        width: 100%;
+    }
     .containerr h3 {
         font-size: 20px;
     }
     .card_slider img{
-        height: 25px;
-    }
-    .card_slider span{
-        font-size: 12px;
+        height: 50px;
     }
     .card_slider h3{
-        font-size: 13px;
-        margin-top: 50px;
+        font-size: 20px;
+        margin-top: 30px;
+        display: inline-flex;
+    }
+    .inline_div{
+        margin-top: 15px;
+    }
+    .card_slider span{
+        font-size: 20px;
+        display: inline-flex;
+        margin-left: 19px;
+        letter-spacing: 2px;    
     }
     .card_slider price{
-        font-size: 13px;
+        font-size: 18px;
+        display: inline-flex;
+        margin-right: 20px;    
     }
     .card_slider percantage {
-        margin-right: 8px;
         padding: 3px 6px;
-        font-size: 13px;
-    }
-    .slick-list {
-        width: 90% !important;
-    }
-    .slick-slide {
-        width: 3% !important;
-        margin: 10px 5px;
+        float: unset !important;
+        font-size: 17px !important;
+        letter-spacing: 3px;
+        display: inline-flex !important;
 
     }
+    .slick-initialized .slick-slide{
+      display: flex !important;
+    }
+    .slick-list {
+        width: 95% !important;
+        margin: auto;
+    }
+    .card_slider percantage {
+        margin-left: 15px;
+    }
+    .slick-slide {
+        width: 500px !important;
+        /* margin: 10px 5px; */
+        height: 222px !important;
+        border-radius: 0% !important;
+    }
+    
 }
 @media only screen and (max-width: 480px){
     .containerr {
@@ -128,24 +150,16 @@
         margin: auto !important;
         margin-top: 0px !important;
     }
+    .slick-list {
+        width: 100% !important;
+        margin: auto;
+    }
     .slick-slide {
         margin-right:20px;
         margin-left:20px;
     }
-}
-@media only screen and (max-width: 425px){
-    .containerr {
-        width: 87%;
-        margin: auto !important;
-    }
     .slick-slide {
-        width: 3% !important;
+        width: 450px !important;
     }
 }
-/* @media only screen and (max-width: 376px){
-    .slick-slide {
-        width: 8.5% !important;
-        margin: 10px 15px;
-        border-radius: 6px;
-    }
-} */
+

@@ -150,7 +150,7 @@ nav.main_nav{
     padding: 4px 17px;
     color: hsla(0,0%,100%,.55);
     border-radius: 46px;
-    top: -21px;
+    top: -3px;
     position: relative;
     background: white;
     color: gray;
@@ -316,4 +316,11 @@ nav.main_nav{
     font-size: 15px;
     padding: 5px 11px;
   }
+  .btn i {
+    top: 2px;
   }
+  /* .close-btn i{
+    position: relative;
+    top: -5px !important;
+  } */
+}

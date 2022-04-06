@@ -32,6 +32,10 @@ function Trades() {
         {console.log("post",resf)}      
             <div className='flex_box_table'>
                <h3>Trades</h3>
+               <div className='btns_lengends'>
+                <button className='buy'>Buy</button>
+                <button className='sell'>Sale</button>
+            </div>
             </div>
 
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
@@ -52,24 +56,24 @@ function Trades() {
                         
                     return(
                         <tr key={key}>
-                            <td className='green'>{post.symbol}</td>
-                            <td className='date_table green'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
+                            <td className=''>{post.symbol}</td>
+                            <td className='date_table'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
                             <td className='green'>{post.side}</td>                  
-                            <td className='green'>${post.price}</td>
-                            <td className='green'>${post.amount}</td>
-                            <td className='green'>{post.cost}</td>
-                            <td className='green maker_table'>{post.id}</td>
+                            <td className=''>${post.price}</td>
+                            <td className=''>${post.amount}</td>
+                            <td className=''>{post.cost}</td>
+                            <td className=' maker_table'>{post.id}</td>
                         </tr>
                         )}else{
                             return(
                                 <tr key={key}>
-                                    <td className='red'>{post.symbol}</td>
-                                    <td className='date_table red'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
+                                    <td className=''>{post.symbol}</td>
+                                    <td className='date_table'>{(post.datetime).replace('T','..').slice(0, -5)}</td>
                                     <td className='red'>{post.side}</td>                  
-                                    <td className='red'>${post.price}</td>
-                                    <td className='red'>${post.amount}</td>
-                                    <td className='red'>{post.cost}</td>
-                                    <td className='maker_table red'>{post.id}</td>
+                                    <td className=''>${post.price}</td>
+                                    <td className=''>${post.amount}</td>
+                                    <td className=''>{post.cost}</td>
+                                    <td className='maker_table'>{post.id}</td>
                                 </tr>
                                 )
                         }

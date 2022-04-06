@@ -118,33 +118,11 @@ function Tabscontent() {
           <ConnectButton connect={connect} />
         ) : (
           <div className='vollet_msg'>
-                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
-                  <p> Wallet is not Connected</p>
-               
-                </div>
+              <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+              <p> Wallet is not Connected</p>
+          </div>
         )}
-<<<<<<< HEAD
-               {/* {address?(
-                <>
-                  <div className="connected_btn">          
-                    <h1>Connected</h1>
-                    <p>{address}</p>
-                  </div>
-                 
-                </>):
-                (
-                <div className='vollet_msg'>
-                  <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
-                  <p> Wallet is not Connected</p>
-<<<<<<< HEAD
-                </div>)}
-=======
-               
-                </div>)}  */}
->>>>>>> 5fa9a8adabda771157e4c9863fd6f091ceeaf278
-=======
             
->>>>>>> 63408a5e7eec97461a7e5540629395863c6d7aaa
           
             </div>
                 <div className="tab tabs_flex" role="tabpanel">
@@ -176,10 +154,10 @@ function Tabscontent() {
                           <div className='col-lg-9 trades_col mt-5'>
                               <Trades/>
                           </div>
-                          <div className='col-lg-5 responsive_col mt-5'>
+                          <div className='col-lg-5 responsive_col mt-5 css_orders'>
                             <BullSays/>
                           </div>
-                          <div className='col-lg-4 responsive_col mt-5'>
+                          <div className='col-lg-4 responsive_col mt-5 css_orders'>
                             <Trendinghr/>
                           </div>
                         </div>

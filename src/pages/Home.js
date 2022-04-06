@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import '../css/home.css'
-import RetPlayer from 'react-player'
+import RetPlayer from 'react-player/lazy'
 import video from '../video/proVid.mp4';
 import Cardslider from '../components/Cardslider'
 import sec_img from '../images/about image.png'
@@ -20,6 +20,7 @@ function Home() {
   return (
     <div>
        <Header />
+       
        <div className='container-fluid banner-clss'>
           <div className='row'>
             <div className='col-lg-6'>
@@ -39,17 +40,19 @@ function Home() {
             </div>
             <div className='col-lg-6 video'>
               <RetPlayer 
-                playing="playing"
-                // preload="true"
-                autoplay="true" 
-                controls="true"
-                url={video}
-                onReady={() => console.log('onReady Callback')}
-                onStart={() => console.log('onStart Callback')}
-                onPause={() => console.log('onPause Callback')}
-                onEnded={() => console.log('onEnded Callback')}
-                onError={() => console.log('onError Callback')}
-                />
+                  playing="playing"
+                  preload="true"
+                  autoplay="true" 
+                  controls="true"
+                  muted="true"
+                  // url={video}
+                  url='https://validefi.global/video/proVid.mp4' 
+                  onReady={() => console.log('onReady Callback')}
+                  onStart={() => console.log('onStart Callback')}
+                  onPause={() => console.log('onPause Callback')}
+                  onEnded={() => console.log('onEnded Callback')}
+                  onError={() => console.log('onError Callback')}
+              />
             </div>
           </div>
        </div>
@@ -118,7 +121,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <Link to="/Dashboard" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
+                           <Link to="/Dashboard" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -190,7 +193,9 @@ function Home() {
              </div>
           </div>
        </section>
+
        <Footer />
+       
     </div>
   )
 }

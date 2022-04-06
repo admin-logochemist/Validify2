@@ -194,6 +194,10 @@ ul.nav-tabs li a img{
     margin: 0;
     color: white;
     font-size: 13px;
+    width: 156px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 2px;
 }
 .vollet_msg p{
     color: white;
@@ -249,6 +253,9 @@ ul.nav-tabs li a img{
 }
 .tv-embed-widget-wrapper__body {
     height: 555px !important;
+}
+.widget_onramper {
+    height: 616px !important;
 }
 .col_iframe > div > iframe{
     width: 100%;
@@ -367,6 +374,17 @@ ul.nav-tabs li a img{
     }
 }
 
+.widget_onramper ~ div.widget-container {
+    width: 100% !important;
+    max-width: unset !important;
+}
+
+/* @media (max-width: 990px){
+    #root > div > div.widget-container {
+        max-width: unset !important;
+        width: 100% !important;
+    }
+} */
 @media screen and (max-width:992px){
     .connected_btn {
         padding: 2px 18px;
@@ -478,31 +496,6 @@ ul.nav-tabs li a img{
 }
 
 @media screen and (max-width:500px){
-    .img_left_side_box {
-        justify-content: center;
-    }
-    .img_left_side_box > img {
-        padding: 10px;
-    }
-    .own_flex_classes {
-        display: flex;
-        flex-direction: column;
-    }
-    .market_cup h3{
-        display: unset !important;
-    }
-    .market_cup{
-        justify-content: center;
-    }
-    .market_cup h3 span.one {
-        margin: 0 10px;
-    }
-    .buy_now {
-        padding: 7px 14px;
-        margin: 0 10px;
-        display: block;
-        margin: auto;
-    }
     .MuiTable-root {
         width: 100% !important;
         display: block !important;
@@ -528,6 +521,12 @@ ul.nav-tabs li a img{
     }
     .table_trades table {
         height: 433px;
+    }
+    .display_two {
+        order: 1;
+    }
+    .css_orders{
+        order: 1;
     }
 }
 
