@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import '../css/WhaleTrades.css'
 import '../css/trades.css'
+import Ethcoin_icon from '../images/eth.svg'
 import PriceTickers from '../components/PriceTickers'
 import DashFooter from '../components/DashFooter'
 function SearchTokenData() {
@@ -27,16 +28,34 @@ function SearchTokenData() {
             </div>
             <div className='col-12'>
             <div className='table_trades'>
-        <input type="text" onChange={(e)=>setSearch(e.target.value)} />
-        <button type="submit" onClick={callApi}>Submit</button>
-        
-        {console.log("post",resd)}      
+                <div className='Trades_search'>
+                    <input type="text" onChange={(e)=>setSearch(e.target.value)} placeholder='Search Token Address'/>
+                    <button type="submit" onClick={callApi}>Search</button>
+                </div>
+                <div className='icons_info'>
+                    <div className='img_box'>
+                        <img src={Ethcoin_icon}/>
+                        <li className='wrapper_name'>WETH / rETH</li>
+                    </div>
+                    <div className='coin_names'>
+                        <li className='value_names'>$3,336.90<li>26.4971</li></li>
+                        <span>ETH 1.03049</span>
+                    </div>
+                </div>
+                <div className='li_pairs'>
+                    <li className='li_div'>
+                    Rocket Pool ETH
+                        <li className='inner_li'>Token: 0xae7...6393</li>
+                        <li className='inner_li'>Pair: 0xa4e...9613</li>
+                    </li>
+                </div>
+              {console.log("post",resd)}      
             <div className='flex_box_table'>
                <h3>Trades</h3>
-               <div className='btns_lengends'>
-                <button className='buy'>Buy</button>
-                <button className='sell'>Sale</button>
-            </div>
+               {/* <div className='btns_lengends'>
+                    <button className='buy'>Buy</button>
+                    <button className='sell'>Sale</button>
+               </div> */}
             </div>
 
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}

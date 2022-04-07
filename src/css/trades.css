@@ -187,16 +187,98 @@
 .maker_table{
   width: 52% !important;
 }
-  /* .table_trades table:nth-child(2) > thead:nth-child(1) > th:nth-child(3),
-  .table_trades table:nth-child(2) > thead:nth-child(1) > th:nth-child(4){
-    display: block;
-    width: 173px;
-  } */
 
   .transform{
     text-align: center !important;
   }
-  
+  .Trades_search{
+    width: 100%;
+  }
+  .Trades_search input{
+    width: 30%;
+    margin: auto;
+    display: inline-block;
+    height: 39px;
+    border: none;
+    background: #23323c;
+    padding-left: 30px;
+    color: white;
+  }
+  .Trades_search input:focus{
+    outline: none;
+    border: none;
+  }
+  .Trades_search input::placeholder{
+    color: white;
+  }
+  .Trades_search button{
+    padding: 7px 26px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    background: #23323c;
+    border-left: 1px solid grey !important;
+    letter-spacing: 2px;
+  }
+  .li_pairs{
+    margin-top: 20px;
+    width: 70%;
+  }
+  .li_pairs .li_div{
+    display: inline-flex;
+    color: white;
+    list-style: none;
+  }
+  .li_pairs .li_div .inner_li{
+    padding-left: 20px;
+    color: grey;
+    letter-spacing: 1px;
+  }
+  .icons_info{
+    margin-top: 20px;
+    width: 100%;
+    display: inline-flex;
+  }
+  .icons_info .img_box{
+    display: flex;
+    align-items: center;
+  }
+  .icons_info .img_box img{
+    height: 57px;
+    border-radius: 52px;
+  }
+  .icons_info .img_box  li.wrapper_name{
+    list-style: none;
+    padding-left: 13px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 23px;
+  }
+  .coin_names{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    right: 42px;
+}
+.coin_names .value_names{
+  display: -webkit-inline-box;
+  list-style: none;
+  font-size: 30px;
+}
+.coin_names li.value_names li{
+  margin: 0 20px;
+  color: green;
+  font-size: 21px;
+  position: relative;
+  top: 10px;
+}
+.coin_names  > span{
+  display: block;
+  position: absolute;
+  right: 18px;
+  line-height: 53px;
+}
 @media screen and (max-width:678px){
     /* .table_trades table {
       width: 100%;
