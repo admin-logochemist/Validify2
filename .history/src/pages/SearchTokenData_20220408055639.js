@@ -42,13 +42,11 @@ function SearchTokenData() {
                        
                     </div>
                   )})}
-                   {resd.slice(0,1).map((post,key) =>{
-                        return(
+                  
                     <div className='coin_names'>
-                        <li className='value_names'><li>{post.quoteAmount}</li></li>
-                        <span>ETH {post.quotePrice}</span>
+                        <li className='value_names'>$3,336.90<li>26.4971</li></li>
+                        <span>ETH 1.03049</span>
                     </div>
-                        )})}
                 </div>
                 {resd.slice(0,1).map((post,key) =>{
                         return(

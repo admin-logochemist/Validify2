@@ -38,28 +38,22 @@ function SearchTokenData() {
                     <div className='img_box'>
                    
                         <img src={Ethcoin_icon}/>
-                        <li className='wrapper_name'>{post.quoteCurrency.symbol} / {post.baseCurrency.symbol} </li>
+                        <li className='wrapper_name'>{post.baseCurrency.sy} / rETH</li>
                        
                     </div>
                   )})}
-                   {resd.slice(0,1).map((post,key) =>{
-                        return(
                     <div className='coin_names'>
-                        <li className='value_names'><li>{post.quoteAmount}</li></li>
-                        <span>ETH {post.quotePrice}</span>
+                        <li className='value_names'>$3,336.90<li>26.4971</li></li>
+                        <span>ETH 1.03049</span>
                     </div>
-                        )})}
                 </div>
-                {resd.slice(0,1).map((post,key) =>{
-                        return(
                 <div className='li_pairs'>
                     <li className='li_div'>
-                    {post.baseCurrency.name}
-                        <li className='inner_li'>Token:{post.baseCurrency.address}</li>
-                        <li className='inner_li'>Pair: {post.quoteCurrency.address}</li>
+                    Rocket Pool ETH
+                        <li className='inner_li'>Token: 0xae7...6393</li>
+                        <li className='inner_li'>Pair: 0xa4e...9613</li>
                     </li>
                 </div>
-                  )})}
               {console.log("post",resd)}      
             <div className='flex_box_table'>
                <h3>Trades</h3>

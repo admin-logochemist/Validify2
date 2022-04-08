@@ -45,7 +45,7 @@ function SearchTokenData() {
                    {resd.slice(0,1).map((post,key) =>{
                         return(
                     <div className='coin_names'>
-                        <li className='value_names'><li>{post.quoteAmount}</li></li>
+                        <li className='value_names'>${(post.maximum_price).slice(0,)}<li>{post.quoteAmount}</li></li>
                         <span>ETH {post.quotePrice}</span>
                     </div>
                         )})}
