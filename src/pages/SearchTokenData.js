@@ -9,7 +9,6 @@ function SearchTokenData() {
     const [search,setSearch]=useState()
     const callApi=()=>{
         if(search){
-
             fetch(`http://localhost:8080/exchange?bcurrency=${search}`).then((resd)=>resd.json().then(re=>{setResd(re)
         }))
 }else{
@@ -36,10 +35,8 @@ function SearchTokenData() {
                 {resd.slice(0,1).map((post,key) =>{
                         return(
                     <div className='img_box'>
-                   
                         <img src={Ethcoin_icon}/>
                         <li className='wrapper_name'>{post.quoteCurrency.symbol} / {post.baseCurrency.symbol} </li>
-                       
                     </div>
                   )})}
                    {resd.slice(0,1).map((post,key) =>{
