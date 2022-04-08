@@ -192,13 +192,15 @@
     text-align: center !important;
   }
   .Trades_search{
-    width: 100%;
+    width: 50%;
+    margin: auto;
+    display: block;
   }
   .Trades_search input{
-    width: 30%;
+    width: 80%;
     margin: auto;
     display: inline-block;
-    height: 39px;
+    height: 55px;
     border: none;
     background: #23323c;
     padding-left: 30px;
@@ -212,7 +214,7 @@
     color: white;
   }
   .Trades_search button{
-    padding: 7px 26px;
+    padding: 16px 26px;
     border: none;
     color: white;
     font-weight: 500;
@@ -279,14 +281,30 @@
   right: 18px;
   line-height: 53px;
 }
+
+@media screen and (max-width:1500px) {
+    .Trades_search {
+      width: 66%;
+    }
+    .Trades_search input {
+        width: 75%;
+    }
+    .Trades_search button {
+        width: 20%;
+    }
+}
+@media screen and (max-width:993px) {
+  .Trades_search {
+    width: 100%;
+  }
+  .Trades_search input {
+      width: 80%;
+  }
+  .Trades_search button {
+      width: 20%;
+  }
+}
 @media screen and (max-width:678px){
-    /* .table_trades table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 0.3em;
-      overflow-x: scroll;
-      display: block;
-    } */
     .table_trades th {
       font-size: 10px;
     }
@@ -296,12 +314,43 @@
 }
 
 @media screen and (max-width:602px){
-/* .table_trades .flex_box_table {
-    display: block !important;
-} */
   .btns_lengends {
     width: 77%;
     padding: 0%;
+  }
+  .Trades_search button {
+    padding: 16px 0px;
+  }
+  .coin_names{
+    position: unset !important;
+    display: unset !important;
+} 
+    .coin_names .value_names {
+        font-size: 18px;
+    } 
+    .li_pairs {
+      width: 100%;
+    }
+    .coin_names li.value_names li {
+      top: -4px !important;
+  }
+  .coin_names > span {
+    line-height: 80px;
+    display: unset !important;
+    position: unset !important;
+  }
+  .icons_info {
+    display: block;
+  }
+  .li_pairs {
+    margin-top: -14px;
+    width: 100%;
+  }
+  .icons_info .img_box img {
+    height: 37px;
+  }
+  .icons_info .img_box li.wrapper_name {
+    font-size: 18px;
   }
 }
 @media screen and (max-width:500px){
@@ -333,9 +382,29 @@
    .table_trades .flex_box_table button {
     margin: 14px 3px;
    }
+   .Trades_search button {
+      font-size: 11px;
+    }
+    .Trades_search input {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .li_pairs .li_div {
+      display: flex;
+      flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 322px){
     .btns_lengends {
       width: 112%;
+  }
+}
+@media screen and (max-width: 340px){
+  .coin_names > span {
+    line-height: 21px;
+    display: inline-block !important;
+  }
+  .li_pairs{
+    margin-top: 0 !important;
   }
 }
