@@ -106,7 +106,9 @@ function Tabscontent() {
             <PriceTickers />
               <div className='vollet_btn'>
                   <div className='search_boxx'>
-                      <Searchbar  data={SearchData}/>
+                     <Link to='/SearchTokenData'>
+                        <Searchbar  data={SearchData}/>
+                     </Link>
                   </div>
                   {/* <div className="dash_search_box">
                       <Link to='/WhaleTrade'>
