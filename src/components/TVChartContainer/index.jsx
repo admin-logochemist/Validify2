@@ -2,20 +2,19 @@ import * as React from 'react';
 import './index.css';
 import { widget } from '../../charting_library';
 import Datafeed from './datafeed'; 
-
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
 	const results = regex.exec(window.location.search);
 	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
-         
-export class TVChartContainer extends React.PureComponent { 
+
+export class TVChartContainer extends React.PureComponent {
 	static defaultProps = {
-		 symbol: "0xb9bc21237e83541abe53e774097247e815a8bb6a", 
+        symbol: "0x41515885251e724233c6ca94530d6dcf3a20dec7", 
 		interval: '15',
 		containerId: 'tv_chart_container',
 		 //datafeedUrl: 'https://demo_feed.tradingview.com',
-		libraryPath: '../../charting_library/',
+		libraryPath: '/charting_library/',
 		chartsStorageUrl: 'https://saveload.tradingview.com',
 		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',
@@ -26,16 +25,22 @@ export class TVChartContainer extends React.PureComponent {
 
 	tvWidget = null;
 
+	constructor(props) {
+		super(props);
+
+		this.ref = React.createRef();
+	}
+
+
 	componentDidMount() {
 		const widgetOptions = {
 			symbol: this.props.symbol,
 			// BEWARE: no trailing slash is expected in feed URL
 			datafeed: Datafeed,
-			// datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
 			interval: this.props.interval,
-			container_id: this.props.containerId,
+			container: this.ref.current,
 			library_path: this.props.libraryPath,
-			theme: 'Dark',
+
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings'],
 			enabled_features: ['study_templates'],
@@ -77,9 +82,11 @@ export class TVChartContainer extends React.PureComponent {
 	}
 
 	render() {
+console.log("================ >>>>>>",this.props);
+
 		return (
 			<div
-				id={ this.props.containerId }
+				ref={ this.ref }
 				className={ 'TVChartContainer' }
 			/>
 		);

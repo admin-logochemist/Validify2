@@ -4,7 +4,7 @@ import { TVChartContainer } from '../components/TVChartContainer'
 function Trading() {
   return (
     <div id="tv_chart_container">
-<TVChartContainer/>
+<TVChartContainer />
     </div>
   )
 }
