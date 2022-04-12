@@ -232,9 +232,13 @@
     list-style: none;
   }
   .li_pairs .li_div .inner_li{
-    padding-left: 20px;
     color: grey;
     letter-spacing: 1px;
+    padding-left: 20px;
+    overflow: hidden;
+    width: 177px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .icons_info{
     margin-top: 20px;
