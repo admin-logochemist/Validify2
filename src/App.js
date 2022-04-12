@@ -37,7 +37,7 @@ import CoinPage from "./pages/CoinPage";
 import WhaleTrade from "./pages/WhaleTrade";
 import TextPdf from "./pages/TextPdf";
 import SearchTokenData from "./pages/SearchTokenData";
-
+import Trading from "./pages/Trading"
 
 
 function App() {
@@ -54,6 +54,7 @@ function App() {
        <Route path="USDT" element={<USDT />} /> */}
        {/* <Route path="Tron" element={<Tron />} /> */}
        <Route path="WhaleTrade" element={<WhaleTrade />} />
+       <Route path="trade" element={<Trading/>} />
        <Route path="TextPdf" element={<TextPdf />} />
        <Route path="About" element={<About />} />
        <Route path="Faq" element={<Faq />} />
