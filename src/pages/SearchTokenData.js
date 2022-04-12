@@ -3,6 +3,7 @@ import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import Ethcoin_icon from "../images/eth.svg";
 import PriceTickers from "../components/PriceTickers";
+import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
 function SearchTokenData() {
@@ -24,6 +25,7 @@ function SearchTokenData() {
   };
   return (
     <>
+    <Header />
       <section className="bannerAdds_whale_trade"></section>
       <div className="container-fluid">
         <div className="row">
