@@ -68,36 +68,54 @@ import Searchbar from './Searchbar'
 import { TVChartContainer } from './TVChartContainer'
 import { Link } from 'react-router-dom'
 import InstallMetaMask from './molecules/InstallMetaMask'
-
-
+import Web3 from "web3";
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+import Fortmatic from "fortmatic";
 function Tabscontent() {
-  const {address,connectWallet}=useWeb3()
-  const { ethereum } = window;
+  // const {address,connectWallet}=useWeb3()
+  // const { ethereum } = window;
   const [account, setAccount] = useState("");
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const connectedAccount = (
-          await ethereum.request({ method: "eth_accounts" })
-        )[0];
-        setAccount(connectedAccount);
-      } catch (e) {
-        console.log(e);
+  const providerOptions = {
+    /* See Provider Options Section */
+    walletconnect: {
+      package: WalletConnectProvider, // required
+      options: {
+        infuraId: "4013365e8f774d45a4d9e84d6f5e2940" // required
       }
-    })();
-  }, [ethereum]);
-
-  const connect = async () => {
-    try {
-      const accounts = (
-        await ethereum.request({ method: "eth_requestAccounts" })
-      )[0];
-      setAccount(accounts);
-    } catch (e) {
-      console.log(e);
-    }
+    },
+    coinbasewallet: {
+      package: CoinbaseWalletSDK, // Required
+      options: {
+        appName: "My Awesome App", // Required
+        infuraId: "4013365e8f774d45a4d9e84d6f5e2940", // Required
+        rpc: "", // Optional if `infuraId` is provided; otherwise it's required
+        chainId: 1, // Optional. It defaults to 1 if not provided
+        darkMode: true // Optional. Use dark theme, defaults to false
+      }
+    },
+      binancechainwallet: {
+        package: true
+      },
+  
   };
+ 
+  const web3Modal = new Web3Modal({
+    network: "mainnet", // optional
+    cacheProvider: true, // optional
+    providerOptions // required
+  });
+  async function connectwallet() { 
+	  var provider = await web3Modal.connect();
+      var web3 = new Web3(provider); 
+      await window.ethereum.send('eth_requestAccounts'); 
+      var accounts = await web3.eth.getAccounts(); 
+      account = accounts[0]; 
+      document.getElementById('wallet-address').textContent = account; 
+      // contract = new web3.eth.Contract(ABI, ADDRESS);
+}
 
   return (
     <div className="container-fluid own_container">
@@ -106,26 +124,22 @@ function Tabscontent() {
             <PriceTickers />
               <div className='vollet_btn'>
                   <div className='search_boxx'>
-                     <Link to='/SearchTokenData'>
+                     {/* <Link to='/SearchTokenData'> */}
                         <Searchbar  data={SearchData}/>
-                     </Link>
+                     {/* </Link> */}
                   </div>
-                  {/* <div className="dash_search_box">
-                      <Link to='/WhaleTrade'>
-                      <input type='text' placeholder="Search Token Name/ Address"/>
-                      <i className="fa fa-search"></i>
-                      </Link>
-                  </div> */}
+               
                         {account ? (
-                      <Pill address={account} />
-                    ) : ethereum ? (
-                      <ConnectButton connect={connect} />
-                    ) : (
-                      <div className='vollet_msg'>
-                          <button onClick={()=>connectWallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                     <div className='vollet_msg'>
+                     <p>Connected</p>
+                     </div>
+                      
+                        ):(
+                          <div className='vollet_msg'>
+                          <button onClick={()=>connectwallet()}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
                           <p> Wallet is not Connected</p>
                       </div>
-                    )}
+                        )}
               </div>
 
                 <div className="tab tabs_flex" role="tabpanel">

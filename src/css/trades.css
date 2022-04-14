@@ -230,11 +230,16 @@
     display: inline-flex;
     color: white;
     list-style: none;
+    margin-bottom: 40px;
   }
   .li_pairs .li_div .inner_li{
-    padding-left: 20px;
     color: grey;
     letter-spacing: 1px;
+    padding-left: 20px;
+    overflow: hidden;
+    width: 177px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .icons_info{
     margin-top: 20px;
@@ -278,8 +283,12 @@
 .coin_names  > span{
   display: block;
   position: absolute;
-  right: 18px;
+  right: 21px;
   line-height: 53px;
+  width: 80px;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width:1500px) {
@@ -302,6 +311,9 @@
   }
   .Trades_search button {
       width: 20%;
+  }
+  .li_pairs {
+    width: 100%;
   }
 }
 @media screen and (max-width:678px){
@@ -335,9 +347,11 @@
       top: -4px !important;
   }
   .coin_names > span {
-    line-height: 80px;
-    display: unset !important;
-    position: unset !important;
+    line-height: 77px;
+    display: inline-flex;
+    position: relative;
+    top: -5px;
+    right: 0%;
   }
   .icons_info {
     display: block;
@@ -400,9 +414,16 @@
   }
 }
 @media screen and (max-width: 340px){
-  .coin_names > span {
+  /* .coin_names > span {
     line-height: 21px;
     display: inline-block !important;
+  } */
+  .coin_names > span {
+    font-size: 15px;
+    width: 66px;
+  }
+  .coin_names li.value_names li {
+    font-size: 15px;
   }
   .li_pairs{
     margin-top: 0 !important;

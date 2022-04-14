@@ -27,12 +27,12 @@ export class TVChartContainer extends React.PureComponent {
 
 	constructor(props) {
 		super(props);
-
 		this.ref = React.createRef();
 	}
-
-
-	componentDidMount() {
+	
+	componentDidUpdate=async()=>{
+		let baseQuery = await localStorage.getItem('@baseQuery')
+		if(baseQuery.length){
 		const widgetOptions = {
 			symbol: this.props.symbol,
 			// BEWARE: no trailing slash is expected in feed URL
@@ -40,7 +40,6 @@ export class TVChartContainer extends React.PureComponent {
 			interval: this.props.interval,
 			container: this.ref.current,
 			library_path: this.props.libraryPath,
-
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings'],
 			enabled_features: ['study_templates'],
@@ -51,7 +50,10 @@ export class TVChartContainer extends React.PureComponent {
 			fullscreen: this.props.fullscreen,
 			autosize: this.props.autosize,
 			studies_overrides: this.props.studiesOverrides,
+			theme: "Dark",
+		
 		};
+		
 
 		const tvWidget = new widget(widgetOptions);
 		this.tvWidget = tvWidget;
@@ -72,6 +74,7 @@ export class TVChartContainer extends React.PureComponent {
 				button.innerHTML = 'Check API';
 			});
 		});
+	}
 	}
 
 	componentWillUnmount() {

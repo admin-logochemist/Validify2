@@ -33,8 +33,8 @@ function Home() {
                        that was made to blur the lines between traditional finance and true financial freedom thru it's multi use case platforms.</p>
                   </div>
                   <div className='btn_banner'>
-                    <Link to='' className='link_btn_one'><button className='btn_one Read_more'>Get a Token</button></Link>
-                    <Link to="/About" className='link_btn_one'><button className='btn_two Read_more'>Read More</button></Link>
+                    <Link to='' className='link_btn_one'><button className='btn_one Read_more'>Buy Token</button></Link>
+                    <Link to="/Dashboard" className='link_btn_one'><button className='btn_two Read_more'>Launch</button></Link>
                   </div>
                 </div>
             </div>

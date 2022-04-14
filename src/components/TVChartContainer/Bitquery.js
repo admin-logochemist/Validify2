@@ -35,28 +35,28 @@ return myQuery;
 
 export const GET_COIN_BARS =(baseQuery)=>{
   let myQuery =`
-{
+ {
   ethereum(network: ethereum) {
     dexTrades(
       options: {asc: "timeInterval.minute"}
-      date: {since: "2022-01-20T07:23:21.000Z", till: "2022-04-11T15:23:21.000Z"}
-      exchangeName: {is: "Uniswap"},
-      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"},
+      date: {since: "2021-01-20T07:23:21.000Z",}
+      exchangeName: {is: "Uniswap"}
+      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"}
       baseCurrency: {is: "${baseQuery}"}
-      tradeAmountUsd: {gt: 10}
-    ) 
-    {
+      tradeAmountUsd: {gt: 1}
+    ) {
       timeInterval {
-        minute(count: 15, format: "%Y-%m-%dT%H:%M:%SZ")  
+        minute(count: 1, format: "%Y-%m-%dT%H:%M:%SZ")
       }
       volume: quoteAmount
       high: quotePrice(calculate: maximum)
       low: quotePrice(calculate: minimum)
       open: minimum(of: block, get: quote_price)
-      close: maximum(of: block, get: quote_price) 
+      close: maximum(of: block, get: quote_price)
     }
   }
 }
+
 `; 
 return myQuery;
 }
