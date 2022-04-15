@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "../css/WhaleTrades.css";
 import "../css/trades.css";
+import "../css/SearchBar.css";
 import Ethcoin_icon from "../images/eth.svg";
 import PriceTickers from "../components/PriceTickers";
 import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
+import bitcoin_icon from '../images/bitcoin.png';
+import bnbicon from '../images/bsc.png'
+
+
 function SearchTokenData() {
+  const [showResults, setShowResults] = useState()
+  const handleClick = () => setShowResults(true)
   const [resd, setResd] = useState([]);
   const [search, setSearch] = useState();
   useEffect(() => {
@@ -23,6 +30,62 @@ function SearchTokenData() {
     } else {
     }
   };
+
+  const Results = () => (
+    <div className="search-results">
+      <div className="scroll_box">
+          <li className="top_box" >
+            <img src={Ethcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={bnbicon}/>
+            <span>BNB CHAIN</span>
+          </li>
+          <li className="top_box">
+            <img src={Ethcoin_icon}/>
+            <span style={{width:30}}>AVALANCE</span>
+          </li>
+          <li className="top_box">
+            <img src={bitcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={Ethcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={bitcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={Ethcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={bitcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={Ethcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={bitcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={Ethcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+          <li className="top_box">
+            <img src={bitcoin_icon}/>
+            <span>ETHEREUM</span>
+          </li>
+      </div>
+    </div>
+  )
+
   return (
     <>
       <Header />
@@ -38,6 +101,7 @@ function SearchTokenData() {
             <div className="Trades_search">
               <input
                 type="text"
+                onClick={handleClick}
                 onChange={(e) => {
                   setSearch(e.target.value);
                   localStorage.setItem("@baseQuery", e.target.value)
@@ -53,7 +117,14 @@ function SearchTokenData() {
               >
                 Search
               </button>
+
+
+              <div class="next_search">
+                  { showResults ? <Results /> : null}
+             </div>
             </div>
+            
+             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">
               {resd.slice(0, 1).map((post, key) => {
                 return (

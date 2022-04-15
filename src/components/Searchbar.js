@@ -115,7 +115,7 @@ function Searchbar({data }) {
       </div>
       <div>
             { showResults ? <Results /> : null}
-        </div>
+      </div>
       {filteredData.length != 0 && (
         <>
         <div className="dataResult">

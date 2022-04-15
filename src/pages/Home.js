@@ -33,8 +33,8 @@ function Home() {
                        that was made to blur the lines between traditional finance and true financial freedom thru it's multi use case platforms.</p>
                   </div>
                   <div className='btn_banner'>
-                    <Link to='' className='link_btn_one'><button className='btn_one Read_more'>Buy Token</button></Link>
-                    <Link to="/Dashboard" className='link_btn_one'><button className='btn_two Read_more'>Launch</button></Link>
+                    <a href='https://pancakeswap.finance/swap?outputCurrency=0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00' target='_blank' className='link_btn_one'><button className='btn_one Read_more'>Buy</button></a>
+                    <a href="https://bscscan.com/address/0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00#code" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Read More</button></a>
                   </div>
                 </div>
             </div>

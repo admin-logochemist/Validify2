@@ -77,6 +77,19 @@ function Tabscontent() {
   // const {address,connectWallet}=useWeb3()
   // const { ethereum } = window;
   const [account, setAccount] = useState("");
+  const { ethereum } = window;
+  useEffect(() => {
+    (async () => {
+      try {
+        const connectedAccount = (
+          await ethereum.request({ method: "eth_accounts" })
+        )[0];
+        setAccount(connectedAccount);
+      } catch (e) {
+        console.log(e);
+      }
+    })();
+  }, [ethereum]);
 
   const providerOptions = {
     /* See Provider Options Section */
@@ -124,22 +137,24 @@ function Tabscontent() {
             <PriceTickers />
               <div className='vollet_btn'>
                   <div className='search_boxx'>
-                     {/* <Link to='/SearchTokenData'> */}
+                     <Link to='/SearchTokenData'>
                         <Searchbar  data={SearchData}/>
-                     {/* </Link> */}
+                     </Link>
                   </div>
                
-                        {account ? (
-                     <div className='vollet_msg'>
-                     <p>Connected</p>
-                     </div>
-                      
-                        ):(
-                          <div className='vollet_msg'>
-                          <button onClick={()=>connectwallet()}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                  {account ? (
+                      <Pill address={account} />
+                    ) : ethereum ? (
+                      <div className='vollet_msg'>
+                      <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                      <p> Wallet is not Connected</p>
+                  </div>
+                    ) : (
+                      <div className='vollet_msg'>
+                          <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
                           <p> Wallet is not Connected</p>
                       </div>
-                        )}
+                    )}
               </div>
 
                 <div className="tab tabs_flex" role="tabpanel">
