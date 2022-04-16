@@ -157,10 +157,6 @@ const BNBcoin=()=>{
             <img src={aurora}/>
             <span>AURORA</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
-          </li>
       </div>
     </div>
   )
@@ -203,7 +199,7 @@ const BNBcoin=()=>{
 
               <div class="next_search">
                   { showResults ? <Results /> : null}
-             </div>
+              </div>
             </div>
             
              {/* <Searchbar  data={SearchData}/> */}
@@ -246,7 +242,10 @@ const BNBcoin=()=>{
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
+
               <TVChartContainer baseQuery={search} network={network} qQuery={qoute} exchange={exchange} />
+
+
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>
@@ -269,25 +268,43 @@ const BNBcoin=()=>{
               </thead>
               <tbody>
                 {resd.slice(0, 100).map((post, key) => {
-                  // if(post.side=="buy"){
-
-                  return (
-                    <tr key={key}>
-                      <td className="date_table">
-                        {post.block.timestamp.iso8601
-                          .replace("T", "..")
-                          .slice(0, -4)}
-                      </td>
-                      <td className="red">{post.side}</td>
-                      <td className="">{post.baseAmount}</td>
-                      <td className="truncate">{post.quoteAmount}</td>
-                      <td className="truncate">{post.quotePrice}</td>
-                      <td className="truncate">{post.baseAmount}</td>
-                      <td className="truncate maker_table">
-                        {post.maker.address.slice(0, -2)}
-                      </td>
-                    </tr>
-                  );
+                  if(post.side == "BUY"){
+                    return (
+                      <tr key={key}>
+                        <td className="date_table">
+                          {post.block.timestamp.iso8601
+                            .replace("T", "..")
+                            .slice(0, -4)}
+                        </td>
+                        <td className="green">{post.side}</td>
+                        <td className="">{post.baseAmount}</td>
+                        <td className="truncate">{post.quoteAmount}</td>
+                        <td className="truncate">{post.quotePrice}</td>
+                        <td className="truncate">{post.baseAmount}</td>
+                        <td className="truncate maker_table">
+                          {post.maker.address.slice(0, -2)}
+                        </td>
+                      </tr>
+                    );
+                  }else{
+                      return (
+                        <tr key={key}>
+                          <td className="date_table">
+                            {post.block.timestamp.iso8601
+                              .replace("T", "..")
+                              .slice(0, -4)}
+                          </td>
+                          <td className="red">{post.side}</td>
+                          <td className="">{post.baseAmount}</td>
+                          <td className="truncate">{post.quoteAmount}</td>
+                          <td className="truncate">{post.quotePrice}</td>
+                          <td className="truncate">{post.baseAmount}</td>
+                          <td className="truncate maker_table">
+                            {post.maker.address.slice(0, -2)}
+                          </td>
+                        </tr>
+                      );
+                  }
                 })}
               </tbody>
             </table>
@@ -299,4 +316,21 @@ const BNBcoin=()=>{
   );
 }
 
+// return (
+//   <tr key={key}>
+//     <td className="date_table">
+//       {post.block.timestamp.iso8601
+//         .replace("T", "..")
+//         .slice(0, -4)}
+//     </td>
+//     <td className="red">{post.side}</td>
+//     <td className="">{post.baseAmount}</td>
+//     <td className="truncate">{post.quoteAmount}</td>
+//     <td className="truncate">{post.quotePrice}</td>
+//     <td className="truncate">{post.baseAmount}</td>
+//     <td className="truncate maker_table">
+//       {post.maker.address.slice(0, -2)}
+//     </td>
+//   </tr>
+// );
 export default SearchTokenData;

@@ -111,10 +111,14 @@
 }
 
 .search-results{
-  z-index: 1111;
+  z-index: 11;
   position: relative;
   background: #23323c;
+<<<<<<< HEAD
+  width: 100%;
+=======
   width: 95%;
+>>>>>>> f977655ff6d48014cccb8822d5cf2248de5b823e
 }
 
 .search-results > .scroll_box{
@@ -170,15 +174,21 @@
   position: relative;
   top: 4px;
 }
-/* .next_search{
-  width: 90%;
+.next_search{
+  width: 50%;
   margin: auto;
-} */
-
+}
+.search_max{
+  width: 50%;
+  margin: auto;
+}
 @media screen and (max-width:1500px) {
   .search_boxx{
     width: 82%;
-}
+  }
+  .search-results{
+    width: 95%;
+  }
 }
 @media screen and (max-width:1200px){
   .search_box{

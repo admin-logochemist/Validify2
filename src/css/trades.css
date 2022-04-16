@@ -179,7 +179,7 @@
   }
   .table_trades tr:hover {
     background: #8080806b;
-    transition: all .9s cubic-bezier(0.25, 0.1, 0.53, 0.84);
+    /* transition: all .9s cubic-bezier(0.25, 0.1, 0.53, 0.84); */
 }
 .date_table{
   width: 45% !important;
@@ -191,11 +191,11 @@
   .transform{
     text-align: center !important;
   }
-  .Trades_search{
+  /* .Trades_search{
     width: 50%;
     margin: auto;
     display: block;
-  }
+  } */
   .Trades_search input{
     width: 80%;
     margin: auto;
@@ -214,13 +214,14 @@
     color: white;
   }
   .Trades_search button{
-    padding: 16px 26px;
     border: none;
     color: white;
     font-weight: 500;
     background: #23323c;
     border-left: 1px solid grey !important;
     letter-spacing: 2px;
+    width: 20%;
+    line-height: 53px;
   }
   .li_pairs{
     margin-top: 20px;
@@ -275,7 +276,7 @@
 }
 .coin_names li.value_names li{
   margin: 0 20px;
-  color: green;
+  color: green !important;
   font-size: 21px;
   position: relative;
   top: 10px;
@@ -292,28 +293,22 @@
 }
 
 @media screen and (max-width:1500px) {
-    .Trades_search {
-      width: 66%;
-    }
     .Trades_search input {
         width: 75%;
     }
     .Trades_search button {
         width: 20%;
-    }
+    } 
 }
 @media screen and (max-width:993px) {
-  .Trades_search {
-    width: 100%;
-  }
   .Trades_search input {
-      width: 80%;
+    width: 80%;
   }
-  .Trades_search button {
-      width: 20%;
+  .search_max {
+    width: 100% !important;
   }
-  .li_pairs {
-    width: 100%;
+  .next_search {
+    width: 100% !important;
   }
 }
 @media screen and (max-width:678px){
@@ -330,13 +325,10 @@
     width: 77%;
     padding: 0%;
   }
-  .Trades_search button {
-    padding: 16px 0px;
-  }
   .coin_names{
     position: unset !important;
     display: unset !important;
-} 
+  } 
     .coin_names .value_names {
         font-size: 18px;
     } 
