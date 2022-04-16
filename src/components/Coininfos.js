@@ -33,7 +33,6 @@ const [flag,setflag] = useState(false);
           data.push([days === 1 ? time : date.toLocaleDateString(),coin[2],coin[1],coin[4],coin[3]])
           
     }
-    
       )
       return data
     }

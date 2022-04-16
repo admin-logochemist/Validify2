@@ -151,6 +151,13 @@
   transition: all .2s linear;
   border-radius: 50px;
 }
+#top_box_active{
+  background: #545454bd;
+  border-radius: 50px;
+}
+#top_box_not_active{
+  background: none;
+}
 .top_box img{
   height: 30px;
   margin: 0 6px;

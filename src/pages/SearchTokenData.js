@@ -20,6 +20,11 @@ function SearchTokenData() {
   const [exchange, setExchange] = useState();
   const [qoute, setQoute] = useState();
   const [network, setNetwork] = useState();
+
+  const [switchClassOne, setswitchClassOneToogled] = useState(false);
+  const [switchClassTwo, setswitchClassTwoToogled] = useState(false);
+  const [switchClassThree, setswitchClassThreeToogled] = useState(false);
+
   useEffect(() => {
     callApi();
   }, [search]);
@@ -34,37 +39,39 @@ function SearchTokenData() {
     } else {
     }
   };
-const Ethcoin=()=>{
-setExchange('Uniswap')
-setNetwork('ethereum')
-setQoute('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')
-
+const Ethcoin = () => {
+  setExchange('Uniswap')
+  setNetwork('ethereum')
+  setQoute('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')
+  switchClassOne ? setswitchClassOneToogled (false) : setswitchClassOneToogled(true);
+  // console.log("Coin was clicked");
 }
 const BNBcoin=()=>{
   setExchange('Pancake')
   setNetwork('bsc')
   setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
-  
+  switchClassTwo ? setswitchClassTwoToogled (false) : setswitchClassTwoToogled(true);
   }
   const AVAcoin=()=>{
     setExchange("Partyswap")
     setNetwork("avalanche")
     setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7")
+    switchClassThree ? setswitchClassThreeToogled (false) : setswitchClassThreeToogled(true);
     
     }
   const Results = () => (
     <div className="search-results">
       <div className="scroll_box">
-          <li className="top_box" onClick={Ethcoin} >
+          <li className="top_box" onClick={Ethcoin} id={switchClassOne ?  "top_box_active" : "top_box_not_active"}>
             <img src={Ethcoin_icon} />
             <span>ETHEREUM</span>
           </li>
           {console.log(exchange)}
-          <li className="top_box" onClick={BNBcoin}>
+          <li className="top_box" onClick={BNBcoin} id={switchClassTwo ?  "top_box_active" : "top_box_not_active"}>
             <img src={bnbicon}/>
             <span>BNB</span>
           </li>
-          <li className="top_box" onClick={AVAcoin}>
+          <li className="top_box" onClick={AVAcoin} id={switchClassThree ?  "top_box_active" : "top_box_not_active"}>
             <img src={avaicon}/>
             <span>AVALANCE</span>
           </li>
