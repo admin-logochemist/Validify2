@@ -227,7 +227,11 @@ const BNBcoin=()=>{
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
+<<<<<<< HEAD
               <TVChartContainer baseQuery={search} network={network}  />
+=======
+              <TVChartContainer baseQuery={search}  />
+>>>>>>> f977655ff6d48014cccb8822d5cf2248de5b823e
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>

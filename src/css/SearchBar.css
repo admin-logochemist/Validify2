@@ -114,7 +114,11 @@
   z-index: 11;
   position: relative;
   background: #23323c;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 95%;
+>>>>>>> f977655ff6d48014cccb8822d5cf2248de5b823e
 }
 
 .search-results > .scroll_box{
