@@ -184,6 +184,9 @@ const BNBcoin=()=>{
                 onChange={(e) => {
                   setSearch(e.target.value);
                   localStorage.setItem("@baseQuery", e.target.value)
+                  localStorage.setItem("@qQuery", qoute)
+                  localStorage.setItem("@network", network)
+                  localStorage.setItem("@exchange", exchange)
                 }}
                 placeholder="Search Token Address"
               />
@@ -243,7 +246,7 @@ const BNBcoin=()=>{
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
-              <TVChartContainer baseQuery={search}  />
+              <TVChartContainer baseQuery={search} network={network} qQuery={qoute} exchange={exchange} />
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>

@@ -22,7 +22,14 @@ export default {
          
         console.log('[resolveSymbol]: Method called!!'); 
         let baseQuery = await localStorage.getItem('@baseQuery')
+        let qQuery = await localStorage.getItem('@qQuery')
+		    let network = await localStorage.getItem('@network')
+		    let exchange = await localStorage.getItem('@exchange')
         console.log("BaseQuery",baseQuery)
+        console.log("qQuery",qQuery)
+        console.log("network",network)
+        console.log("exchange",exchange)
+
         const response = await fetch(
             Bitquery.endpoint, {
                 method: "POST",
@@ -38,7 +45,7 @@ export default {
              
                 },
                 //body: JSON.stringify({ query: Bitquery.GET_COIN_INFO2(baseQuery) }) // ({ QUERY })
-                 body: JSON.stringify({ query: Bitquery.GET_COIN_INFO(baseQuery) }) // ({ QUERY })
+                 body: JSON.stringify({ query: Bitquery.GET_COIN_INFO(baseQuery,qQuery,network,exchange) }) // ({ QUERY })
             
             }
         )
@@ -60,7 +67,7 @@ export default {
         }else{
             const symbol = {
                 ticker: symbolName,
-                name: `${coin.symbol}/WETH`,
+                name: `${coin.symbol}/USD`,
                 session: '24x7',
                 timezone: 'Etc/UTC',
                 minmov: 1,
@@ -79,8 +86,11 @@ export default {
     }, 
     getBars: async(symbolInfo, resolution,periodParams, onHistoryCallback) =>{
         const { from, to, firstDataRequest } = periodParams;
-        // console.log('[getBars]: Method call', symbolInfo, resolution, from, to);
+         console.log('[getBars]: Method call', symbolInfo, resolution, from, to);
         let baseQuery = await localStorage.getItem('@baseQuery')
+        let qQuery = await localStorage.getItem('@qQuery')
+		    let network = await localStorage.getItem('@network')
+		    let exchange = await localStorage.getItem('@exchange')
         try{
             if (resolution==='1m') {
                 resolution = 1400n;
@@ -98,7 +108,7 @@ export default {
                     "Access-Control-Allow-Origin" : "*", 
                     "Access-Control-Allow-Credentials" : true,
                 },
-                body: JSON.stringify({ query: Bitquery.GET_COIN_BARS(baseQuery) })
+                body: JSON.stringify({ query: Bitquery.GET_COIN_BARS(baseQuery,qQuery,network,exchange) })
             
             })
             .then((response) => {

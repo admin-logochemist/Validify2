@@ -32,6 +32,10 @@ export class TVChartContainer extends React.PureComponent {
 	
 	componentDidUpdate=async()=>{
 		let baseQuery = await localStorage.getItem('@baseQuery')
+		let qQuery = await localStorage.getItem('@qQuery')
+		let network = await localStorage.getItem('@network')
+		let exchange = await localStorage.getItem('@exchange')
+		
 		if(baseQuery.length){
 		const widgetOptions = {
 			symbol: this.props.symbol,

@@ -1,13 +1,13 @@
 export const endpoint = 'https://graphql.bitquery.io';    
 
-export const GET_COIN_INFO=(baseQuery)=>{
+export const GET_COIN_INFO=(baseQuery,qQuery,network,exchange)=>{
   let myQuery =`
 {
-  ethereum(network: ethereum) {
+  ethereum(network: ${network}) {
     dexTrades(
       options: {desc: ["block.height", "transaction.index"], limit: 1}
-      exchangeName: {is: "Uniswap"},
-      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"}
+      exchangeName: {is: "${exchange}"},
+      quoteCurrency: {is: "${qQuery}"}
       baseCurrency: {is: "${baseQuery}"}
     ) {
       block {
@@ -33,15 +33,15 @@ export const GET_COIN_INFO=(baseQuery)=>{
 return myQuery;
 }
 
-export const GET_COIN_BARS =(baseQuery)=>{
+export const GET_COIN_BARS =(baseQuery,qQuery,network,exchange)=>{
   let myQuery =`
  {
-  ethereum(network: ethereum) {
+  ethereum(network: ${network}) {
     dexTrades(
       options: {asc: "timeInterval.minute" }
-      date: {since: "2021-01-20T07:23:21.000Z"}
-      exchangeName: {is: "Uniswap"}
-      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"}
+      date: {is: "2022-01-20T07:23:21.000Z" }
+      exchangeName: {is: "${exchange}"}
+      quoteCurrency: {is: "${qQuery}"}
       baseCurrency: {is: "${baseQuery}"}
       tradeAmountUsd: {gt: 10}
     ) {
