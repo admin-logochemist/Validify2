@@ -9,19 +9,23 @@ import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
 import bitcoin_icon from '../images/bitcoin.png';
 import bnbicon from '../images/bsc.png'
-
+import avaicon from '../images/avalanche.png'
+import { color } from "@mui/system";
 
 function SearchTokenData() {
   const [showResults, setShowResults] = useState()
   const handleClick = () => setShowResults(true)
   const [resd, setResd] = useState([]);
   const [search, setSearch] = useState();
+  const [exchange, setExchange] = useState();
+  const [qoute, setQoute] = useState();
+  const [network, setNetwork] = useState();
   useEffect(() => {
     callApi();
   }, [search]);
   const callApi = () => {
     if (search) {
-      fetch(`https://validefi.global:8080/exchange?bcurrency=${search}`).then(
+      fetch(`http://localhost:8080/exchange?bcurrency=${search}&&ex=${exchange}&&network=${network}&&qcurrency=${qoute}`).then(
         (resd) =>
           resd.json().then((re) => {
             setResd(re);
@@ -30,21 +34,39 @@ function SearchTokenData() {
     } else {
     }
   };
+const Ethcoin=()=>{
+setExchange('Uniswap')
+setNetwork('ethereum')
+setQoute('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')
 
+}
+const BNBcoin=()=>{
+  setExchange('Pancake')
+  setNetwork('bsc')
+  setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
+  
+  }
+  const AVAcoin=()=>{
+    setExchange("Partyswap")
+    setNetwork("avalanche")
+    setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7")
+    
+    }
   const Results = () => (
     <div className="search-results">
       <div className="scroll_box">
-          <li className="top_box" >
-            <img src={Ethcoin_icon}/>
+          <li className="top_box" onClick={Ethcoin} >
+            <img src={Ethcoin_icon} />
             <span>ETHEREUM</span>
           </li>
-          <li className="top_box">
+          {console.log(exchange)}
+          <li className="top_box" onClick={BNBcoin}>
             <img src={bnbicon}/>
-            <span>BNB CHAIN</span>
+            <span>BNB</span>
           </li>
-          <li className="top_box">
-            <img src={Ethcoin_icon}/>
-            <span style={{width:30}}>AVALANCE</span>
+          <li className="top_box" onClick={AVAcoin}>
+            <img src={avaicon}/>
+            <span>AVALANCE</span>
           </li>
           <li className="top_box">
             <img src={bitcoin_icon}/>

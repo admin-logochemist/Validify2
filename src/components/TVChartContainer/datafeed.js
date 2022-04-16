@@ -35,7 +35,7 @@ export default {
                     "X-API-KEY": `BQYH5kJPfhPiJsmS36s6zasFiNkfgWbD`,
                     "Access-Control-Allow-Origin" : "*", 
                     "Access-Control-Allow-Credentials" : true,
-                    'Authorization' : 'Bearer <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>'
+             
                 },
                 //body: JSON.stringify({ query: Bitquery.GET_COIN_INFO2(baseQuery) }) // ({ QUERY })
                  body: JSON.stringify({ query: Bitquery.GET_COIN_INFO(baseQuery) }) // ({ QUERY })
@@ -77,21 +77,19 @@ export default {
             onSymbolResolvedCallback(symbol) 
         }
     }, 
-    getBars: async(symbolInfo, resolution,periodParams, onHistoryCallback, onErrorCallback, first,) =>{
+    getBars: async(symbolInfo, resolution,periodParams, onHistoryCallback) =>{
         const { from, to, firstDataRequest } = periodParams;
-        console.log('[getBars]: Method call', symbolInfo, resolution, from, to);
+        // console.log('[getBars]: Method call', symbolInfo, resolution, from, to);
         let baseQuery = await localStorage.getItem('@baseQuery')
         try{
             if (resolution==='1m') {
-                resolution = 1400;
+                resolution = 1400n;
             }
             const response2 = await fetch(Bitquery.endpoint, {
                 method: "POST",
-                variables: {
-                    "from": new Date("2022-01-11T07:23:21.000Z").toISOString(),
-                    "to": new Date("2022-04-13T07:23:21.000Z").toISOString(),
-                    "interval": Number(resolution),
-                    "tokenAddress": symbolInfo.ticker
+                variables: {                    
+                    interval: Number(resolution),
+                    tokenAddress: symbolInfo.ticker
                 },
                 mode: 'cors',
                 headers: {
@@ -104,7 +102,7 @@ export default {
             
             })
             .then((response) => {
-                if (response.status >= 304)  {
+                if (response.status >= 400)  {
                   throw new Error("Error fetching data");
                 } else {
                   return response.json();
