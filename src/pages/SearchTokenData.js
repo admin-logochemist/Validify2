@@ -30,7 +30,7 @@ function SearchTokenData() {
   }, [search]);
   const callApi = () => {
     if (search) {
-      fetch(`http://localhost:8080/exchange?bcurrency=${search}&&ex=${exchange}&&network=${network}&&qcurrency=${qoute}`).then(
+      fetch(`https://validefi.global:8080/exchange?bcurrency=${search}&&ex=${exchange}&&network=${network}&&qcurrency=${qoute}`).then(
         (resd) =>
           resd.json().then((re) => {
             setResd(re);
