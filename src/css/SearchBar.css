@@ -147,16 +147,17 @@
   margin: 10px 0;
 }
 .top_box:hover{
-  background: #54545459;
+  background: #54545459 !important;
   transition: all .2s linear;
   border-radius: 50px;
 }
 #top_box_active{
   background: #545454bd;
   border-radius: 50px;
+  transition: all .9s linear;
 }
 #top_box_not_active{
-  background: none;
+  background: none !important;
 }
 .top_box img{
   height: 30px;
