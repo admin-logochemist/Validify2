@@ -68,6 +68,7 @@ const BNBcoin=()=>{
   setExchange('Pancake')
   setNetwork('bsc')
   setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
+  switchClassTwo ? setswitchClassTwoToogled (false) : setswitchClassTwoToogled(true);
   
   }
   const AVAcoin=()=>{
@@ -111,16 +112,16 @@ const BNBcoin=()=>{
   const Results = () => (
     <div className="search-results">
       <div className="scroll_box">
-          <li className="top_box" onClick={Ethcoin} >
+          <li className="top_box" onClick={Ethcoin} id={switchClassOne ?  "top_box_active" : "top_box_not_active"}>
             <img src={Ethcoin_icon} />
             <span>ETHEREUM</span>
           </li>
           {console.log(exchange)}
-          <li className="top_box" onClick={BNBcoin}>
+          <li className="top_box" onClick={BNBcoin} id={switchClassTwo ?  "top_box_active" : "top_box_not_active"}>
             <img src={bnbicon}/>
             <span>BNB</span>
           </li>
-          <li className="top_box" onClick={AVAcoin}>
+          <li className="top_box" onClick={AVAcoin} id={switchClassThree ?  "top_box_active" : "top_box_not_active"}>
             <img src={avaicon}/>
             <span>AVALANCE</span>
           </li>
@@ -242,7 +243,7 @@ const BNBcoin=()=>{
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
-              <TVChartContainer baseQuery={search} />
+              <TVChartContainer baseQuery={search}  />
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>
