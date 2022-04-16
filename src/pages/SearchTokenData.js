@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
-import "../css/WhaleTrades.css";
-import "../css/trades.css";
-import "../css/SearchBar.css";
-import Ethcoin_icon from "../images/eth.svg";
 import PriceTickers from "../components/PriceTickers";
 import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
+import { color } from "@mui/system";
+
+import "../css/WhaleTrades.css";
+import "../css/trades.css";
+import "../css/SearchBar.css";
 import bitcoin_icon from '../images/bitcoin.png';
+import Ethcoin_icon from "../images/eth.svg";
 import bnbicon from '../images/bsc.png'
 import avaicon from '../images/avalanche.png'
-import { color } from "@mui/system";
+import polygon from '../images/polygon.svg'
+import okc from '../images/okc.svg'
+import fantom from '../images/fantom.png'
+import arbitrum from '../images/arbitrum.png'
 
 function SearchTokenData() {
   const [showResults, setShowResults] = useState()
@@ -20,6 +25,15 @@ function SearchTokenData() {
   const [exchange, setExchange] = useState();
   const [qoute, setQoute] = useState();
   const [network, setNetwork] = useState();
+
+  const [switchClassOne, setswitchClassOneToogled] = useState(false);
+  const [switchClassTwo, setswitchClassTwoToogled] = useState(false);
+  const [switchClassThree, setswitchClassThreeToogled] = useState(false);
+  const [switchClassFour, setswitchClassFourToogled] = useState(false);
+  const [switchClassFive, setswitchClassFiveToogled] = useState(false);
+  const [switchClassSix, setswitchClassSixToogled] = useState(false);
+  const [switchClassSeven, setswitchClassSevenToogled] = useState(false);
+
   useEffect(() => {
     callApi();
   }, [search]);
@@ -34,11 +48,11 @@ function SearchTokenData() {
     } else {
     }
   };
-const Ethcoin=()=>{
-setExchange('Uniswap')
-setNetwork('ethereum')
-setQoute('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')
-
+const Ethcoin = () => {
+  setExchange('Uniswap')
+  setNetwork('ethereum')
+  setQoute('0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2')
+  switchClassOne ? setswitchClassOneToogled (false) : setswitchClassOneToogled(true);
 }
 const BNBcoin=()=>{
   setExchange('Pancake')
@@ -50,8 +64,24 @@ const BNBcoin=()=>{
     setExchange("Partyswap")
     setNetwork("avalanche")
     setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7")
-    
-    }
+    switchClassThree ? setswitchClassThreeToogled (false) : setswitchClassThreeToogled(true);
+  }
+  const polygoncoin=()=>{
+    switchClassFour ? setswitchClassFourToogled (false) : setswitchClassFourToogled(true);
+  }
+
+  const okccoin=()=>{
+    switchClassFive ? setswitchClassFiveToogled (false) : setswitchClassFiveToogled(true);
+  }
+
+  const fantomcoin=()=>{
+    switchClassSix ? setswitchClassSixToogled (false) : setswitchClassSixToogled(true);
+  }
+
+  const arbitrumcoin=()=>{
+    switchClassSeven ? setswitchClassSevenToogled (false) : setswitchClassSevenToogled(true);
+  }
+
   const Results = () => (
     <div className="search-results">
       <div className="scroll_box">
@@ -68,21 +98,21 @@ const BNBcoin=()=>{
             <img src={avaicon}/>
             <span>AVALANCE</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={polygoncoin} id={switchClassFour ?  "top_box_active" : "top_box_not_active"}>
+            <img src={polygon}/>
+            <span>POLYGON</span>
           </li>
-          <li className="top_box">
-            <img src={Ethcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={okccoin}  id={switchClassFive ?  "top_box_active" : "top_box_not_active"}>
+            <img src={okc}/>
+            <span>OKC</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={fantomcoin} id={switchClassSix ?  "top_box_active" : "top_box_not_active"}>
+            <img src={fantom}/>
+            <span>FANTOM</span>
           </li>
-          <li className="top_box">
-            <img src={Ethcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={arbitrumcoin} id={switchClassSeven ?  "top_box_active" : "top_box_not_active"}>
+            <img src={arbitrum}/>
+            <span>ARBITRUM</span>
           </li>
           <li className="top_box">
             <img src={bitcoin_icon}/>
