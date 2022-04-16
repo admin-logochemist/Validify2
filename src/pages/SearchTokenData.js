@@ -49,7 +49,7 @@ function SearchTokenData() {
   }, [search]);
   const callApi = () => {
     if (search) {
-      fetch(`https://validefi.global:8080/exchange?bcurrency=${search}&&ex=${exchange}&&network=${network}&&qcurrency=${qoute}`).then(
+      fetch(`https://validefi.global:8080/exchange?bcurrency=${search}&ex=${exchange}&network=${network}&qcurrency=${qoute}`).then(
         (resd) =>
           resd.json().then((re) => {
             setResd(re);
@@ -69,6 +69,7 @@ const BNBcoin=()=>{
   setNetwork('bsc')
   setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
   switchClassTwo ? setswitchClassTwoToogled (false) : setswitchClassTwoToogled(true);
+  
   }
   const AVAcoin=()=>{
     setExchange("Partyswap")
@@ -156,10 +157,6 @@ const BNBcoin=()=>{
             <img src={aurora}/>
             <span>AURORA</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
-          </li>
       </div>
     </div>
   )
@@ -177,29 +174,17 @@ const BNBcoin=()=>{
         <div className="col-12">
           <div className="table_trades">
             <div className="Trades_search">
-              <input
-                type="text"
-                onClick={handleClick}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                  localStorage.setItem("@baseQuery", e.target.value)
-                }}
-                placeholder="Search Token Address"
-              />
-              <button
-                type="submit"
-                onClick={() => {
-                  callApi(); 
-                  
-                }}
-              >
-                Search
-              </button>
-
-
+              <div className="search_max">
+                  <input type="text" onClick={handleClick} onChange={(e) => {setSearch(e.target.value);
+                      localStorage.setItem("@baseQuery", e.target.value )}}
+                      placeholder="Search Token Address" />
+                  <button type="submit" onClick={() => { callApi(); }}>
+                    Search
+                  </button>
+              </div>
               <div class="next_search">
                   { showResults ? <Results /> : null}
-             </div>
+              </div>
             </div>
             
              {/* <Searchbar  data={SearchData}/> */}
@@ -242,7 +227,7 @@ const BNBcoin=()=>{
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
-              <TVChartContainer baseQuery={search} />
+              <TVChartContainer baseQuery={search} network={network}  />
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>
@@ -265,25 +250,43 @@ const BNBcoin=()=>{
               </thead>
               <tbody>
                 {resd.slice(0, 100).map((post, key) => {
-                  // if(post.side=="buy"){
-
-                  return (
-                    <tr key={key}>
-                      <td className="date_table">
-                        {post.block.timestamp.iso8601
-                          .replace("T", "..")
-                          .slice(0, -4)}
-                      </td>
-                      <td className="red">{post.side}</td>
-                      <td className="">{post.baseAmount}</td>
-                      <td className="truncate">{post.quoteAmount}</td>
-                      <td className="truncate">{post.quotePrice}</td>
-                      <td className="truncate">{post.baseAmount}</td>
-                      <td className="truncate maker_table">
-                        {post.maker.address.slice(0, -2)}
-                      </td>
-                    </tr>
-                  );
+                  if(post.side == "BUY"){
+                    return (
+                      <tr key={key}>
+                        <td className="date_table">
+                          {post.block.timestamp.iso8601
+                            .replace("T", "..")
+                            .slice(0, -4)}
+                        </td>
+                        <td className="green">{post.side}</td>
+                        <td className="">{post.baseAmount}</td>
+                        <td className="truncate">{post.quoteAmount}</td>
+                        <td className="truncate">{post.quotePrice}</td>
+                        <td className="truncate">{post.baseAmount}</td>
+                        <td className="truncate maker_table">
+                          {post.maker.address.slice(0, -2)}
+                        </td>
+                      </tr>
+                    );
+                  }else{
+                      return (
+                        <tr key={key}>
+                          <td className="date_table">
+                            {post.block.timestamp.iso8601
+                              .replace("T", "..")
+                              .slice(0, -4)}
+                          </td>
+                          <td className="red">{post.side}</td>
+                          <td className="">{post.baseAmount}</td>
+                          <td className="truncate">{post.quoteAmount}</td>
+                          <td className="truncate">{post.quotePrice}</td>
+                          <td className="truncate">{post.baseAmount}</td>
+                          <td className="truncate maker_table">
+                            {post.maker.address.slice(0, -2)}
+                          </td>
+                        </tr>
+                      );
+                  }
                 })}
               </tbody>
             </table>
@@ -295,4 +298,21 @@ const BNBcoin=()=>{
   );
 }
 
+// return (
+//   <tr key={key}>
+//     <td className="date_table">
+//       {post.block.timestamp.iso8601
+//         .replace("T", "..")
+//         .slice(0, -4)}
+//     </td>
+//     <td className="red">{post.side}</td>
+//     <td className="">{post.baseAmount}</td>
+//     <td className="truncate">{post.quoteAmount}</td>
+//     <td className="truncate">{post.quotePrice}</td>
+//     <td className="truncate">{post.baseAmount}</td>
+//     <td className="truncate maker_table">
+//       {post.maker.address.slice(0, -2)}
+//     </td>
+//   </tr>
+// );
 export default SearchTokenData;
