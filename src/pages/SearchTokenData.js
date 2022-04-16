@@ -89,7 +89,7 @@ const BNBcoin=()=>{
           </li>
           <li className="top_box">
             <img src={Ethcoin_icon}/>
-            <span>ETHEREUM</span>
+            <span>ethereum</span>
           </li>
           <li className="top_box">
             <img src={bitcoin_icon}/>
