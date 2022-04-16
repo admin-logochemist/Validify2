@@ -16,6 +16,11 @@ import polygon from '../images/polygon.svg'
 import okc from '../images/okc.svg'
 import fantom from '../images/fantom.png'
 import arbitrum from '../images/arbitrum.png'
+import metis from '../images/metis.png'
+import heco from '../images/heco.svg'
+import velas from '../images/velas.svg'
+import aurora from '../images/aurora.svg'
+import harmony from '../images/harmony.png'
 
 function SearchTokenData() {
   const [showResults, setShowResults] = useState()
@@ -33,6 +38,11 @@ function SearchTokenData() {
   const [switchClassFive, setswitchClassFiveToogled] = useState(false);
   const [switchClassSix, setswitchClassSixToogled] = useState(false);
   const [switchClassSeven, setswitchClassSevenToogled] = useState(false);
+  const [switchClassEight, setswitchClassEightToogled] = useState(false);
+  const [switchClassNine, setswitchClassNineToogled] = useState(false);
+  const [switchClassTen, setswitchClassTenToogled] = useState(false);
+  const [switchClassEleven, setswitchClassElevenToogled] = useState(false);
+
 
   useEffect(() => {
     callApi();
@@ -82,6 +92,22 @@ const BNBcoin=()=>{
     switchClassSeven ? setswitchClassSevenToogled (false) : setswitchClassSevenToogled(true);
   }
 
+  const metiscoin=()=>{
+    switchClassEight ? setswitchClassEightToogled (false) : setswitchClassEightToogled(true);
+  }
+
+  const hecocoin=()=>{
+    switchClassNine ? setswitchClassNineToogled (false) : setswitchClassNineToogled(true);
+  }
+
+  const velascoin=()=>{
+    switchClassTen ? setswitchClassTenToogled (false) : setswitchClassTenToogled(true);
+  }
+
+  const auroracoin=()=>{
+    switchClassEleven ? setswitchClassElevenToogled (false) : setswitchClassElevenToogled(true);
+  }
+
   const Results = () => (
     <div className="search-results">
       <div className="scroll_box">
@@ -114,21 +140,21 @@ const BNBcoin=()=>{
             <img src={arbitrum}/>
             <span>ARBITRUM</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={metiscoin} id={switchClassEight ?  "top_box_active" : "top_box_not_active"}>
+            <img src={metis}/>
+            <span>METIS</span>
           </li>
-          <li className="top_box">
-            <img src={Ethcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={hecocoin} id={switchClassNine ?  "top_box_active" : "top_box_not_active"}>
+            <img src={heco}/>
+            <span>HECO</span>
           </li>
-          <li className="top_box">
-            <img src={bitcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={velascoin} id={switchClassTen ?  "top_box_active" : "top_box_not_active"}>
+            <img src={velas}/>
+            <span>VELAS</span>
           </li>
-          <li className="top_box">
-            <img src={Ethcoin_icon}/>
-            <span>ETHEREUM</span>
+          <li className="top_box" onClick={auroracoin} id={switchClassEleven ?  "top_box_active" : "top_box_not_active"}>
+            <img src={aurora}/>
+            <span>AURORA</span>
           </li>
           <li className="top_box">
             <img src={bitcoin_icon}/>
