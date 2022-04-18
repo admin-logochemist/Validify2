@@ -31,7 +31,8 @@ export default {
         console.log("exchange",exchange)
 
         const response = await fetch(
-            Bitquery.endpoint, {
+           
+          Bitquery.endpoint, {
                 method: "POST",
                 variables: {
                     "tokenAddress": symbolName
@@ -92,14 +93,16 @@ export default {
 		    let network = await localStorage.getItem('@network')
 		    let exchange = await localStorage.getItem('@exchange')
         try{
-            if (resolution==='1m') {
-                resolution = 1400n;
-            }
+          if (resolution==='1D') {
+            resolution = 1440;
+        }
             const response2 = await fetch(Bitquery.endpoint, {
                 method: "POST",
                 variables: {                    
-                    interval: Number(resolution),
-                    tokenAddress: symbolInfo.ticker
+                  "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
+                  "to": new Date("2022-04-18T15:23:21.000Z").toISOString(),
+                  "interval": Number(resolution),
+                  "tokenAddress": symbolInfo.ticker
                 },
                 mode: 'cors',
                 headers: {
@@ -131,15 +134,13 @@ export default {
             }))
            
             )
-          if (firstDataRequest) {
-				lastBarsCache.set(symbolInfo.full_name, {
-					...window.bars[window.bars.length - 1],
-				});
-			}
+    
 			
-			onHistoryCallback(window.bars, {
-				noData: false,
-			});
+      if (window.bars.length){
+        onHistoryCallback(window.bars, {noData: false}); 
+    }else{
+        onHistoryCallback(window.bars, {noData: true}); 
+    }
         } catch(err){
             console.log({err})
             // onErrorCallback(err)
