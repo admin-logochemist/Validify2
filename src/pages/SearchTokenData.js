@@ -65,7 +65,7 @@ const Ethcoin = () => {
   switchClassOne ? setswitchClassOneToogled (false) : setswitchClassOneToogled(true);
 }
 const BNBcoin=()=>{
-  setExchange('Pancake')
+  setExchange('Pancake v2')
   setNetwork('bsc')
   setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
   switchClassTwo ? setswitchClassTwoToogled (false) : setswitchClassTwoToogled(true);

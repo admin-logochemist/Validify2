@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
-import axios from 'axios'; 
+
 import * as Bitquery from './Bitquery';
-import { useEffect } from 'react';
+
 
 const lastBarsCache = new Map(); 
 const configurationData = {
@@ -51,8 +51,8 @@ export default {
             }
         )
         .then((response) => {
-            if (response.status >= 400) {
-              throw new Error("Error fetching data");
+            if (response) {
+              return response.json();
             } else {
               return response.json();
             }
@@ -93,7 +93,7 @@ export default {
 		    let network = await localStorage.getItem('@network')
 		    let exchange = await localStorage.getItem('@exchange')
         try{
-          if (resolution==='1D') {
+          if (resolution==='15m') {
             resolution = 1440;
         }
             const response2 = await fetch(Bitquery.endpoint, {
@@ -115,7 +115,7 @@ export default {
             
             })
             .then((response) => {
-                if (response.status >= 400)  {
+                if (response.status >= 304)  {
                   throw new Error("Error fetching data");
                 } else {
                   return response.json();
@@ -134,28 +134,48 @@ export default {
             }))
            
             )
-    
+            if (firstDataRequest) {
+              onHistoryCallback(window.bars, {noData: true}); 
+              lastBarsCache.set(symbolInfo.full_name, {
+                
+                  ...window.bars[window.bars.length - 1],
+                  
+              });
+          }
+          console.log(`[getBars]:  ${window.bars.length}`);
+          
+          onHistoryCallback(window.bars, {
+              noData: false,
+          });
 			
-      if (window.bars.length){
-        onHistoryCallback(window.bars, {noData: false}); 
-    }else{
-        onHistoryCallback(window.bars, {noData: true}); 
-    }
+    //   if (window.bars.length){
+    //     onHistoryCallback(window.bars, {noData: false}); 
+    // }else{
+    //     onHistoryCallback(window.bars, {noData: true}); 
+    // }
         } catch(err){
             console.log({err})
             // onErrorCallback(err)
         }
     },
+  
 subscribeBars: (
-    symbolInfo,
-    resolution,
-    onRealtimeCallback,
-    subscribeUID,
-    onResetCacheNeededCallback
+  symbolInfo,
+  resolution,
+  onRealtimeCallback,
+  subscribeUID,
+  onResetCacheNeededCallback
   ) => {
+    
     console.log(
       "[subscribeBars]: Method call with subscribeUID:",
-      subscribeUID
+      subscribeUID,
+      symbolInfo,
+            resolution,
+            onRealtimeCallback,
+            subscribeUID,
+            onResetCacheNeededCallback,
+            lastBarsCache.get(symbolInfo.full_name)
     );
   },
   unsubscribeBars: (subscriberUID) => {
