@@ -18,7 +18,7 @@ export class TVChartContainer extends React.PureComponent {
 		chartsStorageUrl: 'https://saveload.tradingview.com',
 		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',
-		userId: 'public_user_id',
+		userId: 'danmanoloff',
 		fullscreen: false,
 		autosize: true
 	};

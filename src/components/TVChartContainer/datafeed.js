@@ -92,11 +92,16 @@ export default {
         let qQuery = await localStorage.getItem('@qQuery')
 		    let network = await localStorage.getItem('@network')
 		    let exchange = await localStorage.getItem('@exchange')
+
+
+        console.log(baseQuery, qQuery);
+
         try{
           if (resolution==='15m') {
             resolution = 1440;
         }
-            const response2 = await fetch(Bitquery.endpoint, {
+            // const response2 = await fetch(Bitquery.endpoint, {
+              fetch(Bitquery.endpoint, {
                 method: "POST",
                 variables: {                    
                   "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
@@ -134,25 +139,23 @@ export default {
             }))
            
             )
-            if (firstDataRequest) {
-              onHistoryCallback(window.bars, {noData: true}); 
-              lastBarsCache.set(symbolInfo.full_name, {
+          //   if (firstDataRequest) {
+          //     onHistoryCallback(window.bars, {noData: true}); 
+          //     lastBarsCache.set(symbolInfo.full_name, {
                 
-                  ...window.bars[window.bars.length - 1],
+          //         ...window.bars[window.bars.length - 1],
                   
-              });
-          }
-          console.log(`[getBars]:  ${window.bars.length}`);
+          //     });
+          // }
+          // console.log(`[getBars]:  ${window.bars.length}`);
           
-          onHistoryCallback(window.bars, {
-              noData: false,
-          });
+          // onHistoryCallback(window.bars, {noData: false});
 			
-    //   if (window.bars.length){
-    //     onHistoryCallback(window.bars, {noData: false}); 
-    // }else{
-    //     onHistoryCallback(window.bars, {noData: true}); 
-    // }
+      if (window.bars.length){
+        onHistoryCallback(window.bars, {noData: false}); 
+    }else{
+        onHistoryCallback(window.bars, {noData: true}); 
+    }
         } catch(err){
             console.log({err})
             // onErrorCallback(err)

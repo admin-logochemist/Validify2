@@ -48,15 +48,16 @@ function SearchTokenData() {
     callApi();
   }, [search]);
   const callApi = () => {
-    if (search) {
+    if (search || exchange || network || qoute) {
       fetch(`https://validefi.global:8080/exchange?bcurrency=${search}&ex=${exchange}&network=${network}&qcurrency=${qoute}`).then(
         (resd) =>
           resd.json().then((re) => {
             setResd(re);
           })
       );
-    } else {
-    }
+    } else if(search === "") {
+      console.log("no Search")
+    };
   };
 const Ethcoin = () => {
   setExchange('Uniswap')
@@ -65,6 +66,7 @@ const Ethcoin = () => {
   switchClassOne ? setswitchClassOneToogled (false) : setswitchClassOneToogled(true);
 }
 const BNBcoin=()=>{
+ 
   setExchange('Pancake v2')
   setNetwork('bsc')
   setQoute('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c')
