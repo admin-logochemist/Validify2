@@ -9,6 +9,9 @@
   width: 75%;
   height: 100px;
 }
+#tv_chart_container{
+  height: 100vh;
+}
 
 .searchInputs > input {
   font-family: 'Lato', sans-serif;
