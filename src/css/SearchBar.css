@@ -203,7 +203,7 @@
     width: 82%;
   }
   .search-results{
-    width: 95%;
+    width: 100%;
   }
 }
 @media screen and (max-width:1200px){
