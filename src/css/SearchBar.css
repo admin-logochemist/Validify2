@@ -65,7 +65,7 @@
 }
 
 .dataResult::-webkit-scrollbar-thumb{
-	background-color: rgb(104, 102, 102);
+	background-color: white;
   border-radius: 50px;
 }
 .dataResult li{
@@ -113,12 +113,9 @@
 .search-results{
   z-index: 11;
   position: relative;
-  background: #23323c;
-<<<<<<< HEAD
+  background: black;
   width: 100%;
-=======
-  width: 95%;
->>>>>>> f977655ff6d48014cccb8822d5cf2248de5b823e
+  border-radius: 0 0 20px 20px;
 }
 
 .search-results > .scroll_box{
@@ -127,6 +124,8 @@
   overflow-y: hidden;
   display: flex;
   margin: auto;
+  padding: 16px 0;
+  border-top: 1px solid grey;
 }
 
 .search-results > .scroll_box::-webkit-scrollbar-track{
@@ -140,14 +139,14 @@
 }
 
 .search-results > div::-webkit-scrollbar-thumb{
-	background-color: rgb(104, 102, 102);
+	background-color: white;
   border-radius: 50px;
 }
 .top_box{
   list-style: none;
   display: inline-flex;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 10px 0;
 }
 .top_box:hover{
@@ -156,15 +155,23 @@
   border-radius: 50px;
 }
 #top_box_active{
-  background: #545454bd;
+  background: black;
   border-radius: 50px;
   transition: all .9s linear;
+  margin: 10px 5px;
+  border: 2px solid white;
 }
 #top_box_not_active{
   background: none !important;
 }
+#search_active{
+  display: block;
+}
+#search_not_active{
+  display: none;
+}
 .top_box img{
-  height: 30px;
+  height: 25px;
   margin: 0 6px;
   border-radius: 50px;
   padding: 0;
@@ -172,15 +179,24 @@
 .top_box span{
   display: block;
   position: relative;
-  top: 4px;
+  /* top: 4px; */
 }
 .next_search{
   width: 50%;
   margin: auto;
+  /* display: none; */
+}
+#search_actives{
+  background-color: red;
 }
 .search_max{
   width: 50%;
   margin: auto;
+}
+.search_max > div{
+  position: relative;
+  width: 80%;
+  display: inline-block;
 }
 @media screen and (max-width:1500px) {
   .search_boxx{
@@ -214,6 +230,9 @@
 @media screen and (max-width:601px){
     .top_box {
       display: inline-table;
+    }
+    #top_box_active {
+      border-radius: 10px;
     }
     .top_box img {
       height: 25px;

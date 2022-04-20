@@ -197,14 +197,15 @@
     display: block;
   } */
   .Trades_search input{
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: inline-block;
     height: 55px;
     border: none;
-    background: #23323c;
+    background: black;
     padding-left: 30px;
     color: white;
+    border-radius:  20px 0 0 20px;
   }
   .Trades_search input:focus{
     outline: none;
@@ -213,15 +214,43 @@
   .Trades_search input::placeholder{
     color: white;
   }
+  .Trades_search .search_max  > div svg{
+    position: absolute;
+    color: white;
+    height: 35px;
+    right: 8px;
+    top: 10px;
+    padding: 4px 10px;
+    border-radius: 22px;
+  }
+  #svg_active{
+    display: block;
+  }
+  #svg_not_active{
+    display: none;
+  }
   .Trades_search button{
     border: none;
     color: white;
     font-weight: 500;
-    background: #23323c;
+    background: black;
     border-left: 1px solid grey !important;
     letter-spacing: 2px;
     width: 20%;
     line-height: 53px;
+    border-radius: 0 20px 20px 0;
+  }
+  #input_active{
+    border-radius:  20px 0 0 0px;
+  }
+  #input_not_active{
+    border-radius:  20px 0 0 20px;
+  }
+  #btn_active{
+    border-radius: 0 20px 0px 0;
+  }
+  #btn_not_active{
+    border-radius: 0 20px 20px 0;
   }
   .li_pairs{
     margin-top: 20px;
