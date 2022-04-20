@@ -1,7 +1,7 @@
 export const endpoint = 'https://graphql.bitquery.io';
 
 export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
-  let myQuery = `
+    let myQuery = `
 {
   ethereum(network: ${network}) {
     dexTrades(
@@ -30,7 +30,7 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 }
 
 `;
-  return myQuery;
+    return myQuery;
 };
 
 // export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
@@ -102,9 +102,9 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 // }
 
 export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
-  let myQuery;
-  if (network === 'ethereum') {
-    myQuery = `
+    let myQuery;
+    if (network === 'ethereum') {
+        myQuery = `
     {
      ethereum(network: ${network}) {
        dexTrades(
@@ -128,21 +128,21 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
    }
    
    `;
-  } else {
-    console.log('bnb taiche');
-    myQuery = `
+    } else {
+        console.log('bnb taiche');
+        myQuery = `
     {
      ethereum(network: ${network}) {
        dexTrades(
-         options: {asc: "timeInterval.minute" }
-         date: {is: "2022-04-19" }
+         options: {asc: "timeInterval.minute"}
+         date: {since: "2022-04-13T15:15:00Z" till: "2022-04-20T23:15:00Z"}
          exchangeName: {is: "${exchange}"}
          quoteCurrency: {is: "${qQuery}"}
          baseCurrency: {is: "${baseQuery}"}
-         tradeAmountUsd: {gt: 10}
+        
        ) {
          timeInterval {
-           minute(count: 1, format: "%Y-%m-%dT%H:%M:%SZ")
+            minute(count: 5, format: "%Y-%m-%dT%H:%M:%SZ") 
          }
          volume: quoteAmount
          high: quotePrice(calculate: maximum)
@@ -154,7 +154,7 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
    }
    
    `;
-  }
+    }
 
-  return myQuery;
+    return myQuery;
 };

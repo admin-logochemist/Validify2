@@ -17,7 +17,7 @@ export class TVChartContainer extends React.PureComponent {
     interval: '15',
     containerId: 'tv_chart_container',
     //datafeedUrl: 'https://demo_feed.tradingview.com',
-    libraryPath: '/charting_library/',
+    libraryPath: '../charting_library/',
     chartsStorageUrl: 'https://saveload.tradingview.com',
     chartsStorageApiVersion: '1.1',
     clientId: 'tradingview.com',
@@ -45,7 +45,7 @@ export class TVChartContainer extends React.PureComponent {
         // BEWARE: no trailing slash is expected in feed URL
         datafeed: Datafeed,
         interval: this.props.interval,
-        container: this.ref.current,
+        container_id: this.props.containerId,
         library_path: this.props.libraryPath,
         locale: getLanguageFromURL() || 'en',
         disabled_features: ['use_localstorage_for_settings'],
@@ -93,7 +93,6 @@ export class TVChartContainer extends React.PureComponent {
 
   render() {
     console.log('================ >>>>>>', this.props);
-
-    return <div ref={this.ref} className={'TVChartContainer'} />;
+    return <div ref={this.ref} id={this.props.containerId} className={'TVChartContainer'} />;
   }
 }
