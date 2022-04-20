@@ -1,13 +1,13 @@
-export const endpoint = 'https://graphql.bitquery.io';    
+export const endpoint = 'https://graphql.bitquery.io';
 
-export const GET_COIN_INFO=(baseQuery)=>{
-  let myQuery =`
+export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
+    let myQuery = `
 {
-  ethereum(network: ethereum) {
+  ethereum(network: ${network}) {
     dexTrades(
       options: {desc: ["block.height", "transaction.index"], limit: 1}
-      exchangeName: {is: "Uniswap"},
-      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"}
+      exchangeName: {is: "${exchange}"},
+      quoteCurrency: {is: "${qQuery}"},
       baseCurrency: {is: "${baseQuery}"}
     ) {
       block {
@@ -29,35 +29,132 @@ export const GET_COIN_INFO=(baseQuery)=>{
   }
 }
 
-`; 
-return myQuery;
-}
+`;
+    return myQuery;
+};
 
-export const GET_COIN_BARS =(baseQuery)=>{
-  let myQuery =`
- {
-  ethereum(network: ethereum) {
-    dexTrades(
-      options: {asc: "timeInterval.minute" }
-      date: {since: "2021-01-20T07:23:21.000Z"}
-      exchangeName: {is: "Uniswap"}
-      quoteCurrency: {is: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"}
-      baseCurrency: {is: "${baseQuery}"}
-      tradeAmountUsd: {gt: 10}
-    ) {
-      timeInterval {
-        minute(count: 1, format: "%Y-%m-%dT%H:%M:%SZ")
-      }
-      volume: quoteAmount
-      high: quotePrice(calculate: maximum)
-      low: quotePrice(calculate: minimum)
-      open: minimum(of: block, get: quote_price)
-      close: maximum(of: block, get: quote_price)
+// export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
+//   let myQuery;
+//   // if(network==='ethereum'){
+//   myQuery = `
+//     {
+//   ethereum(network: ${network}) {
+//     dexTrades(
+//       options: {limit: 1000, desc: "timeInterval.minute"}
+//       date: {since: "2022-04-19"}
+//       baseCurrency: {is: "${baseQuery}"}
+//       quoteCurrency: {is: "${qQuery}"}
+//     ) {
+//       timeInterval {
+//         minute(count: 15)
+//       }
+//       baseCurrency {
+//         symbol
+//         address
+//       }
+//       baseAmount
+//       quoteCurrency {
+//         symbol
+//         address
+//       }
+
+//       quoteAmount
+//       trades: count
+//       quotePrice
+//       maximum_price: quotePrice(calculate: maximum)
+//       minimum_price: quotePrice(calculate: minimum)
+//       open_price: minimum(of: block, get: quote_price)
+//       close_price: maximum(of: block, get: quote_price)
+//     }
+//   }
+// }
+//    `;
+//   return myQuery;
+// };
+// }else{
+//   console.log("bnb taiche");
+//   myQuery =`
+//   {
+//    ethereum(network: ${network}) {
+//      dexTrades(
+//        options: {asc: "timeInterval.minute" }
+//        date: {is: "2022-01-20" }
+//        exchangeName: {is: "${exchange}"}
+//        quoteCurrency: {is: "${qQuery}"}
+//        baseCurrency: {is: "${baseQuery}"}
+//        tradeAmountUsd: {gt: 10}
+//      ) {
+//        timeInterval {
+//          minute(count: 1, format: "%Y-%m-%dT%H:%M:%SZ")
+//        }
+//        volume: quoteAmount
+//        high: quotePrice(calculate: maximum)
+//        low: quotePrice(calculate: minimum)
+//        open: minimum(of: block, get: quote_price)
+//        close: maximum(of: block, get: quote_price)
+//      }
+//    }
+//  }
+
+//  `;
+// }
+
+// }
+
+export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
+    let myQuery;
+    if (network === 'ethereum') {
+        myQuery = `
+    {
+     ethereum(network: ${network}) {
+       dexTrades(
+         options: {asc: "timeInterval.minute", limit:1000}
+         date: {since: "2021-06-20" till: "2022-04-19"}
+         exchangeName: {is: "${exchange}"}
+         quoteCurrency: {is: "${qQuery}"}
+         baseCurrency: {is: "${baseQuery}"}
+         
+       ) {
+         timeInterval {
+           minute(count: 5, format: "%Y-%m-%dT%H:%M:%SZ")
+         }
+         volume: quoteAmount
+         high: quotePrice(calculate: maximum)
+         low: quotePrice(calculate: minimum)
+         open: minimum(of: block, get: quote_price)
+         close: maximum(of: block, get: quote_price)
+       }
+     }
+   }
+   
+   `;
+    } else {
+        console.log('bnb taiche');
+        myQuery = `
+    {
+     ethereum(network: ${network}) {
+       dexTrades(
+         options: {asc: "timeInterval.minute"}
+         date: {since: "2022-04-13T15:15:00Z" till: "2022-04-20T23:15:00Z"}
+         exchangeName: {is: "${exchange}"}
+         quoteCurrency: {is: "${qQuery}"}
+         baseCurrency: {is: "${baseQuery}"}
+        
+       ) {
+         timeInterval {
+            minute(count: 5, format: "%Y-%m-%dT%H:%M:%SZ") 
+         }
+         volume: quoteAmount
+         high: quotePrice(calculate: maximum)
+         low: quotePrice(calculate: minimum)
+         open: minimum(of: block, get: quote_price)
+         close: maximum(of: block, get: quote_price)
+       }
+     }
+   }
+   
+   `;
     }
-  }
-}
 
-`; 
-return myQuery;
-}
-
+    return myQuery;
+};

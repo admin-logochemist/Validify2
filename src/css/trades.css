@@ -223,6 +223,9 @@
     padding: 4px 10px;
     border-radius: 22px;
   }
+  .Trades_search .search_max  > div svg:hover{
+    cursor: pointer;
+  }
   #svg_active{
     display: block;
   }
