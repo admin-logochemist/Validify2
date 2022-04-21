@@ -253,7 +253,7 @@ function SearchTokenData() {
             <div className="Trades_search">
             <div className="search_max">
               <div>
-                    <input type="text" onClick={handleClick}
+                    <input type="text" onClick={handleClick} autoComplete="off"
                     onChange={(e) => {
                       setSearch(e.target.value);
                       localStorage.setItem("@baseQuery", e.target.value);

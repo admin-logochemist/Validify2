@@ -13,11 +13,11 @@ function getLanguageFromURL() {
 
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
-    symbol: '0x41515885251e724233c6ca94530d6dcf3a20dec7',
-    interval: '15',
+    symbol: 'Pancake',
+    interval: '5',
     containerId: 'tv_chart_container',
     //datafeedUrl: 'https://demo_feed.tradingview.com',
-    libraryPath: '../../charting_library',
+    libraryPath: '../../charting_library/',
     chartsStorageUrl: 'https://saveload.tradingview.com',
     chartsStorageApiVersion: '1.1',
     clientId: 'tradingview.com',
@@ -45,7 +45,7 @@ export class TVChartContainer extends React.PureComponent {
         // BEWARE: no trailing slash is expected in feed URL
         datafeed: Datafeed,
         interval: this.props.interval,
-        container_id: this.props.containerId,
+        container: this.ref.current,
         library_path: this.props.libraryPath,
         locale: getLanguageFromURL() || 'en',
         disabled_features: ['use_localstorage_for_settings'],
