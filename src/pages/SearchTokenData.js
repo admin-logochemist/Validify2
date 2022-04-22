@@ -3,13 +3,13 @@ import PriceTickers from "../components/PriceTickers";
 import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
-import { color } from "@mui/system";
+// import { color } from "@mui/system";
 import 'font-awesome/css/font-awesome.min.css'
 
 import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import "../css/SearchBar.css";
-import bitcoin_icon from "../images/bitcoin.png";
+// import bitcoin_icon from "../images/bitcoin.png";
 import Ethcoin_icon from "../images/eth.svg";
 import bnbicon from "../images/bsc.png";
 import avaicon from "../images/avalanche.png";
@@ -21,7 +21,7 @@ import metis from "../images/metis.png";
 import heco from "../images/heco.svg";
 import velas from "../images/velas.svg";
 import aurora from "../images/aurora.svg";
-import harmony from "../images/harmony.png";
+// import harmony from "../images/harmony.png";
 
 function SearchTokenData() {
   const [resd, setResd] = useState([]);

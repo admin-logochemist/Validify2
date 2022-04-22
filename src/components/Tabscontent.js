@@ -29,8 +29,8 @@ import BullSays from './BullSays'
 // import Technical from './TechnicalAnalysis'
 import PriceTickers from './PriceTickers'
 import Pill from './molecules/Pill'
-import ConnectButton from './molecules/ConnectButton'
-import { useWeb3 } from '@3rdweb/hooks'
+// import ConnectButton from './molecules/ConnectButton'
+// import { useWeb3 } from '@3rdweb/hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/tab_content.css'
 import BTCSwap from './BTCSwap'
@@ -65,18 +65,18 @@ import TradesShiba from './TradesShiba'
 import TradesTron from './TradesTron'
 import SearchData from './SearchData.json'
 import Searchbar from './Searchbar'
-import { TVChartContainer } from './TVChartContainer'
+// import { TVChartContainer } from './TVChartContainer'
 import { Link } from 'react-router-dom'
-import InstallMetaMask from './molecules/InstallMetaMask'
+// import InstallMetaMask from './molecules/InstallMetaMask'
 import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
-import Fortmatic from "fortmatic";
+// import Fortmatic from "fortmatic";
 function Tabscontent() {
   // const {address,connectWallet}=useWeb3()
   // const { ethereum } = window;
-  const [account, setAccount] = useState("");
+  var [account, setAccount] = useState("");
   const { ethereum } = window;
   useEffect(() => {
     (async () => {
@@ -160,16 +160,16 @@ function Tabscontent() {
                 <div className="tab tabs_flex" role="tabpanel">
                     <div className='hamza'>
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" className="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} />Bit</a></li>
-                            <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon}/> ETH</a></li>
-                            <li role="presentation"><a href="#tetherss" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon}/> Tether </a></li>
-                            <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon}/> BNB </a></li>
-                            <li role="presentation"><a href="#usd" aria-controls="messages" role="tab" data-toggle="tab">< img src={Usd_icon}/> USD </a></li>
-                            <li role="presentation"><a href="#xrp" aria-controls="messages" role="tab" data-toggle="tab">< img src={Xrp}/> XRP </a></li>
-                            <li role="presentation"><a href="#luna" aria-controls="messages" role="tab" data-toggle="tab">< img src={LUNA}/> Terra </a></li>
-                            <li role="presentation"><a href="#sol" aria-controls="messages" role="tab" data-toggle="tab">< img src={SOL}/> SOL </a></li>
-                            <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={rond}/> Bitshiba </a></li>
-                            <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={tron}/> Tron </a></li>
+                            <li role="presentation" className="active"><a href="#bit" aria-controls="home" role="tab" data-toggle="tab"><img src={bitcoin_icon} alt="d" />Bit</a></li>
+                            <li role="presentation"><a href="#ETH" aria-controls="profile" role="tab" data-toggle="tab"><img src={Ethcoin_icon} alt="d"/> ETH</a></li>
+                            <li role="presentation"><a href="#tetherss" aria-controls="messages" role="tab" data-toggle="tab">< img src={Tethercoin_icon} alt="d"/> Tether </a></li>
+                            <li role="presentation"><a href="#bnb" aria-controls="messages" role="tab" data-toggle="tab">< img src={Bnb_icon} alt="d"/> BNB </a></li>
+                            <li role="presentation"><a href="#usd" aria-controls="messages" role="tab" data-toggle="tab">< img src={Usd_icon} alt="d"/> USD </a></li>
+                            <li role="presentation"><a href="#xrp" aria-controls="messages" role="tab" data-toggle="tab">< img src={Xrp} alt="d"/> XRP </a></li>
+                            <li role="presentation"><a href="#luna" aria-controls="messages" role="tab" data-toggle="tab">< img src={LUNA} alt="d"/> Terra </a></li>
+                            <li role="presentation"><a href="#sol" aria-controls="messages" role="tab" data-toggle="tab">< img src={SOL} alt="d"/> SOL </a></li>
+                            <li role="presentation"><a href="#cardano" aria-controls="messages" role="tab" data-toggle="tab">< img src={rond} alt="d"/> Bitshiba </a></li>
+                            <li role="presentation"><a href="#avax" aria-controls="messages" role="tab" data-toggle="tab">< img src={tron} alt="d"/> Tron </a></li>
                         </ul>
                     </div>
                     <div class="tab-content tabs container-fluid">
