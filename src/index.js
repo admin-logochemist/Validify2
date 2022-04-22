@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import CryptoContext from './CryptoContext';
 const supportedChainIds = [4];
 const connectors = {

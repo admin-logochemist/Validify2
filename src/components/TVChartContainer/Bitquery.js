@@ -101,7 +101,7 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 
 // }
 
-export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
+export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) => {
     let myQuery;
     if (network === 'ethereum') {
         myQuery = `
@@ -129,20 +129,18 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
    
    `;
     } else {
-        console.log('bnb taiche');
         myQuery = `
     {
      ethereum(network: ${network}) {
        dexTrades(
          options: {asc: "timeInterval.minute"}
-         date: {since: "2022-04-13T15:15:00Z" till: "2022-04-20T23:15:00Z"}
          exchangeName: {is: "${exchange}"}
          quoteCurrency: {is: "${qQuery}"}
          baseCurrency: {is: "${baseQuery}"}
         
        ) {
          timeInterval {
-            minute(count: 5, format: "%Y-%m-%dT%H:%M:%SZ") 
+            minute(count: ${resolution}) 
          }
          volume: quoteAmount
          high: quotePrice(calculate: maximum)
