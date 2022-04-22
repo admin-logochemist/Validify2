@@ -109,7 +109,7 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
      ethereum(network: ${network}) {
        dexTrades(
          options: {asc: "timeInterval.minute", limit:1000}
-         date: {since: "2021-06-20" till: "2022-04-19"}
+         date: {since: "2021-06-20" till: "2022-04-22"}
          exchangeName: {is: "${exchange}"}
          quoteCurrency: {is: "${qQuery}"}
          baseCurrency: {is: "${baseQuery}"}
@@ -135,7 +135,7 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange) => {
      ethereum(network: ${network}) {
        dexTrades(
          options: {asc: "timeInterval.minute"}
-         date: {since: "2022-04-13T15:15:00Z" till: "2022-04-20T23:15:00Z"}
+         date: {since: "2022-04-13T15:15:00Z" till: "2022-04-22T23:15:00Z"}
          exchangeName: {is: "${exchange}"}
          quoteCurrency: {is: "${qQuery}"}
          baseCurrency: {is: "${baseQuery}"}

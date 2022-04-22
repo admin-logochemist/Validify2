@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
 import * as Bitquery from './Bitquery';
 
@@ -46,9 +47,10 @@ export default {
         if (!coin) {
             onResolveErrorCallback();
         } else {
+
             const symbol = {
                     ticker: symbolName,
-                    name: `${coin.symbol}/USD`,
+                    name: `${coin.symbol}/BNB`,
                     session: '24x7',
                     timezone: 'Etc/UTC',
                     minmov: 1,
