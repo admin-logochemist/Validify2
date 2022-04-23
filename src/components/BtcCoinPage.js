@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/CoinPages.css'
-import BTC_icon from '../images/btcpage.png'
+// import BTC_icon from '../images/btcpage.png'
 import { BTCSingleCoin } from "../config/api";
 // import { numberWithCommas } from "./CoinsTable";
 import { CryptoState } from "../CryptoContext";
@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 export default function BtcCoinPage({id}) {
   const [coins, setCoin] = useState();
 
-  const { currency, symbol } = CryptoState();
+  const { currency } = CryptoState();
   const fetchCoin = async () => {
     const { data } = await axios.get(BTCSingleCoin(id));
 

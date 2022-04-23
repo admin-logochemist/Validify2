@@ -25,8 +25,7 @@ function Home() {
           <div className='row'>
             <div className='col-lg-6'>
                 <div className='validate'>
-                  <small>VALID Price</small>
-                  <h3>$00.00</h3>
+                
                   <div className='main_title_banner'>
                     <h4 className='banner_h4'>ENHANCE YOUR TRADING EXPERIENCE THRU VALID DEFI</h4>
                     <p className='banner_phara'>VALIDEFI An All-in-One crypto platform backed by the valid token,
