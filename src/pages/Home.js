@@ -6,8 +6,9 @@ import 'aos/dist/aos.css'
 import '../css/home.css'
 import RetPlayer from 'react-player/lazy'
 import video from '../video/proVid.mp4';
+// import Nftslider from '../components/Nftslider'
 import Cardslider from '../components/Cardslider'
-import sec_img from '../images/Animation_File_validefi.gif'
+import sec_img from '../images/aboutimage.png'
 import head_img from '../images/logoIcon.svg'
 import chain from '../images/portfolio.svg'
 import multichain from '../images/Icon_awesome-coins.svg'
@@ -93,10 +94,6 @@ function Home() {
                   <div className='btn_banner'>
                     <a className='link_btn_one' href="https://validefi.global/pdf/Validefi_Whitepaper_V2_20220329.pdf" target='_blank'><button className='btn_two scd_btn'>Whitepaper</button></a>
                   </div>
-
-                  <div className='mobile_vedio_Section'>
-                    <img src={sec_img}/>
-                  </div>
                 </div>
               </div>
             </div>
@@ -113,7 +110,7 @@ function Home() {
                 </h4>
               </div>
             <div className="row  justify-content-center" data-aos='zoom-in' data-aos-offset="300">
-                <div className="col-lg-3 col_one">
+                <div className="col-lg-4 col_one">
                     <div className="service-icon">
                         <span><img src={chain}/></span>
                     </div>
@@ -131,7 +128,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col_one">
+                <div className="col-lg-4 col_one">
                     <div className="service-icon">
                         <span><img src={multichain}/></span>
                     </div>
@@ -144,13 +141,12 @@ function Home() {
                           All of your NFTS in one place
                         </p>
                         <br/>
-                        <br/>
                         <div className='btn_banner'>
                            <Link to="" className='link_btn_one'><button className='btn_one services_btn'>Coming Soon</button></Link>
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-3 col_large">
+                <div className="col-lg-4 col_large">
                       <div className="service-icon">
                            <span><img src={titan}/></span>
                       </div>
@@ -172,11 +168,12 @@ function Home() {
        </section>
 
        <section className='section_divider'></section>
+
        <section className="banner_nft_bg">
          <div className="nftBanner"></div>
        </section>
 
-       <section className='section'>
+       <section className='sectionMargin'>
           <div className='container-fluid custom_conatiner'>
              <div className='row justify-content-center'>
                <div className='col-lg-12'>
@@ -204,7 +201,7 @@ function Home() {
                </div> */}
              </div>
 
-             <div className='row justify-content-center mt-5'>
+             {/*<div className='row justify-content-center mt-5'>
                 <div className="col-12 qr-code-container">
                     <div className='col-lg-5 Qr-code'>
                         <QRCode className="QR-image" id="abc" value="https://validefi.pro/trade/" />
@@ -216,7 +213,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-             </div>
+              </div>*/}
           </div>
        </section>
 

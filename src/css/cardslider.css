@@ -31,7 +31,6 @@
     margin-top: 15px;
     height: 36px;
 }
-.slider_div .images_slider{}
 .card_slider span{
     font-family: 'Lato', sans-serif;
     font-size: 18px;
@@ -76,23 +75,31 @@
 /* // RESPONSIVE AREA // */
 @media only screen and (max-width: 993px){
     .containerr {
-        margin-top: 130px;
+        margin: 200px 0 auto;
     }
 }
 @media only screen and (max-width: 768px){
     .containerr {
-        width: 90%;
-        margin: auto !important;
-        margin-top: 60px !important;
+        width: 100%;
+        margin: 150px 0 auto;
     }
     .slick-slide {
         width: 4% !important;
         margin: 10px 5px;
     }
 }
+@media screen and (max-width:651px){
+    .containerr {
+        margin: 130px 0 auto;
+    }
+    .section {
+        margin-top: 0px;
+    }
+}
 @media only screen and (max-width: 501px){
     .containerr{
         width: 100%;
+        margin: 60px 0 auto;
     }
     .containerr h3 {
         font-size: 20px;
@@ -147,9 +154,9 @@
 }
 @media only screen and (max-width: 480px){
     .containerr {
-        width: 90%;
-        margin: auto !important;
-        margin-top: 0px !important;
+        width: 100%;
+        margin: 65px 0 auto;
+        padding: 0 15px 15px 15px;
     }
     .slick-list {
         width: 100% !important;

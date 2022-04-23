@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
-    /* background: #0B2251 !important; */
-    background-image: linear-gradient(to right, #081f4e, #0d0d7c) !important;
+    background: #0B2251 !important;
+    /* background-image: linear-gradient(to right, #081f4e, #0d0d7c) !important; */
 }
 nav.main_nav{
     position: fixed;
@@ -10,8 +10,8 @@ nav.main_nav{
     left: 0%;
     z-index: 99;
     width: 100%;
-    /* background: #0B2251 !important; */
-    background-image: linear-gradient(to right, #081f4e, #0d0d7c) !important;
+    background: #0B2251 !important;
+    /* background-image: linear-gradient(to right, #081f4e, #0d0d7c) !important; */
   }
   nav.main_nav .wrapper{
     position: relative;

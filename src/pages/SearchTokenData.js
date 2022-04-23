@@ -70,7 +70,6 @@ function SearchTokenData() {
   const [network, setNetwork] = useState();
   const [showResults, setShowResults] = useState()
   const [NexBoxResults, setNexBoxResults] = useState()
-  const [Boxradius, setBoxradius] = useState()
   const [BorderRadius, setBorderRadius] = useState()
   const [BorderRadiusBtn, setBorderRadiusBtn] = useState()
   const [CroxIconBtn, setCroxIconBtn] = useState()
@@ -112,16 +111,16 @@ let btnIds = ["top_box_active","top_box_not_active"];
   let ShowBOx = showResults ?  "search_active" : "search_not_active"
   const handleClick = () => {
     // showResults ? setShowResults (false) : setShowResults(true);
-    setShowResults(showResults => !showResults);
-    BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
+    // setShowResults(showResults => !showResults);
+    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
+    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
     CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
   }
   const handleClickSvg = () => {
-    showResults ? setShowResults (false) : setShowResults(true);
+    // showResults ? setShowResults (false) : setShowResults(true);
     CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
-    BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
+    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
+    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
   }
 
   const Ethcoin = () => {
@@ -130,7 +129,6 @@ let btnIds = ["top_box_active","top_box_not_active"];
     setQoute("0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2");
     switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(true);
     // NexBoxResults ? setNexBoxResults(false) : setNexBoxResults(true);
-    Boxradius ? setBoxradius(false) : setBoxradius(true)
     switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
     switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
     switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
@@ -147,7 +145,6 @@ let btnIds = ["top_box_active","top_box_not_active"];
     setNetwork("bsc");
     setQoute("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c");
 
-    Boxradius ? setBoxradius (false) : setBoxradius (true)
 
     switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(true);
     switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
@@ -169,7 +166,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
     switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(true);
 
     switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
-    switchClassTwo ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
     switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
     switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
     switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
@@ -181,6 +178,17 @@ let btnIds = ["top_box_active","top_box_not_active"];
   };
   const polygoncoin = () => {
     switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const okccoin = () => {
     switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(true);
@@ -213,8 +221,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
       ? setswitchClassElevenToogled(false)
       : setswitchClassElevenToogled(true);
   };
+
+
   const Results = () => (
-    <div className="search-results" id={Boxradius ?  "search_border_active" : "search_border_not_active"}>
+    <div className="search-results">
       <div className="scroll_box">
         <li
           className="top_box"
@@ -309,6 +319,8 @@ let btnIds = ["top_box_active","top_box_not_active"];
     </div>
   );
 
+
+
   const EthSwap = () => (
     <div className="">
        <div className="check_box_width">
@@ -336,14 +348,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={shibaswap} />
-              Shibaswap
+              Coming Soon
               <span class="checkmark"></span>
            </label>
 
            <label class="container-radio">
            {/*<input type="radio" name="radio"  />*/}
              <img src={kyberswap} />
-             kyberswap
+             Coming Soon
              <span class="checkmark"></span>
           </label>
 
@@ -351,14 +363,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 <label class="container-radio">
                 {/*<input type="radio" name="radio"  />*/}
                   <img src={minty} />
-                  MintySwap
+                  Coming Soon
                   <span class="checkmark"></span>
               </label>
 
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={cryptodefi} />
-                CroDefiswap
+                Coming Soon
                 <span class="checkmark"></span>
               </label>
 
@@ -366,7 +378,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={justmoney} />
-                Just Money
+                Coming Soon
                 <span class="checkmark"></span>
             </label>
 
@@ -374,14 +386,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={safemoon} />
-              SafeMoonSwap
+              Coming Soon
               <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={swapr} />
-              Swapr
+              Coming Soon
               <span class="checkmark"></span>
           </label>
 
@@ -389,14 +401,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={empiredex} />
-              EmpireDEX
+              Coming Soon
               <span class="checkmark"></span>
             </label>
 
           <label class="container-radio">
           {/*<input type="radio" name="radio"  />*/}
             <img src={degen} />
-            DegenSwap
+            Coming Soon
             <span class="checkmark"></span>
         </label>
 
@@ -404,14 +416,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
         <label class="container-radio">
         {/*<input type="radio" name="radio"  />*/}
           <img src={dojo} />
-          DojoSwap
+          Coming Soon
           <span class="checkmark"></span>
       </label>
 
       <label class="container-radio">
       {/*<input type="radio" name="radio"  />*/}
         <img src={concave} />
-        Concave
+        Coming Soon
         <span class="checkmark"></span>
     </label>
 
@@ -447,105 +459,105 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={mdex} />
-             Mdex
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={empiredex} />
-            EmpireDEX
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={wault} />
-            Wault
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={sheepdex} />
-            Sheepdex
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={bakery} />
-            BakerySwap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={sushiswap} />
-            Sushiswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={coinone} />
-            Coinone
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={jetswap} />
-            Jetswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={babyswap} />
-            Babyswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={kyberswap} />
-            kyberswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={biswap} />
-            Biswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={padswap} />
-            Padswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={mochiswap} />
-            Mochiswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={firebird} />
-            Firebird
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={justliquidity} />
-            JustLiquidity
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
@@ -553,35 +565,35 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={shibanova} />
-            Shibanova
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={acyfinance} />
-            Acy Finance
+             Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={fsts} />
-            FstsSwap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={niob} />
-            NiobSwap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={mars} />
-            Mars Ecosystem
+             Coming Soon
             <span class="checkmark"></span>
             </label>
 
@@ -589,35 +601,35 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={safemoon} />
-            Safemoonswap
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={elkfinance} />
-            Elk Finance
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={hyperjump} />
-            Hyperjump
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={knight} />
-            Knight Finance
+            Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={swapx} />
-            Swapx
+            Coming Soon
             <span class="checkmark"></span>
             </label>
          </div>
@@ -638,28 +650,28 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
                  {/*<input type="radio" name="radio"  />*/}
                 <img src={traderjoe} />
-                Trader Joe
+                Coming Soon
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
              {/*<input type="radio" name="radio"  />*/}
             <img src={lydiafinance} />
-            Lydia Finance
+            Coming Soon
             <span class="checkmark"></span>
             </label>
             
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={shibaswap} />
-              Shibaswap
+              Coming Soon
               <span class="checkmark"></span>
            </label>
 
            <label class="container-radio">
            {/*<input type="radio" name="radio"  />*/}
              <img src={kyberswap} />
-             kyberswap
+             Coming Soon
              <span class="checkmark"></span>
           </label>
 
@@ -667,14 +679,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 <label class="container-radio">
                 {/*<input type="radio" name="radio"  />*/}
                   <img src={minty} />
-                  MintySwap
+                  Coming Soon
                   <span class="checkmark"></span>
               </label>
 
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={cryptodefi} />
-                CroDefiswap
+                Coming Soon
                 <span class="checkmark"></span>
               </label>
 
@@ -682,7 +694,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={justmoney} />
-                Just Money
+                Coming Soon
                 <span class="checkmark"></span>
             </label>
 
@@ -690,14 +702,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={safemoon} />
-              SafeMoonSwap
+              Coming Soon
               <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={swapr} />
-              Swapr
+              Coming Soon
               <span class="checkmark"></span>
           </label>
 
@@ -705,14 +717,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={empiredex} />
-              EmpireDEX
+              Coming Soon
               <span class="checkmark"></span>
             </label>
 
           <label class="container-radio">
           {/*<input type="radio" name="radio"  />*/}
             <img src={degen} />
-            DegenSwap
+            Coming Soon
             <span class="checkmark"></span>
         </label>
 
@@ -720,14 +732,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
         <label class="container-radio">
         {/*<input type="radio" name="radio"  />*/}
           <img src={dojo} />
-          DojoSwap
+          Coming Soon
           <span class="checkmark"></span>
       </label>
 
       <label class="container-radio">
       {/*<input type="radio" name="radio"  />*/}
         <img src={concave} />
-        Concave
+        Coming Soon
         <span class="checkmark"></span>
     </label>
 
@@ -750,7 +762,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <div className="Trades_search">
             <div className="search_max">
               <div>
-                    <input type="text" onClick={handleClick} autoComplete="off"
+                    <input type="text" onClick={handleClick} value={search}  autoComplete="off"
                     onChange={(e) => {
                       setSearch(e.target.value);
                       localStorage.setItem("@baseQuery", e.target.value);
@@ -761,7 +773,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     placeholder="Search Token Address"
                     id={BorderRadius ?  "input_active" : null}
                   />
-                  <svg id={CroxIconBtn ?  "svg_active" : "svg_not_active"} onClick={handleClickSvg}
+                  <svg id={CroxIconBtn ?  "svg_active" : "svg_not_active"} onClick={() => setSearch(() => "")}
                       role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" class="svg-inline--fa fa-times fa-w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                       <path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z">
                       </path>
@@ -773,7 +785,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 callApi();
               }}
               id={BorderRadiusBtn ?  "btn_active" : "btn_not_active"}
-            >Home
+            >
             Search
           </button>
             </div>
@@ -788,9 +800,9 @@ let btnIds = ["top_box_active","top_box_not_active"];
                  <BNBSwap />
               </div>
               <div className="" id={switchClassThree ?  "search_active" : "search_not_active"}>
-                  <AVASwap />
-              </div>
-            </div> 
+                    <AVASwap />
+                </div>
+              </div> 
 
             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">

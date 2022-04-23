@@ -33,7 +33,7 @@ function Cardslider() {
     margin: 0,
     dots: false,
     slidesToShow: 4,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     slidesToScroll: 1,
     draggable: true,
