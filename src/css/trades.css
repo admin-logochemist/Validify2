@@ -308,8 +308,8 @@
 }
 .coin_names li.value_names li{
   margin: 0 20px;
-  color: green !important;
-  font-size: 21px;
+  color: white !important;
+  font-size: 40px;
   position: relative;
   top: 10px;
   margin-bottom: 20px;

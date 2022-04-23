@@ -1,9 +1,10 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
 import * as Bitquery from './Bitquery';
 
-const lastBarsCache = new Map();
+// const lastBarsCache = new Map();
 const configurationData = {
-    supported_resolutions: ['1', '5', '15', '30', '60', '1D', '1W', '1M']
+    supported_resolutions: ['1', '5', '15', '30', '60', '120', '1D', '1W', '1M']
 };
 
 export default {
@@ -46,9 +47,10 @@ export default {
         if (!coin) {
             onResolveErrorCallback();
         } else {
+
             const symbol = {
                     ticker: symbolName,
-                    name: `${coin.symbol}/USD`,
+                    name: `${coin.symbol}/BNB`,
                     session: '24x7',
                     timezone: 'Etc/UTC',
                     minmov: 1,
@@ -72,17 +74,9 @@ export default {
         let network = await localStorage.getItem('@network');
         let exchange = await localStorage.getItem('@exchange');
         try {
-            if (resolution === '1D') {
-                resolution = 1440;
-            }
+            
             const response2 = await axios.post(Bitquery.endpoint, {
-                query: Bitquery.GET_COIN_BARS(baseQuery, qQuery, network, exchange),
-                variables: {
-                    "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
-                    "to": new Date("2021-06-23T15:23:21.000Z").toISOString(),
-                    "interval": Number(resolution),
-                    "tokenAddress": symbolInfo.ticker
-                }
+                query: Bitquery.GET_COIN_BARS(baseQuery, qQuery, network, exchange, resolution),
             }, {
                 mode: 'cors',
                 headers: {
@@ -92,8 +86,6 @@ export default {
                     'Access-Control-Allow-Credentials': true,
                 }
             })
-
-            console.log(response2.data.data.ethereum.dexTrades[0].high);
 
             const bars = response2.data.data.ethereum.dexTrades.map(el => ({
                 time: new Date(el.timeInterval.minute).getTime(), // date string in api response
@@ -112,7 +104,6 @@ export default {
 
         } catch (err) {
             console.log({ err })
-                // onErrorCallback(err)
         }
     },
     subscribeBars: (symbolInfo, resolution, onRealtimeCallback, subscribeID, onResetCacheNeededCallback) => {},

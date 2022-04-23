@@ -3,13 +3,13 @@ import PriceTickers from "../components/PriceTickers";
 import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
-import { color } from "@mui/system";
+// import { color } from "@mui/system";
 import 'font-awesome/css/font-awesome.min.css'
 
 import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import "../css/SearchBar.css";
-import bitcoin_icon from "../images/bitcoin.png";
+// import bitcoin_icon from "../images/bitcoin.png";
 import Ethcoin_icon from "../images/eth.svg";
 import bnbicon from "../images/bsc.png";
 import avaicon from "../images/avalanche.png";
@@ -98,7 +98,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   const callApi = () => {
     if (search || exchange || network || qoute) {
       fetch(
-        `https://validefi.global:8080/exchange?bcurrency=${search}&ex=${exchange}&network=${network}&qcurrency=${qoute}`
+        `https://validefi.global:8080/exchange?bcurrency=${search}&network=${network}&qcurrency=${qoute}`
       ).then((resd) =>
         resd.json().then((re) => {
           setResd(re);
@@ -795,24 +795,50 @@ let btnIds = ["top_box_active","top_box_not_active"];
             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">
               {resd.slice(0, 1).map((post, key) => {
+                if(network==='bsc'){
                 return (
+                  <div className="img_box">
+                    <img src={bnbicon} />
+                    <li className="wrapper_name">
+                      {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
+                    </li>
+                  </div>
+                )
+                }else{
+                  return(
                   <div className="img_box">
                     <img src={Ethcoin_icon} />
                     <li className="wrapper_name">
                       {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
                     </li>
                   </div>
-                );
+                  )}
               })}
               {resd.slice(0, 1).map((post, key) => {
+                   if(network==='bsc'){
                 return (
                   <div className="coin_names">
                     <li className="value_names">
-                      <li>{post.quoteAmount}</li>
+                      <li>{((post?.quotePrice)*408.16).toPrecision(5)}</li>
                     </li>
-                    <span>BNB {post.quotePrice}</span>
+                 
+                    <span>BNB {(post.quotePrice).toPrecision(5)}</span>
+                 
+              
                   </div>
-                );
+                );}else{
+                  return (
+                    <div className="coin_names">
+                      <li className="value_names">
+                        <li>{post.quoteAmount}</li>
+                      </li>
+                   
+                      <span>ETH {post.quotePrice}</span>
+                   
+                
+                    </div>
+                  );
+                }
               })}
             </div>
             {resd.slice(0, 1).map((post, key) => {
@@ -849,33 +875,51 @@ let btnIds = ["top_box_active","top_box_not_active"];
             </div>
 
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
+
             <table>
-              <thead>
-                <th>Date</th>
-                <th>Type</th>
-                <th>PRICE USDT</th>
-                <th className="transform">Price BNB</th>
-                <th className="transform">Amount WBNB</th>
-                <th className="transform">TOTAL BNB</th>
-                <th>Maker</th>
-              </thead>
+            {resd.slice(0, 1).map((post, key) => {
+                  if (network === 'bsc') {
+                    return (
+                      <thead>  
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>PRICE USDT</th>
+                      <th className="transform">Amount WBNB</th>
+                      <th className="transform">Price BNB</th>
+                      <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+                      <th>Maker</th>
+                    </thead>
+                    
+            
+              );
+            } else {  
+              return(      
+               <thead>  
+              <th>Date</th>
+              <th>Type</th>
+              <th>PRICE USDT</th>
+              <th className="transform">Amount WETH</th>
+              <th className="transform">Price ETH</th>
+              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th>Maker</th>
+            </thead>
+            
+            )}})}
               <tbody>
                 {resd.slice(0, 100).map((post, key) => {
                   if (post.side == "BUY") {
                     return (
                       <tr key={key}>
                         <td className="date_table">
-                          {post.block.timestamp.iso8601
-                            .replace("T", "..")
-                            .slice(0, -4)}
+                        {post.block.timestamp.time}
                         </td>
-                        <td className="green">{post.side}</td>
-                        <td className="">{post.baseAmount}</td>
+                        <td className="red">SELL</td>
+                        <td className="">{(post.quotePrice)*408.16}</td>
                         <td className="truncate">{post.quoteAmount}</td>
                         <td className="truncate">{post.quotePrice}</td>
                         <td className="truncate">{post.baseAmount}</td>
                         <td className="truncate maker_table">
-                          {post.maker.address.slice(0, -2)}
+                          {post.transaction.txFrom.address.slice(0, -2)}
                         </td>
                       </tr>
                     );
@@ -883,17 +927,15 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     return (
                       <tr key={key}>
                         <td className="date_table">
-                          {post.block.timestamp.iso8601
-                            .replace("T", "..")
-                            .slice(0, -4)}
+                          {post.block.timestamp.time}
                         </td>
-                        <td className="red">{post.side}</td>
-                        <td className="">{post.baseAmount}</td>
+                        <td className="green">BUY</td>
+                        <td className="">{(post.quotePrice)*408.16}</td>
                         <td className="truncate">{post.quoteAmount}</td>
                         <td className="truncate">{post.quotePrice}</td>
                         <td className="truncate">{post.baseAmount}</td>
                         <td className="truncate maker_table">
-                          {post.maker.address.slice(0, -2)}
+                          {post.transaction.txFrom.address.slice(0, -2)}
                         </td>
                       </tr>
                     );

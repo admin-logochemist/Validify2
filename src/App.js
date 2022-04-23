@@ -65,14 +65,14 @@ function App() {
          <Route path="Valideficoming" element={<Valideficoming />} />
          <Route path="Psp" element={<Psp />} />
          <Route path="coins/:id" element={<CoinPage/>}  />
-         <Route path="Validtoken" element={<Validtoken />} />
+         {/* <Route path="Validtoken" element={<Validtoken />} /> */}
          <Route path="Whitepaper" element={<Whitepaper />} />
-         <Route path="Validdx" element={<Validdx />} />
+         {/* <Route path="Validdx" element={<Validdx />} /> */}
          <Route path="PortfolioTracker " element={<PortfolioTracker  />} />
-         <Route path="VALIDEFINTTLink " element={<VALIDEFINTTLink />} />
-          <Route path="TitanWallet " element={<TitanWallet />} />
+         {/* <Route path="VALIDEFINTTLink " element={<VALIDEFINTTLink />} /> */}
+          {/* <Route path="TitanWallet " element={<TitanWallet />} /> */}
           <Route path="Team" element={<Team />} />
-          <Route path="InvestorRelations" element={<InvestorRelations />} />
+          {/* <Route path="InvestorRelations" element={<InvestorRelations />} /> */}
           <Route path="Institutional" element={<Institutional />} />
           <Route path="Careers" element={<Careers />} />
           <Route path="NFTPlatform" element={<NFTPlatform />} />
