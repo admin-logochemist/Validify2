@@ -830,7 +830,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                   return (
                     <div className="coin_names">
                       <li className="value_names">
-                        <li>{post.quoteAmount}</li>
+                        <li>{((post?.quotePrice)*2963.518)}</li>
                       </li>
                    
                       <span>ETH {post.quotePrice}</span>
