@@ -325,7 +325,7 @@ function SearchTokenData() {
                   return (
                     <div className="coin_names">
                       <li className="value_names">
-                        <li>{post.quoteAmount}</li>
+                        <li>{((post?.quotePrice)*2963.518)}</li>
                       </li>
                    
                       <span>ETH {post.quotePrice}</span>
