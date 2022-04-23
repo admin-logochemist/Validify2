@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../css/cardslider.css'
+import empiredex from '../images/empiredex.png'
 // import { Link } from "react-router-dom";
 
 import axios from "axios";
@@ -32,7 +33,7 @@ function Cardslider() {
     margin: 0,
     dots: false,
     slidesToShow: 4,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     slidesToScroll: 1,
     draggable: true,
@@ -74,18 +75,19 @@ function Cardslider() {
         <h3>Top Trading Currency</h3>
         <Slider {...settings}>
             {trending.map((coin) => {
+              console.log(coin?.image);
                   return(
                     <div className='card_slider'>
-                    <img src={coin?.image} alt={coin.name} />
-                    <h3> {coin?.id} </h3>
-                    <span> 
-                      {coin?.symbol}
-                    </span>
-                   <div className='inline_div'>
-                        <price>${numberWithCommas(coin?.current_price.toFixed(2))}</price>
-                        <percantage>{coin?.price_change_percentage_24h?.toFixed(2)}%</percantage>
-                   </div>
-               </div>
+                          <img src={coin?.image} alt={coin.name} />
+                          <h3> {coin?.id} </h3>
+                        <span> 
+                          {coin?.symbol}
+                        </span>
+                      <div className='inline_div'>
+                            <price>${numberWithCommas(coin?.current_price.toFixed(2))}</price>
+                            <percantage>{coin?.price_change_percentage_24h?.toFixed(2)}%</percantage>
+                      </div>
+                  </div>
               )})}
         </Slider>
     </div>

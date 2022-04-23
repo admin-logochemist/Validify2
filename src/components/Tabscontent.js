@@ -73,6 +73,7 @@ import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 import Fortmatic from "fortmatic";
+import Adds from './Adds'
 function Tabscontent() {
   // const {address,connectWallet}=useWeb3()
   // const { ethereum } = window;
@@ -175,6 +176,7 @@ function Tabscontent() {
                     <div class="tab-content tabs container-fluid">
 
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
+                        <Adds />
                           <div className='col-lg-6 responsive_col'>
                              {/* <TVChartContainer/>   */}
                             <CoinInfos id="bitcoin"/>

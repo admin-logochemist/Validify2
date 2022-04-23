@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .banner-clss{
     background-image: url('../images/banner-bg.png');
     margin-top: 131px;
     width: 100%;
-    height: 699px;
+    /* height: 699px; */
     background-size: cover;
     align-items: center;
     display: flex;
@@ -24,14 +25,14 @@
 } 
 .validate small{
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 2px;
 }
 .validate h3 {
-    color: #FFD475;
-    font-family: 'Lato', sans-serif;
+    color: #eda300;
+    font-family: 'Inter', sans-serif;
     font-size: 25px;
     letter-spacing: 2px;
     font-weight: 700;
@@ -39,23 +40,23 @@
 .validate .main_title_banner .banner_h4{
     color: white;
     letter-spacing: 4px;
-    font-family: 'Exo 2', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 87px;
-    font-size: 65px;
+    line-height: 85px;
+    font-size: 55px;
+    font-family: 'Inter', sans-serif;
 }
 
 
 .validate .main_title_banner .banner_phara{
-    font-family: 'Lato', sans-serif;
     color: white;
     letter-spacing: 2px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
  .btn_banner .link_btn_one button{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     color: #443107;
     border: none;
@@ -67,6 +68,8 @@
     transition: all 0.5s;
     overflow: hidden;
     position: relative;
+    /* width: 20%;
+    line-height: 49px; */
 }
  .btn_banner .link_btn_one button:hover{
     color: #fff;
@@ -104,20 +107,24 @@
 .col-lg-6.video > div{
     width: unset !important;
     height: unset !important;
+    padding: 50px;
 }
-
+.col-lg-6.video > div > video{
+    border: 6px solid white;
+}
 .section{
     background: white;
-    margin-top: 80px;
+    margin-top: 0px;
     padding: 40px 0;
 }
 .token_sec_img > div > img{
     width: 90%;
     position: relative;
     float: right;
+    padding-right: 57px;
 }
 .token_sec_text .token_head .head{
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #c19636;
     font-size: 50px;
     font-weight: 700;
@@ -146,29 +153,37 @@
     right: -71px;
 }
 .token_sec_text .heading {
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-top: 8px;
-    font-size: 42px;
+    font-size: 31px;
     letter-spacing: 1px;
     text-transform: capitalize;
     font-weight: 700;
     color: #404040;
-    line-height: 49px;
+    line-height: 38px;
     padding-right: 125px;
     text-align: left;
 }
 .token_sec_text .para_text{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
     padding-right: 108px;
-    color: #919191;
-    line-height: 27px;
+    color: #404040;
+    line-height: 30px;
+    font-weight: 300;
 }
 
 
 
 /* // SERVICES BOXES // */
+.our_services{
+    background-image: url('../images/our_services_bg.jpg');
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
 .services_btn{
     background: #0b2251 !important;
     color: #ffd475 !important;
@@ -180,7 +195,7 @@
 }
 .services_heading{
     color: #c19636;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -215,6 +230,10 @@
     margin: 0 0px;
     border-radius: 20px;
 }
+.serviceBox:hover{
+    box-shadow: 1px -6px 10px #80808075;
+    transition: all .5s linear;
+}
 
 .service-icon{
     color: #fff;
@@ -225,37 +244,52 @@
     margin: 0 auto 10px;
     border-radius: 68px;
     text-align: center;
-    /* vertical-align: middle; */
     display: block;
     position: relative;
     top: 75px;
+    border: 6px solid white;
 }  
 .service-icon span > img{
     height: 60px;
 }
 .serviceBox .title{
     color: #0b2251;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
     margin: 0 0 5px;
     letter-spacing: 2px;
-    line-height: 32px;
+    line-height: 25px;
 }
 
 .serviceBox .description{
-    font-family: 'Lato', sans-serif;
-    color: #919191;
-    line-height: 30px;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    line-height: 24px;
     letter-spacing: 1px;
-    font-size: 19px;
+    font-size: 15px;
     padding-top: 20px;
+    font-weight: 600;
 }
-
+/* // NFT SECTION  // */
+.section_divider{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.banner_nft_bg{}
+.nftBanner{
+    background-image: url('../images/nft_banners.jpg');
+    height: 500px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    /* margin-top: 100px; */
+}
 /* // SUBSCRIPE SECTION // */
 .subscripe h4{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #0b2251;
     letter-spacing: 1px;
     font-weight: 800;
@@ -263,8 +297,8 @@
     text-align: center;
 }
 .subscripe p{
-    font-family: 'Lato', sans-serif;
-    color: #919191;
+    font-family: 'Inter', sans-serif;
+    color: black;
     font-size: 17px;
     letter-spacing: 1px;
     text-align: center;
@@ -292,8 +326,37 @@
     letter-spacing: 4px;
 }
 
-
-
+/* // QR CODE SECTION // */
+.qr-code-container{
+    display: flex;
+    justify-content: center;
+    }
+    .Qr-code{
+        display: flex;
+        margin-bottom: 7px;
+        background: #a19c9c26;
+        justify-content: center;
+        border-radius: 14px;
+        padding: 16px;
+    }
+    .QR-image{
+        width: 85px !important;
+        height: 85px !important;
+    
+    }
+    .Qr-code .QR-text{
+        margin-top: 30px;
+        margin-left: 17px;
+        font-size: 22px;
+    
+    }
+    .Qr-code .QR-logo{
+        margin-left: 40px;
+        margin-top: 12px;
+    }
+.mobile_vedio_Section img{
+    display: none;
+}
 /* // RESPONSIVE AREA // */
 @media only screen and (max-width: 1400px){
     .validate .main_title_banner .banner_h4 {
@@ -361,6 +424,13 @@
     .col_one{
         width: 50%;
     }
+    .Qr-code{
+        width: 70%;
+    }
+    .mobile_vedio_Section img{
+        display: block;
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -387,6 +457,9 @@
         width: 80%;
         margin: auto;
     }
+    .Qr-code{
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -402,10 +475,10 @@
         margin: 11px 6px;
         font-size: 13px;
     }
-    *, ::after, ::before {
+    /* *, ::after, ::before {
         box-sizing: border-box;
         overflow-x: clip;
-    }
+    } */
     .banner-clss {
         margin-top: 111px;
     }

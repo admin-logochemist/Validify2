@@ -117,6 +117,12 @@
   width: 100%;
   border-radius: 0 0 20px 20px;
 }
+#search_border_active{
+  border-radius: 0;
+}
+#search_border_not_active{
+  border-radius: 0 0 20px 20px;
+}
 
 .search-results > .scroll_box{
   overflow-x: scroll;
@@ -149,7 +155,7 @@
   padding: 5px 10px;
   margin: 10px 0;
 }
-.top_box:hover{
+.scroll_box li.top_box:hover{
   background: #54545459 !important;
   transition: all .2s linear;
   border-radius: 50px;
@@ -197,6 +203,87 @@
   position: relative;
   width: 80%;
   display: inline-block;
+}
+/* ++ == CHECHBOX INPUT == ++ */
+/* Create a custom radio button */
+.check_box_width{
+  width: 50%;
+  margin: auto;
+  display: block;
+  background: black;
+  border-radius: 0 0 20px 20px;
+  padding-top: 27px;
+  padding-bottom: 10px;
+}
+.check_box_scroll_box .container-radio{
+  display: block;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-left: 20px;
+}
+.check_box_scroll_box{
+  height: 30vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.check_box_scroll_box::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+.check_box_scroll_box::-webkit-scrollbar{
+	width: 8px;
+  padding: 50px;
+	background-color: transparent;
+}
+.check_box_scroll_box::-webkit-scrollbar-thumb{
+	background-color: white;
+  border-radius: 50px;
+}
+.check_box_scroll_box .container-radio img{
+  height: 20px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 50px;
+  background: white;
+  width: 22px;
+}
+.check_box_scroll_box .container-radio > input{
+  width: 40px;
+  height: 19px;
+  position: relative;
+  top: 5px;
+}
+.check_box_scroll_box .container-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.check_box_scroll_box .container-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.check_box_scroll_box .container-radio input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.check_box_scroll_box .container-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check_box_scroll_box .container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+.check_box_scroll_box .container-radio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
 @media screen and (max-width:1500px) {
   .search_boxx{
