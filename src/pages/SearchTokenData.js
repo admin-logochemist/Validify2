@@ -779,7 +779,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       </path>
                   </svg>
               </div>
-            <button
+           {/* <button
               type="submit"
               onClick={() => {
                 callApi();
@@ -787,10 +787,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
               id={BorderRadiusBtn ?  "btn_active" : "btn_not_active"}
             >
             Search
-          </button>
+            </button>*/}
             </div>
 
-              <div class="next_search"  id={`${ShowBOx}`}>
+              <div class="next_search">
                   <Results />
               </div>
               <div className="" id={switchClassOne ?  "search_active" : "search_not_active"}>
