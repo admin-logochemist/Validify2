@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .header_banner{
-    background-image: url(../images/bannerAd.png);
+    background-image: url(../images/front-banner.gif);
     height: 100px;
     background-repeat: no-repeat;
     float: right;
@@ -61,7 +61,7 @@ marquee .animation::before{
 }
 
 .Footer_banner{
-    background-image: url(../images/bannerAd.png);
+    background-image: url(../images/bannerred.gif);
     background-repeat: no-repeat;
     float: right;
     width: 100%;

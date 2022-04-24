@@ -6,12 +6,16 @@ import 'aos/dist/aos.css'
 import '../css/home.css'
 import RetPlayer from 'react-player/lazy'
 import video from '../video/proVid.mp4';
+// import Nftslider from '../components/Nftslider'
 import Cardslider from '../components/Cardslider'
-import sec_img from '../images/about image.png'
+import sec_img from '../images/aboutimage.png'
 import head_img from '../images/logoIcon.svg'
 import chain from '../images/portfolio.svg'
 import multichain from '../images/Icon_awesome-coins.svg'
 import titan from '../images/crypto-wallet.svg'
+import QRCode from 'qrcode.react'
+import logoIcon from '../images/logoIcon.svg'
+import nftBanner from '../images/nft_banners.jpg'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 AOS.init();
@@ -75,7 +79,7 @@ function Home() {
                      <h4 className='head'>valid TOKEN <span className='border_bnottom'></span></h4>
                   </div>
                   <h3 className='heading'>
-                          valid Token Powers the entire VALIDEFI Network without forcing you to own it in order to access its tools platform.
+                        valid Token Powers the entire VALIDEFI Network without forcing you to own it in order to access its tools platform.
                   </h3>
                   <p className='para_text'>
                   <br/>
@@ -96,7 +100,7 @@ function Home() {
           </div>
        </section>
 
-       <section>
+       <section className='our_services'>
           <div className="container-fluid custom_conatiner">
             <div className='row'>
               <h4 className='services_heading'>
@@ -105,7 +109,7 @@ function Home() {
                 <span className='border_head  right'></span>
                 </h4>
               </div>
-            <div className="row" data-aos='zoom-in' data-aos-offset="300">
+            <div className="row  justify-content-center" data-aos='zoom-in' data-aos-offset="300">
                 <div className="col-lg-4 col_one">
                     <div className="service-icon">
                         <span><img src={chain}/></span>
@@ -163,9 +167,15 @@ function Home() {
           </div>
        </section>
 
-       <section className='section'>
+       <section className='section_divider'></section>
+
+       <section className="banner_nft_bg">
+         <div className="nftBanner"></div>
+       </section>
+
+       <section className='sectionMargin'>
           <div className='container-fluid custom_conatiner'>
-             <div className='row justify-content-centent'>
+             <div className='row justify-content-center'>
                <div className='col-lg-12'>
                  <div className='subscripe'>
                     <h4>Subscribe to our Medium Page</h4>
@@ -190,8 +200,23 @@ function Home() {
                  </div>
                </div> */}
              </div>
+
+             {/*<div className='row justify-content-center mt-5'>
+                <div className="col-12 qr-code-container">
+                    <div className='col-lg-5 Qr-code'>
+                        <QRCode className="QR-image" id="abc" value="https://validefi.pro/trade/" />
+
+                        <h4 className='QR-text'>IOS & Android</h4>
+
+                        <div>
+                          <a href="https://validefi.global"><img src={logoIcon} height='65'className='QR-logo' /></a>
+                        </div>
+                    </div>
+                </div>
+              </div>*/}
           </div>
        </section>
+
 
        <Footer />
        

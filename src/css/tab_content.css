@@ -407,9 +407,9 @@ ul.nav-tabs li a img{
     .dash_search_box input{
         width: 85%;
     }
-    .vollet_btn {
+    /* .vollet_btn {
         flex-direction: column;
-    }
+    } */
     .margin-top {
         margin-top: -26px;
     }
