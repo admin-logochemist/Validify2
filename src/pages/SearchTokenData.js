@@ -348,14 +348,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={shibaswap} />
-              Coming Soon
+              Shibaswap
               <span class="checkmark"></span>
            </label>
 
            <label class="container-radio">
            {/*<input type="radio" name="radio"  />*/}
              <img src={kyberswap} />
-             Coming Soon
+             Kyberswap
              <span class="checkmark"></span>
           </label>
 
@@ -363,14 +363,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 <label class="container-radio">
                 {/*<input type="radio" name="radio"  />*/}
                   <img src={minty} />
-                  Coming Soon
+                  Minty
                   <span class="checkmark"></span>
               </label>
 
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={cryptodefi} />
-                Coming Soon
+                Cryptodefi
                 <span class="checkmark"></span>
               </label>
 
@@ -378,7 +378,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <label class="container-radio">
               {/*<input type="radio" name="radio"  />*/}
                 <img src={justmoney} />
-                Coming Soon
+                Justmoney
                 <span class="checkmark"></span>
             </label>
 
@@ -386,14 +386,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={safemoon} />
-              Coming Soon
+              Safemoon
               <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={swapr} />
-              Coming Soon
+              Swapr
               <span class="checkmark"></span>
           </label>
 
@@ -401,14 +401,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio"  />*/}
               <img src={empiredex} />
-              Coming Soon
+              Emiredex
               <span class="checkmark"></span>
             </label>
 
           <label class="container-radio">
           {/*<input type="radio" name="radio"  />*/}
             <img src={degen} />
-            Coming Soon
+            Degen
             <span class="checkmark"></span>
         </label>
 
@@ -416,14 +416,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
         <label class="container-radio">
         {/*<input type="radio" name="radio"  />*/}
           <img src={dojo} />
-          Coming Soon
+          Dojo
           <span class="checkmark"></span>
       </label>
 
       <label class="container-radio">
       {/*<input type="radio" name="radio"  />*/}
         <img src={concave} />
-        Coming Soon
+        Concave
         <span class="checkmark"></span>
     </label>
 
@@ -459,98 +459,98 @@ let btnIds = ["top_box_active","top_box_not_active"];
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={mdex} />
-            Coming Soon
+            Mdex
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={empiredex} />
-            Coming Soon
+            Empiredex
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={wault} />
-            Coming Soon
+            Wault
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={sheepdex} />
-            Coming Soon
+            Sheepdex
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={bakery} />
-            Coming Soon
+            Bakery
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={sushiswap} />
-            Coming Soon
+            Sushiswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={coinone} />
-            Coming Soon
+            Coinone
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={jetswap} />
-            Coming Soon
+            Jetswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={babyswap} />
-            Coming Soon
+            BabySwap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={kyberswap} />
-            Coming Soon
+            Kyberswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={biswap} />
-            Coming Soon
+            Biswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={padswap} />
-            Coming Soon
+            Padswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={mochiswap} />
-            Coming Soon
+            Mochiswap
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
             {/*<input type="radio" name="radio" />*/}
             <img src={firebird} />
-            Coming Soon
+            Firebird
             <span class="checkmark"></span>
             </label>
 
@@ -816,7 +816,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     </li>
                   </div>
                 )
-                }else{
+                }else if(network==='ethereum'){
                   return(
                   <div className="img_box">
                     <img src={Ethcoin_icon} />
@@ -824,33 +824,54 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
                     </li>
                   </div>
-                  )}
+                  )} else{
+                    return(
+                      <div className="img_box">
+                      <img src={avaicon} />
+                      <li className="wrapper_name">
+                        {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
+                      </li>
+                    </div>
+                    )
+                  }
               })}
               {resd.slice(0, 1).map((post, key) => {
-                   if(network==='bsc'){
+                if(network==='bsc'){
                 return (
                   <div className="coin_names">
-                    <li className="value_names">
-                      <li>{((post?.quotePrice)*408.16).toPrecision(5)}</li>
-                    </li>
-                 
-                    <span>BNB {(post.quotePrice).toPrecision(5)}</span>
-                 
-              
-                  </div>
-                );}else{
-                  return (
+                  <li className="value_names">
+                    <li>${((post?.quotePrice)*408.16).toPrecision(5)}</li>
+                  </li>
+
+                  <span>BNB {(post.quotePrice).toPrecision(5)}</span>
+
+
+                </div>
+                )
+                }else if(network==='ethereum'){
+                  return(
                     <div className="coin_names">
+                    <li className="value_names">
+                      <li>${((post?.quotePrice)*2937.69).toPrecision(5)}</li>
+                    </li>
+
+                    <span>ETH {(post.quotePrice).toPrecision(5)}</span>
+
+
+                  </div>
+                  )} else{
+                    return(
+                      <div className="coin_names">
                       <li className="value_names">
-                        <li>{((post?.quotePrice)*2963.518)}</li>
+                        <li>${((post?.quotePrice)*73.05).toPrecision(5)}</li>
                       </li>
-                   
-                      <span>ETH {post.quotePrice}</span>
-                   
-                
+
+                      <span>AVAX {(post.quotePrice).toPrecision(5)}</span>
+
+
                     </div>
-                  );
-                }
+                    )
+                  }
               })}
             </div>
             {resd.slice(0, 1).map((post, key) => {
@@ -895,7 +916,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <thead>  
                       <th>Date</th>
                       <th>Type</th>
-                      <th>PRICE USDT</th>
+                      <th>PRICE USD</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
                       <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -904,19 +925,33 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     
             
               );
-            } else {  
+            } else if(network==='etherum') {  
               return(      
                <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USDT</th>
+              <th>PRICE USD</th>
               <th className="transform">Amount WETH</th>
               <th className="transform">Price ETH</th>
               <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
               <th>Maker</th>
             </thead>
             
-            )}})}
+            )} else {
+              return(
+              <thead>  
+              <th>Date</th>
+              <th>Type</th>
+              <th>PRICE USD</th>
+              <th className="transform">Amount AVAX</th>
+              <th className="transform">Price AVAX</th>
+              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th>Maker</th>
+            </thead>
+              )
+            }
+          
+          })}
               <tbody>
                 {resd.slice(0, 100).map((post, key) => {
                   if (post.side == "BUY") {
