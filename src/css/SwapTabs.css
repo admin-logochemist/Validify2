@@ -1,0 +1,76 @@
+.swaps{
+    border-radius: 15px;
+}
+.swaps .nav-tabs{
+    margin: 0;
+    border: none;
+}
+
+ul.swap-tabs{
+    list-style: none;
+    display: flex;
+    border: 1px solid #F4E286;
+    padding: 0px 0;
+    margin: 0 15px;
+}
+
+ul.swap-tabs li{
+    text-align: center;
+    display: block;
+    width: 50%;
+}
+.swaps .swap-tabs li a{
+    color: white;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+    line-height: 3;
+    padding: 0;
+    margin: 0;
+}
+.swaps .swap-tabs li.active a,
+.swaps .swap-tabs li:hover,
+.swaps .swap-tabs li.active{
+    color: #443107;
+    background: transparent;
+    border: none;
+    background-color: #F4E286;
+    display: block;
+}
+.swaps .swap-tabs li a.active,
+.swaps .swap-tabs li a:hover,
+.swaps .swap-tabs li a.active{
+    color: #443107;
+    background: transparent;
+    border: none;
+    background-color: #F4E286;
+    display: block;
+}
+
+.swaps .tab-content{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    border-radius: unset !important;
+    box-shadow: 0 0 10px -3px rgb(0 0 0 / 25%);
+    position: relative;
+}
+.swaps .tab-content .fade:not(.show) {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 479px){
+    .swaps .swap-tabs li{
+        width: 100%;
+        text-align: center;
+    }
+    .swaps .swap-tabs li a{
+        margin: 0 0 10px;
+    }
+}

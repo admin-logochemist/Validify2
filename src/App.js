@@ -4,11 +4,11 @@ import  {Routes, Route} from "react-router-dom"
 import Home from "./pages/Home";
 import Dashboard from './pages/Dashboard'
 import Login from "./pages/Login";
-import ETH from "./pages/ETH";
+// import ETH from "./pages/ETH";
 import Signup from "./pages/Signup";
-import BNB from "./pages/BNB";
-import USDT from "./pages/USDT";
-import Tron from "./pages/Tron";
+// import BNB from "./pages/BNB";
+// import USDT from "./pages/USDT";
+// import Tron from "./pages/Tron";
 import About from './pages/About';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
@@ -34,7 +34,10 @@ import Licenses from './pages/Licenses'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Promotions from './pages/Promotions'
 import CoinPage from "./pages/CoinPage";
-
+import WhaleTrade from "./pages/WhaleTrade";
+import TextPdf from "./pages/TextPdf";
+import SearchTokenData from "./pages/SearchTokenData";
+import Trading from "./pages/Trading"
 
 
 function App() {
@@ -45,10 +48,14 @@ function App() {
        <Route path='Dashboard' element={ <Dashboard />}/>
        <Route path='Login' element={<Login />} />
        <Route path="Signup" element={<Signup />} />
-       <Route path="ETH" element={<ETH />} />
+       <Route path="SearchTokenData" element={<SearchTokenData />} />
+       {/* <Route path="ETH" element={<ETH />} />
        <Route path="BNB" element={<BNB />} />
-       <Route path="USDT" element={<USDT />} />
-       <Route path="Tron" element={<Tron />} />
+       <Route path="USDT" element={<USDT />} /> */}
+       {/* <Route path="Tron" element={<Tron />} /> */}
+       <Route path="WhaleTrade" element={<WhaleTrade />} />
+       <Route path="trade" element={<Trading/>} />
+       <Route path="TextPdf" element={<TextPdf />} />
        <Route path="About" element={<About />} />
        <Route path="Faq" element={<Faq />} />
        <Route path="Contact" element={<Contact />} />
@@ -58,14 +65,14 @@ function App() {
          <Route path="Valideficoming" element={<Valideficoming />} />
          <Route path="Psp" element={<Psp />} />
          <Route path="coins/:id" element={<CoinPage/>}  />
-         <Route path="Validtoken" element={<Validtoken />} />
+         {/* <Route path="Validtoken" element={<Validtoken />} /> */}
          <Route path="Whitepaper" element={<Whitepaper />} />
-         <Route path="Validdx" element={<Validdx />} />
+         {/* <Route path="Validdx" element={<Validdx />} /> */}
          <Route path="PortfolioTracker " element={<PortfolioTracker  />} />
-         <Route path="VALIDEFINTTLink " element={<VALIDEFINTTLink />} />
-          <Route path="TitanWallet " element={<TitanWallet />} />
-          <Route path="Team " element={<Team />} />
-          <Route path="InvestorRelations" element={<InvestorRelations />} />
+         {/* <Route path="VALIDEFINTTLink " element={<VALIDEFINTTLink />} /> */}
+          {/* <Route path="TitanWallet " element={<TitanWallet />} /> */}
+          <Route path="Team" element={<Team />} />
+          {/* <Route path="InvestorRelations" element={<InvestorRelations />} /> */}
           <Route path="Institutional" element={<Institutional />} />
           <Route path="Careers" element={<Careers />} />
           <Route path="NFTPlatform" element={<NFTPlatform />} />

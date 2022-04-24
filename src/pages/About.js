@@ -6,8 +6,8 @@ import Aboutcontent from '../components/Aboutcontent'
 const About = () => {
   return (
   <> 
-  <Header /> 
-  <Aboutcontent />
+   <Header /> 
+   <Aboutcontent />
    <Footer />
   </>
   );

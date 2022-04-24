@@ -12,6 +12,10 @@
     color: white;
     letter-spacing: 1px;
 }
+.slick-prev{
+    display: none !important;
+    left: -5000px !important;
+}
 .slick-slide {
     height: 180px;
     width: 3% !important;
@@ -24,8 +28,8 @@
     padding-left: 16px
 }
 .card_slider img{
-    /* margin-left: 20px; */
     margin-top: 15px;
+    height: 36px;
 }
 .card_slider span{
     font-family: 'Lato', sans-serif;
@@ -34,6 +38,7 @@
     font-weight: 500;
     margin-top: 7px;
     display: block;
+    text-transform: uppercase;
 }
 .card_slider .chart_bar{
     position: absolute;
@@ -44,6 +49,8 @@
     font-weight: 700;
     margin-top: 8px;
     color: black;
+    left: 0 !important;
+    text-transform: capitalize;
 }
 .card_slider price{
     font-family: 'Lato', sans-serif;
@@ -68,24 +75,99 @@
 /* // RESPONSIVE AREA // */
 @media only screen and (max-width: 993px){
     .containerr {
-        margin-top: 130px;
+        margin: 200px 0 auto;
     }
 }
 @media only screen and (max-width: 768px){
     .containerr {
-        width: 90%;
-        margin: auto !important;
-        margin-top: 60px !important;
+        width: 100%;
+        margin: 150px 0 auto;
     }
     .slick-slide {
         width: 4% !important;
         margin: 10px 5px;
     }
 }
-@media only screen and (max-width: 480px){
+@media screen and (max-width:651px){
     .containerr {
-        width: 90%;
-        margin: auto !important;
-        margin-top: 0px !important;
+        margin: 130px 0 auto;
+    }
+    .section {
+        margin-top: 0px;
     }
 }
+@media only screen and (max-width: 501px){
+    .containerr{
+        width: 100%;
+        margin: 60px 0 auto;
+    }
+    .containerr h3 {
+        font-size: 20px;
+    }
+    .card_slider img{
+        height: 50px;
+    }
+    .card_slider h3{
+        font-size: 20px;
+        margin-top: 30px;
+        display: inline-flex;
+    }
+    .inline_div{
+        margin-top: 15px;
+    }
+    .card_slider span{
+        font-size: 20px;
+        display: inline-flex;
+        margin-left: 19px;
+        letter-spacing: 2px;    
+    }
+    .card_slider price{
+        font-size: 18px;
+        display: inline-flex;
+        margin-right: 20px;    
+    }
+    .card_slider percantage {
+        padding: 3px 6px;
+        float: unset !important;
+        font-size: 17px !important;
+        letter-spacing: 3px;
+        display: inline-flex !important;
+
+    }
+    .slick-initialized .slick-slide{
+      display: flex !important;
+    }
+    .slick-list {
+        width: 95% !important;
+        margin: auto;
+    }
+    .card_slider percantage {
+        margin-left: 15px;
+    }
+    .slick-slide {
+        width: 500px !important;
+        /* margin: 10px 5px; */
+        height: 222px !important;
+        border-radius: 0% !important;
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    .containerr {
+        width: 100%;
+        margin: 65px 0 auto;
+        padding: 0 15px 15px 15px;
+    }
+    .slick-list {
+        width: 100% !important;
+        margin: auto;
+    }
+    .slick-slide {
+        margin-right:20px;
+        margin-left:20px;
+    }
+    .slick-slide {
+        width: 450px !important;
+    }
+}
+
