@@ -55,7 +55,7 @@ function Footer() {
 
                 <div className='col-lg-4 col_footer_last'>
                   <div className='footer'>
-                    <img src={footer_logo}/>
+                    <a href="https://validefi.global/" target="_blank"> <img src={footer_logo}/> </a>
                     <p>We're committed to creating financial freedom by making valid and secure tools accessible to everyone.</p>
                     <ul>
                       <li><a href='https://business.facebook.com/Validefi-106728818516821'><i class="fa fa-facebook-f"></i></a></li>
@@ -69,7 +69,7 @@ function Footer() {
               </div>
               <div className='row'>
                 <div className='border_top'>
-                <h5 className='copy_right'>© 2022 Validefi</h5>
+                <h5 className='copy_right'>© 2022 VALIDEFI</h5>
                   <div className='copy_right_img'>
                     <img src={img_two}/>
                     <img src={img_one}/>

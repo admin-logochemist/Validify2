@@ -160,6 +160,9 @@
 .portfolio{
     display: none;
 }
+.Adds_div > img{
+    margin: 20px auto;
+}
 div.col-lg-6 > canvas{
     background: #0D203C;
     margin: 17px 0;
@@ -177,6 +180,9 @@ div.col-lg-6 > canvas{
     }
     .market_cup h3 span.one {
         font-size: 25px;
+    }
+    .Adds_div > img{
+        display: none;
     }
 }
 

@@ -72,6 +72,9 @@ import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+import Fortmatic from "fortmatic";
+import Adds from './Adds'
+import launch_app from '../images/launch_app.png'
 // import Fortmatic from "fortmatic";
 function Tabscontent() {
   // const {address,connectWallet}=useWeb3()
@@ -138,7 +141,9 @@ function Tabscontent() {
               <div className='vollet_btn'>
                   <div className='search_boxx'>
                      <Link to='/SearchTokenData'>
-                        <Searchbar  data={SearchData}/>
+                        {/*<Searchbar  data={SearchData}/>*/}
+                        <img src={launch_app}/>
+                        <li> Launch App</li>
                      </Link>
                   </div>
                
@@ -175,6 +180,7 @@ function Tabscontent() {
                     <div class="tab-content tabs container-fluid">
 
                         <div role="tabpanel" name="bitcoin" class="tab-pane fade in active row justify-content-center" id="bit">
+                      { /* <Adds /> */ }
                           <div className='col-lg-6 responsive_col'>
                              {/* <TVChartContainer/>   */}
                             <CoinInfos id="bitcoin"/>
@@ -216,7 +222,7 @@ function Tabscontent() {
                         <div role="tabpanel" className="tab-pane fade row justify-content-center" id="tetherss">
                            
                             <div className='col-lg-6 responsive_col'>
-                              <CoinInfos id="tether" />
+                              <CoinInfos id="tether" />hop
                               <TetherCoin/>
                             </div>
                             <TETSwap />

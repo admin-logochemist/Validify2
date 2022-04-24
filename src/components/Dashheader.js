@@ -3,6 +3,7 @@ import '../css/header_dashboard.css'
 import us from '../images/US.svg'
 import bit from '../images/XTVCBTC.svg'
 import eth from '../images/XTVCETH.svg'
+// import avalanche from '../images/avalanche_2_gif.gif'
 function Dashheader() {
   return (
     <>
