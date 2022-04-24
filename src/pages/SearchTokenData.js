@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
 // import { color } from "@mui/system";
-import 'font-awesome/css/font-awesome.min.css'
+import "font-awesome/css/font-awesome.min.css";
 
 import "../css/WhaleTrades.css";
 import "../css/trades.css";
@@ -21,6 +21,7 @@ import metis from "../images/metis.png";
 import heco from "../images/heco.svg";
 import velas from "../images/velas.svg";
 import aurora from "../images/aurora.svg";
+import LiveChart from "../components/LiveChart";
 // import harmony from "../images/harmony.png";
 
 function SearchTokenData() {
@@ -29,11 +30,10 @@ function SearchTokenData() {
   const [exchange, setExchange] = useState();
   const [qoute, setQoute] = useState();
   const [network, setNetwork] = useState();
-  const [showResults, setShowResults] = useState()
-  const [BorderRadius, setBorderRadius] = useState()
-  const [BorderRadiusBtn, setBorderRadiusBtn] = useState()
-  const [CroxIconBtn, setCroxIconBtn] = useState()
-
+  const [showResults, setShowResults] = useState();
+  const [BorderRadius, setBorderRadius] = useState();
+  const [BorderRadiusBtn, setBorderRadiusBtn] = useState();
+  const [CroxIconBtn, setCroxIconBtn] = useState();
 
   const [switchClassOne, setswitchClassOneToogled] = useState(false);
   const [switchClassTwo, setswitchClassTwoToogled] = useState(false);
@@ -66,17 +66,17 @@ function SearchTokenData() {
   };
 
   const handleClick = () => {
-    showResults ? setShowResults (false) : setShowResults(true);
-    BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
-  }
+    showResults ? setShowResults(false) : setShowResults(true);
+    BorderRadius ? setBorderRadius(false) : setBorderRadius(true);
+    BorderRadiusBtn ? setBorderRadiusBtn(false) : setBorderRadiusBtn(true);
+    CroxIconBtn ? setCroxIconBtn(false) : setCroxIconBtn(true);
+  };
   const handleClickSvg = () => {
-    showResults ? setShowResults (false) : setShowResults(true);
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
-    BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
-  }
+    showResults ? setShowResults(false) : setShowResults(true);
+    CroxIconBtn ? setCroxIconBtn(false) : setCroxIconBtn(true);
+    BorderRadius ? setBorderRadius(false) : setBorderRadius(true);
+    BorderRadiusBtn ? setBorderRadiusBtn(false) : setBorderRadiusBtn(true);
+  };
 
   const Ethcoin = () => {
     setExchange("Uniswap");
@@ -251,9 +251,12 @@ function SearchTokenData() {
         <div className="col-12">
           <div className="table_trades">
             <div className="Trades_search">
-            <div className="search_max">
-              <div>
-                    <input type="text" onClick={handleClick} autoComplete="off"
+              <div className="search_max">
+                <div>
+                  <input
+                    type="text"
+                    onClick={handleClick}
+                    autoComplete="off"
                     onChange={(e) => {
                       setSearch(e.target.value);
                       localStorage.setItem("@baseQuery", e.target.value);
@@ -262,75 +265,88 @@ function SearchTokenData() {
                       localStorage.setItem("@exchange", exchange);
                     }}
                     placeholder="Search Token Address"
-                    id={BorderRadius ?  "input_active" : "input_not_active"}
+                    id={BorderRadius ? "input_active" : "input_not_active"}
                   />
-                  <svg id={CroxIconBtn ?  "svg_active" : "svg_not_active"} onClick={handleClickSvg}
-                      role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" class="svg-inline--fa fa-times fa-w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                      <path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z">
-                      </path>
+                  <svg
+                    id={CroxIconBtn ? "svg_active" : "svg_not_active"}
+                    onClick={handleClickSvg}
+                    role="img"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fal"
+                    data-icon="times"
+                    class="svg-inline--fa fa-times fa-w-10"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                    ></path>
                   </svg>
+                </div>
+                <button
+                  type="submit"
+                  onClick={() => {
+                    callApi();
+                  }}
+                  id={BorderRadiusBtn ? "btn_active" : "btn_not_active"}
+                >
+                  Search
+                </button>
               </div>
-            <button
-              type="submit"
-              onClick={() => {
-                callApi();
-              }}
-              id={BorderRadiusBtn ?  "btn_active" : "btn_not_active"}
-            >
-            Search
-          </button>
-            </div>
 
-              <div class="next_search"  id={showResults ?  "search_active" : "search_not_active"}>
-                  { /* showResults ? <Results /> : null */}
-                  <Results />
+              <div
+                class="next_search"
+                id={showResults ? "search_active" : "search_not_active"}
+              >
+                {/* showResults ? <Results /> : null */}
+                <Results />
               </div>
             </div>
 
             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">
               {resd.slice(0, 1).map((post, key) => {
-                if(network==='bsc'){
-                return (
-                  <div className="img_box">
-                    <img src={bnbicon} />
-                    <li className="wrapper_name">
-                      {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
-                    </li>
-                  </div>
-                )
-                }else{
-                  return(
-                  <div className="img_box">
-                    <img src={Ethcoin_icon} />
-                    <li className="wrapper_name">
-                      {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
-                    </li>
-                  </div>
-                  )}
+                if (network === "bsc") {
+                  return (
+                    <div className="img_box">
+                      <img src={bnbicon} />
+                      <li className="wrapper_name">
+                        {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
+                      </li>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className="img_box">
+                      <img src={Ethcoin_icon} />
+                      <li className="wrapper_name">
+                        {post.quoteCurrency.symbol} / {post.baseCurrency.symbol}{" "}
+                      </li>
+                    </div>
+                  );
+                }
               })}
               {resd.slice(0, 1).map((post, key) => {
-                   if(network==='bsc'){
-                return (
-                  <div className="coin_names">
-                    <li className="value_names">
-                      <li>{((post?.quotePrice)*408.16).toPrecision(5)}</li>
-                    </li>
-                 
-                    <span>BNB {(post.quotePrice).toPrecision(5)}</span>
-                 
-              
-                  </div>
-                );}else{
+                if (network === "bsc") {
                   return (
                     <div className="coin_names">
                       <li className="value_names">
-                        <li>{((post?.quotePrice)*2963.518)}</li>
+                        <li>{(post?.quotePrice * 408.16).toPrecision(5)}</li>
                       </li>
-                   
+
+                      <span>BNB {post.quotePrice.toPrecision(5)}</span>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className="coin_names">
+                      <li className="value_names">
+                        <li>{post?.quotePrice * 2963.518}</li>
+                      </li>
+
                       <span>ETH {post.quotePrice}</span>
-                   
-                
                     </div>
                   );
                 }
@@ -353,16 +369,22 @@ function SearchTokenData() {
             })}
             {console.log("post", resd)}
             <div id="tv_chart_container">
-              <TVChartContainer
+              <LiveChart
                 baseQuery={search}
                 network={network}
                 qQuery={qoute}
                 exchange={exchange}
               />
+              {/* <TVChartContainer
+                baseQuery={search}
+                network={network}
+                qQuery={qoute}
+                exchange={exchange}
+              /> */}
             </div>
             <div className="flex_box_table">
               <h3>Trades</h3>
-              
+
               {/* <div className='btns_lengends'>
                     <button className='buy'>Buy</button>
                     <button className='sell'>Sale</button>
@@ -372,44 +394,47 @@ function SearchTokenData() {
             {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
 
             <table>
-            {resd.slice(0, 1).map((post, key) => {
-                  if (network === 'bsc') {
-                    return (
-                      <thead>  
+              {resd.slice(0, 1).map((post, key) => {
+                if (network === "bsc") {
+                  return (
+                    <thead>
                       <th>Date</th>
                       <th>Type</th>
                       <th>PRICE USDT</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
-                      <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+                      <th className="transform">
+                        TOTAL {post.baseCurrency.symbol}
+                      </th>
                       <th>Maker</th>
                     </thead>
-                    
-            
-              );
-            } else {  
-              return(      
-               <thead>  
-              <th>Date</th>
-              <th>Type</th>
-              <th>PRICE USDT</th>
-              <th className="transform">Amount WETH</th>
-              <th className="transform">Price ETH</th>
-              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
-              <th>Maker</th>
-            </thead>
-            
-            )}})}
+                  );
+                } else {
+                  return (
+                    <thead>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>PRICE USDT</th>
+                      <th className="transform">Amount WETH</th>
+                      <th className="transform">Price ETH</th>
+                      <th className="transform">
+                        TOTAL {post.baseCurrency.symbol}
+                      </th>
+                      <th>Maker</th>
+                    </thead>
+                  );
+                }
+              })}
               <tbody>
                 {resd.slice(0, 100).map((post, key) => {
                   if (post.side == "BUY") {
                     return (
                       <tr key={key}>
                         <td className="date_table">
-                        {post.block.timestamp.time}
+                          {post.block.timestamp.time}
                         </td>
                         <td className="red">SELL</td>
-                        <td className="">{(post.quotePrice)*408.16}</td>
+                        <td className="">{post.quotePrice * 408.16}</td>
                         <td className="truncate">{post.quoteAmount}</td>
                         <td className="truncate">{post.quotePrice}</td>
                         <td className="truncate">{post.baseAmount}</td>
@@ -425,7 +450,7 @@ function SearchTokenData() {
                           {post.block.timestamp.time}
                         </td>
                         <td className="green">BUY</td>
-                        <td className="">{(post.quotePrice)*408.16}</td>
+                        <td className="">{post.quotePrice * 408.16}</td>
                         <td className="truncate">{post.quoteAmount}</td>
                         <td className="truncate">{post.quotePrice}</td>
                         <td className="truncate">{post.baseAmount}</td>
