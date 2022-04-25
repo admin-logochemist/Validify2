@@ -32,7 +32,7 @@ import minty from '../images/minty.svg'
 import cryptodefi from '../images/cryptodefi.png'
 import justmoney from '../images/justmoney.svg'
 import safemoon from '../images/safemoon.svg'
-import swapr from '../images/swapr.svg'
+import swapr from '../images/swapr.png'
 import empiredex from '../images/empiredex.png'
 import degen from '../images/degen.svg'
 import dojo from '../images/dojo.svg'
@@ -84,6 +84,34 @@ import island from '../images/island.svg'
 import jswap from '../images/jswap.svg'
 import kswap from '../images/kswap.svg'
 import myswap from '../images/myswap.svg'
+import spookyswap from '../images/spookyswap.png'
+import paintswap from '../images/paintswap.png'
+import spiritswap from '../images/spiritswap.png'
+import fbomb from '../images/fbomb.svg'
+import soulswap from '../images/soulswap.png'
+import morpheusswap from '../images/morpheusswap.png'
+import wingswap from '../images/wingswap.svg'
+import fantomlive from '../images/fantomlive.png'
+import wigo from '../images/wigo.png'
+import protofi from '../images/protofi.svg'
+import zoo from '../images/zoo.svg'
+import darkknight from '../images/darkknight.svg'
+import degenhaus from '../images/degenhaus.png'
+import tomb from '../images/tomb.svg'
+import excalibur from '../images/excalibur.svg'
+import redemption from '../images/redemption.svg'
+import netswap from '../images/netswap.svg'
+import standard from '../images/standard.png'
+import tethys from '../images/tethys.png'
+import maki from '../images/maki.svg'
+import butter from '../images/butter.svg'
+import wagyuswap from '../images/wagyuswap.png'
+import astro from '../images/astro.svg'
+import wanna from '../images/wanna.png'
+import trisolaris from '../images/trisolaris.svg'
+import nearpad from '../images/nearpad.png'
+import auroraicon from '../images/aurora.png'
+import amaterasu from '../images/amaterasu.svg'
 
 function SearchTokenData() {
   const [resd, setResd] = useState([]);
@@ -229,31 +257,88 @@ let btnIds = ["top_box_active","top_box_not_active"];
   };
   const fantomcoin = () => {
     switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
+
   const arbitrumcoin = () => {
     switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(true);
 
-    
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const metiscoin = () => {
-    switchClassEight
-      ? setswitchClassEightToogled(false)
-      : setswitchClassEightToogled(true);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const hecocoin = () => {
-    switchClassNine
-      ? setswitchClassNineToogled(false)
-      : setswitchClassNineToogled(true);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const velascoin = () => {
-    switchClassTen
-      ? setswitchClassTenToogled(false)
-      : setswitchClassTenToogled(true);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const auroracoin = () => {
-    switchClassEleven
-      ? setswitchClassElevenToogled(false)
-      : setswitchClassElevenToogled(true);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
   };
 
 
@@ -1014,6 +1099,397 @@ let btnIds = ["top_box_active","top_box_not_active"];
     </div>
   );
 
+  const FantomSwap = () => (
+    <div className="">
+       <div className="check_box_width">
+         <div className="check_box_scroll_box">
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                All Exchanges
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                 <input type="radio" name="radio"  />
+                 <img src={spookyswap} />
+                  Spookyswap
+                 <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={paintswap} />
+                Paintswap
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={empiredex} />
+                EmpireDex
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={spiritswap} />
+                Spiritswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={fbomb} />
+               FBOMB
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={sushiswap} />
+               Sushiswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={shibaswap} />
+              Shibaswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={kyberswap} />
+               Kyberswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={soulswap} />
+              Soulswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={jetswap} />
+              Jetswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={morpheusswap} />
+              MorpheusSwap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={wingswap} />
+              WingSwap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={elkfinance} />
+              Elk Finance
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={firebird} />
+              Firebird
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={fantomlive} />
+              Fantom Live
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={wigo} />
+              Wigoswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={protofi} />
+              ProtoFi
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={hyperjump} />
+              Hyperjump
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={zoo} />
+              ZooDex
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={darkknight} />
+              DarkKnight
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={degenhaus} />
+              Degen Haus
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={tomb} />
+              Tomb Finance
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={excalibur} />
+              Excalibur
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={redemption} />
+              Redemption
+              <span class="checkmark"></span>
+          </label>
+
+         </div>
+       </div>
+    </div>
+  );
+
+  const ArbitrumSwap = () => (
+      <div className="">
+        <div className="check_box_width">
+          <div className="check_box_scroll_box">
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                All Exchanges
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                  <input type="radio" name="radio"  />
+                  <img src={sushiswap} />
+                  Sushiswap
+                  <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={swapr} />
+                Swapr
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={uniswap} />
+                Uniswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={dfyn} />
+                DFYIN
+                <span class="checkmark"></span>
+            </label>
+
+          </div>
+        </div>
+    </div>
+  );
+
+  const METIsSwap = () => (
+      <div className="">
+        <div className="check_box_width">
+          <div className="check_box_scroll_box">
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                All Exchanges
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                  <input type="radio" name="radio"  />
+                  <img src={netswap} />
+                  Netswap
+                  <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={standard} />
+                Standard
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={tethys} />
+                Tethys Finance
+                <span class="checkmark"></span>
+            </label>
+
+          </div>
+        </div>
+      </div>
+  );
+
+  const HecoSwap = () => (
+    <div className="">
+      <div className="check_box_width">
+        <div className="check_box_scroll_box">
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              All Exchanges
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={mdex} />
+                 MDEX
+                <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={pippi} />
+              Pippi.Finance
+              <span class="checkmark"></span>
+          </label>
+          
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={maki} />
+              Makiswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={butter} />
+              Butterswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={elkfinance} />
+              Elk Finance
+              <span class="checkmark"></span>
+          </label>
+
+        </div>
+      </div>
+    </div>
+  );
+
+  const VELASSwap = () => (
+    <div className="">
+      <div className="check_box_width">
+        <div className="check_box_scroll_box">
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              All Exchanges
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={wagyuswap} />
+                Wagyuswap
+                <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={astro} />
+              Astroswap
+              <span class="checkmark"></span>
+          </label>
+
+        </div>
+      </div>
+    </div>
+  );
+
+  const AURORASwap = () => (
+    <div className="">
+      <div className="check_box_width">
+        <div className="check_box_scroll_box">
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              All Exchanges
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={wanna} />
+                Wannaswap
+                <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={trisolaris} />
+              Trisolaris
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={nearpad} />
+              Nearpad
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={auroraicon} />
+              Auroraswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={amaterasu} />
+              Amaterasu
+              <span class="checkmark"></span>
+          </label>
+
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <Header />
@@ -1078,6 +1554,30 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
                   <div className="" id={switchClassFive ?  "search_active" : "search_not_active"}>
                         <OKCSwap />
+                  </div>
+
+                  <div className="" id={switchClassSix ?  "search_active" : "search_not_active"}>
+                        <FantomSwap />
+                  </div>
+
+                  <div className="" id={switchClassSeven ?  "search_active" : "search_not_active"}>
+                        <ArbitrumSwap />
+                  </div>
+
+                  <div className="" id={switchClassEight ?  "search_active" : "search_not_active"}>
+                        <METIsSwap />
+                  </div>
+
+                  <div className="" id={switchClassNine ?  "search_active" : "search_not_active"}>
+                        <HecoSwap />
+                  </div>
+
+                  <div className="" id={switchClassTen ?  "search_active" : "search_not_active"}>
+                        <VELASSwap />
+                  </div>
+
+                  <div className="" id={switchClassEleven ?  "search_active" : "search_not_active"}>
+                        <AURORASwap />
                   </div>
             </div> 
 
