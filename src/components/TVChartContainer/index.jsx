@@ -1,27 +1,27 @@
-import * as React from "react";
-import "./index.css";
-import { widget } from "../../charting_library";
-import Datafeed from "./datafeed";
+import * as React from 'react';
+import './index.css';
+import { widget } from '../../charting_library';
+import Datafeed from './datafeed';
 
 function getLanguageFromURL() {
-  const regex = new RegExp("[\\?&]lang=([^&#]*)");
+  const regex = new RegExp('[\\?&]lang=([^&#]*)');
   const results = regex.exec(window.location.search);
   return results === null
     ? null
-    : decodeURIComponent(results[1].replace(/\+/g, " "));
+    : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
-    symbol: "Pancake",
-    interval: "5",
-    containerId: "tv_chart_container",
+    symbol: 'Pancake',
+    interval: '5',
+    containerId: 'tv_chart_container',
     //datafeedUrl: 'https://demo_feed.tradingview.com',
-    libraryPath: "../../charting_library/",
-    chartsStorageUrl: "https://saveload.tradingview.com",
-    chartsStorageApiVersion: "1.1",
-    clientId: "tradingview.com",
-    userId: "danmanoloff",
+    libraryPath: '../../charting_library/',
+    chartsStorageUrl: 'https://saveload.tradingview.com',
+    chartsStorageApiVersion: '1.1',
+    clientId: 'tradingview.com',
+    userId: 'danmanoloff',
     fullscreen: false,
     autosize: true,
   };
@@ -34,10 +34,10 @@ export class TVChartContainer extends React.PureComponent {
   }
 
   componentDidUpdate = async () => {
-    let baseQuery = await localStorage.getItem("@baseQuery");
-    let qQuery = await localStorage.getItem("@qQuery");
-    let network = await localStorage.getItem("@network");
-    let exchange = await localStorage.getItem("@exchange");
+    let baseQuery = await localStorage.getItem('@baseQuery');
+    let qQuery = await localStorage.getItem('@qQuery');
+    let network = await localStorage.getItem('@network');
+    let exchange = await localStorage.getItem('@exchange');
 
     if (baseQuery.length) {
       const widgetOptions = {
@@ -47,9 +47,9 @@ export class TVChartContainer extends React.PureComponent {
         interval: this.props.interval,
         container: this.ref.current,
         library_path: this.props.libraryPath,
-        locale: getLanguageFromURL() || "en",
-        disabled_features: ["use_localstorage_for_settings"],
-        enabled_features: ["study_templates"],
+        locale: getLanguageFromURL() || 'en',
+        disabled_features: ['use_localstorage_for_settings'],
+        enabled_features: ['study_templates'],
         charts_storage_url: this.props.chartsStorageUrl,
         charts_storage_api_version: this.props.chartsStorageApiVersion,
         client_id: this.props.clientId,
@@ -57,32 +57,30 @@ export class TVChartContainer extends React.PureComponent {
         fullscreen: this.props.fullscreen,
         autosize: this.props.autosize,
         studies_overrides: this.props.studiesOverrides,
-        theme: "Dark",
+        theme: 'Dark',
       };
 
       const tvWidget = new widget(widgetOptions);
       this.tvWidget = tvWidget;
 
-      // setInterval(() => {
       tvWidget.onChartReady(() => {
         tvWidget.headerReady().then(() => {
           const button = tvWidget.createButton();
-          button.setAttribute("title", "Click to show a notification popup");
-          button.classList.add("apply-common-tooltip");
-          button.addEventListener("click", () =>
+          button.setAttribute('title', 'Click to show a notification popup');
+          button.classList.add('apply-common-tooltip');
+          button.addEventListener('click', () =>
             tvWidget.showNoticeDialog({
-              title: "Notification",
-              body: "TradingView Charting Library API works correctly",
+              title: 'Notification',
+              body: 'TradingView Charting Library API works correctly',
               callback: () => {
-                console.log("Noticed!");
+                console.log('Noticed!');
               },
             })
           );
 
-          button.innerHTML = "Check API";
+          button.innerHTML = 'Check API';
         });
       });
-      // }, 1000);
     }
   };
 
@@ -94,13 +92,7 @@ export class TVChartContainer extends React.PureComponent {
   }
 
   render() {
-    console.log("================ >>>>>>", this.props);
-    return (
-      <div
-        ref={this.ref}
-        id={this.props.containerId}
-        className={"TVChartContainer"}
-      />
-    );
+    console.log('================ >>>>>>', this.props);
+    return <div ref={this.ref} id={this.props.containerId} className={'TVChartContainer'} />;
   }
 }

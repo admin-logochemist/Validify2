@@ -4,6 +4,10 @@
   /* margin-top: 105px; */
   display: flex;
 }
+.Trades_search{
+  position: absolute;
+  width: 100%;
+}
 .search_boxx{
   width: 50%;
 }
@@ -15,6 +19,9 @@
   top: -29px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
+}
+.search_boxx > a:hover{
+  color: #443107;
 }
 .search_boxx img{
   height: 25px;
@@ -149,13 +156,12 @@
 }
 
 .search-results > .scroll_box{
-  overflow-x: scroll;
+  overflow-x: scroll !important;
   width: 95%;
   overflow-y: hidden;
   display: flex;
   margin: auto;
   padding: 16px 0;
-  border-top: 1px solid grey;
 }
 
 .search-results > .scroll_box::-webkit-scrollbar-track{
@@ -214,7 +220,7 @@
 .next_search{
   width: 50%;
   margin: auto;
-  /* display: none; */
+  border-top: 2px solid grey;
 }
 #search_actives{
   background-color: red;
@@ -286,6 +292,7 @@
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
+  opacity: 0;
 }
 .check_box_scroll_box .container-radio:hover input ~ .checkmark {
   background-color: #ccc;
@@ -309,6 +316,10 @@
   border-radius: 50%;
   background: white;
 }
+#tv_chart_container{
+  margin: 65px 0 0 0;
+}
+
 @media screen and (max-width:1500px) {
   .search_boxx{
     width: 82%;
@@ -382,6 +393,14 @@
         position: relative;
         top: -9px;
     }
+    .next_search{
+      width: 50%;
+      margin: 10px auto auto;
+      border-top: 7px solid grey;
+    }
+    .search_boxx > a {
+       padding: 5px 35px;
+    }
 }
 @media screen and (max-width:501px){
     .searchInputs > input {
@@ -394,7 +413,14 @@
       font-size: 12px;
       letter-spacing: 2px;
       margin-top: 4px;
-  }
+    }
+    .Trades_search input {
+      font-size: 9px;
+    }
+    .Trades_search .search_max > div svg {
+      top: 37px;
+      height: 25px;
+    }
 }
 @media screen and (max-width:801px){
   .searchInputs > input::placeholder{

@@ -1,4 +1,6 @@
-
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+// import {  HistoChart } from "../config/api";
 import BtcCoinPage from './BtcCoinPage';
 // import { CryptoState } from "../CryptoContext";
 
