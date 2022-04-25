@@ -61,6 +61,29 @@ import swapx from '../images/swapx.svg'
 import traderjoe from '../images/traderjoe.png'
 import lydiafinance from '../images/lydiafinance.png'
 import pangolin from '../images/pangolin.png'
+import hurricaneswap from '../images/hurricaneswap.png'
+import yetiswap from '../images/yetiswap.png'
+import partyswap from '../images/partyswap.png'
+import stormswap from '../images/stormswap.png'
+import baguette from '../images/baguette.png'
+import olivecash from '../images/olivecash.png'
+import dctdao from '../images/dctdao.png'
+import canaryexchange from '../images/canaryexchange.svg'
+import complus from '../images/complus.png'
+import quickswap from '../images/quickswap.png'
+import dfyn from '../images/dfyn.png'
+import polycat from '../images/polycat.png'
+import gravityfinance from '../images/gravityfinance.png'
+import cometh from '../images/cometh.png'
+import pippi from '../images/pippi.svg'
+import jamon from '../images/jamon.png'
+import nacho from '../images/nacho.png'
+import famoso from '../images/famoso.svg'
+import cherry from '../images/cherry.svg'
+import island from '../images/island.svg'
+import jswap from '../images/jswap.svg'
+import kswap from '../images/kswap.svg'
+import myswap from '../images/myswap.svg'
 
 function SearchTokenData() {
   const [resd, setResd] = useState([]);
@@ -192,6 +215,17 @@ let btnIds = ["top_box_active","top_box_not_active"];
   };
   const okccoin = () => {
     switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(true);
+
+    switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+    switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+    switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+    switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+    switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+    switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+    switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+    switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+    switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+    switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const fantomcoin = () => {
     switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(true);
@@ -319,94 +353,92 @@ let btnIds = ["top_box_active","top_box_not_active"];
     </div>
   );
 
-
-
   const EthSwap = () => (
     <div className="">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
+                <input type="radio" name="radio"  />
                 All Exchanges
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-                 {/*<input type="radio" name="radio"  />*/}
+                 <input type="radio" name="radio"  />
                 <img src={sushiswap} />
                 Sushiswap
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-             {/*<input type="radio" name="radio"  />*/}
+            <input type="radio" name="radio"  />
             <img src={uniswap} />
             Uniswap
             <span class="checkmark"></span>
             </label>
             
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+            <input type="radio" name="radio"  />
               <img src={shibaswap} />
               Shibaswap
               <span class="checkmark"></span>
            </label>
 
            <label class="container-radio">
-           {/*<input type="radio" name="radio"  />*/}
+           <input type="radio" name="radio"  />
              <img src={kyberswap} />
-             Kyberswap
+             kyberswap
              <span class="checkmark"></span>
           </label>
 
 
                 <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
+                <input type="radio" name="radio"  />
                   <img src={minty} />
                   Minty
                   <span class="checkmark"></span>
               </label>
 
               <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
+                <input type="radio" name="radio"  />
                 <img src={cryptodefi} />
-                Cryptodefi
+                Cryptodefiswap
                 <span class="checkmark"></span>
               </label>
 
 
               <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
+                <input type="radio" name="radio"  />
                 <img src={justmoney} />
-                Justmoney
+                justmoney
                 <span class="checkmark"></span>
             </label>
 
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={safemoon} />
-              Safemoon
-              <span class="checkmark"></span>
+              <input type="radio" name="radio"  />
+                <img src={safemoon} />
+                safemoonswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={swapr} />
-              Swapr
-              <span class="checkmark"></span>
-          </label>
+              <input type="radio" name="radio"  />
+                <img src={swapr} />
+                Swapr
+                <span class="checkmark"></span>
+            </label>
 
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+              <input type="radio" name="radio"  />
               <img src={empiredex} />
-              Emiredex
+              Empiredex
               <span class="checkmark"></span>
             </label>
 
           <label class="container-radio">
-          {/*<input type="radio" name="radio"  />*/}
+          <input type="radio" name="radio"  />
             <img src={degen} />
             Degen
             <span class="checkmark"></span>
@@ -414,18 +446,18 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
         <label class="container-radio">
-        {/*<input type="radio" name="radio"  />*/}
-          <img src={dojo} />
-          Dojo
-          <span class="checkmark"></span>
-      </label>
+          <input type="radio" name="radio"  />
+            <img src={dojo} />
+            Dojoswap
+            <span class="checkmark"></span>
+        </label>
 
-      <label class="container-radio">
-      {/*<input type="radio" name="radio"  />*/}
-        <img src={concave} />
-        Concave
-        <span class="checkmark"></span>
-    </label>
+        <label class="container-radio">
+          <input type="radio" name="radio"  />
+            <img src={concave} />
+            Concaveswap
+            <span class="checkmark"></span>
+        </label>
 
          </div>
        </div>
@@ -437,201 +469,200 @@ let btnIds = ["top_box_active","top_box_not_active"];
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
-                {/*<input type="radio" name="radio" />*/}
+                <input type="radio" name="radio" />
                 All Exchanges
                 <span class="checkmark"></span>
-                </label>
+            </label>
 
             <label class="container-radio">
-               {/*<input type="radio" name="radio" />*/}
+               <input type="radio" name="radio" />
                 <img src={Apeswap} />
                 Apeswap
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={pancakeswap} />
-            Pancakeswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={pancakeswap} />
+                Pancakeswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={mdex} />
-            Mdex
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={mdex} />
+                MDEX
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={empiredex} />
-            Empiredex
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={empiredex} />
+                Empiredex
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={wault} />
-            Wault
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={wault} />
+                Wault
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={sheepdex} />
-            Sheepdex
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={sheepdex} />
+                Sheepdex
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={bakery} />
-            Bakery
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={bakery} />
+                Bakery
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={sushiswap} />
-            Sushiswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={sushiswap} />
+                Sushiswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={coinone} />
-            Coinone
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={coinone} />
+                Coinone
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={jetswap} />
-            Jetswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={jetswap} />
+                Jetswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={babyswap} />
-            BabySwap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={babyswap} />
+                Babyswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={kyberswap} />
-            Kyberswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={kyberswap} />
+                kyberswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={biswap} />
-            Biswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={biswap} />
+                Biswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={padswap} />
-            Padswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={padswap} />
+                Padswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={mochiswap} />
-            Mochiswap
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={mochiswap} />
+                Mochiswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={firebird} />
-            Firebird
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={firebird} />
+                Firebird
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={justliquidity} />
-            Coming Soon
-            <span class="checkmark"></span>
-            </label>
-
-
-            <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={shibanova} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={justliquidity} />
+                JustLiquidity
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={acyfinance} />
-             Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={shibanova} />
+                Shibanova
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={fsts} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={acyfinance} />
+                ACYfinance
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={niob} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={fsts} />
+                Fsts
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={mars} />
-             Coming Soon
-            <span class="checkmark"></span>
-            </label>
-
-
-            <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={safemoon} />
-            Coming Soon
-            <span class="checkmark"></span>
+              <input type="radio" name="radio" />
+              <img src={niob} />
+              Niob
+              <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={elkfinance} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={mars} />
+                Mars
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={hyperjump} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={safemoon} />
+                Safemoonswap
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={knight} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={elkfinance} />
+                Elkfinance
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
-            <img src={swapx} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio" />
+                <img src={hyperjump} />
+                Hyperjump
+                <span class="checkmark"></span>
             </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio" />
+                <img src={knight} />
+                knight
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio" />
+                <img src={swapx} />
+                Swapx
+                <span class="checkmark"></span>
+            </label>
+
          </div>
        </div>
     </div>
@@ -642,111 +673,347 @@ let btnIds = ["top_box_active","top_box_not_active"];
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
+                <input type="radio" name="radio"  />
                 All Exchanges
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-                 {/*<input type="radio" name="radio"  />*/}
+                 <input type="radio" name="radio"  />
                 <img src={traderjoe} />
-                Coming Soon
+                Trader Joe
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-             {/*<input type="radio" name="radio"  />*/}
-            <img src={lydiafinance} />
-            Coming Soon
-            <span class="checkmark"></span>
+                <input type="radio" name="radio"  />
+                <img src={pangolin} />
+                Pangolin
+                <span class="checkmark"></span>
             </label>
             
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={shibaswap} />
-              Coming Soon
-              <span class="checkmark"></span>
+                <input type="radio" name="radio"  />
+                <img src={lydiafinance} />
+                Lydia Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={hurricaneswap} />
+                Hurricane Swap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={elkfinance} />
+                 Elk Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={sushiswap} />
+                Sushiswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={yetiswap} />
+                Yeti Swap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={partyswap} />
+                Partyswap
+                <span class="checkmark"></span>
            </label>
 
-           <label class="container-radio">
-           {/*<input type="radio" name="radio"  />*/}
-             <img src={kyberswap} />
-             Coming Soon
-             <span class="checkmark"></span>
-          </label>
-
-
-                <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
-                  <img src={minty} />
-                  Coming Soon
-                  <span class="checkmark"></span>
-              </label>
-
-              <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
-                <img src={cryptodefi} />
-                Coming Soon
-                <span class="checkmark"></span>
-              </label>
-
-
-              <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
-                <img src={justmoney} />
-                Coming Soon
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={stormswap} />
+                StormSwap
                 <span class="checkmark"></span>
             </label>
 
-
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={safemoon} />
-              Coming Soon
-              <span class="checkmark"></span>
+                <input type="radio" name="radio"  />
+                <img src={empiredex} />
+                EmpireDex
+                <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={swapr} />
-              Coming Soon
+                <input type="radio" name="radio"  />
+                <img src={baguette} />
+                Baguette
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={olivecash} />
+                Olive Cash
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={dctdao} />
+                DCT DAO
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={canaryexchange} />
+                Canary Exchange
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={complus} />
+              Complus
               <span class="checkmark"></span>
           </label>
-
-
-            <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
-              <img src={empiredex} />
-              Coming Soon
-              <span class="checkmark"></span>
-            </label>
-
-          <label class="container-radio">
-          {/*<input type="radio" name="radio"  />*/}
-            <img src={degen} />
-            Coming Soon
-            <span class="checkmark"></span>
-        </label>
-
-
-        <label class="container-radio">
-        {/*<input type="radio" name="radio"  />*/}
-          <img src={dojo} />
-          Coming Soon
-          <span class="checkmark"></span>
-      </label>
-
-      <label class="container-radio">
-      {/*<input type="radio" name="radio"  />*/}
-        <img src={concave} />
-        Coming Soon
-        <span class="checkmark"></span>
-    </label>
 
          </div>
        </div>
     </div>
   );
+
+  const PolygonSwap = () => (
+    <div className="">
+       <div className="check_box_width">
+         <div className="check_box_scroll_box">
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                All Exchanges
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                 <input type="radio" name="radio"  />
+                <img src={quickswap} />
+                QuickSwap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={sushiswap} />
+                SushiSwap
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={dfyn} />
+                DFYN
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={Apeswap} />
+                Apeswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={wault} />
+                Wault
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={jetswap} />
+                 Jetswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={kyberswap} />
+                kyberswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={empiredex} />
+                EmpireDex
+                <span class="checkmark"></span>
+           </label>
+
+            <label class="container-radio">
+              <input type="radio" name="radio"  />
+                <img src={uniswap} />
+                Uniswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+              <input type="radio" name="radio"  />
+                <img src={polycat} />
+                Polycat
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={gravityfinance} />
+                Gravity Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                 <img src={firebird} />
+                 Firebird
+                 <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={acyfinance} />
+                  Acy Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={elkfinance} />
+                  EIk Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={cometh} />
+                Cometh Swap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={pippi} />
+                Pippi.Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={jamon} />
+                Jamon Swap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={nacho} />
+                Nacho Finance
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={justmoney} />
+                Just Money
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={famoso} />
+                Famoso
+                <span class="checkmark"></span>
+            </label>
+
+         </div>
+       </div>
+    </div>
+  );
+
+  const OKCSwap = () => (
+    <div className="">
+       <div className="check_box_width">
+         <div className="check_box_scroll_box">
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                All Exchanges
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                 <input type="radio" name="radio"  />
+                <img src={cherry} />
+                Cherryswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={island} />
+                Islandswap
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={jswap} />
+                Jswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+                <input type="radio" name="radio"  />
+                <img src={kswap} />
+                Kswap
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={sushiswap} />
+              Sushiswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={myswap} />
+              Myswap
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={pippi} />
+              Pippi.Finance
+              <span class="checkmark"></span>
+          </label>
+
+          <label class="container-radio">
+              <input type="radio" name="radio"  />
+              <img src={elkfinance} />
+             EIk Finance
+              <span class="checkmark"></span>
+          </label>
+
+         </div>
+       </div>
+    </div>
+  );
+
   return (
     <>
       <Header />
@@ -789,20 +1056,30 @@ let btnIds = ["top_box_active","top_box_not_active"];
             Search
             </button>*/}
             </div>
+                  <div class="next_search">
+                      <Results />
+                  </div>
 
-              <div class="next_search">
-                  <Results />
-              </div>
-              <div className="" id={switchClassOne ?  "search_active" : "search_not_active"}>
-                 <EthSwap />
-              </div>
-              <div className="" id={switchClassTwo ?  "search_active" : "search_not_active"}>
-                 <BNBSwap />
-              </div>
-              <div className="" id={switchClassThree ?  "search_active" : "search_not_active"}>
-                    <AVASwap />
-                </div>
-              </div> 
+                  <div className="" id={switchClassOne ?  "search_active" : "search_not_active"}>
+                    <EthSwap />
+                  </div>
+
+                  <div className="" id={switchClassTwo ?  "search_active" : "search_not_active"}>
+                    <BNBSwap />
+                  </div>
+
+                  <div className="" id={switchClassThree ?  "search_active" : "search_not_active"}>
+                        <AVASwap />
+                  </div>
+
+                  <div className="" id={switchClassFour ?  "search_active" : "search_not_active"}>
+                        <PolygonSwap />
+                  </div>
+
+                  <div className="" id={switchClassFive ?  "search_active" : "search_not_active"}>
+                        <OKCSwap />
+                  </div>
+            </div> 
 
             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">

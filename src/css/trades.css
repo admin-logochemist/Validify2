@@ -275,7 +275,7 @@
     text-overflow: ellipsis;
   }
   .icons_info{
-    margin-top: 20px;
+    margin-top: 28px;
     width: 100%;
     display: inline-flex;
   }
@@ -342,6 +342,15 @@
   }
   .next_search {
     width: 100% !important;
+  }
+  .Trades_search{
+    position: relative !important;
+  }
+  .icons_info {
+    margin-top: 20px;
+  }
+  .coin_names li.value_names li {
+    font-size: 25px;
   }
 }
 @media screen and (max-width:678px){
