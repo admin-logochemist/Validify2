@@ -112,10 +112,14 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) 
                 exchangeName: {is: "${exchange}"}
                 quoteCurrency: {is: "${qQuery}"}
                 baseCurrency: {is: "${baseQuery}"}
-               
+                priceAsymmetry: { lt: 0.7 }
+                any: [
+                  {tradeAmountUsd: { gt: 0.00001 }},
+                  {tradeAmountUsd: { is: 0 }}
+                ]
               ) {
                 timeInterval {
-                   minute(count: ${resolution}) 
+                  minute(format:"%FT%TZ", count: 15)
                 }
                 volume: quoteAmount
                 high: quotePrice(calculate: maximum)
@@ -136,10 +140,14 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) 
          exchangeName: {is: "${exchange}"}
          quoteCurrency: {is: "${qQuery}"}
          baseCurrency: {is: "${baseQuery}"}
-        
+         priceAsymmetry: { lt: 0.7 }
+         any: [
+           {tradeAmountUsd: { gt: 0.00001 }},
+           {tradeAmountUsd: { is: 0 }}
+         ]
        ) {
          timeInterval {
-            minute(count: ${resolution}) 
+          minute(format:"%FT%TZ", count: 15) 
          }
          volume: quoteAmount
          high: quotePrice(calculate: maximum)

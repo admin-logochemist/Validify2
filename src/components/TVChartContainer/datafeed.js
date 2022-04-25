@@ -106,6 +106,23 @@ export default {
             console.log({ err })
         }
     },
-    subscribeBars: (symbolInfo, resolution, onRealtimeCallback, subscribeID, onResetCacheNeededCallback) => {},
+    subscribeBars: (
+        symbolInfo,
+        resolution,
+        onRealtimeCallback,
+        subscribeUID,
+        onResetCacheNeededCallback
+    ) => {
+        console.log(
+            '[subscribeBars]: Method call with subscribeUID:',
+            subscribeUID,
+            symbolInfo,
+            resolution,
+            onRealtimeCallback,
+            subscribeUID,
+            onResetCacheNeededCallback,
+            
+        );
+    },
     unsubscribeBars: (subscribeID) => {}
 };

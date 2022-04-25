@@ -10,11 +10,19 @@ function getLanguageFromURL() {
     ? null
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+export const IntervalTypes = {
+  D: 'D',
+  W: 'W'
+};
 
+export const RangeTypes = {
+  YTD: 'ytd',
+  ALL: 'all'
+};
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
     symbol: "Pancake",
-    interval: "5",
+    interval: "15",
     containerId: "tv_chart_container",
     //datafeedUrl: 'https://demo_feed.tradingview.com',
     libraryPath: "../../charting_library/",
@@ -58,6 +66,7 @@ export class TVChartContainer extends React.PureComponent {
         autosize: this.props.autosize,
         studies_overrides: this.props.studiesOverrides,
         theme: "Dark",
+        debug:true
       };
 
       const tvWidget = new widget(widgetOptions);
