@@ -1,0 +1,204 @@
+
+jQuery('.form-control').on('input',function(){
+    calculate()
+})
+
+function calculate(){
+    var fixedSupply = 1000000000 // N12
+    var reflectionTax = (3 / 100)
+
+    var g14 = parseFloat(document.getElementById('capital_spent').value || 0)
+    var h14 = parseFloat(document.getElementById('token_recieved').value || 0)
+    var j14 = parseFloat(document.getElementById('bnb_value_paid').value || 0)
+    var k14 = parseFloat(document.getElementById('volume_pxu').value || 0)
+    
+    
+    // Calculations Yearly ROI
+    var n15 = k14 * reflectionTax
+    var g16 = g14
+    var h16 = h14 / fixedSupply
+    var j16 = h16 * j14
+    var k16 = n15 * h16
+    
+    var stakePool = j16 * 52
+    var reflection = k16 * 356
+    var returnYearly = reflection + stakePool
+    var capitalSpent = g14
+    var roiWorking = returnYearly / capitalSpent
+    var profits = returnYearly - capitalSpent
+
+
+    document.getElementById('capital_spent_result').value = valueFormatter(g16)
+    document.getElementById('pxu_owned_result').value = valueFormatter(h16 * 100) + "%"
+    document.getElementById('stakepool_payout_result').value = valueFormatter(j16)
+    document.getElementById('reflection_payout_result').value = valueFormatter(k16)
+
+    document.getElementById('roi_yearly_result').innerHTML = valueFormatter(roiWorking * 100) + "%"
+    document.getElementById('yearly_return_result').innerHTML = valueFormatter(returnYearly)
+    document.getElementById('profits_result').innerHTML = valueFormatter(profits)
+
+    var roiWorking_monthly = roiWorking / 12
+    var returnYearly_monthly = returnYearly / 12
+    var profits_monthly = returnYearly_monthly - capitalSpent
+
+    document.getElementById('roi_monthly_result').innerHTML = valueFormatter(roiWorking_monthly * 100) + "%"
+    document.getElementById('monthly_return_result').innerHTML = valueFormatter(returnYearly_monthly)
+    document.getElementById('profits_result_monthly').innerHTML = valueFormatter(profits_monthly)
+
+    var roiWorking_weekly = roiWorking_monthly / 4
+    var returnYearly_weekly = returnYearly_monthly / 4
+    var profits_weekly = returnYearly_weekly - capitalSpent 
+
+    document.getElementById('roi_weekly_result').innerHTML = valueFormatter(roiWorking_weekly * 100) + "%"
+    document.getElementById('weekly_return_result').innerHTML = valueFormatter(returnYearly_weekly)
+    document.getElementById('profits_result_weekly').innerHTML = valueFormatter(profits_weekly)
+
+
+    // Mulitple Years ROI Calculations
+    year1_CapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0)
+    year1_YearReturn = parseFloat(document.getElementById('yearly_return_year1').value || 0)
+    year1_ROI = year1_YearReturn
+    year1_Percent = (year1_ROI / year1_CapitalSpent) * 1
+
+    document.getElementById('neg_positive_year1').innerHTML = valueFormatter(year1_ROI)
+    document.getElementById('roi_year1').innerHTML = valueFormatter(year1_Percent * 100) + "%"
+
+    year2_CapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0) + parseFloat(document.getElementById('capital_spent_year2').value || 0)
+    year2_YearReturn = parseFloat(document.getElementById('yearly_return_year2').value || 0)
+    year2_ROI = year2_YearReturn
+    year2_Percent = (year2_ROI / year2_CapitalSpent) * 1
+
+    document.getElementById('neg_positive_year2').innerHTML = valueFormatter(year2_ROI)
+    document.getElementById('roi_year2').innerHTML = valueFormatter(year2_Percent * 100) + "%"
+
+    year3_CapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0) + parseFloat(document.getElementById('capital_spent_year2').value || 0) + parseFloat(document.getElementById('capital_spent_year3').value || 0)
+    year3_YearReturn = parseFloat(document.getElementById('yearly_return_year3').value || 0)
+    year3_ROI = year3_YearReturn
+    year3_Percent = (year3_ROI / year3_CapitalSpent) * 1
+
+    document.getElementById('neg_positive_year3').innerHTML = valueFormatter(year3_ROI)
+    document.getElementById('roi_year3').innerHTML = valueFormatter(year3_Percent * 100) + "%"
+
+    year4_CapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0) + parseFloat(document.getElementById('capital_spent_year2').value || 0) + parseFloat(document.getElementById('capital_spent_year3').value || 0) + parseFloat(document.getElementById('capital_spent_year4').value || 0)
+    year4_YearReturn = parseFloat(document.getElementById('yearly_return_year4').value || 0)
+    year4_ROI = year4_YearReturn
+    year4_Percent = (year4_ROI / year4_CapitalSpent) * 1
+
+    document.getElementById('neg_positive_year4').innerHTML = (year4_ROI)
+    document.getElementById('roi_year4').innerHTML = valueFormatter(year4_Percent * 100) + "%"
+
+    year5_CapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0) + parseFloat(document.getElementById('capital_spent_year2').value || 0) + parseFloat(document.getElementById('capital_spent_year3').value || 0) + parseFloat(document.getElementById('capital_spent_year4').value || 0) + parseFloat(document.getElementById('capital_spent_year5').value || 0)
+    year5_YearReturn = parseFloat(document.getElementById('yearly_return_year5').value || 0)
+    year5_ROI = year5_YearReturn
+    year5_Percent = (year5_ROI / year5_CapitalSpent) * 1
+
+    document.getElementById('neg_positive_year5').innerHTML = valueFormatter(year5_ROI)
+    document.getElementById('roi_year5').innerHTML = valueFormatter(year5_Percent * 100) + "%"
+
+    // Total ROI Calculations
+    var inputCapitalSpent = parseFloat(document.getElementById('capital_spent_year1').value || 0) + parseFloat(document.getElementById('capital_spent_year2').value || 0) + parseFloat(document.getElementById('capital_spent_year3').value || 0) + parseFloat(document.getElementById('capital_spent_year4').value || 0) + parseFloat(document.getElementById('capital_spent_year5').value || 0)
+    var inputYearlyReturn = parseFloat(document.getElementById('yearly_return_year1').value || 0) + parseFloat(document.getElementById('yearly_return_year2').value || 0) + parseFloat(document.getElementById('yearly_return_year3').value || 0) + parseFloat(document.getElementById('yearly_return_year4').value || 0) + parseFloat(document.getElementById('yearly_return_year5').value || 0)
+    var totalNegPositive = inputYearlyReturn - inputCapitalSpent
+    var totalROI = inputYearlyReturn / inputCapitalSpent
+
+    document.getElementById('capital_spent_total').innerHTML = valueFormatter(inputCapitalSpent)
+    document.getElementById('yearly_return_total').innerHTML = valueFormatter(inputYearlyReturn)
+    document.getElementById('neg_positive_total').innerHTML = valueFormatter(totalNegPositive)
+    document.getElementById('roi_total').innerHTML = valueFormatter(totalROI * 100) + "%"
+
+
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Mulitple years ROI',
+            color:'#e2201d',
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+            crosshair: {
+                snap: true
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        tooltip: {
+            shared: true,
+            split: false,
+            enabled: true,
+            formatter: function () {
+                // The first returned item is the header, subsequent items are the
+                // points
+                return ['</br><b>' + this.x + '</b>'].concat(
+                    this.points ?
+                        this.points.map(function (point) {
+                            return "</br>" + point.series.name + ': <b>' + valueFormatter(point.y) + '</b>';
+                        }) : []
+                );
+            },
+            // split: false
+            // formatter: function () {
+            //     return 'Amount: <b>' + this.y + '</b></br><h4>' + this.series.name + '</h4>';
+            // }
+        },
+        series: [{
+            name: 'Capital spent',
+            color:"#4a94ef",
+            data: [year1_CapitalSpent, year2_CapitalSpent, year3_CapitalSpent, year4_CapitalSpent, year5_CapitalSpent]
+        }, {
+            name: 'Yearly Return',
+            color:'#e2201d',
+            data: [year1_YearReturn, year2_YearReturn, year3_YearReturn, year4_YearReturn, year5_YearReturn]
+        }, {
+            name: 'Neg / positive',
+            data: [year1_ROI, year2_ROI, year3_ROI, year4_ROI, year5_ROI]
+        }, {
+            name: 'ROI',
+            color: '#ea691d',
+            data: [year1_Percent, year2_Percent, year3_Percent, year4_Percent, year5_Percent]
+        }]
+    });
+    jQuery('.highcharts-background').attr('fill','#f1f1f1')
+
+}
+
+jQuery(document).ready(function () {
+    jQuery(".helpicon").tooltipster({
+        animation: "fade",
+        animationDuration: 300,
+        delay: 0,
+        maxWidth: 300,
+        side: "bottom",
+    });
+});
+
+
+function valueFormatter(value){
+    if(value > 1){
+        return value.toLocaleString('en',{
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 3,
+        });
+    }else{
+        return value.toLocaleString('en', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 4,
+        });
+    }
+}

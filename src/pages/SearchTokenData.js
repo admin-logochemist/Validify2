@@ -161,17 +161,11 @@ let btnIds = ["top_box_active","top_box_not_active"];
   
   let ShowBOx = showResults ?  "search_active" : "search_not_active"
   const handleClick = () => {
-    // showResults ? setShowResults (false) : setShowResults(true);
-    // setShowResults(showResults => !showResults);
-    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
+    CroxIconBtn ?  setCroxIconBtn (true) : setCroxIconBtn (true)
   }
   const handleClickSvg = () => {
-    // showResults ? setShowResults (false) : setShowResults(true);
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
-    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
+    CroxIconBtn ?  setCroxIconBtn (true) : setCroxIconBtn (true)
+
   }
 
   const Ethcoin = () => {
@@ -269,7 +263,6 @@ let btnIds = ["top_box_active","top_box_not_active"];
     switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
     switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
-
   const arbitrumcoin = () => {
     switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(true);
 
@@ -344,97 +337,97 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
   const Results = () => (
     <div className="search-results">
-      <div className="scroll_box">
-        <li
-          className="top_box"
-          onClick={Ethcoin}
-          id={switchClassOne ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={Ethcoin_icon} />
-          <span>ETHEREUM</span>
-        </li>
-        {console.log(exchange)}
-        <li
-          className="top_box"
-          onClick={BNBcoin}
-          id={switchClassTwo ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={bnbicon} />
-          <span>BNB</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={AVAcoin}
-          id={switchClassThree ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={avaicon} />
-          <span>AVALANCE</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={polygoncoin}
-          id={switchClassFour ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={polygon} />
-          <span>POLYGON</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={okccoin}
-          id={switchClassFive ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={okc} />
-          <span>OKC</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={fantomcoin}
-          id={switchClassSix ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={fantom} />
-          <span>FANTOM</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={arbitrumcoin}
-          id={switchClassSeven ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={arbitrum} />
-          <span>ARBITRUM</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={metiscoin}
-          id={switchClassEight ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={metis} />
-          <span>METIS</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={hecocoin}
-          id={switchClassNine ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={heco} />
-          <span>HECO</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={velascoin}
-          id={switchClassTen ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={velas} />
-          <span>VELAS</span>
-        </li>
-        <li
-          className="top_box"
-          onClick={auroracoin}
-          id={switchClassEleven ? "top_box_active" : "top_box_not_active"}
-        >
-          <img src={aurora} />
-          <span>AURORA</span>
-        </li>
-      </div>
+        <div className="scroll_box">
+            <li
+              className="top_box"
+              onClick={Ethcoin}
+              id={switchClassOne ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={Ethcoin_icon} />
+              <span>ETHEREUM</span>
+            </li>
+            {console.log(exchange)}
+            <li
+              className="top_box"
+              onClick={BNBcoin}
+              id={switchClassTwo ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={bnbicon} />
+              <span>BNB</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={AVAcoin}
+              id={switchClassThree ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={avaicon} />
+              <span>AVALANCE</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={polygoncoin}
+              id={switchClassFour ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={polygon} />
+              <span>POLYGON</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={okccoin}
+              id={switchClassFive ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={okc} />
+              <span>OKC</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={fantomcoin}
+              id={switchClassSix ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={fantom} />
+              <span>FANTOM</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={arbitrumcoin}
+              id={switchClassSeven ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={arbitrum} />
+              <span>ARBITRUM</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={metiscoin}
+              id={switchClassEight ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={metis} />
+              <span>METIS</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={hecocoin}
+              id={switchClassNine ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={heco} />
+              <span>HECO</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={velascoin}
+              id={switchClassTen ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={velas} />
+              <span>VELAS</span>
+            </li>
+            <li
+              className="top_box"
+              onClick={auroracoin}
+              id={switchClassEleven ? "top_box_active" : "top_box_not_active"}
+            >
+              <img src={aurora} />
+              <span>AURORA</span>
+            </li>
+        </div>
     </div>
   );
 

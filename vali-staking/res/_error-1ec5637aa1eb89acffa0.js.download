@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/icon-cu-token.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="celestial unity" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link
+    rel="stylesheet"
+    data-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+  />
+  <link
+  href="../Celestial Unity _ Calculator_files/main.7bf107a0.chunk.css"
+  rel="stylesheet"
+/>
+<link
+  href="../Celestial Unity _ Calculator_files/2.cafa0501.chunk.css"
+  rel="stylesheet"
+/>
+<link
+  href="../Celestial Unity _ Calculator_files/custom.css"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="../Celestial Unity _ Calculator_files/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="../Celestial Unity _ Calculator_files/tooltipster.bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="../Celestial Unity _ Calculator_files/font-awesome-pro-min.css"
+/>
+<link
+  rel="stylesheet"
+  href="../Celestial Unity _ Calculator_files/meanmenu.css"
+/>
+<link
+  rel="stylesheet"
+  href="../Celestial Unity _ Calculator_files/style.css"
+/>
+<link
+  rel="stylesheet"
+  data-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+/>
+<meta name="viewport" content="width=device-width" />
+<meta name="next-head-count" content="2" />
+<noscript data-n-css=""></noscript>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/webpack-8ef24ab4180575dd8a47.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/framework-040fefd35d692e16b857.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/commons-3fa2c21e7173a9680e50.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/433-1ae022a3de32bf1e1c3d.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/778-94f196d12f1c31486036.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/main-5ec178cac14bcca48b45.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/_app-c59c32d35a787e9a90ec.js.download"
+  as="script"
+/>
+<link
+  rel="preload"
+  href="../Celestial Unity _ Calculator_files/index-7035dd9d5edfcfe49691.js.download"
+  as="script"
+/>
+<link rel="stylesheet" href="../Celestial Unity _ Calculator_files/css2" />
+  <link href="./Celestialunity Apps_files/main.7bf107a0.chunk.css" rel="stylesheet">
+  <link href="./Celestialunity Apps_files/2.cafa0501.chunk.css" rel="stylesheet">
+  <link href="./Celestialunity Apps_files/slider.css" rel="stylesheet">
+  <link href="./Celestialunity Apps_files/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Celestialunity Apps_files/font-awesome-pro-min.css">
+  <link rel="stylesheet" href="./Celestialunity Apps_files/style.css">
+  <link
+    href="../Celestial Unity _ Rewards_files/main.7bf107a0.chunk.css"
+    rel="stylesheet"
+  />
+  <link
+    href="../Celestial Unity _ Rewards_files/2.cafa0501.chunk.css"
+    rel="stylesheet"
+  />
+  <link
+    href="../Celestial Unity _ Rewards_files/custom.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="../Celestial Unity _ Rewards_files/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="../Celestial Unity _ Rewards_files/tooltipster.bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="../Celestial Unity _ Rewards_files/font-awesome-pro-min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="../Celestial Unity _ Rewards_files/meanmenu.css"
+  />
+  <link rel="stylesheet" href="../Celestial Unity _ Rewards_files/style.css" />
+  <link
+    rel="stylesheet"
+    data-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+  />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="next-head-count" content="2" />
+  <noscript data-n-css=""></noscript>
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/webpack-49848575501858183c30.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/framework-040fefd35d692e16b857.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/commons-3fa2c21e7173a9680e50.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/433-1ae022a3de32bf1e1c3d.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/778-94f196d12f1c31486036.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/main-5ec178cac14bcca48b45.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/de297ff1-a5808ca72bc6cc63cec2.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/507-7eccaa57216cdf762c49.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/_app-5207e6eeb7921e3283b1.js.download"
+    as="script"
+  />
+  <link
+    rel="preload"
+    href="../Celestial Unity _ Rewards_files/index-7035dd9d5edfcfe49691.js.download"
+    as="script"
+  />
+  <link rel="stylesheet" href="../Celestial Unity _ Rewards_files/css2" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+    <script src="../Celestialunity Apps_files/jquery.min.js.download"></script>
+    <script src="../Celestialunity Apps_files/popper.min.js.download" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../Celestialunity Apps_files/bootstrap.min.js.download" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>
+    
+      celestial
+    </title>
+  <script defer src="/static/js/bundle.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": { "pageProps": {} },
+        "page": "/",
+        "query": {},
+        "buildId": "B3Qul2DAnidTIKMFrGI9c",
+        "nextExport": true,
+        "autoExport": true,
+        "isFallback": false
+      }
+    </script>
+       <script>
+        function myFunction() {
+           var element = document.getElementById("MobileMenu");
+           element.classList.toggle("mystyle");
+        }
+
+    </script>
+    <script id="__NEXT_DATA__" type="application/json">
+        {
+            "props": {
+                "pageProps": {}
+            },
+            "page": "/",
+            "query": {},
+            "buildId": "e-1F_XUHquLodMMq6l4G-",
+            "nextExport": true,
+            "autoExport": true,
+            "isFallback": false
+        }
+    </script>
+    <script src="../Celestialunity Apps_files/slider.min.js.download"></script>
+    <script type="text/javascript">
+        $("#myRange").slider({
+            min: 15,
+            max: 150,
+            value: 15,
+            ticks: [15, 30, 60, 90, 120, 150],
+            ticks_positions: [0, 11.11111, 33.33333, 55.5555, 77.77777, 100],
+            ticks_labels: ['15', '30', '60', '90', '120', '150'],
+            ticks_snap_bounds: 1
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".MobileButton").on("click", function() {
+                $(this).toggleClass('active');
+                $('#MobileMenu').toggleClass('open');
+            });
+
+            $(document).on("click", function(event) {
+                //<!-- var trigger = $(".menu-item"); -->
+                var dropdown = $(".MobileButton");
+                if (dropdown !== event.target && !dropdown.has(event.target).length) {
+                    $('#MobileMenu').removeClass('open');
+                }
+            })
+        })
+    </script>
+
+    <script src="../Celestialunity Apps_files/web3.min.js.download"></script></body></html>
+    <script
+      nomodule=""
+      src="../Celestial Unity _ Rewards_files/polyfills-8683bd742a84c1edd48c.js.download"
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/webpack-49848575501858183c30.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/framework-040fefd35d692e16b857.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/commons-3fa2c21e7173a9680e50.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/433-1ae022a3de32bf1e1c3d.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/778-94f196d12f1c31486036.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/main-5ec178cac14bcca48b45.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/de297ff1-a5808ca72bc6cc63cec2.js.download"
+      async=""
+    ></script>
+    <script
+    nomodule=""
+    src="../Celestial Unity _ Calculator_files/polyfills-8683bd742a84c1edd48c.js.download"
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/webpack-8ef24ab4180575dd8a47.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/framework-040fefd35d692e16b857.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/commons-3fa2c21e7173a9680e50.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/433-1ae022a3de32bf1e1c3d.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/778-94f196d12f1c31486036.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/main-5ec178cac14bcca48b45.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/_app-c59c32d35a787e9a90ec.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/index-7035dd9d5edfcfe49691.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/_buildManifest.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/_ssgManifest.js.download"
+    async=""
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/jquery.min.js.download"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+  ></script>
+  <next-route-announcer
+    ><p
+      aria-live="assertive"
+      id="__next-route-announcer__"
+      role="alert"
+      style="
+        border: 0px;
+        clip: rect(0px, 0px, 0px, 0px);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0px;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+        overflow-wrap: normal;
+      "
+    ></p
+  ></next-route-announcer>
+  <script
+    src="../Celestial Unity _ Calculator_files/popper.min.js.download"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="../Celestial Unity _ Calculator_files/bootstrap.min.js.download"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="../Celestial Unity _ Calculator_files/tooltipster.bundle.min.js.download"
+  ></script>
+  <script src="../Celestial Unity _ Calculator_files/highcharts.js.download"></script>
+  <script src="../Celestial Unity _ Calculator_files/exporting.js.download"></script>
+  <script src="../Celestial Unity _ Calculator_files/export-data.js.download"></script>
+  <script src="../Celestial Unity _ Calculator_files/accessibility.js.download"></script>
+  <script
+    type="text/javascript"
+    src="../Celestial Unity _ Calculator_files/tooltipster.bundle.min.js.download"
+  ></script>
+  <script src="../Celestial Unity _ Calculator_files/script.js.download"></script>
+  <script src="../Celestial Unity _ Calculator_files/custom.js.download"></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/507-7eccaa57216cdf762c49.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/_app-5207e6eeb7921e3283b1.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/index-7035dd9d5edfcfe49691.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/_buildManifest.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/_ssgManifest.js.download"
+      async=""
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/jquery.min.js.download"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/popper.min.js.download"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../Celestial Unity _ Rewards_files/bootstrap.min.js.download"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../Celestial Unity _ Rewards_files/tooltipster.bundle.min.js.download"
+    ></script>
+    <script src="../Celestial Unity _ Rewards_files/highcharts.js.download"></script>
+    <script src="../Celestial Unity _ Rewards_files/exporting.js.download"></script>
+    <script src="../Celestial Unity _ Rewards_files/export-data.js.download"></script>
+    <script src="../Celestial Unity _ Rewards_files/accessibility.js.download"></script>
+    <script
+      type="text/javascript"
+      src="../Celestial Unity _ Rewards_files/tooltipster.bundle.min.js.download"
+    ></script>
+    <script src="../Celestial Unity _ Rewards_files/script.js.download"></script>
+    <script src="../Celestial Unity _ Rewards_files/custom.js.download"></script>
+    <next-route-announcer
+      ><p
+        aria-live="assertive"
+        id="__next-route-announcer__"
+        role="alert"
+        style="
+          border: 0px;
+          clip: rect(0px, 0px, 0px, 0px);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0px;
+          position: absolute;
+          width: 1px;
+          white-space: nowrap;
+          overflow-wrap: normal;
+        "
+      ></p
+    ></next-route-announcer>
+  </body>
+</html>
