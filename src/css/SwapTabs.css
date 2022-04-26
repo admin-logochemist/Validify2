@@ -64,7 +64,42 @@ ul.swap-tabs li{
 .swaps .tab-content .fade:not(.show) {
     opacity: 1;
 }
-
+.Rmaa8{
+    /* background-color: #0B2251 !important; */
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+}
+.GR8Uc{
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+}
+._3Fke_ {
+    color: #999;
+    font-size: 18px !important;
+    color: black !important;
+    letter-spacing: 2px !important;
+    margin-top: 12px !important;
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+  }
+  ._1UX0E h1, ._20Ceb {
+    font-size: 25px !important;
+  }
+  ._2vysN > label {
+    font-size: 22px !important;
+  }
+  ._29JPJ ._19cSd {
+    font-size: 18px !important;
+    margin-top: unset !important;
+  }
+  ._1HyGd {
+    flex-grow: 1;
+    margin-right: calc( var(--padding-rl) * 0.75 );
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 23px;
+  }
+  ._12bnP {
+    background-color: #0B2251 !important;
+  }  
 @media only screen and (max-width: 479px){
     .swaps .swap-tabs li{
         width: 100%;

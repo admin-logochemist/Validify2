@@ -1,9 +1,10 @@
 import React from 'react'
 import OnramperWidget from "@onramper/widget";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../css/SwapTabs.css'
 function BitCoin() {
     return(
-    <div style={{maxWidth: '440px',  maxHeight: '595px',  height:"595px",width:"440px",color:'black'}}>
+    <div style={{maxWidth: '440px',  maxHeight: '595px',  height:"595px",width:"440px",color:'black' , backgroundColor: 'red'}} className="onramper_bg">
       <OnramperWidget
         color="#266678"
         defaultAmount={200}
