@@ -104,6 +104,18 @@ let btnIds = ["top_box_active","top_box_not_active"];
           setResd(re);
         })
       );
+      switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+      // NexBoxResults ? setNexBoxResults(false) : setNexBoxResults(true);
+      switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+      switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+      switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+      switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+      switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+      switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+      switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+      switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+      switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+      switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
     } else if (search === "") {
       console.log("no Search");
     }
@@ -621,14 +633,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
+            {/* {/<input type="radio" name="radio" />/} */}
             <img src={knight} />
             Coming Soon
             <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio" />*/}
+            {/* {/<input type="radio" name="radio" />/} */}
             <img src={swapx} />
             Coming Soon
             <span class="checkmark"></span>
@@ -643,34 +655,34 @@ let btnIds = ["top_box_active","top_box_not_active"];
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
+                {/* {/<input type="radio" name="radio"  />/} */}
                 All Exchanges
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-                 {/*<input type="radio" name="radio"  />*/}
+                 {/* {/<input type="radio" name="radio"  />/} */}
                 <img src={traderjoe} />
                 Coming Soon
                 <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-             {/*<input type="radio" name="radio"  />*/}
+             {/* {/<input type="radio" name="radio"  />/} */}
             <img src={lydiafinance} />
             Coming Soon
             <span class="checkmark"></span>
             </label>
             
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+            {/* {/<input type="radio" name="radio"  />/} */}
               <img src={shibaswap} />
               Coming Soon
               <span class="checkmark"></span>
            </label>
 
            <label class="container-radio">
-           {/*<input type="radio" name="radio"  />*/}
+           {/* {/<input type="radio" name="radio"  />/} */}
              <img src={kyberswap} />
              Coming Soon
              <span class="checkmark"></span>
@@ -678,14 +690,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
                 <label class="container-radio">
-                {/*<input type="radio" name="radio"  />*/}
+                {/* {/<input type="radio" name="radio"  />/} */}
                   <img src={minty} />
                   Coming Soon
                   <span class="checkmark"></span>
               </label>
 
               <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
+              {/* {/<input type="radio" name="radio"  />/} */}
                 <img src={cryptodefi} />
                 Coming Soon
                 <span class="checkmark"></span>
@@ -693,7 +705,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
               <label class="container-radio">
-              {/*<input type="radio" name="radio"  />*/}
+              {/* {/<input type="radio" name="radio"  />/} */}
                 <img src={justmoney} />
                 Coming Soon
                 <span class="checkmark"></span>
@@ -701,14 +713,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+            {/* {/<input type="radio" name="radio"  />/} */}
               <img src={safemoon} />
               Coming Soon
               <span class="checkmark"></span>
             </label>
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+            {/* {/<input type="radio" name="radio"  />/} */}
               <img src={swapr} />
               Coming Soon
               <span class="checkmark"></span>
@@ -716,14 +728,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
             <label class="container-radio">
-            {/*<input type="radio" name="radio"  />*/}
+            {/* {/<input type="radio" name="radio"  />/} */}
               <img src={empiredex} />
               Coming Soon
               <span class="checkmark"></span>
             </label>
 
           <label class="container-radio">
-          {/*<input type="radio" name="radio"  />*/}
+          {/* {/<input type="radio" name="radio"  />/} */}
             <img src={degen} />
             Coming Soon
             <span class="checkmark"></span>
@@ -731,14 +743,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
 
         <label class="container-radio">
-        {/*<input type="radio" name="radio"  />*/}
+        {/* {/<input type="radio" name="radio"  />/} */}
           <img src={dojo} />
           Coming Soon
           <span class="checkmark"></span>
       </label>
 
       <label class="container-radio">
-      {/*<input type="radio" name="radio"  />*/}
+      {/* {/<input type="radio" name="radio"  />/} */}
         <img src={concave} />
         Coming Soon
         <span class="checkmark"></span>
@@ -891,7 +903,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               );
             })}
             {console.log("post", resd)}
-            <div id="tv_chart_container">
+            <div>
               <TVChartContainer
                 baseQuery={search}
                 network={network}
@@ -915,7 +927,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                </div> */}
             </div>
 
-            {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
+            {/* ++-++  TRADES TABLE DATA  ++-++ */}
 
             <table>
             {resd.slice(0, 1).map((post, key) => {
@@ -924,7 +936,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <thead>  
                       <th>Date</th>
                       <th>Type</th>
-                      <th>PRICE USD</th>
+                      <th>PRICE USDT</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
                       <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -933,12 +945,12 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     
             
               );
-            } else if(network==='etherum') {  
+            } else if(network==='ethereum') {  
               return(      
                <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount WETH</th>
               <th className="transform">Price ETH</th>
               <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -950,7 +962,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount AVAX</th>
               <th className="transform">Price AVAX</th>
               <th className="transform">TOTAL {post.baseCurrency.symbol}</th>

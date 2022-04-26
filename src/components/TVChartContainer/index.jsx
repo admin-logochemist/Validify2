@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./index.css";
 import { widget } from "../../charting_library";
-import Datafeed from "./datafeed";
+import datafeed from "./datafeed";
 
 function getLanguageFromURL() {
   const regex = new RegExp("[\\?&]lang=([^&#]*)");
@@ -22,7 +22,7 @@ export const RangeTypes = {
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
     symbol: "Pancake",
-    interval: "15",
+    interval: "5",
     containerId: "tv_chart_container",
     //datafeedUrl: 'https://demo_feed.tradingview.com',
     libraryPath: "../../charting_library/",
@@ -32,6 +32,7 @@ export class TVChartContainer extends React.PureComponent {
     userId: "danmanoloff",
     fullscreen: false,
     autosize: true,
+    studiesOverrides: {}
   };
 
   tvWidget = null;
@@ -51,9 +52,9 @@ export class TVChartContainer extends React.PureComponent {
       const widgetOptions = {
         symbol: this.props.symbol,
         // BEWARE: no trailing slash is expected in feed URL
-        datafeed: Datafeed,
+        datafeed: datafeed,
         interval: this.props.interval,
-        container: this.ref.current,
+        container_id: this.props.containerId,
         library_path: this.props.libraryPath,
         locale: getLanguageFromURL() || "en",
         disabled_features: ["use_localstorage_for_settings"],
@@ -65,8 +66,16 @@ export class TVChartContainer extends React.PureComponent {
         fullscreen: this.props.fullscreen,
         autosize: this.props.autosize,
         studies_overrides: this.props.studiesOverrides,
-        theme: "Dark",
-        debug:true
+        overrides: {
+            "mainSeriesProperties.showCountdown": true,
+            "paneProperties.background": "#131722",
+            "paneProperties.vertGridProperties.color": "#363c4e",
+            "paneProperties.horzGridProperties.color": "#363c4e",
+            "symbolWatermarkProperties.transparency": 90,
+            "scalesProperties.textColor": "#AAA",
+            "mainSeriesProperties.candleStyle.wickUpColor": "#336854",
+            "mainSeriesProperties.candleStyle.wickDownColor": "#7f323f"
+        }
       };
 
       const tvWidget = new widget(widgetOptions);
