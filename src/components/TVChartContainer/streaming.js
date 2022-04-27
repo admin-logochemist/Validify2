@@ -1,8 +1,9 @@
 import { parseFullSymbol } from './helpers.js';
-
-const socket = ('wss://streamer.cryptocompare.com');
+var apiKey = "a442d8103438aaee419bc5eb1bbd65cfbf7bc03f94ead461fa0e9a67b50158aa";
+var io = require("socket.io-client");
+const socket_url = ('wss://streamer.cryptocompare.com/v2?api_key=' + apiKey);
+var socket = io(socket_url);
 const channelToSubscription = new Map();
-
 socket.on('connect', () => {
 	console.log('[socket] Connected');
 });

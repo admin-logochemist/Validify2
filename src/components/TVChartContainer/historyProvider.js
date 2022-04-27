@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import * as Bitquery from './Bitquery';
 import axios from "axios";
+import moment from 'moment';
 
 const api_root = "https://min-api.cryptocompare.com";
 const history = {};
@@ -29,8 +30,18 @@ export default {
     };
     // console.log({qs})
 
+    let dateFrom = moment(periodParams.from*1000).toISOString();
+    let dateTill = moment(periodParams.to*1000).toISOString();
+
     return await axios.post(Bitquery.endpoint, {
-        query: Bitquery.GET_COIN_BARS(gg.baseQuery, gg.qQuery, gg.network, gg.exchange, resolution),
+        query: Bitquery.GET_COIN_BARS(gg.baseQuery, gg.qQuery, gg.network, gg.exchange, resolution, dateFrom, dateTill),
+        // variables: {
+        //     "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
+        //     "to": new Date("2021-06-23T15:23:21.000Z").toISOString(),
+        //     "interval": Number(resolution),
+        //     "tokenAddress": symbolInfo.ticker
+        // },
+        
     }, {
         mode: 'cors',
         headers: {
@@ -61,14 +72,10 @@ export default {
                 open: Number(el.open),
                 close: Number(el.close),
                 volume: el.volume,
-                volumefrom: 7.541,
-                volumeto: 298892.36
             };
         });
         if (periodParams.firstDataRequest) {
-            console.log("bars: ", typeof bars);
             var lastBar = bars[bars.length - 1];
-            console.log("bars: ", bars);
             history[symbolInfo.name] = { lastBar: lastBar };
         }
         return bars;
