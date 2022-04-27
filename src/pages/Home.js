@@ -124,7 +124,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <Link to="/Dashboard" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
+                           <Link to="/SearchTokenData" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                            <Link to="/Signup" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
+                            <Link to="/SearchTokenData" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
