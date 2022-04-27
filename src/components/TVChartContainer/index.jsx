@@ -10,7 +10,15 @@ function getLanguageFromURL() {
     ? null
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+export const IntervalTypes = {
+  D: 'D',
+  W: 'W'
+};
 
+export const RangeTypes = {
+  YTD: 'ytd',
+  ALL: 'all'
+};
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
     symbol: "Pancake",

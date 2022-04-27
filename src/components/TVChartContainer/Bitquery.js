@@ -112,7 +112,7 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution, 
                 baseCurrency: {is: "${baseQuery}"}
               ) {
                 timeInterval {
-                   minute(count: ${resolution}) 
+                  minute(format:"%FT%TZ", count: ${resolution})
                 }
                 volume: quoteAmount
                 high: quotePrice(calculate: maximum)

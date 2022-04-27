@@ -105,6 +105,18 @@ let btnIds = ["top_box_active","top_box_not_active"];
           setResd(re);
         })
       );
+      switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+      // NexBoxResults ? setNexBoxResults(false) : setNexBoxResults(true);
+      switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+      switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+      switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+      switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+      switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+      switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+      switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+      switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+      switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+      switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
     } else if (search === "") {
       console.log("no Search");
     }
@@ -929,7 +941,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <thead>  
                       <th>Date</th>
                       <th>Type</th>
-                      <th>PRICE USD</th>
+                      <th>PRICE USDT</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
                       <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -938,12 +950,12 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     
             
               );
-            } else if(network==='etherum') {  
+            } else if(network==='ethereum') {  
               return(      
                <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount WETH</th>
               <th className="transform">Price ETH</th>
               <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -955,7 +967,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount AVAX</th>
               <th className="transform">Price AVAX</th>
               <th className="transform">TOTAL {post.baseCurrency.symbol}</th>

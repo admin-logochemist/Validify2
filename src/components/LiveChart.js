@@ -13,6 +13,12 @@ const jsFunc = async () => {
     timeScale: {
       timeVisible: true,
       secondsVisible: false,
+    },
+    layout: {
+      background: {
+        color: '#000000'
+      },
+      textColor: '#ffffff'
     }
   };
 
@@ -25,43 +31,50 @@ const jsFunc = async () => {
   let network = localStorage.getItem("@network");
   let exchange = localStorage.getItem("@exchange");
   let resolution = 5;
-
+  
   try {
-    const result = await axios.post(
-      Bitquery.endpoint,
-      {
-        query: Bitquery.GET_COIN_BARS(
-          baseQuery,
-          qQuery,
-          network,
-          exchange,
-          resolution
-        ),
-      },
-      {
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-KEY": "BQYH5kJPfhPiJsmS36s6zasFiNkfgWbD",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true,
+    if (baseQuery.length) 
+    { 
+      const result = await axios.post(
+        Bitquery.endpoint,
+        {
+          query: Bitquery.GET_COIN_BARS(
+            baseQuery,
+            qQuery,
+            network,
+            exchange,
+            resolution
+          ),
         },
-      }
-    );
-    const fdata = result.data.data.ethereum.dexTrades;
-
-    const cdata = [];
-    fdata.map((item) =>
-      cdata.push({
-        time: new Date(`${item.timeInterval.minute}`).getTime(),
-        open: parseFloat(item.open),
-        high: parseFloat(item.high),
-        low: parseFloat(item.low),
-        close: parseFloat(item.close),
-      })
-    );
-
-    candleSeries.setData(cdata);
+        {
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+            "X-API-KEY": "BQYH5kJPfhPiJsmS36s6zasFiNkfgWbD",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true,
+          },
+        }
+      )
+      const fdata = result.data.data.ethereum.dexTrades;
+  
+      const cdata = [];
+      fdata.map((item) =>
+        cdata.push({
+          time: new Date(`${item.timeInterval.minute}`).getTime(),
+          open: parseFloat(item.open*Math.pow(10,12) ),
+          high: parseFloat(item.highMath.pow(10,12) ),
+          low: parseFloat(item.low*Math.pow(10,12) ),
+          close: parseFloat(item.closeMath.pow(10,12) ),
+        })
+      );
+      
+      candleSeries.setData(cdata);
+        
+    }else{
+      <h1>No Data</h1>
+    }
+  
   } catch (error) {
     console.log("error", error.response.data);
   }

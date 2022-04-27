@@ -58,7 +58,7 @@ export default {
         // console.log("CryptoCompare API error:", res.Message);
         // return [];
         // }
-        if (res.data.data.ethereum.dexTrades) {
+        if (res.data.data.ethereum.dexTrades && res.status<307) {
         // console.log(
         //   `Actually returned: ${new Date(
         //     data.TimeFrom * 1000

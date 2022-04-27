@@ -135,7 +135,7 @@ export default {
         historyProvider
           .getBars(symbolInfo, resolution, periodParams, gg)
           .then((bars) => {
-            if (bars.length) {
+            if (bars.length>=307) {
                 onHistoryCallback(bars, { noData: false });
             } else {
                 console.log('datafeed bars: ', bars);
