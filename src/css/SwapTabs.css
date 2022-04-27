@@ -9,7 +9,7 @@
 ul.swap-tabs{
     list-style: none;
     display: flex;
-    border: 1px solid #F4E286;
+    border: 1px solid #c09434;
     padding: 0px 0;
     margin: 0 15px;
 }
@@ -39,7 +39,7 @@ ul.swap-tabs li{
     color: #443107;
     background: transparent;
     border: none;
-    background-color: #F4E286;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     display: block;
 }
 .swaps .swap-tabs li a.active,
@@ -48,7 +48,7 @@ ul.swap-tabs li{
     color: #443107;
     background: transparent;
     border: none;
-    background-color: #F4E286;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     display: block;
 }
 
@@ -66,15 +66,15 @@ ul.swap-tabs li{
 }
 .Rmaa8{
     /* background-color: #0B2251 !important; */
-    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    background: #131722 !important;
 }
 .GR8Uc{
-    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    background: #131722 !important;
 }
 ._3Fke_ {
     color: #999;
     font-size: 18px !important;
-    color: black !important;
+    color: white !important;
     letter-spacing: 2px !important;
     margin-top: 12px !important;
     font-weight: 600 !important;
@@ -82,9 +82,14 @@ ul.swap-tabs li{
   }
   ._1UX0E h1, ._20Ceb {
     font-size: 25px !important;
+    color: white;
+  }
+  ._2yqd6 {
+    color: white;
   }
   ._2vysN > label {
     font-size: 22px !important;
+    color: white;
   }
   ._29JPJ ._19cSd {
     font-size: 18px !important;
@@ -100,6 +105,26 @@ ul.swap-tabs li{
   ._12bnP {
     background-color: #0B2251 !important;
   }  
+  .GR8Uc > * {
+    opacity: 1 !important;
+    color: white;
+    letter-spacing: 3px;
+  }
+  .MJBdv input {
+    color: black !important;
+  }
+  .GR8Uc img {
+    height: 2.083em;
+    filter: brightness(20) !important;
+  }
+  #main{
+      padding: 10px;
+      height: 618px;
+  }
+  .onramper_bg{
+      width: 100%;
+  }
+
 @media only screen and (max-width: 479px){
     .swaps .swap-tabs li{
         width: 100%;

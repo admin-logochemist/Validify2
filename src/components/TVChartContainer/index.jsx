@@ -32,7 +32,8 @@ export class TVChartContainer extends React.PureComponent {
     userId: "danmanoloff",
     fullscreen: false,
     autosize: true,
-    studiesOverrides: {}
+    studiesOverrides: {},
+    "theme": "Dark"
   };
 
   tvWidget = null;

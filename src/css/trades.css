@@ -31,12 +31,19 @@
   background-color: transparent !important;
   border: 1px solid !important;
 }
-.table_trades .flex_box_table{
+.trades_bg {
+  background: #131722 !important;
+  padding: 15px;
+}
+.table_trades .flex_box_table {
   display: inline-flex;
   flex-direction: row;
   width: 100%;
+  background: #131722;
+  margin-top: 47px;
+  border-bottom: 1px solid #8080803b;
 }
-.table_trades .flex_box_table h3{
+.table_trades .flex_box_table h3 {
   color: #ecde84;
   letter-spacing: 3px;
   font-weight: 600;
@@ -44,6 +51,7 @@
   padding: 17px 0 0 0;
   text-transform: capitalize;
   width: 85%;
+  padding-left: 16px;
 }
 .green{
   color: #07b707 !important;
@@ -84,20 +92,20 @@
   overflow: scroll;
   height: 555px;
   display: block;
-
+  background: #131722;
 }
 .table_trades table::-webkit-scrollbar-track{
-  background-color: #0B2251;
+  background-color: #131722;
 }
 
 .table_trades table::-webkit-scrollbar{
 	width: 6px;
   padding: 50px;
-	background-color: #072d79;
+	background-color: #131722;
 }
 
 .table_trades table::-webkit-scrollbar-thumb{
-	background-color: #0B2251;
+	background-color: white;
 }
 
 .table_trades thead {

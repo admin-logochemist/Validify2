@@ -321,7 +321,15 @@
 #tv_chart_container{
   margin: 65px 0 0 0;
 }
-
+#tv_chart_container .toolbar-2yU8ifXU {
+  background: #131722 !important;
+}
+#tv_chart_container .button-1SoiPS-f {
+  color: white !important;
+}
+#tv_chart_container .button-2Vpz_LXc.isInteractive-2Vpz_LXc.isActive-2Vpz_LXc {
+  color: white !important;
+}
 @media screen and (max-width:1500px) {
   .search_boxx{
     width: 82%;

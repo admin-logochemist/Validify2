@@ -27,7 +27,7 @@ function Trades() {
     // const [trades, setTrades] = useState([])
  
     return (
-        <div className='table_trades'>
+        <div className='table_trades trades_bg'>
             {console.log("post",resf)}      
                 <div className='flex_box_table'>
                    <h3>Trades</h3>
