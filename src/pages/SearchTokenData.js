@@ -176,7 +176,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
   };
   const AVAcoin = () => {
-    setBaseSym("AVA");
+    setBaseSym("AVAX");
     setExchange("Partyswap");
     setNetwork("avalanche");
     setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7");
