@@ -4,7 +4,7 @@ import * as Bitquery from "./TVChartContainer/Bitquery";
 import Datafeed from "./TVChartContainer/datafeed";
 import axios from "axios";
 
-console.log(Datafeed);
+// console.log(Datafeed);
 
 const jsFunc = async () => {
   const chartProperties = {
@@ -76,34 +76,9 @@ const jsFunc = async () => {
     }
   
   } catch (error) {
-    console.log("error", error.response.data);
+    
   }
 
-  // candleSeries.setData(cdata);
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     const fdata = data.ethereum.dexTrades;
-  //     console.log("helllo", data);
-  //     const cdata = fdata.map((item) => {
-  //       return {
-  //         time: new Date(`${item.time.timeInterval}`).getTime(),
-  //         open: parseFloat(item.open),
-  //         high: parseFloat(item.high),
-  //         low: parseFloat(item.low),
-  //         close: parseFloat(item.close),
-  //       };
-  //     });
-  //   candleSeries.setData(cdata);
-  // })
-  // .catch((err) => console.log("my error", err));
-
-  //Dynamic Chart
-  // const socket = io.connect('http://127.0.0.1:4000/');
-
-  // socket.on('KLINE',(pl)=>{
-  //   //log(pl);
-  //   candleSeries.update(pl);
-  // });
 };
 
 function LiveChart({ baseQuery, qQuery, network, exchange }) {

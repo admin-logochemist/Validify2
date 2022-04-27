@@ -15,10 +15,10 @@ const CoinPage = () => {
   const { currency, symbol } = CryptoState();
   const fetchCoin = async () => {
     const { data } = await axios.get(SingleCoin(id));
-console.log('data', data)
+
     setCoin(data);
   };
-  console.log('idididididididididiididididid', id);
+ 
 
   useEffect(() => {
     fetchCoin();

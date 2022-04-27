@@ -89,7 +89,7 @@ function Tabscontent() {
         )[0];
         setAccount(connectedAccount);
       } catch (e) {
-        console.log(e);
+        // console.log(e);
       }
     })();
   }, [ethereum]);

@@ -94,7 +94,7 @@ export class TVChartContainer extends React.PureComponent {
               title: "Notification",
               body: "TradingView Charting Library API works correctly",
               callback: () => {
-                console.log("Noticed!");
+                // console.log("Noticed!");
               },
             })
           );
@@ -114,7 +114,7 @@ export class TVChartContainer extends React.PureComponent {
   }
 
   render() {
-    console.log("================ >>>>>>", this.props);
+    // console.log("================ >>>>>>", this.props);
     return (
       <div
         ref={this.ref}

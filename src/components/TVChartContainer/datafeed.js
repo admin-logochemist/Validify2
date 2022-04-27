@@ -13,7 +13,7 @@ export default {
     // This method is used by the Charting Library to get a configuration of your datafeed 
     // (e.g. supported resolutions, exchanges and so on)
     onReady: (callback) => {
-        console.log('[onReady]: Method called!!');
+        // console.log('[onReady]: Method called!!');
         setTimeout(() => callback(configurationData));
     },
     // This method is used by the library to retrieve information about a specific symbol 
@@ -25,7 +25,7 @@ export default {
         let exchange = await localStorage.getItem('@exchange');
         let baseSym = await localStorage.getItem('@baseSym');
 
-        console.log('[resolveSymbol]: Method called!!');
+        // console.log('[resolveSymbol]: Method called!!');
         const response = await axios.post(
             Bitquery.endpoint, {
                 query: Bitquery.GET_COIN_INFO(baseQuery, qQuery, network, exchange),
@@ -44,7 +44,7 @@ export default {
         );
         // const coin = response.data.data.ethereum.dexTrades[0].baseCurrency; 
         // console.log(response.data.data.ethereum.dexTrades[0].quotePrice); 
-        console.log("===datafeed===",response.data.data.ethereum.dexTrades[0].baseCurrency);
+        // console.log("===datafeed===",response.data.data.ethereum.dexTrades[0].baseCurrency);
 
         const coin = response.data.data.ethereum.dexTrades[0].baseCurrency;
         if (!coin) {
@@ -138,12 +138,12 @@ export default {
             if (bars.length>=307) {
                 onHistoryCallback(bars, { noData: false });
             } else {
-                console.log('datafeed bars: ', bars);
+                // console.log('datafeed bars: ', bars);
               onHistoryCallback(bars, { noData: true });
             }
           })
           .catch((err) => {
-            console.log({ err });
+            // console.log({ err });
             onErrorCallback(err);
           });
       },
@@ -154,7 +154,7 @@ export default {
         subscribeUID,
         onResetCacheNeededCallback
       ) => {
-        console.log("=====subscribeBars runnning");
+        // console.log("=====subscribeBars runnning");
         streaming.subscribeOnStream(
           symbolInfo,
           resolution,
@@ -164,13 +164,13 @@ export default {
         );
       },
       unsubscribeBars: (subscriberUID) => {
-        console.log("=====unsubscribeBars running");
+        // console.log("=====unsubscribeBars running");
   
         streaming.unsubscribeFromStream(subscriberUID);
       },
       calculateHistoryDepth: (resolution, resolutionBack, intervalBack) => {
         //optional
-        console.log("=====calculateHistoryDepth running");
+        // console.log("=====calculateHistoryDepth running");
         // while optional, this makes sure we request 24 hours of minute data at a time
         // CryptoCompare's minute data endpoint will throw an error if we request data beyond 7 days in the past, and return no data
         return resolution < 60
@@ -179,7 +179,7 @@ export default {
       },
       getMarks: (symbolInfo, startDate, endDate, onDataCallback, resolution) => {
         //optional
-        console.log("=====getMarks running");
+        // console.log("=====getMarks running");
       },
       getTimeScaleMarks: (
         symbolInfo,
@@ -189,9 +189,9 @@ export default {
         resolution
       ) => {
         //optional
-        console.log("=====getTimeScaleMarks running");
+        // console.log("=====getTimeScaleMarks running");
       },
       getServerTime: (cb) => {
-        console.log("=====getServerTime running");
+        // console.log("=====getServerTime running");
       }
 };

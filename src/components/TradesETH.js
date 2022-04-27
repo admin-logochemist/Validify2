@@ -28,7 +28,7 @@ function TradesETH() {
  
     return (
         <div className='table_trades'>
-            {console.log("post",resf)}      
+            {/* {console.log("post",resf)}       */}
                 <div className='flex_box_table'>
                    <h3>Trades</h3>
                    <div className='btns_lengends'>

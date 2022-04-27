@@ -10,10 +10,10 @@ export default {
   history: history,
 
   getBars: async function (symbolInfo, resolution, periodParams, gg) {
-      console.log(periodParams);
+      // console.log(periodParams);
     var split_symbol = symbolInfo.name.split(/[:/]/);
 
-    console.log('symbolInfo:', symbolInfo);
+    // console.log('symbolInfo:', symbolInfo);
     const url =
       resolution === "D"
         ? "/data/histoday"
@@ -28,19 +28,14 @@ export default {
       limit: 2000
       // aggregate: 1//resolution
     };
-    // console.log({qs})
+    
 
     let dateFrom = moment(periodParams.from*1000).toISOString();
     let dateTill = moment(periodParams.to*1000).toISOString();
 
     return await axios.post(Bitquery.endpoint, {
         query: Bitquery.GET_COIN_BARS(gg.baseQuery, gg.qQuery, gg.network, gg.exchange, resolution, dateFrom, dateTill),
-        // variables: {
-        //     "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
-        //     "to": new Date("2021-06-23T15:23:21.000Z").toISOString(),
-        //     "interval": Number(resolution),
-        //     "tokenAddress": symbolInfo.ticker
-        // },
+
         
     }, {
         mode: 'cors',
@@ -51,19 +46,10 @@ export default {
             'Access-Control-Allow-Credentials': true,
         }
     }).then(res => {
-        console.log(res.data.data);
-        console.log(typeof res.data.data.ethereum.dexTrades);
+     
 
-        // if (res.status && res.status === "Error") {
-        // console.log("CryptoCompare API error:", res.Message);
-        // return [];
-        // }
         if (res.data.data.ethereum.dexTrades && res.status<307) {
-        // console.log(
-        //   `Actually returned: ${new Date(
-        //     data.TimeFrom * 1000
-        //   ).toISOString()} - ${new Date(data.TimeTo * 1000).toISOString()}`
-        // );
+       
         var bars = res.data.data.ethereum.dexTrades.map((el) => {
             return {
                 time: new Date(el.timeInterval.minute).getTime(), // date string in api response
@@ -84,40 +70,5 @@ export default {
         }
     })
 
-    // return await axios.get(`${api_root}${url}`,
-
-    // //   url: `${api_root}${url}`,
-    // //   qs
-    // {params:qs}).then((data) => {
-    //   console.log(data.data);
-    //   if (data.Response && data.Response === "Error") {
-    //     console.log("CryptoCompare API error:", data.Message);
-    //     return [];
-    //   }
-    //   if (data.data.Data.length) {
-    //     // console.log(
-    //     //   `Actually returned: ${new Date(
-    //     //     data.TimeFrom * 1000
-    //     //   ).toISOString()} - ${new Date(data.TimeTo * 1000).toISOString()}`
-    //     // );
-    //     var bars = data.data.Data.map((el) => {
-    //       return {
-    //         time: el.time * 1000, //TradingView requires bar time in ms
-    //         low: el.low,
-    //         high: el.high,
-    //         open: el.open,
-    //         close: el.close,
-    //         volume: el.volumefrom
-    //       };
-    //     });
-    //     if (periodParams.firstDataRequest) {
-    //       var lastBar = bars[bars.length - 1];
-    //       history[symbolInfo.name] = { lastBar: lastBar };
-    //     }
-    //     return bars;
-    //   } else {
-    //     return [];
-    //   }
-    // });
   }
 };

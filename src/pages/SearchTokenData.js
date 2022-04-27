@@ -268,7 +268,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
           <img src={Ethcoin_icon} />
           <span>ETHEREUM</span>
         </li>
-        {console.log(exchange)}
+        {/* {console.log(exchange)} */}
         <li
           className="top_box"
           onClick={BNBcoin}
@@ -924,7 +924,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 </div>
               );
             })}
-            {console.log("post", resd)}
+            {/* {console.log("post", resd)} */}
             <div>
               <TVChartContainer
                 baseQuery={search}

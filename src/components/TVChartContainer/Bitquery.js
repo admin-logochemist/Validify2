@@ -72,7 +72,6 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 //   return myQuery;
 // };
 // }else{
-//   console.log("bnb taiche");
 //   myQuery =`
 //   {
 //    ethereum(network: ${network}) {
