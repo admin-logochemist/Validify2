@@ -239,6 +239,23 @@ let btnIds = ["top_box_active","top_box_not_active"];
       : setswitchClassElevenToogled(true);
   };
 
+  function thisToFixed(x) {
+    if (Math.abs(x) < 1.0) {
+      var e = parseInt(x.toString().split('e-')[1]);
+      if (e) {
+          x *= Math.pow(10,e-1);
+          x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+      }
+    } else {
+      var e = parseInt(x.toString().split('+')[1]);
+      if (e > 20) {
+          e -= 20;
+          x /= Math.pow(10,e);
+          x += (new Array(e+1)).join('0');
+      }
+    }
+    return x;
+  }
 
   const Results = () => (
     <div className="search-results">
@@ -858,10 +875,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 return (
                   <div className="coin_names">
                   <li className="value_names">
-                    <li>${((post?.quotePrice)*408.16).toPrecision(5)}</li>
+                    <li>${((post?.quotePrice)*408.16)}</li>
                   </li>
 
-                  <span>BNB {(post.quotePrice).toPrecision(5)}</span>
+                  <span>BNB {(thisToFixed(post.quotePrice))}</span>
 
 
                 </div>
@@ -873,7 +890,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <li>${((post?.quotePrice)*2937.69).toPrecision(5)}</li>
                     </li>
 
-                    <span>ETH {(post.quotePrice*Math.pow(7,2))}</span>
+                    <span>ETH {(thisToFixed(post.quotePrice))}</span>
 
 
                   </div>
@@ -884,7 +901,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                         <li>${((post?.quotePrice)*73.05).toPrecision(5)}</li>
                       </li>
 
-                      <span>AVAX {(post.quotePrice).toPrecision(5)}</span>
+                      <span>AVAX {(thisToFixed(post.quotePrice))}</span>
 
 
                     </div>
@@ -944,7 +961,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <th>PRICE USDT</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
-                      <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+                      <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
                       <th>Maker</th>
                     </thead>
                     
@@ -958,7 +975,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <th>PRICE USDT</th>
               <th className="transform">Amount WETH</th>
               <th className="transform">Price ETH</th>
-              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
               <th>Maker</th>
             </thead>
             
@@ -970,7 +987,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <th>PRICE USDT</th>
               <th className="transform">Amount AVAX</th>
               <th className="transform">Price AVAX</th>
-              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
               <th>Maker</th>
             </thead>
               )
@@ -986,10 +1003,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
                         {post.block.timestamp.time}
                         </td>
                         <td className="red">SELL</td>
-                        <td className="">{(post.quotePrice)*408.16}</td>
-                        <td className="truncate">{post.quoteAmount}</td>
-                        <td className="truncate">{post.quotePrice}</td>
-                        <td className="truncate">{post.baseAmount}</td>
+                        <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
+                        <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
+                        <td className="truncate">{thisToFixed(post.quotePrice)}</td>
+                        <td className="truncate">{thisToFixed(post.baseAmount)}</td>
                         <td className="truncate maker_table">
                           {post.transaction.txFrom.address.slice(0, -2)}
                         </td>
@@ -1002,10 +1019,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
                           {post.block.timestamp.time}
                         </td>
                         <td className="green">BUY</td>
-                        <td className="">{(post.quotePrice)*408.16}</td>
-                        <td className="truncate">{post.quoteAmount}</td>
-                        <td className="truncate">{post.quotePrice}</td>
-                        <td className="truncate">{post.baseAmount}</td>
+                        <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
+                        <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
+                        <td className="truncate">{thisToFixed(post.quotePrice)}</td>
+                        <td className="truncate">{thisToFixed(post.baseAmount)}</td>
                         <td className="truncate maker_table">
                           {post.transaction.txFrom.address.slice(0, -2)}
                         </td>
