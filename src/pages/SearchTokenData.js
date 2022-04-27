@@ -67,6 +67,7 @@ function SearchTokenData() {
   const [resd, setResd] = useState([]);
   const [search, setSearch] = useState();
   const [exchange, setExchange] = useState();
+  const [baseSym, setBaseSym] = useState();
   const [qoute, setQoute] = useState();
   const [network, setNetwork] = useState();
   const [showResults, setShowResults] = useState()
@@ -125,6 +126,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   }
 
   const Ethcoin = () => {
+    setBaseSym("ETH");
     setExchange("Uniswap");
     setNetwork("ethereum");
     setQoute("0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2");
@@ -142,6 +144,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
     switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const BNBcoin = () => {
+    setBaseSym("BNB");
     setExchange("Pancake v2");
     setNetwork("bsc");
     setQoute("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c");
@@ -161,6 +164,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
   };
   const AVAcoin = () => {
+    setBaseSym("AVA");
     setExchange("Partyswap");
     setNetwork("avalanche");
     setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7");
@@ -770,6 +774,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       localStorage.setItem("@qQuery", qoute);
                       localStorage.setItem("@network", network);
                       localStorage.setItem("@exchange", exchange);
+                      localStorage.setItem("@baseSym", baseSym);
                     }}
                     placeholder="Search Token Address"
                     id={BorderRadius ?  "input_active" : null}
@@ -856,7 +861,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <li>${((post?.quotePrice)*2937.69).toPrecision(5)}</li>
                     </li>
 
-                    <span>ETH {(post.quotePrice).toPrecision(5)}</span>
+                    <span>ETH {(post.quotePrice*Math.pow(7,2))}</span>
 
 
                   </div>

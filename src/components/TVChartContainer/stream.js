@@ -3,7 +3,7 @@
 import historyProvider from "./historyProvider.js";
 // we use Socket.io client to connect to cryptocompare's socket.io stream
 var io = require("socket.io-client");
-var socket_url = "wss://streamer.cryptocompare.com";
+var socket_url = "wss://localhost:8080/websockets?bcurrency=0xae808c96e7cd2ed4c9b7e35dfae5d5c299cfbf00&network=bsc&qcurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&exchange=Pancake v2&interval=10";
 var socket = io(socket_url);
 // keep track of subscriptions
 var _subs = [];
@@ -11,7 +11,7 @@ var _subs = [];
 export default {
   subscribeBars: function (symbolInfo, resolution, updateCb, uid, resetCache) {
     const channelString = createChannelString(symbolInfo);
-    socket.emit("SubAdd", { subs: [channelString] });
+    socket.emit("SubAdd");
 
     var newSub = {
       channelString,
