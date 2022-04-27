@@ -66,26 +66,22 @@ ul.swap-tabs li{
 }
 .Rmaa8{
     /* background-color: #0B2251 !important; */
-    background: #131722 !important;
-    /* background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434); */
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
 }
 .GR8Uc{
-    /* background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434); */
-    background: #131722 !important;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
 }
 ._3Fke_ {
     color: #999;
     font-size: 18px !important;
-    color: white !important;
+    color: black !important;
     letter-spacing: 2px !important;
     margin-top: 12px !important;
     font-weight: 600 !important;
     text-transform: capitalize !important;
   }
   ._1UX0E h1, ._20Ceb {
-    font-size: 22px !important;
-    color: white;
-    letter-spacing: 1px;
+    font-size: 25px !important;
   }
   ._2vysN > label {
     font-size: 22px !important;
@@ -103,20 +99,7 @@ ul.swap-tabs li{
   }
   ._12bnP {
     background-color: #0B2251 !important;
-  }
-  .GR8Uc > * {
-    opacity: 1 !important;
-  }
-  #main{
-      height: 600px !important;
-  }
-  .GR8Uc img {
-    filter: brightness(50) !important;
-  }
-  .onramper_bg{
-      width: 100%;
-      padding: 10px;
-  }
+  }  
 @media only screen and (max-width: 479px){
     .swaps .swap-tabs li{
         width: 100%;

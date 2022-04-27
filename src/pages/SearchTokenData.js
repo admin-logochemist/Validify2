@@ -10,6 +10,7 @@ import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import "../css/SearchBar.css";
 // import bitcoin_icon from "../images/bitcoin.png";
+import LiveChart from "../components/LiveChart";
 import Ethcoin_icon from "../images/eth.svg";
 import bnbicon from "../images/bsc.png";
 import avaicon from "../images/avalanche.png";
@@ -117,6 +118,7 @@ function SearchTokenData() {
   const [resd, setResd] = useState([]);
   const [search, setSearch] = useState();
   const [exchange, setExchange] = useState();
+  const [baseSym, setBaseSym] = useState();
   const [qoute, setQoute] = useState();
   const [network, setNetwork] = useState();
   const [showResults, setShowResults] = useState()
@@ -154,6 +156,18 @@ let btnIds = ["top_box_active","top_box_not_active"];
           setResd(re);
         })
       );
+      switchClassOne ? setswitchClassOneToogled(false) : setswitchClassOneToogled(false);
+      // NexBoxResults ? setNexBoxResults(false) : setNexBoxResults(true);
+      switchClassTwo ? setswitchClassTwoToogled(false) : setswitchClassTwoToogled(false);
+      switchClassThree ? setswitchClassThreeToogled(false) : setswitchClassThreeToogled(false);
+      switchClassFour ? setswitchClassFourToogled(false) : setswitchClassFourToogled(false);
+      switchClassFive ? setswitchClassFiveToogled(false) : setswitchClassFiveToogled(false);
+      switchClassSix ? setswitchClassSixToogled(false) : setswitchClassSixToogled(false);
+      switchClassSeven ? setswitchClassSevenToogled(false) : setswitchClassSevenToogled(false);
+      switchClassEight ? setswitchClassEightToogled(false) : setswitchClassEightToogled(false);
+      switchClassNine ? setswitchClassNineToogled(false) : setswitchClassNineToogled(false);
+      switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
+      switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
     } else if (search === "") {
       console.log("no Search");
     }
@@ -169,6 +183,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   }
 
   const Ethcoin = () => {
+    setBaseSym("ETH");
     setExchange("Uniswap");
     setNetwork("ethereum");
     setQoute("0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2");
@@ -186,6 +201,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
     switchClassEleven ? setswitchClassElevenToogled(false) : setswitchClassElevenToogled(false);
   };
   const BNBcoin = () => {
+    setBaseSym("BNB");
     setExchange("Pancake v2");
     setNetwork("bsc");
     setQoute("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c");
@@ -205,6 +221,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
   };
   const AVAcoin = () => {
+    setBaseSym("AVAX");
     setExchange("Partyswap");
     setNetwork("avalanche");
     setQoute("0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7");
@@ -334,100 +351,117 @@ let btnIds = ["top_box_active","top_box_not_active"];
     switchClassTen ? setswitchClassTenToogled(false) : setswitchClassTenToogled(false);
   };
 
+  function thisToFixed(x) {
+    if (Math.abs(x) < 1.0) {
+      var e = parseInt(x.toString().split('e-')[1]);
+      if (e) {
+          x *= Math.pow(10,e-1);
+          x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+      }
+    } else {
+      var e = parseInt(x.toString().split('+')[1]);
+      if (e > 20) {
+          e -= 20;
+          x /= Math.pow(10,e);
+          x += (new Array(e+1)).join('0');
+      }
+    }
+    return x;
+  }
 
   const Results = () => (
     <div className="search-results">
-        <div className="scroll_box">
-            <li
-              className="top_box"
-              onClick={Ethcoin}
-              id={switchClassOne ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={Ethcoin_icon} />
-              <span>ETHEREUM</span>
-            </li>
-            {console.log(exchange)}
-            <li
-              className="top_box"
-              onClick={BNBcoin}
-              id={switchClassTwo ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={bnbicon} />
-              <span>BNB</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={AVAcoin}
-              id={switchClassThree ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={avaicon} />
-              <span>AVALANCE</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={polygoncoin}
-              id={switchClassFour ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={polygon} />
-              <span>POLYGON</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={okccoin}
-              id={switchClassFive ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={okc} />
-              <span>OKC</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={fantomcoin}
-              id={switchClassSix ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={fantom} />
-              <span>FANTOM</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={arbitrumcoin}
-              id={switchClassSeven ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={arbitrum} />
-              <span>ARBITRUM</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={metiscoin}
-              id={switchClassEight ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={metis} />
-              <span>METIS</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={hecocoin}
-              id={switchClassNine ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={heco} />
-              <span>HECO</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={velascoin}
-              id={switchClassTen ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={velas} />
-              <span>VELAS</span>
-            </li>
-            <li
-              className="top_box"
-              onClick={auroracoin}
-              id={switchClassEleven ? "top_box_active" : "top_box_not_active"}
-            >
-              <img src={aurora} />
-              <span>AURORA</span>
-            </li>
-        </div>
+      <div className="scroll_box">
+        <li
+          className="top_box"
+          onClick={Ethcoin}
+          id={switchClassOne ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={Ethcoin_icon} />
+          <span>ETHEREUM</span>
+        </li>
+        {/* {console.log(exchange)} */}
+        <li
+          className="top_box"
+          onClick={BNBcoin}
+          id={switchClassTwo ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={bnbicon} />
+          <span>BNB</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={AVAcoin}
+          id={switchClassThree ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={avaicon} />
+          <span>AVALANCE</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={polygoncoin}
+          id={switchClassFour ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={polygon} />
+          <span>POLYGON</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={okccoin}
+          id={switchClassFive ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={okc} />
+          <span>OKC</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={fantomcoin}
+          id={switchClassSix ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={fantom} />
+          <span>FANTOM</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={arbitrumcoin}
+          id={switchClassSeven ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={arbitrum} />
+          <span>ARBITRUM</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={metiscoin}
+          id={switchClassEight ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={metis} />
+          <span>METIS</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={hecocoin}
+          id={switchClassNine ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={heco} />
+          <span>HECO</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={velascoin}
+          id={switchClassTen ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={velas} />
+          <span>VELAS</span>
+        </li>
+        <li
+          className="top_box"
+          onClick={auroracoin}
+          id={switchClassEleven ? "top_box_active" : "top_box_not_active"}
+        >
+          <img src={aurora} />
+          <span>AURORA</span>
+        </li>
+      </div>
     </div>
   );
 
@@ -1610,10 +1644,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 return (
                   <div className="coin_names">
                   <li className="value_names">
-                    <li>${((post?.quotePrice)*408.16).toPrecision(5)}</li>
+                    <li>${((post?.quotePrice)*408.16)}</li>
                   </li>
 
-                  <span>BNB {(post.quotePrice).toPrecision(5)}</span>
+                  <span>BNB {(thisToFixed(post.quotePrice))}</span>
 
 
                 </div>
@@ -1625,7 +1659,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <li>${((post?.quotePrice)*2937.69).toPrecision(5)}</li>
                     </li>
 
-                    <span>ETH {(post.quotePrice).toPrecision(5)}</span>
+                    <span>ETH {(thisToFixed(post.quotePrice))}</span>
 
 
                   </div>
@@ -1659,13 +1693,14 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 </div>
               );
             })}
-            {console.log("post", resd)}
-            <div id="tv_chart_container">
+            {/* {console.log("post", resd)} */}
+            <div>
               <TVChartContainer
                 baseQuery={search}
                 network={network}
                 qQuery={qoute}
                 exchange={exchange}
+                
               />
             </div>
             <div className="flex_box_table">
@@ -1677,7 +1712,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                </div> */}
             </div>
 
-            {/* ++_-_++  TRADES TABLE DATA  ++_-_++ */}
+            {/* ++-++  TRADES TABLE DATA  ++-++ */}
 
             <table>
             {resd.slice(0, 1).map((post, key) => {
@@ -1686,7 +1721,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <thead>  
                       <th>Date</th>
                       <th>Type</th>
-                      <th>PRICE USD</th>
+                      <th>PRICE USDT</th>
                       <th className="transform">Amount WBNB</th>
                       <th className="transform">Price BNB</th>
                       <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
@@ -1695,15 +1730,15 @@ let btnIds = ["top_box_active","top_box_not_active"];
                     
             
               );
-            } else if(network==='etherum') {  
+            } else if(network==='ethereum') {  
               return(      
                <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount WETH</th>
               <th className="transform">Price ETH</th>
-              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
               <th>Maker</th>
             </thead>
             
@@ -1712,10 +1747,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
               <thead>  
               <th>Date</th>
               <th>Type</th>
-              <th>PRICE USD</th>
+              <th>PRICE USDT</th>
               <th className="transform">Amount AVAX</th>
               <th className="transform">Price AVAX</th>
-              <th className="transform">TOTAL {post.baseCurrency.symbol}</th>
+              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
               <th>Maker</th>
             </thead>
               )

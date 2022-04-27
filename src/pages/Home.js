@@ -13,7 +13,7 @@ import head_img from '../images/logoIcon.svg'
 import chain from '../images/portfolio.svg'
 import multichain from '../images/Icon_awesome-coins.svg'
 import titan from '../images/crypto-wallet.svg'
-import QRCode from 'qrcode.react'
+// import QRCode from 'qrcode.react'
 import logoIcon from '../images/logoIcon.svg'
 import nftBanner from '../images/nft_banners.jpg'
 import Footer from '../components/Footer'
@@ -37,7 +37,7 @@ function Home() {
                   </div>
                   <div className='btn_banner'>
                     <a href='https://pancakeswap.finance/swap?outputCurrency=0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00' target='_blank' className='link_btn_one'><button className='btn_one Read_more'>Buy</button></a>
-                    <Link to="./SearchTokenData" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Launch App</button></Link>
+                    <a href="https://validefi.global/#/SearchTokenData" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Launch App</button></a>
                   </div>
                 </div>
             </div>
@@ -50,11 +50,7 @@ function Home() {
                   muted="true"
                   // url={video}
                   url='https://validefi.global/video/proVid.mp4' 
-                  onReady={() => console.log('onReady Callback')}
-                  onStart={() => console.log('onStart Callback')}
-                  onPause={() => console.log('onPause Callback')}
-                  onEnded={() => console.log('onEnded Callback')}
-                  onError={() => console.log('onError Callback')}
+         
               />
             </div>
           </div>
@@ -124,7 +120,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <Link to="/Dashboard" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
+                           <Link to="/SearchTokenData" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -159,7 +155,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                            <Link to="/Signup" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
+                            <Link to="/SearchTokenData" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>

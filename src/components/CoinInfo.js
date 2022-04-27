@@ -47,7 +47,7 @@ const CoinInfo = ({ coin }) => {
     setHistoricData(data.prices);
   };
 
-  console.log("histo",historicData);
+ 
 
   useEffect(() => {
     fetchHistoricData();

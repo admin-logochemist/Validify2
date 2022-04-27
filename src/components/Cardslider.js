@@ -19,7 +19,7 @@ function Cardslider() {
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
 
-    console.log(data);
+   
     setTrending(data);
   };
 
@@ -75,7 +75,7 @@ function Cardslider() {
         <h3>Top Trading Currency</h3>
         <Slider {...settings}>
             {trending.map((coin) => {
-              console.log(coin?.image);
+              
                   return(
                     <div className='card_slider'>
                           <img src={coin?.image} alt={coin.name} />

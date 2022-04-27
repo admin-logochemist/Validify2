@@ -72,7 +72,6 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 //   return myQuery;
 // };
 // }else{
-//   console.log("bnb taiche");
 //   myQuery =`
 //   {
 //    ethereum(network: ${network}) {
@@ -101,58 +100,25 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 
 // }
 
-export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) => {
-    let myQuery;
-    if (network === 'ethereum') {
-        myQuery = `
-    {
-     ethereum(network: ${network}) {
-       dexTrades(
-         options: {asc: "timeInterval.minute", limit:25000}
-         date: {since: "2021-06-20" till: "2022-04-22"}
-         exchangeName: {is: "${exchange}"}
-         quoteCurrency: {is: "${qQuery}"}
-         baseCurrency: {is: "${baseQuery}"}
-         
-       ) {
-         timeInterval {
-           minute(count: 5, format: "%Y-%m-%dT%H:%M:%SZ")
-         }
-         volume: quoteAmount
-         high: quotePrice(calculate: maximum)
-         low: quotePrice(calculate: minimum)
-         open: minimum(of: block, get: quote_price)
-         close: maximum(of: block, get: quote_price)
-       }
-     }
-   }
-   
-   `;
-    } else {
-        myQuery = `
-    {
-     ethereum(network: ${network}) {
-       dexTrades(
-         options: {asc: "timeInterval.minute"}
-         exchangeName: {is: "${exchange}"}
-         quoteCurrency: {is: "${qQuery}"}
-         baseCurrency: {is: "${baseQuery}"}
-        
-       ) {
-         timeInterval {
-            minute(count: ${resolution}) 
-         }
-         volume: quoteAmount
-         high: quotePrice(calculate: maximum)
-         low: quotePrice(calculate: minimum)
-         open: minimum(of: block, get: quote_price)
-         close: maximum(of: block, get: quote_price)
-       }
-     }
-   }
-   
-   `;
-    }
-
-    return myQuery;
+export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution, from, to) => {
+    return `{
+            ethereum(network: ${network}) {
+              dexTrades(
+                date: {since: "${from}", till: "${to}"}
+                options: {asc: "timeInterval.minute"}
+                exchangeName: {is: "${exchange}"}
+                quoteCurrency: {is: "${qQuery}"}
+                baseCurrency: {is: "${baseQuery}"}
+              ) {
+                timeInterval {
+                  minute(format:"%FT%TZ", count: ${resolution})
+                }
+                volume: quoteAmount
+                high: quotePrice(calculate: maximum)
+                low: quotePrice(calculate: minimum)
+                open: minimum(of: block, get: quote_price)
+                close: maximum(of: block, get: quote_price)
+              }
+            }
+        }`
 };
