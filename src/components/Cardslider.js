@@ -58,12 +58,10 @@ function Cardslider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1,
-          infinite: 1,
-          adaptiveHeight: true,
-          // centerMode: true,
-          variableWidth: true,
-          // autoplay: true,ta
+          // initialSlide: 1,
+          // infinite: 1,
+          // adaptiveHeight: true,
+          // variableWidth: true,
           draggable: true,
 
         }

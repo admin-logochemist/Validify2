@@ -65,23 +65,25 @@ ul.swap-tabs li{
     opacity: 1;
 }
 .Rmaa8{
-    /* background-color: #0B2251 !important; */
-    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    background-color: #131722 !important;
+    /* background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434); */
 }
 .GR8Uc{
-    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    background-color: #131722 !important;
+    /* background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434); */
 }
 ._3Fke_ {
     color: #999;
     font-size: 18px !important;
-    color: black !important;
+    color: white !important;
     letter-spacing: 2px !important;
     margin-top: 12px !important;
     font-weight: 600 !important;
     text-transform: capitalize !important;
   }
   ._1UX0E h1, ._20Ceb {
-    font-size: 25px !important;
+    font-size: 21px !important;
+    color: white;
   }
   ._2vysN > label {
     font-size: 22px !important;
@@ -100,6 +102,18 @@ ul.swap-tabs li{
   ._12bnP {
     background-color: #0B2251 !important;
   }  
+  .onramper_bg{
+      width: 100%;
+      padding: 10px;
+  }
+  #main{
+      height: 600px;
+  }
+  .GR8Uc img {
+    height: 2.083em;
+    filter: brightness(50);
+    opacity: 1.1 !important;
+  }
 @media only screen and (max-width: 479px){
     .swaps .swap-tabs li{
         width: 100%;

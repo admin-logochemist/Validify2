@@ -10,7 +10,7 @@ import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import "../css/SearchBar.css";
 // import bitcoin_icon from "../images/bitcoin.png";
-import LiveChart from "../components/LiveChart";
+// import LiveChart from "../components/LiveChart";
 import Ethcoin_icon from "../images/eth.svg";
 import bnbicon from "../images/bsc.png";
 import avaicon from "../images/avalanche.png";
@@ -1539,6 +1539,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       localStorage.setItem("@qQuery", qoute);
                       localStorage.setItem("@network", network);
                       localStorage.setItem("@exchange", exchange);
+                      localStorage.setItem("@baseSym", baseSym);
                     }}
                     placeholder="Search Token Address"
                     id={BorderRadius ?  "input_active" : null}
