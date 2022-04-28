@@ -391,6 +391,9 @@
     .custom_conatiner {
         width: 100% !important;
     }
+    .nftBanner{
+        height: 350px;
+    }
     /* .col_one{
         width: 32%;
     }
@@ -450,6 +453,9 @@
     .services_btn {
         width: 85%;
     }
+    .nftBanner {
+        height: 289px;
+    }    
 }
 
 @media screen and (max-width: 1185px){
@@ -484,9 +490,10 @@
         margin: auto;
         width: 90%;
     }
-    /* .our_services {
-        height: 1400px;
-    } */
+    .nftBanner {
+        height: 262px;
+        background-size: cover;
+    }
     .col-lg-6.video > div {
         padding: 0px 50px 50px 0;
     }
@@ -621,11 +628,6 @@
         margin-top: 200px;
     }
 }
-/* @media screen and (max-width:551px){
-    .our_services {
-        height: 1850px;
-    }
-} */
 @media screen and (max-width:500px){
     .section {
         margin-top: 30px;
