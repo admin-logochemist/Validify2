@@ -371,8 +371,9 @@
 }
 @media only screen and (max-width: 600px){
   .Trades_search input {
-   position: relative;
-   top: 22px;
+      position: relative;
+      top: 22px;
+      padding: 0 110px 0px 7px;
   }
   .Trades_search .search_max > div svg {
     top: 31px;
@@ -424,19 +425,56 @@
       border-radius: 6px;
     }
 
-  .table_trades td {
-      font-size: 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }
-  .table_trades table {
-    height: 430px;
-   }
-   .table_trades {
+    .table_trades td {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .table_trades table {
+      height: 430px;
+    }
+
+    .table_trades {
       background: hsla(0,0%,100%,.05);
-      padding: 0px 15px !important;
+      padding: 0px 5px !important;
       padding-bottom: 15px !important;
+      width: 100%;
+    }
+    .custom_container{
+      padding-left: unset !important;
+      padding-right: unset !important;
+    }
+    .icons_info .img_box {
+      justify-content: center;
+    }
+    .icons_info {
+      text-align: center;
+     }
+     .coin_names .value_names {
+      margin-top: 10px;
+     }
+    .coin_names li.value_names li {
+      padding: 0;
+      margin: 0;
+    }
+    .coin_names > span {
+       line-height: 40px;
+       top: 0px;
+    }
+    .li_pairs .li_div .inner_li {
+        padding: 0;
+     }
+    .li_pairs .li_div {
+        margin-bottom: 0px;
+    }
+    .li_pairs {
+      margin-top: 0px;
+      width: 100%;
+      text-align: center;
+    }
+    .li_pairs .li_div .inner_li {
+      color: #ffffffad;
     }
 }
 @media screen and (max-width:381px){
@@ -456,6 +494,7 @@
     .li_pairs .li_div {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
   }
 }
 @media screen and (max-width: 322px){
@@ -470,7 +509,6 @@
   } */
   .coin_names > span {
     font-size: 15px;
-    width: 66px;
   }
   .coin_names li.value_names li {
     font-size: 15px;

@@ -175,17 +175,10 @@ let btnIds = ["top_box_active","top_box_not_active"];
   
   let ShowBOx = showResults ?  "search_active" : "search_not_active"
   const handleClick = () => {
-    // showResults ? setShowResults (false) : setShowResults(true);
-    // setShowResults(showResults => !showResults);
-    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
+    CroxIconBtn ?  setCroxIconBtn (true) : setCroxIconBtn (true)
   }
   const handleClickSvg = () => {
-    // showResults ? setShowResults (false) : setShowResults(true);
-    CroxIconBtn ?  setCroxIconBtn (false) : setCroxIconBtn (true)
-    // BorderRadius ?  setBorderRadius (false) : setBorderRadius (true)
-    // BorderRadiusBtn ?  setBorderRadiusBtn (false) : setBorderRadiusBtn (true)
+    CroxIconBtn ?  setCroxIconBtn (true) : setCroxIconBtn (true)
   }
 
   const Ethcoin = () => {
@@ -1528,7 +1521,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
     <>
       <Header />
       <section className="bannerAdds_whale_trade"></section>
-      <div className="container-fluid">
+      <div className="container-fluid custom_container">
         <div className="row">
           <div className="col-12 mt-3">
             <PriceTickers />

@@ -425,12 +425,16 @@
       margin-top: 4px;
     }
     .Trades_search input {
-      font-size: 9px;
+      font-size: 12px;
     }
     .Trades_search .search_max > div svg {
       top: 37px;
       height: 25px;
     }
+    #tv_chart_container {
+      height: 70vh;
+      margin: 40px 0 0 0;
+  }
 }
 @media screen and (max-width:801px){
   .searchInputs > input::placeholder{
