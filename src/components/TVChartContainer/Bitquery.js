@@ -101,25 +101,18 @@ export const GET_COIN_INFO = (baseQuery, qQuery, network, exchange) => {
 
 // }
 
-export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) => {
-    let myQuery;
-    if (network === 'ethereum') {
-        myQuery = `
-        {
+export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution, from, to) => {
+    return `{
             ethereum(network: ${network}) {
               dexTrades(
+                date: {since: "${from}", till: "${to}"}
                 options: {asc: "timeInterval.minute"}
                 exchangeName: {is: "${exchange}"}
                 quoteCurrency: {is: "${qQuery}"}
                 baseCurrency: {is: "${baseQuery}"}
-                priceAsymmetry: { lt: 0.7 }
-                any: [
-                  {tradeAmountUsd: { gt: 0.00001 }},
-                  {tradeAmountUsd: { is: 0 }}
-                ]
               ) {
                 timeInterval {
-                  minute(format:"%FT%TZ", count: 15)
+                  minute(format:"%FT%TZ", count: ${resolution})
                 }
                 volume: quoteAmount
                 high: quotePrice(calculate: maximum)
@@ -128,38 +121,5 @@ export const GET_COIN_BARS = (baseQuery, qQuery, network, exchange, resolution) 
                 close: maximum(of: block, get: quote_price)
               }
             }
-          }
-   
-   `;
-    } else {
-        myQuery = `
-    {
-     ethereum(network: ${network}) {
-       dexTrades(
-         options: {asc: "timeInterval.minute"}
-         exchangeName: {is: "${exchange}"}
-         quoteCurrency: {is: "${qQuery}"}
-         baseCurrency: {is: "${baseQuery}"}
-         priceAsymmetry: { lt: 0.7 }
-         any: [
-           {tradeAmountUsd: { gt: 0.00001 }},
-           {tradeAmountUsd: { is: 0 }}
-         ]
-       ) {
-         timeInterval {
-          minute(format:"%FT%TZ", count: 15) 
-         }
-         volume: quoteAmount
-         high: quotePrice(calculate: maximum)
-         low: quotePrice(calculate: minimum)
-         open: minimum(of: block, get: quote_price)
-         close: maximum(of: block, get: quote_price)
-       }
-     }
-   }
-   
-   `;
-    }
-
-    return myQuery;
+        }`
 };

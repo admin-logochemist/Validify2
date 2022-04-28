@@ -51,6 +51,8 @@ export class TVChartContainer extends React.PureComponent {
 
     if (baseQuery.length) {
       const widgetOptions = {
+          debug: true,
+          timeframe: '3M',
         symbol: this.props.symbol,
         // BEWARE: no trailing slash is expected in feed URL
         datafeed: datafeed,

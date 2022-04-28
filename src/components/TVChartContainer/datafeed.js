@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios';
 import * as Bitquery from './Bitquery';
-import stream from './stream';
+import * as streaming from './streaming';
 import historyProvider from './historyProvider';
 
 // const lastBarsCache = new Map();
@@ -23,6 +23,7 @@ export default {
         let qQuery = await localStorage.getItem('@qQuery');
         let network = await localStorage.getItem('@network');
         let exchange = await localStorage.getItem('@exchange');
+        let baseSym = await localStorage.getItem('@baseSym');
 
         console.log('[resolveSymbol]: Method called!!');
         const response = await axios.post(
@@ -43,24 +44,22 @@ export default {
         );
         // const coin = response.data.data.ethereum.dexTrades[0].baseCurrency; 
         // console.log(response.data.data.ethereum.dexTrades[0].quotePrice); 
-        console.log(response.data.data.ethereum.dexTrades[0].baseCurrency);
+        console.log("===datafeed===",response.data.data.ethereum.dexTrades[0].baseCurrency);
 
         const coin = response.data.data.ethereum.dexTrades[0].baseCurrency;
         if (!coin) {
             onResolveErrorCallback();
         } else {
-            var split_data = symbolName.split(/[:/]/);
-
             const symbol = {
                     // name: symbolName,
                     ticker: symbolName,
-                    name: `${coin.symbol}/BNB`,
+                    name: `${coin.symbol}/${baseSym}`,
                     type: "crypto",
                     session: '24x7',
                     timezone: 'Etc/UTC',
-                    exchange: split_data[0],
+                    exchange: `${exchange}`,
                     minmov: 1,
-                    pricescale: 100000000,
+                    pricescale: 1000000000000,
                     has_intraday: true,
                     intraday_multipliers: ['1', '5', '15', '30', '60'],
                     supported_resolution: configurationData.supported_resolutions,
@@ -156,7 +155,7 @@ export default {
         onResetCacheNeededCallback
       ) => {
         console.log("=====subscribeBars runnning");
-        stream.subscribeBars(
+        streaming.subscribeOnStream(
           symbolInfo,
           resolution,
           onRealtimeCallback,
@@ -167,7 +166,7 @@ export default {
       unsubscribeBars: (subscriberUID) => {
         console.log("=====unsubscribeBars running");
   
-        stream.unsubscribeBars(subscriberUID);
+        streaming.unsubscribeFromStream(subscriberUID);
       },
       calculateHistoryDepth: (resolution, resolutionBack, intervalBack) => {
         //optional

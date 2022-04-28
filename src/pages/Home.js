@@ -37,7 +37,7 @@ function Home() {
                   </div>
                   <div className='btn_banner'>
                     <a href='https://pancakeswap.finance/swap?outputCurrency=0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00' target='_blank' className='link_btn_one'><button className='btn_one Read_more'>Buy</button></a>
-                    <a href="https://bscscan.com/address/0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00#code" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Read More</button></a>
+                    <a href="https://validefi.global/#/SearchTokenData" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Launch App</button></a>
                   </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                           <Link to="/Dashboard" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
+                           <Link to="/SearchTokenData" className='link_btn_one' target='_blank' ><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ function Home() {
                         </p>
                         <br/>
                         <div className='btn_banner'>
-                            <Link to="/Signup" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
+                            <Link to="/SearchTokenData" className='link_btn_one'><button className='btn_one services_btn'>Launch App</button></Link>
                         </div>
                     </div>
                 </div>
