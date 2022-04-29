@@ -130,12 +130,16 @@ export default {
             network : network,
             exchange : exchange
         }
+
+        var split_symbol = symbolInfo.name.split(/[:/]/);
         // console.log('function args',arguments)
         // console.log(`Requesting bars between ${new Date(from * 1000).toISOString()} and ${new Date(to * 1000).toISOString()}`)
         historyProvider
           .getBars(symbolInfo, resolution, periodParams, gg)
           .then((bars) => {
             if (bars.length>=307) {
+                onHistoryCallback(bars, { noData: false });
+            } else if(bars.length && split_symbol[0] === 'VALID') {
                 onHistoryCallback(bars, { noData: false });
             } else {
                 console.log('datafeed bars: ', bars);
