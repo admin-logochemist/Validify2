@@ -17,7 +17,8 @@ import Exchnage_dapprader from '../images/exchange-dapprader.jpg'
 export default function BTCSwap() {
   return (
     <>
-       <div className='col-lg-3 display_one'>
+       <div className=''>
+            {/* col-lg-3 display_one */}
             <div className="swap_box">
             <h4 className='left-right-head'>Swap</h4>
               <div class="swaps" role="tabpanel">

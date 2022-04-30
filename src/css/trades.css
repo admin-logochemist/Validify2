@@ -240,7 +240,7 @@
   #svg_not_active{
     display: none;
   }
-  .Trades_search button{
+  /* .Trades_search button{
     border: none;
     color: white;
     font-weight: 500;
@@ -250,7 +250,7 @@
     width: 20%;
     line-height: 53px;
     border-radius: 0 20px 20px 0;
-  }
+  } */
   #input_active{
     border-radius:  20px 0 0 0px;
   }
@@ -283,7 +283,7 @@
     text-overflow: ellipsis;
   }
   .icons_info{
-    margin-top: 157px;
+    margin-top: 190px;
     width: 100%;
     display: inline-flex;
   }

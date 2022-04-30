@@ -3,6 +3,14 @@ import PriceTickers from "../components/PriceTickers";
 import Header from "../components/Header";
 import DashFooter from "../components/DashFooter";
 import { TVChartContainer } from "../components/TVChartContainer";
+import Web3 from "web3";
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+import Pill from '../components/molecules/Pill'
+import BullSayss from '../components/BullSays'
+import Trendinghrr from '../components/Trending24hr'
+import BTCSwaps from '../components/BTCSwap'
 // import { color } from "@mui/system";
 import 'font-awesome/css/font-awesome.min.css'
 
@@ -113,8 +121,11 @@ import trisolaris from '../images/trisolaris.svg'
 import nearpad from '../images/nearpad.png'
 import auroraicon from '../images/aurora.png'
 import amaterasu from '../images/amaterasu.svg'
+import wallet_icon from '../images/wallet-solid.svg'
+import BullSays from "../components/BullSays";
 
 function SearchTokenData() {
+  var [account, setAccount] = useState("");
   const [resd, setResd] = useState([]);
   const [search, setSearch] = useState();
   const [exchange, setExchange] = useState();
@@ -139,6 +150,64 @@ function SearchTokenData() {
   const [switchClassNine, setswitchClassNineToogled] = useState(false);
   const [switchClassTen, setswitchClassTenToogled] = useState(false);
   const [switchClassEleven, setswitchClassElevenToogled] = useState(false);
+
+
+  const { ethereum } = window;
+  useEffect(() => {
+    (async () => {
+      try {
+        const connectedAccount = (
+          await ethereum.request({ method: "eth_accounts" })
+        )[0];
+        setAccount(connectedAccount);
+      } catch (e) {
+        console.log(e);
+      }
+    })();
+  }, [ethereum]);
+
+  const providerOptions = {
+    /* See Provider Options Section */
+    walletconnect: {
+      package: WalletConnectProvider, // required
+      options: {
+        infuraId: "4013365e8f774d45a4d9e84d6f5e2940" // required
+      }
+    },
+    coinbasewallet: {
+      package: CoinbaseWalletSDK, // Required
+      options: {
+        appName: "My Awesome App", // Required
+        infuraId: "4013365e8f774d45a4d9e84d6f5e2940", // Required
+        rpc: "", // Optional if `infuraId` is provided; otherwise it's required
+        chainId: 1, // Optional. It defaults to 1 if not provided
+        darkMode: true // Optional. Use dark theme, defaults to false
+      }
+    },
+      binancechainwallet: {
+        package: true
+      },
+  
+  };
+ 
+  const web3Modal = new Web3Modal({
+    network: "mainnet", // optional
+    cacheProvider: true, // optional
+    providerOptions // required
+  });
+  async function connectwallet() { 
+	  var provider = await web3Modal.connect();
+      var web3 = new Web3(provider); 
+      await window.ethereum.send('eth_requestAccounts'); 
+      var accounts = await web3.eth.getAccounts(); 
+      account = accounts[0]; 
+      document.getElementById('wallet-address').textContent = account; 
+      // contract = new web3.eth.Contract(ABI, ADDRESS);
+    }
+
+
+
+
 
 let btnIds = ["top_box_active","top_box_not_active"];
   const [switchBox, setswitchBox] = useState(false);
@@ -466,7 +535,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const EthSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -577,7 +646,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
   
   const BNBSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -781,7 +850,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const AVASwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -901,7 +970,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const PolygonSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -1056,7 +1125,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const OKCSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -1127,7 +1196,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const FantomSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
        <div className="check_box_width">
          <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -1310,7 +1379,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const ArbitrumSwap = () => (
-      <div className="">
+      <div className="check_box_parent">
         <div className="check_box_width">
           <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -1353,7 +1422,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const METIsSwap = () => (
-      <div className="">
+      <div className="check_box_parent">
         <div className="check_box_width">
           <div className="check_box_scroll_box">
             <label class="container-radio">
@@ -1389,7 +1458,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const HecoSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
       <div className="check_box_width">
         <div className="check_box_scroll_box">
           <label class="container-radio">
@@ -1439,7 +1508,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const VELASSwap = () => (
-    <div className="">
+    <div className="check_box_parent">
       <div className="check_box_width">
         <div className="check_box_scroll_box">
           <label class="container-radio">
@@ -1468,7 +1537,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
   );
 
   const AURORASwap = () => (
-    <div className="">
+    <div className="check_box_parent">
       <div className="check_box_width">
         <div className="check_box_scroll_box">
           <label class="container-radio">
@@ -1529,37 +1598,40 @@ let btnIds = ["top_box_active","top_box_not_active"];
         </div>
         <div className="col-12">
           <div className="table_trades">
+
             <div className="Trades_search">
-            <div className="search_max">
-              <div>
-                    <input type="text" onClick={handleClick} value={search}  autoComplete="off"
-                    onChange={(e) => {
-                      setSearch(e.target.value);
-                      localStorage.setItem("@baseQuery", e.target.value);
-                      localStorage.setItem("@qQuery", qoute);
-                      localStorage.setItem("@network", network);
-                      localStorage.setItem("@exchange", exchange);
-                      localStorage.setItem("@baseSym", baseSym);
+
+                  <div className="search_max">
+                    <div>
+                          <input type="text" onClick={handleClick} value={search}  autoComplete="off"
+                          onChange={(e) => {
+                            setSearch(e.target.value);
+                            localStorage.setItem("@baseQuery", e.target.value);
+                            localStorage.setItem("@qQuery", qoute);
+                            localStorage.setItem("@network", network);
+                            localStorage.setItem("@exchange", exchange);
+                            localStorage.setItem("@baseSym", baseSym);
+                          }}
+                          placeholder="Search Token Address"
+                          id={BorderRadius ?  "input_active" : null}
+                        />
+                        <svg id={CroxIconBtn ?  "svg_active" : "svg_not_active"} onClick={() => setSearch(() => "")}
+                            role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" class="svg-inline--fa fa-times fa-w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z">
+                            </path>
+                        </svg>
+                    </div>
+                {/* <button
+                    type="submit"
+                    onClick={() => {
+                      callApi();
                     }}
-                    placeholder="Search Token Address"
-                    id={BorderRadius ?  "input_active" : null}
-                  />
-                  <svg id={CroxIconBtn ?  "svg_active" : "svg_not_active"} onClick={() => setSearch(() => "")}
-                      role="img" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" class="svg-inline--fa fa-times fa-w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                      <path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z">
-                      </path>
-                  </svg>
-              </div>
-           {/* <button
-              type="submit"
-              onClick={() => {
-                callApi();
-              }}
-              id={BorderRadiusBtn ?  "btn_active" : "btn_not_active"}
-            >
-            Search
-            </button>*/}
-            </div>
+                    id={BorderRadiusBtn ?  "btn_active" : "btn_not_active"}
+                  >
+                  Search
+                  </button>*/}
+                  </div>
+
                   <div class="next_search">
                       <Results />
                   </div>
@@ -1596,7 +1668,25 @@ let btnIds = ["top_box_active","top_box_not_active"];
                   <div className="" id={switchClassEleven ?  "search_active" : "search_not_active"}>
                         <AURORASwap />
                   </div>
-              </div> 
+
+
+                  <div className="Btn_wallet">
+                      {account ? (
+                        <Pill address={account} />
+                      ) : ethereum ? (
+                        <div className='wallet_msg'>
+                        <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                          <p> Wallet is not Connected</p>
+                        </div>
+                      ) : (
+                        <div className='wallet_msg'>
+                            <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
+                            <p> Wallet is not Connected</p>
+                        </div>
+                      )}
+                </div>
+
+            </div> 
 
             {/* <Searchbar  data={SearchData}/> */}
             <div className="icons_info">
@@ -1684,7 +1774,8 @@ let btnIds = ["top_box_active","top_box_not_active"];
               );
             })}
             {console.log("post", resd)}
-            <div>
+
+            <div className="ChartContainer">
               <TVChartContainer
                 baseQuery={search}
                 network={network}
@@ -1698,10 +1789,13 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 qQuery={qoute}
                 exchange={exchange}
               /> */}
+              <div className="SwapsContainer">
+                <BTCSwaps />
+              </div>
             </div>
+
             <div className="flex_box_table">
               <h3>Trades</h3>
-              
               {/* <div className='btns_lengends'>
                     <button className='buy'>Buy</button>
                     <button className='sell'>Sale</button>
@@ -1723,8 +1817,6 @@ let btnIds = ["top_box_active","top_box_not_active"];
                       <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
                       <th>Maker</th>
                     </thead>
-                    
-            
               );
             } else if(network==='ethereum') {  
               return(      
@@ -1791,6 +1883,16 @@ let btnIds = ["top_box_active","top_box_not_active"];
                 })}
               </tbody>
             </table>
+
+
+            <div className='wig_width mt-2'>
+              <BullSayss />
+            </div>
+
+            <div className='wig_width mt-2'>
+              <Trendinghrr/>
+            </div>
+
           </div>
         </div>
       </div>

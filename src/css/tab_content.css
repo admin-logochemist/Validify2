@@ -156,7 +156,7 @@ ul.nav-tabs li a img{
     color: white;
     top: -20px;
 }
-.vollet_btn button{
+/* .vollet_btn button{
     font-family: 'Lato', sans-serif;
     background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
     color: #443107;
@@ -172,13 +172,13 @@ ul.nav-tabs li a img{
     line-height: 50px;
     margin: auto;
     display: block;
-}
-.connected_btn{
+} */
+/* .connected_btn{
     border: 1px solid palegoldenrod;
     padding: 10px 31px;
     border-radius: 17px;
-}
-.connected_btn h1{
+} */
+/* .connected_btn h1{
     color: #F4E286;
     font-size: 25px;
     letter-spacing: 2px;
@@ -188,8 +188,8 @@ ul.nav-tabs li a img{
     font-weight: 600;
     position: relative;
     left: -16px;
-}
-.connected_btn p{
+} */
+/* .connected_btn p{
     padding: 0;
     margin: 0;
     color: white;
@@ -198,13 +198,13 @@ ul.nav-tabs li a img{
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 2px;
-}
-.vollet_msg p{
+} */
+/* .vollet_msg p{
     color: white;
     letter-spacing: 1px;
     margin-top: 12px;
     text-align: center;
-}
+} */
 .sign_up a:hover{
   color: #443107;
 }

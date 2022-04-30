@@ -218,16 +218,16 @@
   /* top: 4px; */
 }
 .next_search{
-  width: 50%;
-  margin: auto;
+  width: 60%;
+  /* margin: auto; */
   border-top: 2px solid grey;
 }
 #search_actives{
   background-color: red;
 }
 .search_max{
-  width: 50%;
-  margin: auto;
+  width: 60%;
+  /* margin: auto; */
 }
 .search_max > div{
   position: relative;
@@ -237,8 +237,8 @@
 /* ++ == CHECHBOX INPUT == ++ */
 /* Create a custom radio button */
 .check_box_width{
-  width: 50%;
-  margin: auto;
+  width: 60%;
+  /* margin: auto; */
   display: block;
   background: black;
   border-radius: 0 0 20px 20px;
@@ -320,6 +320,7 @@
 }
 #tv_chart_container{
   margin: 65px 0 0 0;
+  width: 75%;
 }
 #tv_chart_container .toolbar-2yU8ifXU {
   background: #131722 !important;
@@ -330,6 +331,102 @@
 #tv_chart_container .button-2Vpz_LXc.isInteractive-2Vpz_LXc.isActive-2Vpz_LXc {
   color: white !important;
 }
+.Btn_wallet{
+  display: flex;
+  float: right;
+  position: relative;
+  right: 87px;
+  top: -108px;
+}
+.Btn_wallet button{
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(90deg,#c09434,#caa344,#d3b154,#ddc064,#e7cf75,#e7cf75,#e7cf75,#e7cf75,#ddc064,#d3b154,#caa344,#c09434);
+    color: #443107;
+    border: none;
+    padding: 0px 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    display: block;
+}
+
+.Btn_wallet button:before,
+.Btn_wallet button:after{
+    content: "";
+    background-color: #8f939396;
+    height: 100%;
+    width: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+    transition: all 0.4s ease-out 0.1s;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.Btn_wallet button:after{
+    opacity: 0;
+    transform: scale(0.9,0.7);
+    left: 0;
+    transition: all 0.3s ease-out 0s;
+}
+
+.Btn_wallet button:hover:before{ left: 100%; }
+
+.Btn_wallet button:hover:after{
+    opacity: 0.3;
+    transform: scale(1);
+}
+.Btn_wallet button img{
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+.wallet_msg p{
+  color: white;
+  letter-spacing: 1px;
+  margin-top: 12px;
+  text-align: center;
+}
+.wig_width{
+  width: 50%;
+  display: inline-flex;
+  padding: 5px;
+}
+.check_box_parent{
+  display: flex;
+  width: 100%;
+  position: absolute;
+}
+.ChartContainer{
+  display: flex;
+}
+.SwapsContainer{
+  width: 25%;
+  margin: 63px 0 0 0;
+  padding: 0px 20px;
+}
+#main {
+  padding: 10px;
+  height: 745px;
+}
+#WEB3_CONNECT_MODAL_ID{
+  position: relative;
+  z-index: 15;
+}
+
+@media screen and (max-width:1880px){
+  #main {
+    height: 659px;
+  }
+}
 @media screen and (max-width:1500px) {
   .search_boxx{
     width: 82%;
@@ -337,10 +434,43 @@
   .search-results{
     width: 100%;
   }
+  .Btn_wallet button {
+    width: 100%;
+  }
+  .Btn_wallet {
+    display: flex;
+    float: unset;
+    position: relative;
+    right: unset;
+    top: unset;
+    justify-content: center;
+  }
+  .search_max {
+    margin: auto;
+  }
+  .next_search {
+    margin: auto;
+  }
+  .check_box_width {
+    margin: auto;
+  }
+  .Btn_wallet {
+    margin-top: 16px;
+  }
+  #tv_chart_container {
+    width: 65%;
+  }
+  .SwapsContainer{
+    width: 35%;
+  }
 }
 @media screen and (max-width:1200px){
   .search_box{
     width: 90%;
+  }
+  .wig_width{
+    width: 100%;
+    display: flex;
   }
 }
 @media screen and (max-width:993px){
@@ -359,6 +489,21 @@
   }
   .check_box_width {
     width: 100%;
+  }
+  .ChartContainer {
+    display: block;
+  }
+  #tv_chart_container {
+    width: 100%;
+  }
+  .SwapsContainer {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width:850px){
+  .SwapsContainer {
+    width: 70%;
   }
 }
 @media screen and (max-width:778px){
@@ -412,6 +557,9 @@
        padding: 5px 35px;
        display: inline-block;
     }
+    .SwapsContainer {
+      width: 90%;
+    }
 }
 @media screen and (max-width:501px){
     .searchInputs > input {
@@ -435,7 +583,13 @@
     #tv_chart_container {
       height: 70vh;
       margin: 40px 0 0 0;
-  }
+    }
+    .ChartContainer {
+        padding: 5px;
+    }
+    .SwapsContainer {
+      width: 100%;
+    }
 }
 @media screen and (max-width:801px){
   .searchInputs > input::placeholder{
