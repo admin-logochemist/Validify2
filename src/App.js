@@ -37,6 +37,7 @@ import WhaleTrade from "./pages/WhaleTrade";
 import TextPdf from "./pages/TextPdf";
 import SearchTokenData from "./pages/SearchTokenData";
 import Trading from "./pages/Trading";
+import Live_Pairs from './pages/Live_Pairs'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
        <Route path="BNB" element={<BNB />} />
        <Route path="USDT" element={<USDT />} /> */}
       {/* <Route path="Tron" element={<Tron />} /> */}
+      <Route path="Live_Pairs" element={<Live_Pairs />} />
       <Route path="WhaleTrade" element={<WhaleTrade />} />
       <Route path="trade" element={<Trading />} />
       <Route path="TextPdf" element={<TextPdf />} />

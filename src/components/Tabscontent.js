@@ -152,8 +152,8 @@ function Tabscontent() {
                     ) : ethereum ? (
                       <div className='vollet_msg'>
                       <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>
-                      <p> Wallet is not Connected</p>
-                  </div>
+                        <p> Wallet is not Connected</p>
+                      </div>
                     ) : (
                       <div className='vollet_msg'>
                           <button onClick={()=>connectwallet('injected')}>  <img src={wallet_icon} alt="d"/>Connect Wallet</button>

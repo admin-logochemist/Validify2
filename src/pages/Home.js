@@ -48,6 +48,7 @@ function Home() {
                   autoplay="true" 
                   controls="true"
                   muted="true"
+                  playsInline={true}
                   // url={video}
                   url='https://validefi.global/video/proVid.mp4' 
                   onReady={() => console.log('onReady Callback')}

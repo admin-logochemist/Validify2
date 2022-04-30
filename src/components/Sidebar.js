@@ -42,6 +42,7 @@ function Sidebar() {
                 </li>
 
                 <li className='li_hover'><i class="fa fa-globe side_icons"></i><Link to='/WhaleTrade'>Whale Trade</Link></li>
+                {/*<li className='li_hover'><i class="fa fa-globe side_icons"></i><Link to='/Live_Pairs'>New Live Pairs</Link></li>*/}
                 <li>
                   <input type="checkbox" id="scdDrop" />
                   <label for="scdDrop" className="side_mobile-items">
