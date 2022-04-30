@@ -12,8 +12,6 @@ export default {
   getBars: async function (symbolInfo, resolution, periodParams, gg) {
       console.log(periodParams);
     var split_symbol = symbolInfo.name.split(/[:/]/);
-
-    console.log('symbolInfo:', symbolInfo);
     const url =
       resolution === "D"
         ? "/data/histoday"
@@ -30,8 +28,13 @@ export default {
     };
     // console.log({qs})
 
-    let dateFrom = moment(periodParams.from*1000).toISOString();
-    let dateTill = moment(periodParams.to*1000).toISOString();
+    let dateFrom = null;
+    let dateTill = null;
+    
+    if (split_symbol[0] !== 'VALID') {
+        dateFrom = moment(periodParams.from*1000).toISOString();
+        dateTill = moment(periodParams.to*1000).toISOString();
+    } 
 
     return await axios.post(Bitquery.endpoint, {
         query: Bitquery.GET_COIN_BARS(gg.baseQuery, gg.qQuery, gg.network, gg.exchange, resolution, dateFrom, dateTill),

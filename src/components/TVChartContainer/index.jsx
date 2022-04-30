@@ -22,7 +22,7 @@ export const RangeTypes = {
 export class TVChartContainer extends React.PureComponent {
   static defaultProps = {
     symbol: "Pancake",
-    interval: "5",
+    interval: "1",
     containerId: "tv_chart_container",
     //datafeedUrl: 'https://demo_feed.tradingview.com',
     libraryPath: "../../charting_library/",
