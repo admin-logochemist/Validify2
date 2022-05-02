@@ -83,6 +83,8 @@
   display: none;
 }
 
+
+
 /* ++ == SHOW AND HIDE SIDE-BAR == ++ */
 .side_menu .wrapper .side-links{
   position: absolute;
@@ -90,7 +92,7 @@
   width: 100%;
   max-width: 100px;
   top: 0;
-  left: 0%;
+  left: -50%; 
   background: #0b2251;
   display: block;
   padding: 50px 0px;
@@ -101,7 +103,9 @@
   z-index: 999;
   max-width: 100px;
 }
-
+.side_menu #menu-btn:checked ~ .side-links{
+  left: 0%; 
+}   
 .side_menu #menu-btn:checked ~ .side-links{
   max-width: 262px; 
 }
@@ -339,4 +343,5 @@ background: #ecde84 !important;}
     width: 40px !important;
     background: white !important;
   }
+
 }

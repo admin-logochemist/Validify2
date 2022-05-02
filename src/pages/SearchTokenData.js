@@ -13,7 +13,7 @@ import Trendinghrr from '../components/Trending24hr'
 import BTCSwaps from '../components/BTCSwap'
 // import { color } from "@mui/system";
 import 'font-awesome/css/font-awesome.min.css'
-
+import Dashheader from '../components/Dashheader'
 import "../css/WhaleTrades.css";
 import "../css/trades.css";
 import "../css/SearchBar.css";
@@ -1589,7 +1589,8 @@ let btnIds = ["top_box_active","top_box_not_active"];
 
   return (
     <>
-      <Header />
+<Sidebar/>
+<Dashheader/>
       <section className="bannerAdds_whale_trade"></section>
       <div className="container-fluid custom_container">
         <div className="row">
@@ -1793,99 +1794,103 @@ let btnIds = ["top_box_active","top_box_not_active"];
               /> */}
               <div className="SwapsContainer">
                 <BTCSwaps />
+              </div>    
+            </div>
+            {/* <div className="SwapsContainer1">
+                <BTCSwaps />
+              </div>  */}
+              <div className="flex_box_table">
+                <h3>Trades</h3>
+                {/* <div className='btns_lengends'>
+                      <button className='buy'>Buy</button>
+                      <button className='sell'>Sale</button>
+                </div> */}
               </div>
-            </div>
 
-            <div className="flex_box_table">
-              <h3>Trades</h3>
-              {/* <div className='btns_lengends'>
-                    <button className='buy'>Buy</button>
-                    <button className='sell'>Sale</button>
-               </div> */}
-            </div>
+              {/* ++-++  TRADES TABLE DATA  ++-++ */}
 
-            {/* ++-++  TRADES TABLE DATA  ++-++ */}
-
-            <table>
-            {resd.slice(0, 1).map((post, key) => {
-                  if (network === 'bsc') {
-                    return (
-                      <thead>  
-                      <th>Date</th>
-                      <th>Type</th>
-                      <th>PRICE USDT</th>
-                      <th className="transform">Amount WBNB</th>
-                      <th className="transform">Price BNB</th>
-                      <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
-                      <th>Maker</th>
-                    </thead>
-              );
-            } else if(network==='ethereum') {  
-              return(      
-               <thead>  
-              <th>Date</th>
-              <th>Type</th>
-              <th>PRICE USDT</th>
-              <th className="transform">Amount WETH</th>
-              <th className="transform">Price ETH</th>
-              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
-              <th>Maker</th>
-            </thead>
+              <table>
+              {resd.slice(0, 1).map((post, key) => {
+                    if (network === 'bsc') {
+                      return (
+                        <thead>  
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>PRICE USDT</th>
+                        <th className="transform">Amount WBNB</th>
+                        <th className="transform">Price BNB</th>
+                        <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
+                        <th>Maker</th>
+                      </thead>
+                );
+              } else if(network==='ethereum') {  
+                return(      
+                <thead>  
+                <th>Date</th>
+                <th>Type</th>
+                <th>PRICE USDT</th>
+                <th className="transform">Amount WETH</th>
+                <th className="transform">Price ETH</th>
+                <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
+                <th>Maker</th>
+              </thead>
+              
+              )} else {
+                return(
+                <thead>  
+                <th>Date</th>
+                <th>Type</th>
+                <th>PRICE USDT</th>
+                <th className="transform">Amount AVAX</th>
+                <th className="transform">Price AVAX</th>
+                <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
+                <th>Maker</th>
+              </thead>
+                )
+              }
             
-            )} else {
-              return(
-              <thead>  
-              <th>Date</th>
-              <th>Type</th>
-              <th>PRICE USDT</th>
-              <th className="transform">Amount AVAX</th>
-              <th className="transform">Price AVAX</th>
-              <th className="transform">TOTAL {thisToFixed(post.baseCurrency.symbol)}</th>
-              <th>Maker</th>
-            </thead>
-              )
-            }
-          
-          })}
-              <tbody>
-                {resd.slice(0, 100).map((post, key) => {
-                  if (post.side == "BUY") {
-                    return (
-                      <tr key={key}>
-                        <td className="date_table">
-                        {post.block.timestamp.time}
-                        </td>
-                        <td className="red">SELL</td>
-                        <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
-                        <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
-                        <td className="truncate">{thisToFixed(post.quotePrice)}</td>
-                        <td className="truncate">{thisToFixed(post.baseAmount)}</td>
-                        <td className="truncate maker_table">
-                          {post.transaction.txFrom.address.slice(0, -2)}
-                        </td>
-                      </tr>
-                    );
-                  } else {
-                    return (
-                      <tr key={key}>
-                        <td className="date_table">
+            })}
+                <tbody>
+                  {resd.slice(0, 100).map((post, key) => {
+                    if (post.side == "BUY") {
+                      return (
+                        <tr key={key}>
+                          <td className="date_table">
                           {post.block.timestamp.time}
-                        </td>
-                        <td className="green">BUY</td>
-                        <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
-                        <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
-                        <td className="truncate">{thisToFixed(post.quotePrice)}</td>
-                        <td className="truncate">{thisToFixed(post.baseAmount)}</td>
-                        <td className="truncate maker_table">
-                          {post.transaction.txFrom.address.slice(0, -2)}
-                        </td>
-                      </tr>
-                    );
-                  }
-                })}
-              </tbody>
-            </table>
-
+                          </td>
+                          <td className="red">SELL</td>
+                          <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
+                          <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
+                          <td className="truncate">{thisToFixed(post.quotePrice)}</td>
+                          <td className="truncate">{thisToFixed(post.baseAmount)}</td>
+                          <td className="truncate maker_table">
+                            {post.transaction.txFrom.address.slice(0, -2)}
+                          </td>
+                        </tr>
+                      );
+                    } else {
+                      return (
+                        <tr key={key}>
+                          <td className="date_table">
+                            {post.block.timestamp.time}
+                          </td>
+                          <td className="green">BUY</td>
+                          <td className="">{(thisToFixed(post.quotePrice))*408.16}</td>
+                          <td className="truncate">{thisToFixed(post.quoteAmount)}</td>
+                          <td className="truncate">{thisToFixed(post.quotePrice)}</td>
+                          <td className="truncate">{thisToFixed(post.baseAmount)}</td>
+                          <td className="truncate maker_table">
+                            {post.transaction.txFrom.address.slice(0, -2)}
+                          </td>
+                        </tr>
+                      );
+                    }
+                  })}
+                </tbody>
+              </table>
+              <div className="SwapsContainer1">
+                <BTCSwaps />
+              </div> 
 
             <div className='wig_width mt-2'>
               <BullSayss />

@@ -41,7 +41,7 @@ function Sidebar() {
                   </ul>
                 </li>
 
-                <li className='li_hover'><i class="fa fa-globe side_icons"></i><Link to='/WhaleTrade'>Whale Trade</Link></li>
+                {/* <li className='li_hover'><i class="fa fa-globe side_icons"></i><Link to='/WhaleTrade'>Whale Trade</Link></li> */}
                 {/*<li className='li_hover'><i class="fa fa-globe side_icons"></i><Link to='/Live_Pairs'>New Live Pairs</Link></li>*/}
                 <li>
                   <input type="checkbox" id="scdDrop" />
@@ -54,7 +54,7 @@ function Sidebar() {
                     <li><a>Charting system</a></li>
                     <li><a>Portfolio Tracker</a></li>
                     <li><a>NFT Platform</a></li>
-                    <li><a>Whale Trade</a></li>
+                    {/* <li><a>Whale Trade</a></li> */}
                   </ul>
                 </li>
 
