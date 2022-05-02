@@ -30,7 +30,7 @@ function Header() {
                         <input type="checkbox" id="showDrop" />
                         <label for="showDrop" className="mobile-item">PLATFORMS<i className="fa fa-caret-down"></i></label>
                         <ul className="drop-menu">
-                            <li><Link to="/Dashboard">VALIDEFI•DX</Link></li>
+                            <li><Link to="/SearchTokenData">VALIDEFI•DX</Link></li>
                             <li><Link to="/Validefinf">VALIDEFI•NF T-Link (Coming Soon)</Link></li>
                             <li><a href="https://validefi.global/psp/" target='_blank' >Validefi PSP</a></li>
                             <li><Link to="/Valideficoming">Validefi•Pro (Coming Soon)</Link></li>

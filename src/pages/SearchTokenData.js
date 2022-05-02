@@ -123,6 +123,7 @@ import auroraicon from '../images/aurora.png'
 import amaterasu from '../images/amaterasu.svg'
 import wallet_icon from '../images/wallet-solid.svg'
 import BullSays from "../components/BullSays";
+import Sidebar from "../components/Sidebar";
 
 function SearchTokenData() {
   var [account, setAccount] = useState("");
@@ -1592,6 +1593,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
       <section className="bannerAdds_whale_trade"></section>
       <div className="container-fluid custom_container">
         <div className="row">
+      
           <div className="col-12 mt-3">
             <PriceTickers />
           </div>
@@ -1685,7 +1687,7 @@ let btnIds = ["top_box_active","top_box_not_active"];
                         </div>
                       )}
                 </div>
-
+              
             </div> 
 
             {/* <Searchbar  data={SearchData}/> */}

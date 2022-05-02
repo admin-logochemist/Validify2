@@ -37,7 +37,7 @@ function Home() {
                   </div>
                   <div className='btn_banner'>
                     <a href='https://pancakeswap.finance/swap?outputCurrency=0xae808C96e7cD2ED4c9B7e35DfAe5d5c299CfBF00' target='_blank' className='link_btn_one'><button className='btn_one Read_more'>Buy</button></a>
-                    <a href="https://validefi.global/#/SearchTokenData" target='_blank' className='link_btn_one'><button className='btn_two Read_more'>Launch App</button></a>
+                    <a href="https://validefi.global/#/SearchTokenData"  className='link_btn_one'><button className='btn_two Read_more'>Launch App</button></a>
                   </div>
                 </div>
             </div>
